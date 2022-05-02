@@ -1,0 +1,148 @@
+.sp-icon {
+    background-image: url(../img/icons.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+.sp-icon.small {
+    transform: scale(0.7);
+}
+.sp-icon.xs {
+    transform: scale(0.5);
+}
+.sp-icon.float-left {
+    float: left;
+}
+.sp-icon.float-right {
+    float: right;
+}
+.sp-icon.padding {
+    padding: 5px;
+}
+.sp-icon.margin-right {
+    margin-right: 10px;
+}
+.sp-icon.margin-left {
+    margin-left: 10px;
+}
+
+.sp-icon.attention {
+  background-position: -0px -0px;
+}
+.sp-icon.attention.hover {
+  background-position: -32px -0px;
+}
+.sp-icon.info {
+  background-position: -64px -0px;
+}
+.sp-icon.info.hover {
+  background-position: -96px -0px;
+}
+
+.sp-icon.question {
+  background-position: -0px -32px;
+}
+.sp-icon.question.hover {
+  background-position: -32px -32px;
+}
+.sp-icon.check-circle {
+  background-position: -64px -32px;
+}
+.sp-icon.check-circle.hover {
+  background-position: -96px -32px;
+}
+
+.sp-icon.check {
+  background-position: -0px -64px;
+}
+.sp-icon.check.hover {
+  background-position: -32px -64px;
+}
+.sp-icon.close {
+  background-position: -64px -64px;
+}
+.sp-icon.close.hover {
+  background-position: -96px -64px;
+}
+
+.sp-icon.download {
+  background-position: -0px -96px;
+}
+.sp-icon.download:hover {
+  background-position: -32px -96px;
+}
+.sp-icon.delete {
+  background-position: -64px -96px;
+}
+.sp-icon.delete:hover {
+  background-position: -96px -96px;
+}
+
+.sp-icon.tools {
+  background-position: -0px -128px;
+}
+.sp-icon.tools:hover {
+  background-position: -32px -128px;
+}
+.sp-icon.cog {
+  background-position: -64px -128px;
+}
+.sp-icon.cog.hover {
+  background-position: -96px -128px;
+}
+
+.sp-icon.shield {
+  background-position: -0px -160px;
+}
+.sp-icon.shield.hover {
+  background-position: -32px -160px;
+}
+.sp-icon.lock {
+  background-position: -64px -160px;
+}
+.sp-icon.lock.hover {
+  background-position: -96px -160px;
+}
+
+.sp-icon.search {
+  background-position: -0px -192px;
+}
+.sp-icon.search.hover {
+  background-position: -32px -192px;
+}
+.sp-icon.edit {
+  background-position: -64px -192px;
+}
+.sp-icon.edit.hover {
+  background-position: -96px -192px;
+}
+
+.sp-icon.comments {
+  background-position: -0px -224px;
+}
+.sp-icon.comments.hover {
+  background-position: -32px -224px;
+}
+.sp-icon.listings {
+  background-position: -64px -224px;
+}
+.sp-icon.listings.hover {
+  background-position: -96px -224px;
+}
+
+.sp-icon.thumbsdown {
+  background-position: -0px -256px;
+  transition: ease transform .4s;
+}
+.sp-icon.thumbsdown:hover {
+  background-position: -32px -256px;
+  transform: scale(0.7) !important;
+}
+.sp-icon.thumbsup {
+  background-position: -64px -256px;
+  transition: ease transform .4s;
+}
+.sp-icon.thumbsup:hover {
+  background-position: -96px -256px;
+  transform: scale(0.7) !important;
+}

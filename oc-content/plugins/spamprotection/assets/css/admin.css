@@ -1,0 +1,551 @@
+#content-head {
+    border-bottom: solid 1px #ddd;
+    background-color: #f3f3f3;
+    padding: 24px 30px;
+}
+
+.row.form-group.comingsoon {
+    position: relative;
+}
+
+.row.form-group.comingsoon:before {
+    content: "coming soon";
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    margin: 100px auto;
+    width: 175px;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: rotate(-45deg);
+}
+
+.row {
+    margin: 20px 0 !important;   
+}
+
+.halfrow {
+    width: 46%;
+    padding: 2%;
+    float: left;
+}
+
+.compare {
+    width: 100%;
+}
+
+.settings input[type='text'], .settings textarea {
+    width: 100%;    
+}
+
+#view_comment .author_info > p, #view_comment .comment_info > p {
+    line-height: 10px;
+    margin-left: 10px;
+}
+
+div#blocked_ads {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+div#blocked_ads_inner {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 120px auto;
+    padding: 15px;
+    width: 500px;
+    height: auto;
+    overflow: auto;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #000;
+}
+
+div#blocked_ads_inner table {
+    width: 100%;    
+}
+
+div#blocked_ads_inner table tr {
+    height: 30px;    
+}
+
+div#blocked_ads_inner table tr td {
+    padding: 3px 7px;    
+}
+
+#sp_options {
+    color: #000;
+    transition: ease all 0.6s;
+}
+
+#sp_options.disabled * {
+    color: #bbb;
+}
+
+#sp_comment_options {
+    color: #000;
+    transition: ease all 0.6s;
+}
+
+#sp_comment_options.disabled * {
+    color: #bbb;
+}
+
+#sp_contact_options {
+    color: #000;
+    transition: ease all 0.6s;
+}
+
+#sp_contact_options.disabled * {
+    color: #bbb;
+}
+
+.hiddeninput {
+    margin-top: 15px;
+}
+
+.hiddeninput label {
+    width: 100%;
+}
+
+.hiddeninput:not(.visible) {
+    display: none;
+}
+
+input[name=honeypot_name].valid {
+    border: 1px solid green;
+    outline: none;    
+}
+
+input[name=honeypot_name].invalid {
+    border: 1px solid red;
+    outline: none;    
+}
+
+#spamprot { 
+    background: transparent; 
+    border: none; 
+}
+div#sp_settings, div#sp_comments, div#sp_contact, div#sp_help {
+    position: relative;
+    top: 50px;
+    left: 0;
+    width: calc(100% - 40px);
+}
+
+.sp_tabs {
+    width: 200px;
+    float: left;
+}
+.sp_options, .sp_comment_options, .sp_contact_options, .sp_help_section {
+    width: calc(100% - 200px);
+    float: left;
+} 
+#spamprot ul.tabs {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: calc(100% - 40px);
+    line-height: 35px;
+    background: #000;
+    border: none;
+    margin-bottom: 20px;
+} 
+#spamprot ul.tabs li { 
+    background: transparent;
+    display: inline-block;
+    border: none;
+    list-style: none;
+    position: relative;
+    top: 1px;
+    border-bottom: 0 !important;
+} 
+#spamprot ul.tabs li a {
+    color: #c0c0c0 !important;
+    display: block;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    padding: .5em 1em;
+} 
+#spamprot ul.tabs li.current { 
+    background: transparent url(../img/uiTabsArrow.png) no-repeat bottom center; 
+    border: none;
+} 
+#spamprot ul.tabs li.current a { 
+    color: #459e00 !important; 
+}
+
+
+#spamprot ul.langtabs { 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #c0c0c0; 
+    -moz-border-radius: 0; 
+    -webkit-border-radius: 0; 
+    border-radius: 0; 
+} 
+#spamprot ul.langtabs li { 
+    background: transparent;
+    display: inline-block;
+    border: none;
+    list-style: none;
+    position: relative;
+    top: 1px;
+    border-bottom: 0 !important;
+} 
+#spamprot ul.langtabs li a {
+    color: #c0c0c0 !important;
+    display: block;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    padding: .5em 1em;
+} 
+#spamprot ul.langtabs li.current { 
+    background: transparent url(../img/uiTabsArrow.png) no-repeat bottom center; 
+    border: none;
+} 
+#spamprot ul.langtabs li.current a { 
+    color: #459e00 !important; 
+}
+
+ 
+#spamprot ul.subtabs {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+#spamprot ul.subtabs li { 
+    background: transparent;
+    display: block;
+    border: none;
+    list-style: none;
+    position: relative;
+    top: 1px;
+    border-bottom: 0 !important;
+    text-align: center;
+} 
+#spamprot ul.subtabs li a {
+    color: #c0c0c0 !important;
+    display: block;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    padding: 1em;
+}
+#spamprot ul.subtabs li button {
+    margin-top: 20px;
+} 
+#spamprot ul.subtabs li.current {
+    border: none;
+} 
+#spamprot ul.subtabs li.current a { 
+    color: #459e00 !important; 
+}
+
+ 
+#spamprot ul.commtabs {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+#spamprot ul.commtabs li { 
+    background: transparent;
+    display: block;
+    border: none;
+    list-style: none;
+    position: relative;
+    top: 1px;
+    border-bottom: 0 !important;
+    text-align: center;
+} 
+#spamprot ul.commtabs li a {
+    color: #c0c0c0 !important;
+    display: block;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    padding: 1em;
+}
+#spamprot ul.commtabs li button {
+    margin-top: 20px;
+} 
+#spamprot ul.commtabs li.current {
+    border: none;
+} 
+#spamprot ul.commtabs li.current a { 
+    color: #459e00 !important; 
+}
+
+ 
+#spamprot ul.contacttabs {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+#spamprot ul.contacttabs li { 
+    background: transparent;
+    display: block;
+    border: none;
+    list-style: none;
+    position: relative;
+    top: 1px;
+    border-bottom: 0 !important;
+    text-align: center;
+} 
+#spamprot ul.contacttabs li a {
+    color: #c0c0c0 !important;
+    display: block;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    padding: 1em;
+}
+#spamprot ul.contacttabs li button {
+    margin-top: 20px;
+} 
+#spamprot ul.contacttabs li.current {
+    border: none;
+} 
+#spamprot ul.contacttabs li.current a { 
+    color: #459e00 !important; 
+}
+
+ 
+#spamprot ul.helptabs {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+#spamprot ul.helptabs li { 
+    background: transparent;
+    display: block;
+    border: none;
+    list-style: none;
+    position: relative;
+    top: 1px;
+    border-bottom: 0 !important;
+    text-align: center;
+} 
+#spamprot ul.helptabs li a {
+    color: #c0c0c0 !important;
+    display: block;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    padding: 1em;
+}
+#spamprot ul.helptabs li button {
+    margin-top: 20px;
+} 
+#spamprot ul.helptabs li.current {
+    border: none;
+} 
+#spamprot ul.helptabs li.current a { 
+    color: #459e00 !important; 
+}
+
+ 
+#spamprot .tab-content, #spamprot .subtab-content, #spamprot .commtab-content, #spamprot .contacttab-content, #spamprot .langtab-content, #spamprot .helptab-content {
+    display: none;
+}
+
+#spamprot .tab-content.current, #spamprot .subtab-content.current, #spamprot .commtab-content.current, #spamprot .contacttab-content.current, #spamprot .langtab-content.current, #spamprot .helptab-content.current {
+    display: inherit;
+}
+
+#spamprot #sp_mainfeatures > div > div.floating {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    float: left;
+}
+
+#spamprot .form-control {
+    width: 100%;
+}
+
+#spamprot textarea.form-control {
+    height: 200px;
+}
+
+#spamprot .actionbuttons {
+    margin: 70px 0 0;
+    text-align: right;
+}
+
+#spamprot .actionbuttons a {
+    margin: 0 10px;
+}
+
+#sp_help ul li {
+    list-style-type: disc;
+}
+
+#sp_help ul li p {
+    margin: 0 0 10px;
+}
+div#flashmessage {
+    position: absolute;
+    right: 20px;
+    top: 90px;
+    z-index: 100;
+    min-height: 0;
+    line-height: 21px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+div#flashmessage a {
+    margin-left: 15px;
+}
+
+div#attention {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+#attention_content {
+    display: none;
+    margin: 150px auto;
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    box-shadow: 6px 6px 8px #000;
+}
+.viewToggle {
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.viewToggle:hover {
+  background: #eee;
+}
+textarea#descriptionCode {
+    display: none;
+}
+div#descriptionHTML {
+    display: block;
+}
+
+.table th, .table td {
+    padding: 4px 6px;
+    line-height: 18px;
+    vertical-align: top;
+    border-left: 0;
+    border-top: 0;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-left: 0;
+    position: relative;
+}
+
+.table td.col-status-border {
+    width: 1px;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.table .status-blocked td.col-status-border {
+    background: #e02800;
+}
+
+.table td.col-author {
+    width: 200px;    
+}
+
+.table td.col-status {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 0;
+    width: 50px;
+    padding: 0 10px;
+    margin: 0;
+    font-weight: 700;
+    vertical-align: middle;
+    border-left: 0;
+}
+
+.table .status-blocked td.col-status {
+    background: #fe7d7f;
+    color: #A10;
+}
+
+.table div.actions {
+    display: none;
+}
+
+.table div.actions > ul{
+    margin: 0;
+    padding: 0;
+}
+
+.table div.actions > ul > li {
+    display: inline-block;
+}
+
+.table div.actions > ul > li:before {
+    content: "> ";
+}
+
+.table tr:hover div.actions {
+    display: block;
+}
+
+.table-contains-actions tbody td {
+    padding-bottom: 0;
+    height: 41px;
+}
+
+div#sp_review_wrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+div#sp_review_inner {
+    position: relative;
+    width: 400px;
+    padding: 10px;
+    margin: 100px auto 0;
+    background: #fff;
+    z-index: 2;
+}
+
+span.sp_review_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #999;
+    color: #999;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}

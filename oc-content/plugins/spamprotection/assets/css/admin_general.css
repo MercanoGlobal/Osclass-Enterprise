@@ -1,0 +1,206 @@
+@import 'icons.css';
+@import 'alerts.css';
+
+form#datatablesForm td.col-reputation {
+    width: 32px;
+}
+
+nav.osc_admin_submenu{
+    position:absolute;
+    top:30px;
+    right:10px;
+    background:#383838;
+    border-color:#616161;
+    border-left:1px solid;
+    border-right:1px solid;
+    border-bottom:1px solid;
+    border-radius:0 0 3px 3px;
+    width:200px;
+    visibility:hidden;
+    opacity:0;
+    transition:all .3s linear;
+}
+nav.osc_admin_submenu ul{
+    margin:0;
+    padding:0;
+}
+nav.osc_admin_submenu ul li{
+    background-color:#1e1e1e;
+}
+nav.osc_admin_submenu ul li a{
+    width:calc(100% - 10px);
+    text-align:center;
+    padding:5px;
+}
+nav.osc_admin_submenu ul li a:hover{
+    background: #444;
+}
+div[id^='osc_toolbar_']:not(#osc_toolbar_logout){
+    position:relative
+}
+div[id^='osc_toolbar_']:not(#osc_toolbar_logout) > a{
+    min-width:100px;
+    text-align:center
+}
+div[id^='osc_toolbar_']:hover nav[id^='osc_toolbar_sub_']{
+    visibility:visible;
+    opacity:1
+}
+
+#osc_toolbar_spamprotection > a {
+    min-width: 40px !important;
+    width: 40px !important;
+}
+
+#osc_toolbar_spamprotection > nav.osc_admin_submenu {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background: #383838;
+    border-color: #616161;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 0 0 3px 3px;
+    min-width: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+#osc_toolbar_spamprotection > nav.osc_admin_submenu li:after {
+    content: "";
+    clear: both;
+}
+
+#osc_toolbar_spamprotection > nav.osc_admin_submenu a {
+    display: block;
+    width: calc(100% - 10px);
+    text-align: left;
+    line-height: 16px;
+    float: none;
+}
+
+#osc_toolbar_spamprotection:hover > nav.osc_admin_submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+#content-head .sp_header_icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: -8px;
+}
+
+#osc_toolbar_spamprotection .ico-spamprotection {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+#spamprotection .ico-spamprotection, #osc_toolbar_spamprotection .ico-spamprotection {
+    opacity: 0.5;
+    transition: ease opacity .4s;
+}
+
+#osc_toolbar_spamprotection .ico-spamprotection {
+    background-image: url(../img/admin.png) !important;
+    background-size: 150px 50px;
+    background-position: -5px -9px;
+}
+
+#spamprotection .ico-spamprotection, #content-head .sp_header_icon {
+    background-image: url(../img/admin.png) !important;
+    background-size: 150px 50px;
+    background-position: 0 0;
+}
+
+#osc_toolbar_spamprotection .ico-spamprotection.highlight {
+    background-image: url(../img/admin.png) !important;
+    background-size: 150px 50px;
+    background-position: -105px -7px;
+    opacity: 1;    
+}
+
+#spamprotection.highlight .ico-spamprotection {
+    background-position: -100px 0;
+    opacity: 1;    
+}
+
+#spamprotection.highlight.pulse .ico-spamprotection, #osc_toolbar_spamprotection .ico-spamprotection.highlight.pulse {    
+    animation-name: pulse_button;
+    animation-duration: 1500ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#osc_toolbar_spamprotection:hover .ico-spamprotection {
+    background-position: -55px -9px;
+    animation: none;
+    opacity: 1;
+}
+
+#spamprotection:hover .ico-spamprotection {
+    background-position: -50px 0px;
+    animation: none;
+    opacity: 1;
+}
+
+div#spamprot_upgrade_overlay, div#spamprot_installed_overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+div#spamprot_upgrade, div#spamprot_installed {
+    position: relative;
+    width: 600px;
+    padding: 10px 25px;
+    margin: 75px auto;
+    text-align: center;
+    background: rgba(200, 200, 200, 0.95);
+    border-radius: 3px;
+    box-shadow: 6px 6px 8px #000;
+    z-index: 11;
+}
+
+div#spamprot_upgrade_buttons, div#spamprot_installed_buttons {
+    display: inline-block;
+    text-align: center;
+}
+
+div#spamprot_upgrade_close, div.spamprot_installed_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #999;
+    color: #999;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@keyframes pulse_button {
+    0% { opacity: 0.5; }
+    10% { opacity: 0.6; }
+    20% { opacity: 0.7; }
+    30% { opacity: 0.8; }
+    40% { opacity: 0.9; }
+    50% { opacity: 1; }
+    60% { opacity: 0.9; }
+    70% { opacity: 0.8; }
+    80% { opacity: 0.7; }
+    90% { opacity: 0.6; }
+    100% { opacity: 0.5; }
+}

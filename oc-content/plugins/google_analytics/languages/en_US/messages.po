@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Osclass 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-06 12:55+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Tango\n"
+"Language-Team: Osclass <info@osclass.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_US\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SearchPath-0: /oc-content/plugins/google_analytics\n"
+
+#: /oc-content/plugins/google_analytics/index.php:39
+msgid "The tracking ID has been updated"
+msgstr ""
+
+#: /oc-content/plugins/google_analytics/admin.php:7
+msgid "Tracking ID"
+msgstr ""

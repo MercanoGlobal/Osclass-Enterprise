@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gdpr_osclass\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-30 12:55+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Tango\n"
+"Language-Team: Tango\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:23
+msgid "Request GDPR Info"
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:29
+msgid "Remove account"
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:47
+msgid "Are you sure you want to delete your account?"
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:48
+msgid "Delete account"
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:177
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:180
+msgid "Privacy Policy"
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:187
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:190
+msgid "Terms and Conditions"
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:246
+msgid "Successufuly requested user information, you will receive your data in a few days."
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:249
+msgid "An error occurred while requesting user information."
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:254
+msgid "Only users"
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:276
+msgid "You must accept our \"Terms and Conditions\" and \"Privacy Policy\""
+msgstr ""
+
+#: plugins/gdpr_osclass/class/OsclassGdpr.php:492
+msgid "Download your data from this link: <a href=\"%s\">Download</a> (GDPR)"
+msgstr ""

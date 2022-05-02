@@ -1,0 +1,92 @@
+.sp-alert {
+    background-image: url(../img/alerts.png);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.sp-alert.small {
+    transform: scale(0.7);
+}
+.sp-alert.xs {
+    transform: scale(0.5);
+}
+.sp-alert.float-left {
+    float: left;
+}
+.sp-alert.float-right {
+    float: right;
+}
+.sp-alert.padding {
+    padding: 5px;
+}
+.sp-alert.margin-right {
+    margin-right: 10px;
+}
+.sp-alert.margin-left {
+    margin-left: 10px;
+}
+.sp-alert.highlight {
+  opacity: 1;
+}
+.sp-alert.pulse {
+  opacity: 1;
+  animation-name: pulse_button;
+  animation-duration: 1500ms;
+  transform-origin:70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.sp-alert span {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    width: 15px;
+    line-height: 15px;
+    background: #888;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+}
+
+.sp-alert.ads {
+  background-position: -0px -0px;
+}
+.sp-alert.ads.highlight, .sp-alert.ads.pulse {
+  background-position: -80px -0px;
+}
+.sp-alert.ads:hover {
+  background-position: -40px -0px;
+}
+
+.sp-alert.comments {
+  background-position: -0px -40px;
+}
+.sp-alert.comments.highlight, .sp-alert.comments.pulse {
+  background-position: -80px -40px;
+}
+.sp-alert.comments:hover {
+  background-position: -40px -40px;
+}
+
+.sp-alert.mails {
+  background-position: -0px -80px;
+}
+.sp-alert.mails.highlight, .sp-alert.mails.pulse {
+  background-position: -80px -80px;
+}
+.sp-alert.mails:hover {
+  background-position: -40px -80px;
+}
+
+.sp-alert.bans {
+  background-position: -0px -120px;
+  opacity: 0.5;
+}
+.sp-alert.bans.highlight, .sp-alert.bans.pulse {
+  background-position: -80px -120px;
+}
+.sp-alert.bans:hover {
+  background-position: -40px -120px;
+}

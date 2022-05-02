@@ -1,0 +1,58 @@
+/* Black */
+#spamprot.black ul.tabs, #spamprot.black ul.subtabs {
+    background-color: black !important    
+}
+
+#spamprot.black ul.tabs li a, #spamprot.black ul.subtabs li a{
+    color: #c0c0c0 !important;    
+}
+
+#spamprot.black ul.tabs li.current a, #spamprot.black ul.subtabs li.current a {
+    color: #459e00 !important;
+}
+
+/* White */
+#spamprot.white ul.tabs, #spamprot.white ul.subtabs {
+    background-color: white !important;    
+}
+
+#spamprot.white ul.tabs li {    
+    top: 1px;    
+}
+
+#spamprot.white ul.tabs li a, #spamprot.white ul.subtabs li a {
+    color: #333 !important;    
+}
+
+#spamprot.white ul.tabs li.current {
+    background: transparent url(../img/uiTabsArrow.png) no-repeat bottom center;
+}
+/*
+#spamprot.white ul.tabs li.current a {
+    padding: 2px 10px;
+    margin-top: 2px;
+    border: 1px solid;
+}
+*/
+#spamprot.white ul.tabs li.current a, #spamprot.white ul.subtabs li.current a {
+    color: #459e00 !important;
+}
+
+#spamprot.white ul.tabs {
+    border-bottom: 1px solid #000;
+}
+
+#spamprot.white ul.subtabs {
+    border-right: 1px solid #000;
+}
+
+#spamprot.white .sp_options, 
+#spamprot.white .sp_comment_options, 
+#spamprot.white .sp_contact_options, 
+#spamprot.white .sp_security_options, 
+#spamprot.white .sp_admin_options, 
+#spamprot.white .sp_register_options, 
+#spamprot.white .sp_help_section, 
+#spamprot.white .sp_config_options {
+    width: calc(100% - 201px);
+}
