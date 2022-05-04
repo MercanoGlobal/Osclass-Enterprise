@@ -71,7 +71,7 @@ function sprot_style_admin_footer() {
         $(document).ready(function(){
             '.($toppos == 'left' ? 
             '$("#osc_toolbar_spamprotection").insertBefore("#osc_toolbar_home");' : 
-            '$("#osc_toolbar_spamprotection").insertBefore("#osc_toolbar_logout").css({"float" : "right", "margin-right": "15px"});'
+            '$("#osc_toolbar_spamprotection").insertBefore("#osc_toolbar_logout").css({"float" : "right", "margin-right": "33px"});'
             ).'                            
 
             $("div#osc_toolbar_spamprotection > a").hover(function(){

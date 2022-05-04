@@ -325,7 +325,7 @@ class spam_prot extends DAO {
         $bans = $this->_countRows('t_sp_ban_log');
 
         echo '
-        <div id="osc_toolbar_spamprotection" style="position: relative !important;margin: 0 15px 0 -15px;">
+        <div id="osc_toolbar_spamprotection" style="position: relative !important;margin: 0 0 0 -7px;">
             <a href="'.osc_admin_render_plugin_url('spamprotection/admin/main.php&tab=settings').'"><i class="ico-spamprotection topbar"></i></a>
             <nav class="osc_admin_submenu" id="osc_toolbar_sub_spamprotection" style="position: absolute;">';                            
 
