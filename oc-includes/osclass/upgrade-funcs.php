@@ -549,6 +549,11 @@ CREATE TABLE %st_item_description_tmp (
     }
 
     if(osc_version() < 381) {
+        osc_delete_preference('marketAllowExternalSources');
+        osc_delete_preference('marketURL');
+        osc_delete_preference('marketAPIConnect');
+        osc_delete_preference('marketCategories');
+        osc_delete_preference('marketDataUpdate');
         $comm->query(sprintf('ALTER TABLE %st_city ADD COLUMN d_coord_lat DECIMAL(20, 10) NULL AFTER b_active;', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_city ADD COLUMN d_coord_long DECIMAL(20, 10) NULL AFTER d_coord_lat;', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_user CHANGE dt_access_date dt_access_date DATETIME NULL;', DB_TABLE_PREFIX));
