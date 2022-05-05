@@ -1,39 +1,39 @@
 <?php
 class spam_prot extends DAO {
 
-    private static $instance ;
+    private static $instance;
 
     public static function newInstance() {
         if (!self::$instance instanceof self) {
             self::$instance = new self;
         }
-        return self::$instance ;
+        return self::$instance;
     }
 
     function __construct() {
-        $this->_table_user              = '`'.DB_TABLE_PREFIX.'t_user`';
-        $this->_table_admin             = '`'.DB_TABLE_PREFIX.'t_admin`';
-        $this->_table_item              = '`'.DB_TABLE_PREFIX.'t_item`';
-        $this->_table_comment           = '`'.DB_TABLE_PREFIX.'t_item_comment`';
-        $this->_table_desc              = '`'.DB_TABLE_PREFIX.'t_item_description`';
-        $this->_table_bans              = '`'.DB_TABLE_PREFIX.'t_ban_rule`';
-        $this->_table_pref              = '`'.DB_TABLE_PREFIX.'t_preference`';
-        $this->_table_sp_ban_log        = '`'.DB_TABLE_PREFIX.'t_spam_protection_ban_log`';
-        $this->_table_sp_items          = '`'.DB_TABLE_PREFIX.'t_spam_protection_items`';
-        $this->_table_sp_users          = '`'.DB_TABLE_PREFIX.'t_spam_protection_users`';
-        $this->_table_sp_comments       = '`'.DB_TABLE_PREFIX.'t_spam_protection_comments`';
-        $this->_table_sp_contacts       = '`'.DB_TABLE_PREFIX.'t_spam_protection_contacts`';
-        $this->_table_sp_logins         = '`'.DB_TABLE_PREFIX.'t_spam_protection_logins`';        
-        $this->_table_sp_globallog      = '`'.DB_TABLE_PREFIX.'t_spam_protection_global_log`';
+        $this->_table_user         = '`'.DB_TABLE_PREFIX.'t_user`';
+        $this->_table_admin        = '`'.DB_TABLE_PREFIX.'t_admin`';
+        $this->_table_item         = '`'.DB_TABLE_PREFIX.'t_item`';
+        $this->_table_comment      = '`'.DB_TABLE_PREFIX.'t_item_comment`';
+        $this->_table_desc         = '`'.DB_TABLE_PREFIX.'t_item_description`';
+        $this->_table_bans         = '`'.DB_TABLE_PREFIX.'t_ban_rule`';
+        $this->_table_pref         = '`'.DB_TABLE_PREFIX.'t_preference`';
+        $this->_table_sp_ban_log   = '`'.DB_TABLE_PREFIX.'t_spam_protection_ban_log`';
+        $this->_table_sp_items     = '`'.DB_TABLE_PREFIX.'t_spam_protection_items`';
+        $this->_table_sp_users     = '`'.DB_TABLE_PREFIX.'t_spam_protection_users`';
+        $this->_table_sp_comments  = '`'.DB_TABLE_PREFIX.'t_spam_protection_comments`';
+        $this->_table_sp_contacts  = '`'.DB_TABLE_PREFIX.'t_spam_protection_contacts`';
+        $this->_table_sp_logins    = '`'.DB_TABLE_PREFIX.'t_spam_protection_logins`';        
+        $this->_table_sp_globallog = '`'.DB_TABLE_PREFIX.'t_spam_protection_global_log`';
 
-        $this->configFiles              = array(
-                                            'active'            => $this->_get("sp_files_activate"),
-                                            'interval'          => $this->_get("sp_files_interval"),
-                                            'scanDir'           => $this->_get("sp_files_directory"),
-                                            'excludeDir'        => unserialize($this->_get("sp_files_exclude")),
-                                            'excludeFile'       => explode(",", $this->_get("sp_files_extensions")),
-                                            'alertAddress'      => $this->_get("sp_files_alerts")
-                                        );
+        $this->configFiles         = array(
+                                        'active'       => $this->_get("sp_files_activate"),
+                                        'interval'     => $this->_get("sp_files_interval"),
+                                        'scanDir'      => $this->_get("sp_files_directory"),
+                                        'excludeDir'   => unserialize($this->_get("sp_files_exclude")),
+                                        'excludeFile'  => explode(",", $this->_get("sp_files_extensions")),
+                                        'alertAddress' => $this->_get("sp_files_alerts")
+                                    );
 
         parent::__construct();
     }
@@ -249,12 +249,12 @@ class spam_prot extends DAO {
 
         if ($topicon == '1') {
             osc_add_hook("render_admintoolbar", array($this, "_admin_topicon"));
-        }         
+        }
 
         if ($count > 0 || $comments > 0 || $contacts > 0 || $bans > 0) {
             if ($sidebar == '1') {
                 osc_add_admin_submenu_divider('spamprotection', __('Actions', 'spamprotection'), 'spamprotection_separator', 'administrator');
-            }    
+            }
         }
         if ($count > 0) {
             if ($sidebar == '1') {
