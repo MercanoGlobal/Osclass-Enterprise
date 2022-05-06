@@ -470,8 +470,7 @@
                     }
                 }
             }
-            unset($dao_pluginCategory);
-            unset($dao_category);
+            unset($dao_pluginCategory, $dao_category);
         }
 
         // Add a hook

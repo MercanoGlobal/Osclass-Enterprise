@@ -568,6 +568,7 @@
 
             if($itemType == 'active') {
                 $this->dao->where('b_active', 1);
+                $this->dao->where('b_spam', 0);
                 $this->dao->where('dt_expiration > \'' . date('Y-m-d H:i:s') . '\'');
 
             } elseif($itemType == 'nospam') {
@@ -624,6 +625,7 @@
 
             if($itemType == 'active') {
                 $this->dao->where('b_active', 1);
+                $this->dao->where('b_spam', 0);
                 $this->dao->where("dt_expiration > '" . date('Y-m-d H:i:s') . "'");
 
             } elseif($itemType == 'nospam') {

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-05-05 13:17+0300\n"
+"PO-Revision-Date: 2022-05-06 16:10+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -5848,11 +5848,11 @@ msgstr ""
 msgid "Non-Existent Category"
 msgstr ""
 
-#: oc-includes/osclass/model/Item.php:1111
+#: oc-includes/osclass/model/Item.php:1113
 msgid "%s in"
 msgstr ""
 
-#: oc-includes/osclass/model/Item.php:1120
+#: oc-includes/osclass/model/Item.php:1122
 msgid "There's no description available in your language"
 msgstr ""
 
