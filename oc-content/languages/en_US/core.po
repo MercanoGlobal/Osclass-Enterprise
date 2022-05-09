@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-05-06 16:10+0300\n"
+"PO-Revision-Date: 2022-05-09 15:50+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -24,24 +24,24 @@ msgid "We are sorry for any inconvenience. %s is undergoing maintenance."
 msgstr ""
 
 #: oc-admin/admins.php:329 oc-admin/emails.php:128 oc-admin/languages.php:363 oc-admin/themes/modern/appearance/widgets.php:86 oc-admin/themes/modern/categories/index.php:336 oc-admin/themes/modern/fields/index.php:136 oc-admin/themes/modern/fields/index.php:279 oc-admin/themes/modern/settings/currencies.php:111
-#: oc-admin/themes/modern/settings/locations.php:130 oc-includes/osclass/classes/datatables/BanRulesDataTable.php:71 oc-includes/osclass/classes/datatables/CommentsDataTable.php:102 oc-includes/osclass/classes/datatables/ItemsDataTable.php:258 oc-includes/osclass/classes/datatables/ItemsDataTable.php:360
+#: oc-admin/themes/modern/settings/locations.php:130 oc-includes/osclass/classes/datatables/BanRulesDataTable.php:71 oc-includes/osclass/classes/datatables/CommentsDataTable.php:102 oc-includes/osclass/classes/datatables/ItemsDataTable.php:267 oc-includes/osclass/classes/datatables/ItemsDataTable.php:369
 #: oc-includes/osclass/classes/datatables/PagesDataTable.php:83 oc-includes/osclass/classes/datatables/UsersDataTable.php:93
 msgid "Edit"
 msgstr ""
 
-#: oc-admin/admins.php:330 oc-admin/admins.php:370 oc-admin/comments.php:257 oc-admin/items.php:839 oc-admin/languages.php:366 oc-admin/languages.php:422 oc-admin/media.php:135 oc-admin/pages.php:277 oc-admin/plugins.php:338 oc-admin/themes/modern/admins/index.php:175 oc-admin/themes/modern/admins/index.php:186
+#: oc-admin/admins.php:330 oc-admin/admins.php:370 oc-admin/comments.php:257 oc-admin/items.php:868 oc-admin/languages.php:366 oc-admin/languages.php:422 oc-admin/media.php:135 oc-admin/pages.php:277 oc-admin/plugins.php:338 oc-admin/themes/modern/admins/index.php:175 oc-admin/themes/modern/admins/index.php:186
 #: oc-admin/themes/modern/appearance/index.php:103 oc-admin/themes/modern/appearance/widgets.php:87 oc-admin/themes/modern/appearance/widgets.php:129 oc-admin/themes/modern/categories/index.php:340 oc-admin/themes/modern/categories/index.php:386 oc-admin/themes/modern/comments/index.php:181 oc-admin/themes/modern/comments/index.php:192
 #: oc-admin/themes/modern/fields/index.php:138 oc-admin/themes/modern/fields/index.php:281 oc-admin/themes/modern/fields/index.php:301 oc-admin/themes/modern/items/index.php:402 oc-admin/themes/modern/items/index.php:413 oc-admin/themes/modern/items/reported.php:149 oc-admin/themes/modern/items/reported.php:204
 #: oc-admin/themes/modern/items/reported.php:215 oc-admin/themes/modern/languages/index.php:175 oc-admin/themes/modern/languages/index.php:187 oc-admin/themes/modern/media/index.php:169 oc-admin/themes/modern/media/index.php:180 oc-admin/themes/modern/pages/index.php:203 oc-admin/themes/modern/pages/index.php:214
 #: oc-admin/themes/modern/settings/currencies.php:110 oc-admin/themes/modern/settings/currencies.php:132 oc-admin/themes/modern/settings/currencies.php:175 oc-admin/themes/modern/settings/currencies.php:186 oc-admin/themes/modern/settings/locations.php:412 oc-admin/themes/modern/users/alerts.php:150 oc-admin/themes/modern/users/alerts.php:205
 #: oc-admin/themes/modern/users/alerts.php:216 oc-admin/themes/modern/users/ban.php:202 oc-admin/themes/modern/users/ban.php:213 oc-admin/themes/modern/users/frm.php:379 oc-admin/themes/modern/users/frm.php:419 oc-admin/themes/modern/users/index.php:331 oc-admin/themes/modern/users/index.php:342 oc-admin/users.php:534 oc-admin/users.php:535
-#: oc-admin/users.php:667 oc-includes/osclass/classes/datatables/AlertsDataTable.php:71 oc-includes/osclass/classes/datatables/BanRulesDataTable.php:72 oc-includes/osclass/classes/datatables/CommentsDataTable.php:100 oc-includes/osclass/classes/datatables/ItemsDataTable.php:259 oc-includes/osclass/classes/datatables/ItemsDataTable.php:361
+#: oc-admin/users.php:667 oc-includes/osclass/classes/datatables/AlertsDataTable.php:71 oc-includes/osclass/classes/datatables/BanRulesDataTable.php:72 oc-includes/osclass/classes/datatables/CommentsDataTable.php:100 oc-includes/osclass/classes/datatables/ItemsDataTable.php:268 oc-includes/osclass/classes/datatables/ItemsDataTable.php:370
 #: oc-includes/osclass/classes/datatables/MediaDataTable.php:94 oc-includes/osclass/classes/datatables/PagesDataTable.php:85 oc-includes/osclass/classes/datatables/UsersDataTable.php:94 oc-includes/osclass/frm/Item.form.class.php:1178 oc-includes/osclass/frm/Item.form.class.php:1353 oc-includes/osclass/frm/Item.form.class.php:1360
 #: oc-includes/osclass/frm/Item.form.class.php:1505
 msgid "Delete"
 msgstr ""
 
-#: oc-admin/admins.php:369 oc-admin/comments.php:256 oc-admin/items.php:835 oc-admin/languages.php:417 oc-admin/media.php:134 oc-admin/pages.php:276 oc-admin/themes/modern/admins/index.php:180 oc-admin/themes/modern/comments/index.php:186 oc-admin/themes/modern/items/index.php:407 oc-admin/themes/modern/items/reported.php:148
+#: oc-admin/admins.php:369 oc-admin/comments.php:256 oc-admin/items.php:867 oc-admin/languages.php:417 oc-admin/media.php:134 oc-admin/pages.php:276 oc-admin/themes/modern/admins/index.php:180 oc-admin/themes/modern/comments/index.php:186 oc-admin/themes/modern/items/index.php:407 oc-admin/themes/modern/items/reported.php:148
 #: oc-admin/themes/modern/items/reported.php:199 oc-admin/themes/modern/languages/index.php:181 oc-admin/themes/modern/media/index.php:174 oc-admin/themes/modern/pages/index.php:208 oc-admin/themes/modern/settings/currencies.php:131 oc-admin/themes/modern/settings/currencies.php:180 oc-admin/themes/modern/users/alerts.php:210
 #: oc-admin/themes/modern/users/ban.php:207 oc-admin/themes/modern/users/index.php:336 oc-admin/users.php:533 oc-admin/users.php:662
 msgid "Bulk actions"
@@ -187,22 +187,22 @@ msgstr ""
 msgid "Log in as %s"
 msgstr ""
 
-#: oc-admin/comments.php:258 oc-admin/items.php:452 oc-admin/items.php:840 oc-admin/themes/modern/appearance/index.php:101 oc-admin/themes/modern/comments/frm.php:90 oc-admin/themes/modern/users/alerts.php:148 oc-admin/users.php:98 oc-admin/users.php:663 oc-includes/osclass/classes/datatables/AlertsDataTable.php:77
+#: oc-admin/comments.php:258 oc-admin/items.php:452 oc-admin/items.php:869 oc-admin/themes/modern/appearance/index.php:101 oc-admin/themes/modern/comments/frm.php:90 oc-admin/themes/modern/users/alerts.php:148 oc-admin/users.php:98 oc-admin/users.php:663 oc-includes/osclass/classes/datatables/AlertsDataTable.php:77
 #: oc-includes/osclass/classes/datatables/CommentsDataTable.php:106 oc-includes/osclass/classes/datatables/ItemsDataTable.php:239 oc-includes/osclass/classes/datatables/UsersDataTable.php:101
 msgid "Activate"
 msgstr ""
 
-#: oc-admin/comments.php:259 oc-admin/items.php:450 oc-admin/items.php:841 oc-admin/themes/modern/comments/frm.php:90 oc-admin/themes/modern/users/alerts.php:149 oc-admin/users.php:96 oc-admin/users.php:664 oc-includes/osclass/classes/datatables/AlertsDataTable.php:75 oc-includes/osclass/classes/datatables/CommentsDataTable.php:104
+#: oc-admin/comments.php:259 oc-admin/items.php:450 oc-admin/items.php:870 oc-admin/themes/modern/comments/frm.php:90 oc-admin/themes/modern/users/alerts.php:149 oc-admin/users.php:96 oc-admin/users.php:664 oc-includes/osclass/classes/datatables/AlertsDataTable.php:75 oc-includes/osclass/classes/datatables/CommentsDataTable.php:104
 #: oc-includes/osclass/classes/datatables/ItemsDataTable.php:237 oc-includes/osclass/classes/datatables/UsersDataTable.php:99
 msgid "Deactivate"
 msgstr ""
 
-#: oc-admin/comments.php:260 oc-admin/items.php:455 oc-admin/items.php:842 oc-admin/themes/modern/comments/frm.php:98 oc-admin/themes/modern/items/index.php:258 oc-admin/themes/modern/users/index.php:222 oc-admin/users.php:101 oc-admin/users.php:666 oc-includes/osclass/classes/datatables/CommentsDataTable.php:96
+#: oc-admin/comments.php:260 oc-admin/items.php:455 oc-admin/items.php:871 oc-admin/themes/modern/comments/frm.php:98 oc-admin/themes/modern/items/index.php:258 oc-admin/themes/modern/users/index.php:222 oc-admin/users.php:101 oc-admin/users.php:666 oc-includes/osclass/classes/datatables/CommentsDataTable.php:96
 #: oc-includes/osclass/classes/datatables/ItemsDataTable.php:242 oc-includes/osclass/classes/datatables/UsersDataTable.php:104
 msgid "Block"
 msgstr ""
 
-#: oc-admin/comments.php:261 oc-admin/items.php:457 oc-admin/items.php:843 oc-admin/themes/modern/comments/frm.php:98 oc-admin/users.php:103 oc-admin/users.php:665 oc-includes/osclass/classes/datatables/CommentsDataTable.php:98 oc-includes/osclass/classes/datatables/ItemsDataTable.php:244
+#: oc-admin/comments.php:261 oc-admin/items.php:457 oc-admin/items.php:872 oc-admin/themes/modern/comments/frm.php:98 oc-admin/users.php:103 oc-admin/users.php:665 oc-includes/osclass/classes/datatables/CommentsDataTable.php:98 oc-includes/osclass/classes/datatables/ItemsDataTable.php:244
 #: oc-includes/osclass/classes/datatables/UsersDataTable.php:106
 msgid "Unblock"
 msgstr ""
@@ -278,23 +278,27 @@ msgstr ""
 msgid "Get new password"
 msgstr ""
 
-#: oc-admin/items.php:460 oc-admin/items.php:845 oc-includes/osclass/classes/datatables/ItemsDataTable.php:247
+#: oc-admin/items.php:460 oc-admin/items.php:874 oc-includes/osclass/classes/datatables/ItemsDataTable.php:247
 msgid "Unmark as premium"
 msgstr ""
 
-#: oc-admin/items.php:462 oc-admin/items.php:844 oc-includes/osclass/classes/datatables/ItemsDataTable.php:249
+#: oc-admin/items.php:462 oc-admin/items.php:873 oc-includes/osclass/classes/datatables/ItemsDataTable.php:249
 msgid "Mark as premium"
 msgstr ""
 
-#: oc-admin/items.php:465 oc-admin/items.php:847 oc-includes/osclass/classes/datatables/ItemsDataTable.php:252
+#: oc-admin/items.php:465 oc-admin/items.php:876 oc-includes/osclass/classes/datatables/ItemsDataTable.php:252
 msgid "Unmark as spam"
 msgstr ""
 
-#: oc-admin/items.php:467 oc-admin/items.php:846 oc-includes/osclass/classes/datatables/ItemsDataTable.php:254
+#: oc-admin/items.php:467 oc-admin/items.php:875 oc-includes/osclass/classes/datatables/ItemsDataTable.php:254
 msgid "Mark as spam"
 msgstr ""
 
-#: oc-admin/items.php:836 oc-admin/items.php:837 oc-admin/items.php:838 oc-admin/items.php:839 oc-admin/items.php:840 oc-admin/items.php:841 oc-admin/items.php:842 oc-admin/items.php:843 oc-admin/items.php:844
+#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:261
+msgid "Renew"
+msgstr ""
+
+#: oc-admin/items.php:868 oc-admin/items.php:869 oc-admin/items.php:870 oc-admin/items.php:871 oc-admin/items.php:872 oc-admin/items.php:873 oc-admin/items.php:874 oc-admin/items.php:875 oc-admin/items.php:876
 msgid "Are you sure you want to %s the selected listings?"
 msgstr ""
 
@@ -807,11 +811,11 @@ msgid "Status"
 msgstr ""
 
 #: oc-admin/themes/modern/comments/frm.php:90 oc-admin/themes/modern/items/index.php:246 oc-admin/themes/modern/main/index.php:360 oc-admin/themes/modern/main/index.php:421 oc-admin/themes/modern/main/index.php:484 oc-admin/themes/modern/users/index.php:179 oc-includes/osclass/classes/datatables/CommentsDataTable.php:215
-#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:592 oc-includes/osclass/classes/datatables/UsersDataTable.php:297
+#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:601 oc-includes/osclass/classes/datatables/UsersDataTable.php:297
 msgid "Active"
 msgstr ""
 
-#: oc-admin/themes/modern/comments/frm.php:90 oc-includes/osclass/classes/datatables/CommentsDataTable.php:209 oc-includes/osclass/classes/datatables/ItemsDataTable.php:572 oc-includes/osclass/classes/datatables/UsersDataTable.php:291
+#: oc-admin/themes/modern/comments/frm.php:90 oc-includes/osclass/classes/datatables/CommentsDataTable.php:209 oc-includes/osclass/classes/datatables/ItemsDataTable.php:581 oc-includes/osclass/classes/datatables/UsersDataTable.php:291
 msgid "Inactive"
 msgstr ""
 
@@ -819,7 +823,7 @@ msgstr ""
 msgid "Unblocked"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:369 oc-admin/themes/modern/main/index.php:427 oc-admin/themes/modern/main/index.php:493 oc-admin/themes/modern/comments/frm.php:98 oc-includes/osclass/classes/datatables/CommentsDataTable.php:202 oc-includes/osclass/classes/datatables/ItemsDataTable.php:565
+#: oc-admin/themes/modern/main/index.php:369 oc-admin/themes/modern/main/index.php:427 oc-admin/themes/modern/main/index.php:493 oc-admin/themes/modern/comments/frm.php:98 oc-includes/osclass/classes/datatables/CommentsDataTable.php:202 oc-includes/osclass/classes/datatables/ItemsDataTable.php:574
 #: oc-includes/osclass/classes/datatables/UsersDataTable.php:284
 msgid "Blocked"
 msgstr ""
@@ -1211,7 +1215,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: oc-admin/themes/modern/items/index.php:234 oc-admin/themes/modern/market/section.php:58 oc-includes/osclass/classes/datatables/ItemsDataTable.php:579
+#: oc-admin/themes/modern/items/index.php:234 oc-admin/themes/modern/market/section.php:58 oc-includes/osclass/classes/datatables/ItemsDataTable.php:588
 msgid "Premium"
 msgstr ""
 
@@ -1227,7 +1231,7 @@ msgstr ""
 msgid "OFF"
 msgstr ""
 
-#: oc-admin/themes/modern/items/index.php:270 oc-admin/themes/modern/stats/reports.php:72 oc-admin/themes/modern/main/index.php:366 oc-admin/themes/modern/main/index.php:490 oc-includes/osclass/classes/datatables/ItemsDataTable.php:203 oc-includes/osclass/classes/datatables/ItemsDataTable.php:558
+#: oc-admin/themes/modern/items/index.php:270 oc-admin/themes/modern/stats/reports.php:72 oc-admin/themes/modern/main/index.php:366 oc-admin/themes/modern/main/index.php:490 oc-includes/osclass/classes/datatables/ItemsDataTable.php:203 oc-includes/osclass/classes/datatables/ItemsDataTable.php:567
 msgid "Spam"
 msgstr ""
 
@@ -1288,7 +1292,7 @@ msgstr ""
 msgid "Are you sure you want to clear all the reportings of the selected items?"
 msgstr ""
 
-#: oc-admin/themes/modern/items/reported.php:150 oc-includes/osclass/classes/datatables/ItemsDataTable.php:343
+#: oc-admin/themes/modern/items/reported.php:150 oc-includes/osclass/classes/datatables/ItemsDataTable.php:352
 msgid "Clear All"
 msgstr ""
 
@@ -1296,7 +1300,7 @@ msgstr ""
 msgid "Are you sure you want to clear the spam reportings of the selected items?"
 msgstr ""
 
-#: oc-admin/themes/modern/items/reported.php:151 oc-includes/osclass/classes/datatables/ItemsDataTable.php:345
+#: oc-admin/themes/modern/items/reported.php:151 oc-includes/osclass/classes/datatables/ItemsDataTable.php:354
 msgid "Clear Spam"
 msgstr ""
 
@@ -1312,7 +1316,7 @@ msgstr ""
 msgid "Are you sure you want to clear the duplicated reportings of the selected items?"
 msgstr ""
 
-#: oc-admin/themes/modern/items/reported.php:153 oc-includes/osclass/classes/datatables/ItemsDataTable.php:351
+#: oc-admin/themes/modern/items/reported.php:153 oc-includes/osclass/classes/datatables/ItemsDataTable.php:360
 msgid "Clear Duplicated"
 msgstr ""
 
@@ -1320,7 +1324,7 @@ msgstr ""
 msgid "Are you sure you want to clear the expired reportings of the selected items?"
 msgstr ""
 
-#: oc-admin/themes/modern/items/reported.php:154 oc-includes/osclass/classes/datatables/ItemsDataTable.php:357
+#: oc-admin/themes/modern/items/reported.php:154 oc-includes/osclass/classes/datatables/ItemsDataTable.php:366
 msgid "Clear Expired"
 msgstr ""
 
@@ -1328,7 +1332,7 @@ msgstr ""
 msgid "Are you sure you want to clear the offensive reportings of the selected items?"
 msgstr ""
 
-#: oc-admin/themes/modern/items/reported.php:155 oc-includes/osclass/classes/datatables/ItemsDataTable.php:354
+#: oc-admin/themes/modern/items/reported.php:155 oc-includes/osclass/classes/datatables/ItemsDataTable.php:363
 msgid "Clear Offensive"
 msgstr ""
 
@@ -1401,7 +1405,7 @@ msgid "Renewal"
 msgstr ""
 
 #: oc-admin/themes/modern/items/settings.php:142
-msgid "User can renew his listings once expired. This feature is available only to registered users."
+msgid "User can renew his listings once expired. This feature is available only to registered users and admins."
 msgstr ""
 
 #: oc-admin/themes/modern/items/settings.php:148
@@ -3395,7 +3399,7 @@ msgstr ""
 msgid "Offensive"
 msgstr ""
 
-#: oc-admin/themes/modern/stats/reports.php:76 oc-includes/osclass/classes/datatables/ItemsDataTable.php:206 oc-includes/osclass/classes/datatables/ItemsDataTable.php:586
+#: oc-admin/themes/modern/stats/reports.php:76 oc-includes/osclass/classes/datatables/ItemsDataTable.php:206 oc-includes/osclass/classes/datatables/ItemsDataTable.php:595
 msgid "Expired"
 msgstr ""
 
@@ -4282,7 +4286,7 @@ msgstr ""
 msgid "Alert"
 msgstr ""
 
-#: oc-includes/osclass/classes/datatables/BanRulesDataTable.php:78 oc-includes/osclass/classes/datatables/CommentsDataTable.php:110 oc-includes/osclass/classes/datatables/ItemsDataTable.php:271 oc-includes/osclass/classes/datatables/UsersDataTable.php:114 oc-includes/osclass/helpers/hAdminMenu.php:168
+#: oc-includes/osclass/classes/datatables/BanRulesDataTable.php:78 oc-includes/osclass/classes/datatables/CommentsDataTable.php:110 oc-includes/osclass/classes/datatables/ItemsDataTable.php:280 oc-includes/osclass/classes/datatables/UsersDataTable.php:114 oc-includes/osclass/helpers/hAdminMenu.php:168
 msgid "Show more"
 msgstr ""
 
@@ -4294,19 +4298,19 @@ msgstr ""
 msgid "Misclassified"
 msgstr ""
 
-#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:263
+#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:272
 msgid "View comments"
 msgstr ""
 
-#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:266 oc-includes/osclass/classes/datatables/ItemsDataTable.php:297
+#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:275 oc-includes/osclass/classes/datatables/ItemsDataTable.php:297
 msgid "View media"
 msgstr ""
 
-#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:308 oc-includes/osclass/classes/datatables/ItemsDataTable.php:387
+#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:317 oc-includes/osclass/classes/datatables/ItemsDataTable.php:396
 msgid "Never expires"
 msgstr ""
 
-#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:348
+#: oc-includes/osclass/classes/datatables/ItemsDataTable.php:357
 msgid "Clear Misclassified"
 msgstr ""
 

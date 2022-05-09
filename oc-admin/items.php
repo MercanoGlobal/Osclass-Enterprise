@@ -778,6 +778,35 @@
                                         //calling the view...
                                         $this->doView('items/reported.php');
                 break;
+                case 'renew':           //status renew
+                                        osc_csrf_check();
+                                        $id = Params::getParam('id');
+                                        $value = Params::getParam('value');
+
+                                        if (!$id) {
+                                            return false;
+                                        }
+
+                                        $id = (int) $id;
+
+                                        if (!is_numeric($id)) {
+                                            return false;
+                                        }
+
+                                        if (!in_array($value, array(1))) {
+                                            return false;
+                                        }
+
+                                        $mItems = new ItemActions(true);
+                                        $do = $mItems->renew($id);
+                                        if($do == 1) {
+                                            osc_add_flash_ok_message(_m('The listing has been renewed'), 'admin');
+                                        } else {
+                                            osc_add_flash_error_message(_m('The listing can\'t be renewed' . ' (' . $do . ')'), 'admin');
+                                        }
+
+                                        $this->redirectTo(Params::getServerParam('HTTP_REFERER', false, false));
+                break;
                 default:                // default
 
                                         require_once osc_lib_path()."osclass/classes/datatables/ItemsDataTable.php";

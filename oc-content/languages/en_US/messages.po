@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-04-17 16:17+0300\n"
+"PO-Revision-Date: 2022-05-09 15:51+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -1471,11 +1471,12 @@ msgstr ""
 msgid "Only authorized users are allowed to renew listings."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:324
+#: oc-includes/osclass/controller/item.php:324 oc-admin/items.php:803
 msgid "The listing has been renewed"
 msgstr ""
 
 #: oc-includes/osclass/controller/item.php:326 oc-includes/osclass/controller/item.php:329
+#: oc-admin/items.php:805
 msgid "The listing can't be renewed"
 msgstr ""
 

@@ -253,6 +253,15 @@
                     } else {
                         $options_more[] = '<a href="' . osc_admin_base_url(true) . '?page=items&amp;action=status_spam&amp;id=' . $aRow['pk_i_id'] . '&amp;' . $csrf_token_url . '&amp;value=1">' . __('Mark as spam') .'</a>';
                     }
+                    if(osc_renewal_items_enabled()) {
+                        if($aRow['b_premium'] == 1 || osc_isExpired($aRow['dt_expiration'])) {
+                            $renewed_count = (int)$aRow['i_renewed'];
+
+                            if((osc_renewal_limit() > 0 && $renewed_count < osc_renewal_limit()) || osc_renewal_limit() <= 0) {
+                                $options_more[] = '<a href="' . osc_admin_base_url(true) . '?page=items&amp;action=renew&amp;id=' . $aRow['pk_i_id'] . '&amp;' . $csrf_token_url . '&amp;value=1">' . __('Renew') .'</a>';
+                            }
+                        }
+                    }
 
                     // general options
                     $options[] = '<a href="' . osc_admin_base_url(true) . '?page=items&amp;action=item_edit&amp;id=' . $aRow['pk_i_id'] . '">' . __('Edit') . '</a>';
@@ -502,10 +511,10 @@
             }
 
             // column sort
-            $sort       = $_get['sort'];
+            $sort     = $_get['sort'];
             $arraySortColumns = array('date'  => 'dt_pub_date', 'expiration'  => 'dt_expiration');
             if(!array_key_exists($sort, $arraySortColumns)) {
-                $sort       = 'dt_pub_date';
+                $sort = 'dt_pub_date';
             } else {
                 $sort = $arraySortColumns[$sort];
             }

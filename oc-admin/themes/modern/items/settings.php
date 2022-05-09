@@ -139,7 +139,7 @@
                                 <div class="form-label-checkbox">
                                     <label>
                                         <input type="checkbox" <?php echo ( osc_renewal_items_enabled() ? 'checked="checked"' : '' ); ?> name="enabled_renewal_items" value="1" />
-                                        <?php _e('User can renew his listings once expired. This feature is available only to registered users.'); ?>
+                                        <?php _e('User can renew his listings once expired. This feature is available only to registered users and admins.'); ?>
                                     </label>
                                 </div>
                                 <div class="separate-top-medium">
