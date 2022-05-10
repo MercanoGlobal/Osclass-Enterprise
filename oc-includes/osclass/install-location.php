@@ -101,10 +101,10 @@ function basic_info() {
     $body .= '<li>'.sprintf(__('username: %s'), $admin).'</li>';
     $body .= '<li>'.sprintf(__('password: %s'), $password).'</li>';
     $body .= '</ul>';
-    $body .= sprintf(__('Remember that for any doubts you might have you can consult our <a href="%1$s">documentation</a>, <a href="%2$s">forum</a> or <a href="%3$s">blog</a>.'), 'https://doc.osc4u.com/Main_Page.html', 'https://www.valueweb.gr/forums/', 'https://osclass.calinbehtuk.ro/blog');
-    $body .= sprintf(' ' . __('Osclass doesn’t run any developments but we can put you in touch with third party developers through a Premium Support. And hey, if you would like to contribute to Osclass - learn how <a href="%1$s">here</a>!'), 'https://www.valueweb.gr/forums/') . '<br/><br/>';
+    $body .= sprintf(__('Remember that for any doubts you might have you can consult our <a href="%1$s">documentation</a>, <a href="%2$s">forum</a> or <a href="%3$s">blog</a>.'), 'https://doc.osc4u.com/Main_Page.html', 'https://www.valueweb.gr/forums/osclass-enterprise-release/', 'https://osclass.calinbehtuk.ro/blog');
+    $body .= sprintf(' ' . __('Osclass doesn’t run any developments but we can put you in touch with third party developers through a Premium Support. And hey, if you would like to contribute to Osclass - learn how <a href="%1$s">here</a>!'), 'https://www.valueweb.gr/forums/osclass-enterprise-release/') . '<br/><br/>';
     $body .= __('Cheers,')."<br/>";
-    $body .= __('The <a href="https://www.valueweb.gr/forums/">Osclass</a> team');
+    $body .= __('The <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/">Osclass</a> team');
 
     $sitename = strtolower( Params::getServerParam('SERVER_NAME'));
     if ( substr( $sitename, 0, 4 ) == 'www.' ) {

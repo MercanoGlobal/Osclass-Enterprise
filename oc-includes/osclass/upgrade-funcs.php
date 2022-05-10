@@ -43,7 +43,7 @@
                 $title    = __('Osclass &raquo; Has some errors');
                 $message  = __("We've encountered some problems while updating the database structure. The following queries failed:");
                 $message .= "<br/><br/>" . implode("<br>", $error_queries[2]);
-                $message .= "<br/><br/>" . sprintf(__("These errors could be false-positive errors. If you're sure that is the case, you can <a href=\"%s\">continue with the upgrade</a>, or <a href=\"https://www.valueweb.gr/forums/\">ask in our forums</a>."), $skip_db_link);
+                $message .= "<br/><br/>" . sprintf(__("These errors could be false-positive errors. If you're sure that is the case, you can <a href=\"%s\">continue with the upgrade</a>, or <a href=\"https://www.valueweb.gr/forums/osclass-enterprise-release/\">ask in our forums</a>."), $skip_db_link);
                 osc_die($title, $message);
             }
         }
@@ -574,12 +574,12 @@ CREATE TABLE %st_item_description_tmp (
 
     if(!defined('IS_AJAX') || !IS_AJAX) {
         if(empty($aMessages)) {
-            osc_add_flash_ok_message(_m('Osclass has been updated successfully. <a href="https://www.valueweb.gr/forums/" target="_blank">Need more help?</a>'), 'admin');
+            osc_add_flash_ok_message(_m('Osclass has been updated successfully. <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Need more help?</a>'), 'admin');
             echo '<script type="text/javascript"> window.location = "'.osc_admin_base_url(true).'?page=tools&action=version"; </script>';
         } else {
             echo '<div class="well ui-rounded-corners separate-top-medium">';
             echo '<p>'.__('Osclass &raquo; Updated correctly').'</p>';
-            echo '<p>'.__('Osclass has been updated successfully. <a href="https://www.valueweb.gr/forums/" target="_blank">Need more help?</a>').'</p>';
+            echo '<p>'.__('Osclass has been updated successfully. <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Need more help?</a>').'</p>';
             foreach($aMessages as $msg) {
                 echo "<p>".$msg."</p>";
             }

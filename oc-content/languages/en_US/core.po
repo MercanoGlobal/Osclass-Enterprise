@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-05-09 15:50+0300\n"
+"PO-Revision-Date: 2022-05-10 14:29+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -5369,7 +5369,7 @@ msgid "Cheers,"
 msgstr ""
 
 #: oc-includes/osclass/install-location.php:107
-msgid "The <a href=\"https://www.valueweb.gr/forums/\">Osclass</a> team"
+msgid "The <a href=\"https://www.valueweb.gr/forums/osclass-enterprise-release/\">Osclass</a> team"
 msgstr ""
 
 #: oc-includes/osclass/install.php:89
