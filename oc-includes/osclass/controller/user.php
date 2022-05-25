@@ -274,7 +274,7 @@
                             Cookie::newInstance()->pop('oc_userSecret');
                             Cookie::newInstance()->set();
 
-                            osc_add_flash_ok_message(_m("Your account has been deleted"));
+                            osc_add_flash_ok_message(_m("Your account has been deleted. We're sorry to see you go..."));
                             $this->redirectTo( osc_base_url() );
                         } else {
                             osc_add_flash_error_message(_m("Oops! You can't do that"));

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-05-09 15:51+0300\n"
+"PO-Revision-Date: 2022-05-25 22:13+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -424,8 +424,7 @@ msgid "The watermark image has to be a .PNG file"
 msgstr ""
 
 #: oc-admin/controller/settings/media.php:138
-msgid ""
-"You cannot set a maximum file size higher than the one allowed in the PHP configuration: <b>%d KB</b>"
+msgid "You cannot set a maximum file size higher than the one allowed in the PHP configuration: <b>%d KB</b>"
 msgstr ""
 
 #: oc-admin/controller/settings/media.php:163
@@ -455,8 +454,8 @@ msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:585
 msgid ""
-"However, we can't check if Apache module <b>mod_rewrite</b> is loaded. If you experience some problems "
-"with the URLs, you should deactivate <em>Friendly URLs</em>"
+"However, we can't check if Apache module <b>mod_rewrite</b> is loaded. If you experience some problems with "
+"the URLs, you should deactivate <em>Friendly URLs</em>"
 msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:592 oc-admin/controller/settings/permalinks.php:602
@@ -471,8 +470,8 @@ msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:604
 msgid ""
-"Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file or "
-"experience some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
+"Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file or experience "
+"some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
 msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:616
@@ -481,8 +480,8 @@ msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:618
 msgid ""
-"Here's the content you have to add to the <b>.htaccess</b> file. If you can't modify the file or "
-"experience some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
+"Here's the content you have to add to the <b>.htaccess</b> file. If you can't modify the file or experience "
+"some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
 msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:651
@@ -714,8 +713,7 @@ msgstr ""
 msgid "Selected languages have been enabled for the website"
 msgstr ""
 
-#: oc-admin/languages.php:187 oc-admin/languages.php:212 oc-admin/languages.php:245
-#: oc-admin/languages.php:270
+#: oc-admin/languages.php:187 oc-admin/languages.php:212 oc-admin/languages.php:245 oc-admin/languages.php:270
 msgid "The language IDs aren't in the correct format"
 msgstr ""
 
@@ -749,8 +747,8 @@ msgstr ""
 
 #: oc-admin/languages.php:310
 msgid ""
-"Directory '%s' couldn't be removed because it's the default language. <a href=\"%s\">Set another "
-"language</a> as default first and try again"
+"Directory '%s' couldn't be removed because it's the default language. <a href=\"%s\">Set another language</a> "
+"as default first and try again"
 msgstr ""
 
 #: oc-admin/login.php:44
@@ -869,8 +867,8 @@ msgstr ""
 
 #: oc-admin/plugins.php:90
 msgid ""
-"The plugin generated %d characters of <strong>unexpected output</strong> during the installation. "
-"Output: \"%s\""
+"The plugin generated %d characters of <strong>unexpected output</strong> during the installation. Output: \"%s"
+"\""
 msgstr ""
 
 #: oc-admin/plugins.php:93
@@ -938,13 +936,12 @@ msgid "Invalid plugin file"
 msgstr ""
 
 #: oc-admin/themes/modern/market/header.php:5
-msgid ""
-"<code>downloads</code> folder has to be writable, i.e.: <code>chmod 0755 %soc-content/downloads/</code>"
+msgid "<code>downloads</code> folder has to be writable, i.e.: <code>chmod 0755 %soc-content/downloads/</code>"
 msgstr ""
 
-#: oc-admin/tools.php:36 oc-admin/tools.php:63 oc-admin/tools.php:73 oc-admin/tools.php:83
-#: oc-admin/tools.php:94 oc-admin/tools.php:130 oc-admin/tools.php:173 oc-admin/tools.php:200
-#: oc-admin/tools.php:229 oc-admin/upgrade.php:34 oc-admin/ajax/ajax.php:565
+#: oc-admin/tools.php:36 oc-admin/tools.php:63 oc-admin/tools.php:73 oc-admin/tools.php:83 oc-admin/tools.php:94
+#: oc-admin/tools.php:130 oc-admin/tools.php:173 oc-admin/tools.php:200 oc-admin/tools.php:229
+#: oc-admin/upgrade.php:34 oc-admin/ajax/ajax.php:565
 msgid "This action cannot be done because it is a demo site"
 msgstr ""
 
@@ -1604,9 +1601,7 @@ msgid "The password is incorrect"
 msgstr ""
 
 #: oc-includes/osclass/controller/login.php:134
-msgid ""
-"The user has not been validated yet. Would you like to re-send your <a href=\"%s\">activation email?</"
-"a>"
+msgid "The user has not been validated yet. Would you like to re-send your <a href=\"%s\">activation email?</a>"
 msgstr ""
 
 #: oc-includes/osclass/controller/login.php:136
@@ -1631,8 +1626,8 @@ msgstr ""
 
 #: oc-includes/osclass/controller/login.php:194
 msgid ""
-"We have just sent you an email to validate your account, you will have to wait a few minutes to resend "
-"it again"
+"We have just sent you an email to validate your account, you will have to wait a few minutes to resend it "
+"again"
 msgstr ""
 
 #: oc-includes/osclass/controller/login.php:207
@@ -1668,7 +1663,7 @@ msgid "The user has been created. An activation email has been sent (please chec
 msgstr ""
 
 #: oc-includes/osclass/controller/register.php:72
-msgid "Your account has been created successfully"
+msgid "Your account has been created successfully. Please complete your <a href=\"%s\">profile</a> to continue."
 msgstr ""
 
 #: oc-includes/osclass/controller/register.php:91
@@ -1680,7 +1675,7 @@ msgid "Your account has already been validated"
 msgstr ""
 
 #: oc-includes/osclass/controller/register.php:117
-msgid "Your account has been validated"
+msgid "Your account has been validated. Please complete your <a href=\"%s\">profile</a> to continue."
 msgstr ""
 
 #: oc-includes/osclass/controller/register.php:119
@@ -1744,7 +1739,7 @@ msgid "Password has been changed"
 msgstr ""
 
 #: oc-includes/osclass/controller/user.php:277
-msgid "Your account has been deleted"
+msgid "Your account has been deleted. We're sorry to see you go..."
 msgstr ""
 
 #: oc-includes/osclass/controller/user.php:280 oc-includes/osclass/controller/user.php:284

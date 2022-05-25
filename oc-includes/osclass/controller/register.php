@@ -69,7 +69,7 @@
                                             osc_add_flash_ok_message( _m('The user has been created. An activation email has been sent (please check the Spam folder also).'));
                                             $this->redirectTo(osc_base_url());
                                         } else if($success==2) {
-                                            osc_add_flash_ok_message( _m('Your account has been created successfully'));
+                                            osc_add_flash_ok_message( _m('Your account has been created successfully. Please complete your <a href="' . osc_user_profile_url() . '">profile</a> to continue.'));
                                             Params::setParam('action', 'login_post');
                                             Params::setParam('email', Params::getParam('s_email'));
                                             Params::setParam('password', Params::getParam('s_password', false, false));
@@ -114,7 +114,7 @@
                                             osc_run_hook('hook_email_user_registration', $user);
                                             osc_run_hook('validate_user', $user);
 
-                                            osc_add_flash_ok_message( _m('Your account has been validated'));
+                                            osc_add_flash_ok_message( _m('Your account has been validated. Please complete your <a href="' . osc_user_profile_url() . '">profile</a> to continue.'));
                                         } else {
                                             osc_add_flash_ok_message( _m('Account validation failed'));
                                         }
