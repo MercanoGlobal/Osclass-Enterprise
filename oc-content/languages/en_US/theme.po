@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2022-01-04 00:07+0200\n"
+"PO-Revision-Date: 2022-06-30 14:24+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1\n"
 
 #: 404.php:30
 msgid "Sorry but I can't find the page you're looking for"
@@ -242,7 +242,7 @@ msgstr ""
 msgid "Subscribe now"
 msgstr ""
 
-#: common/head.php:25 item.php:165 loop-single-premium.php:48 loop-single.php:52
+#: common/head.php:25 item.php:168 loop-single-premium.php:48 loop-single.php:52
 msgid "Delete"
 msgstr ""
 
@@ -266,7 +266,7 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
-#: contact.php:40 item-send-friend.php:44 item-sidebar.php:100 item.php:191 user-public-sidebar.php:33
+#: contact.php:40 item-send-friend.php:44 item-sidebar.php:100 item.php:194 user-public-sidebar.php:33
 msgid "Your name"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: contact.php:68 item-send-friend.php:87 item-sidebar.php:125 item.php:216 user-public-sidebar.php:69
+#: contact.php:68 item-send-friend.php:87 item-sidebar.php:125 item.php:219 user-public-sidebar.php:69
 msgid "Send"
 msgstr ""
 
@@ -442,7 +442,7 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
-#: item-post.php:65 item.php:204
+#: item-post.php:65 item.php:207
 msgid "Title"
 msgstr ""
 
@@ -506,7 +506,7 @@ msgstr ""
 msgid "Publish"
 msgstr ""
 
-#: item-send-friend.php:50 item.php:197
+#: item-send-friend.php:50 item.php:200
 msgid "Your e-mail"
 msgstr ""
 
@@ -660,15 +660,19 @@ msgstr ""
 msgid "by"
 msgstr ""
 
-#: item.php:165
+#: item.php:162
+msgid "Owner"
+msgstr ""
+
+#: item.php:168
 msgid "Delete your comment"
 msgstr ""
 
-#: item.php:177
+#: item.php:180
 msgid "Leave your comment (spam and offensive messages will be removed)"
 msgstr ""
 
-#: item.php:210
+#: item.php:213
 msgid "Comment"
 msgstr ""
 
