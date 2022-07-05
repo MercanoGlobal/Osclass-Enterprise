@@ -684,6 +684,27 @@ function bender_print_sidebar_category_search($aCategories, $current_category = 
     }
 }
 
+// Match all keywords in search
+function search_pattern_match_all_keywords($params) {
+    if (@$params['sPattern'] != '') {
+        $mSearch = Search::newInstance();
+        $query_elements = json_decode($mSearch->toJson(), true);
+        $pattern = $query_elements['sPattern'];
+
+        foreach (explode(' ', $pattern) as $word) {
+            $query_elements['sPattern'] = str_replace($word, '+' . $word . '*', $query_elements['sPattern']); //search with wildcard: merced => mercedes
+            //$query_elements['sPattern'] = str_replace($word, '+' . $word, $query_elements['sPattern']);     //search without wildcard
+        }
+
+        $mSearch->addLocale('%');
+        $mSearch->addGroupBy(DB_TABLE_PREFIX.'t_item.pk_i_id');
+
+        $mSearch->setJsonAlert($query_elements);
+    }
+}
+
+osc_add_hook('search_conditions', 'search_pattern_match_all_keywords', 10);
+
 /**
 
 CLASSES
