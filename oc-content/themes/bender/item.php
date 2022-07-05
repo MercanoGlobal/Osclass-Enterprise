@@ -159,7 +159,7 @@
                     <?php while ( osc_has_item_comments() ) { ?>
                         <div class="comment">
                             <h3><strong><?php echo osc_comment_title(); ?></strong> <em><?php _e("by", 'bender'); ?> 
-                                <?php if ( osc_item_user_id() == osc_comment_user_id() ) { echo osc_comment_author_name(); ?>&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true" style="color:#29b7cd" title="<?php _e('Owner', 'bender'); ?>"></i>
+                                <?php if ( (osc_item_user_id() == osc_comment_user_id()) && osc_comment_user_id() != 0 ) { echo osc_comment_author_name(); ?>&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true" style="color:#29b7cd" title="<?php _e('Owner', 'bender'); ?>"></i>
                                 <?php } else { echo osc_comment_author_name(); } ?>:
                             </em></h3>
                             <p><?php echo nl2br( osc_comment_body() ); ?> </p>
