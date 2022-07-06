@@ -61,7 +61,7 @@
         <ul id="user_data">
             <li class="name"><?php echo osc_user_name(); ?></li>
             <?php if( osc_user_website() !== '' ) { ?>
-            <li class="website"><a target="_blank" href="<?php echo osc_user_website(); ?>"><?php echo osc_user_website(); ?></a></li>
+            <li class="website"><a target="_blank" rel="noopener nofollow" href="<?php echo osc_user_website(); ?>"><?php echo osc_user_website(); ?></a></li>
             <?php } ?>
             <?php if( $address !== '' ) { ?>
             <li class="adress"><?php printf(__('<strong>Address:</strong> %1$s'), $address); ?></li>
