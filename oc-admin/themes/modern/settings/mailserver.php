@@ -36,18 +36,14 @@
                     }
                 });
 
-                $('#testMail').bind('click', function() {
+                $('#testMail').bind('click', function(e) {
+                    e.preventDefault();
+
                     $.ajax({
                         "url": "<?php echo osc_admin_base_url(true)?>?page=ajax&action=test_mail",
                         "dataType": 'json',
                         success: function(data) {
-                            $('#testMail_message p').html(data.html);
-                            $('#testMail_message').css('display', 'block');
-                            if( data.status == 1 ) {
-                                $('#testMail_message').addClass('ok');
-                            } else {
-                                $('#testMail_message').addClass('error');
-                            }
+                            alert(data.html);
                         }
                     });
                 });
@@ -142,11 +138,11 @@
                                     <?php _e('Options: blank, ssl or tls'); ?>
                                     <?php if( php_sapi_name() == 'cgi-fcgi' || php_sapi_name() == 'cgi' ) { ?>
                                     <div class="flashmessage flashmessage-inline warning">
-                                        <p><?php _e("Cannot be sure that Apache Module <b>mod_ssl</b> is loaded."); ?></p>
+                                        <p><?php _e("Cannot be sure that Apache Module <b>mod_ssl</b> is loaded. SMTP authentication might not work."); ?></p>
                                     </div>
                                     <?php } else if( !@apache_mod_loaded('mod_ssl') ) { ?>
                                     <div class="flashmessage flashmessage-inline warning">
-                                        <p><?php _e("Apache Module <b>mod_ssl</b> is not loaded"); ?></p>
+                                        <p><?php _e("Apache Module <b>mod_ssl</b> is not loaded. SMTP authentication might not work."); ?></p>
                                     </div>
                                     <?php } ?>
                                 </div>
@@ -163,6 +159,12 @@
                                 <div class="form-controls">
                                     <div class="form-label-checkbox"><input type="checkbox" <?php echo ( osc_mailserver_pop() ? 'checked="checked"' : '' ); ?> name="mailserver_pop" value="1" />
                                     <?php _e('Use POP before SMTP'); ?></div>
+                                </div>
+                            </div>
+                            <div class="form-row separate-top">
+                                <div class="form-label"><?php _e('Test configuration'); ?></div>
+                                <div class="form-controls">
+                                    <button id="testMail" class="btn"><?php _e('Send test email'); ?></button>
                                 </div>
                             </div>
                             <div class="form-actions">

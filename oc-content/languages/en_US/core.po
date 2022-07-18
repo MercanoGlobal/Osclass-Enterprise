@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-05-10 14:29+0300\n"
+"PO-Revision-Date: 2022-07-18 13:50+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: index.php:52 oc-admin/themes/modern/tools/maintenance.php:38
 msgid "Maintenance &raquo; %s"
@@ -241,12 +241,12 @@ msgstr ""
 msgid "Back to %s"
 msgstr ""
 
-#: oc-admin/gui/login.php:41 oc-admin/themes/modern/admins/index.php:123 oc-admin/themes/modern/settings/mailserver.php:127 oc-admin/themes/modern/users/frm.php:225 oc-admin/themes/modern/users/index.php:171 oc-includes/osclass/classes/datatables/UsersDataTable.php:69 oc-includes/osclass/install-functions.php:784
+#: oc-admin/gui/login.php:41 oc-admin/themes/modern/admins/index.php:123 oc-admin/themes/modern/settings/mailserver.php:123 oc-admin/themes/modern/users/frm.php:225 oc-admin/themes/modern/users/index.php:171 oc-includes/osclass/classes/datatables/UsersDataTable.php:69 oc-includes/osclass/install-functions.php:784
 #: oc-includes/osclass/install-functions.php:918 oc-includes/osclass/classes/EmailVariables.php:98
 msgid "Username"
 msgstr ""
 
-#: oc-admin/gui/login.php:47 oc-admin/themes/modern/settings/mailserver.php:133 oc-admin/themes/modern/users/frm.php:310 oc-includes/osclass/install-functions.php:688 oc-includes/osclass/install-functions.php:793 oc-includes/osclass/install-functions.php:926 oc-includes/osclass/classes/EmailVariables.php:99
+#: oc-admin/gui/login.php:47 oc-admin/themes/modern/settings/mailserver.php:129 oc-admin/themes/modern/users/frm.php:310 oc-includes/osclass/install-functions.php:688 oc-includes/osclass/install-functions.php:793 oc-includes/osclass/install-functions.php:926 oc-includes/osclass/classes/EmailVariables.php:99
 msgid "Password"
 msgstr ""
 
@@ -590,7 +590,7 @@ msgid "Edit widget"
 msgstr ""
 
 #: oc-admin/themes/modern/appearance/add_widget.php:27 oc-admin/themes/modern/appearance/add_widget.php:55 oc-admin/themes/modern/categories/iframe.php:54 oc-admin/themes/modern/emails/frm.php:134 oc-admin/themes/modern/fields/iframe.php:82 oc-admin/themes/modern/items/settings.php:257 oc-admin/themes/modern/languages/frm.php:112
-#: oc-admin/themes/modern/pages/frm.php:36 oc-admin/themes/modern/settings/advanced.php:113 oc-admin/themes/modern/settings/comments.php:161 oc-admin/themes/modern/settings/index.php:415 oc-admin/themes/modern/settings/mailserver.php:169 oc-admin/themes/modern/settings/media.php:331 oc-admin/themes/modern/settings/permalinks.php:823
+#: oc-admin/themes/modern/pages/frm.php:36 oc-admin/themes/modern/settings/advanced.php:113 oc-admin/themes/modern/settings/comments.php:161 oc-admin/themes/modern/settings/index.php:415 oc-admin/themes/modern/settings/mailserver.php:171 oc-admin/themes/modern/settings/media.php:331 oc-admin/themes/modern/settings/permalinks.php:823
 #: oc-admin/themes/modern/settings/searches.php:142 oc-admin/themes/modern/settings/spamNbots.php:80 oc-admin/themes/modern/settings/spamNbots.php:124 oc-admin/themes/modern/users/settings.php:84
 msgid "Save changes"
 msgstr ""
@@ -841,7 +841,7 @@ msgid "Manage the comments that users publish on the listings on your site. You 
 msgstr ""
 
 #: oc-admin/themes/modern/comments/index.php:25 oc-admin/themes/modern/emails/frm.php:21 oc-admin/themes/modern/emails/index.php:24 oc-admin/themes/modern/items/settings.php:72 oc-admin/themes/modern/languages/add.php:20 oc-admin/themes/modern/languages/frm.php:22 oc-admin/themes/modern/languages/index.php:24
-#: oc-admin/themes/modern/settings/advanced.php:48 oc-admin/themes/modern/settings/comments.php:85 oc-admin/themes/modern/settings/currencies.php:24 oc-admin/themes/modern/settings/currency_form.php:66 oc-admin/themes/modern/settings/index.php:139 oc-admin/themes/modern/settings/locations.php:158 oc-admin/themes/modern/settings/mailserver.php:71
+#: oc-admin/themes/modern/settings/advanced.php:48 oc-admin/themes/modern/settings/comments.php:85 oc-admin/themes/modern/settings/currencies.php:24 oc-admin/themes/modern/settings/currency_form.php:66 oc-admin/themes/modern/settings/index.php:139 oc-admin/themes/modern/settings/locations.php:158 oc-admin/themes/modern/settings/mailserver.php:67
 #: oc-admin/themes/modern/settings/media.php:153 oc-admin/themes/modern/settings/permalinks.php:373 oc-admin/themes/modern/settings/searches.php:75 oc-admin/themes/modern/settings/spamNbots.php:29 oc-admin/themes/modern/users/settings.php:45 oc-includes/osclass/classes/AdminMenu.php:64 oc-includes/osclass/classes/AdminMenu.php:83
 msgid "Settings"
 msgstr ""
@@ -2501,76 +2501,84 @@ msgstr ""
 msgid "Import a country with it's regions and cities from our database. Already imported countries aren't shown."
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:65
+#: oc-admin/themes/modern/settings/mailserver.php:61
 msgid "Modify the settings of the mail server from which your site's emails are sent. <strong>Be careful</strong>: these settings can vary depending on your hosting or server. If you run into any issues, check your hosting's help section."
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:78
+#: oc-admin/themes/modern/settings/mailserver.php:74
 msgid "Mail Settings &raquo; %s"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:86
+#: oc-admin/themes/modern/settings/mailserver.php:82
 msgid "Mail Settings"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:94
+#: oc-admin/themes/modern/settings/mailserver.php:90
 msgid "Server type"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:97
+#: oc-admin/themes/modern/settings/mailserver.php:93
 msgid "Custom Server"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:98
+#: oc-admin/themes/modern/settings/mailserver.php:94
 msgid "Gmail Server"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:103
+#: oc-admin/themes/modern/settings/mailserver.php:99
 msgid "Hostname"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:109
+#: oc-admin/themes/modern/settings/mailserver.php:105
 msgid "Mail from"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:115
+#: oc-admin/themes/modern/settings/mailserver.php:111
 msgid "Name from"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:121
+#: oc-admin/themes/modern/settings/mailserver.php:117
 msgid "Server port"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:139
+#: oc-admin/themes/modern/settings/mailserver.php:135
 msgid "Encryption"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:142
+#: oc-admin/themes/modern/settings/mailserver.php:138
 msgid "Options: blank, ssl or tls"
 msgstr ""
 
+#: oc-admin/themes/modern/settings/mailserver.php:141
+msgid "Cannot be sure that Apache Module <b>mod_ssl</b> is loaded. SMTP authentication might not work."
+msgstr ""
+
 #: oc-admin/themes/modern/settings/mailserver.php:145
-msgid "Cannot be sure that Apache Module <b>mod_ssl</b> is loaded."
+msgid "Apache Module <b>mod_ssl</b> is not loaded. SMTP authentication might not work."
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:149
-msgid "Apache Module <b>mod_ssl</b> is not loaded"
-msgstr ""
-
-#: oc-admin/themes/modern/settings/mailserver.php:155
+#: oc-admin/themes/modern/settings/mailserver.php:151
 msgid "SMTP"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:158
+#: oc-admin/themes/modern/settings/mailserver.php:154
 msgid "SMTP authentication enabled"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:162
+#: oc-admin/themes/modern/settings/mailserver.php:158
 msgid "POP"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/mailserver.php:165
+#: oc-admin/themes/modern/settings/mailserver.php:161
 msgid "Use POP before SMTP"
+msgstr ""
+
+#: oc-admin/themes/modern/settings/mailserver.php:165
+msgid "Test configuration"
+msgstr ""
+
+#: oc-admin/themes/modern/settings/mailserver.php:167
+msgid "Send test email"
 msgstr ""
 
 #: oc-admin/themes/modern/settings/media.php:35
