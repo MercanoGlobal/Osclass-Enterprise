@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-05-25 22:13+0300\n"
+"PO-Revision-Date: 2022-07-23 23:28+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: oc-admin/admins.php:30 oc-admin/items.php:38 oc-includes/osclass/core/AdminSecBaseModel.php:28
 msgid "You don't have enough permissions"
@@ -1306,10 +1306,6 @@ msgstr ""
 msgid "The file you tried to upload does not have a valid extension."
 msgstr ""
 
-#: oc-includes/osclass/UserActions.php:37
-msgid "The reCAPTCHA was not entered correctly"
-msgstr ""
-
 #: oc-includes/osclass/UserActions.php:43
 msgid "The password cannot be empty"
 msgstr ""
@@ -1383,7 +1379,7 @@ msgstr ""
 #: oc-includes/osclass/controller/contact.php:45 oc-includes/osclass/controller/item.php:126
 #: oc-includes/osclass/controller/item.php:241 oc-includes/osclass/controller/item.php:456
 #: oc-includes/osclass/controller/item.php:518 oc-includes/osclass/controller/user-non-secure.php:164
-#: oc-includes/osclass/controller/login.php:224 oc-admin/login.php:119
+#: oc-includes/osclass/controller/login.php:224 oc-admin/login.php:119 oc-includes/osclass/UserActions.php:37
 msgid "The reCAPTCHA is invalid"
 msgstr ""
 
@@ -1643,7 +1639,7 @@ msgid "We were not able to identify you given the information provided"
 msgstr ""
 
 #: oc-includes/osclass/controller/login.php:228
-msgid "You have already requested a password reset. Please wait 12 hours to make another one."
+msgid "You have already requested a password reset. Please wait 1 hour to make another one."
 msgstr ""
 
 #: oc-includes/osclass/controller/login.php:245 oc-includes/osclass/controller/user.php:178

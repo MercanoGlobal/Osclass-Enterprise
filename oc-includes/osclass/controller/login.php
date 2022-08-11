@@ -224,8 +224,8 @@
                                                      osc_add_flash_error_message( _m('The reCAPTCHA is invalid'));
                                                      $this->redirectTo( osc_recover_user_password_url() );
                                                      break;
-                                            case(3): // prevent multiple requests in a 12 hour interval
-                                                     osc_add_flash_error_message( _m('You have already requested a password reset. Please wait 12 hours to make another one.'));
+                                            case(3): // prevent multiple requests in a 1 hour interval
+                                                     osc_add_flash_error_message( _m('You have already requested a password reset. Please wait 1 hour to make another one.'));
                                                      $this->redirectTo( osc_user_login_url() );
                                                      break;
                                         }

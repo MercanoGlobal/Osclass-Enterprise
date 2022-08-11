@@ -34,7 +34,7 @@
             $flash_error = '';
             if( (osc_recaptcha_private_key() != '') && !$this->is_admin ) {
                 if( !osc_check_recaptcha() ) {
-                    $flash_error .= _m('The reCAPTCHA was not entered correctly') . PHP_EOL;
+                    $flash_error .= _m('The reCAPTCHA is invalid') . PHP_EOL;
                     $error[] = 4;
                 }
             }
@@ -278,7 +278,7 @@
             $date      = date('Y-m-d H:i:s');
             $pass_date = $user['s_pass_date'];
 
-            if( !empty($user['s_pass_code']) && ((strtotime($date) - strtotime($pass_date)) < 60*60*12) ) { // 1 password request every 12 hours
+            if( !empty($user['s_pass_code']) && ((strtotime($date) - strtotime($pass_date)) < 60*60*1) ) { // 1 password request every hour
                 return 3;
             }
 
