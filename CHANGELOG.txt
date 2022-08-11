@@ -1,4 +1,4 @@
-Osclass 3.8.1 2022-07-05
+Osclass 3.8.1 2022-08-11
 ------------------------
 
 - Removed ties to Osclass Market API
@@ -22,10 +22,11 @@ Osclass 3.8.1 2022-07-05
 - Added a new function 'osc_user_is_online' that returns true if user has been online in last 5 minutes and false otherwise
 - Added bot protection to the E-mail field on the item sidebar
 - Added the 7G Firewall to the Permalinks .htaccess
-- Added multiple password reset requests prevention (limit is set to 1 per 12 hours)
+- Added multiple password reset requests prevention (limit is set to 1 per hour)
 - Added search and pagination to Ban Rules
 - Added the ability to show the user avatar (set by plugins) in oc-admin > Users
 - Added listings views count in oc-admin > Listings. It also shows how many times a premium* listing was shown in the "Premium block"
+- Added the ability to customize the appearance of your theme/plugins by using custom CSS/HTML code
 - Added Locations at install and in the admin
 - Updated the Geodata to 2021 (it now contains 248 countries with all the cities and their coordinates)
 - Updated PHPMailer to 5.2.28

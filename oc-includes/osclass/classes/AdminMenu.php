@@ -76,6 +76,7 @@
             $this->add_menu( __('Appearance'), osc_admin_base_url(true) .'?page=appearance', 'appearance', 'administrator');
             $this->add_submenu( 'appearance', __('Manage themes'), osc_admin_base_url(true) .'?page=appearance', 'appearance_manage', 'administrator');
             $this->add_submenu( 'appearance', __('Manage widgets'), osc_admin_base_url(true) .'?page=appearance&action=widgets', 'appearance_widgets', 'administrator');
+            $this->add_submenu( 'appearance', __('Customization'), osc_admin_base_url(true) .'?page=appearance&action=customization', 'appearance_customization', 'administrator');
 
             $this->add_menu(__('Plugins'), osc_admin_base_url(true) .'?page=plugins', 'plugins', 'administrator');
             $this->add_submenu( 'plugins', __('Manage plugins'), osc_admin_base_url(true) .'?page=plugins', 'plugins_manage', 'administrator');

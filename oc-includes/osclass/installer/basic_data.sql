@@ -15,6 +15,8 @@ INSERT INTO /*TABLE_PREFIX*/t_preference VALUES
     ,('osclass', 'dimPreview', '480x340', 'STRING')
     ,('osclass', 'dimNormal', '640x480', 'STRING')
     ,('osclass', 'keep_original_image', '1', 'BOOLEAN')
+    ,('osclass', 'custom_css', '', 'STRING')
+    ,('osclass', 'custom_html', '', 'STRING')
     ,('osclass', 'dateFormat', 'F j, Y', 'STRING')
     ,('osclass', 'timeFormat', 'g:i a', 'STRING')
     ,('osclass', 'timezone', 'Europe/Madrid', 'STRING')

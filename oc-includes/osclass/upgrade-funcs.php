@@ -568,6 +568,8 @@ CREATE TABLE %st_item_description_tmp (
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'enabled_user_publishing', '1', 'BOOLEAN')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'item_contact_form_disabled', '0', 'BOOLEAN')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'web_contact_form_disabled', '0', 'BOOLEAN')", DB_TABLE_PREFIX));
+        $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'custom_css', '', 'STRING')", DB_TABLE_PREFIX));
+        $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'custom_html', '', 'STRING')", DB_TABLE_PREFIX));
     }
 
     osc_changeVersionTo( strtr( OSCLASS_VERSION , array ( '.' => '' ) ));

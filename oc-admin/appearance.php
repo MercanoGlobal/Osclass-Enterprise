@@ -202,6 +202,31 @@
                     $this->_exportVariableToView('file', osc_base_path() . $file);
                     $this->doView('appearance/view.php');
                 break;
+                case('customization'):
+                    $this->doView('appearance/customization.php');
+                break;
+                case('customization_update'):
+                    osc_csrf_check();
+                    $error       = '';
+                    $iUpdated    = 0;
+                    $sCustomCss  = Params::getParam('customCss', false, false);
+                    $sCustomHtml = Params::getParam('customHtml', false, false);
+
+                    $iUpdated    += osc_set_preference('custom_css', $sCustomCss);
+                    $iUpdated    += osc_set_preference('custom_html', $sCustomHtml);
+
+                    if( $iUpdated > 0 ) {
+                        if( $error != '' ) {
+                            osc_add_flash_error_message( $error . "</p><p>" . _m('There was an issue saving the customizations'), 'admin');
+                        } else {
+                            osc_add_flash_ok_message( _m('Customization settings have been updated'), 'admin');
+                        }
+                    } else if($error != '') {
+                        osc_add_flash_error_message( $error , 'admin');
+                    }
+
+                    $this->redirectTo(osc_admin_base_url(true) . '?page=appearance&action=customization');
+                break;
                 default:
                     if(Params::getParam('checkUpdated') != '') {
                         osc_admin_toolbar_update_themes(true);

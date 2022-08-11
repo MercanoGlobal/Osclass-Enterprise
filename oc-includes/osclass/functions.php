@@ -693,4 +693,20 @@ function osc_get_count_query_data($sql) {
     }
 }
 
+function osc_custom_css_footer() {
+    if(trim(osc_get_preference('custom_css')) <> '') {
+        echo '<style>' . osc_get_preference('custom_css') . '</style>' . PHP_EOL;
+    }
+}
+
+osc_add_hook('footer', 'osc_custom_css_footer', 10);
+
+function osc_custom_html_footer() {
+    if(trim(osc_get_preference('custom_html')) <> '') {
+        echo osc_get_preference('custom_html') . PHP_EOL;
+    }
+}
+
+osc_add_hook('footer', 'osc_custom_html_footer', 10);
+
 ?>

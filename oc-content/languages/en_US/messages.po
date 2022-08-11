@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-07-23 23:28+0300\n"
+"PO-Revision-Date: 2022-08-11 14:48+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -170,6 +170,14 @@ msgstr ""
 
 #: oc-admin/appearance.php:170
 msgid "Theme activated correctly"
+msgstr ""
+
+#: oc-admin/appearance.php:220
+msgid "There was an issue saving the customizations"
+msgstr ""
+
+#: oc-admin/appearance.php:220
+msgid "Customization settings have been updated"
 msgstr ""
 
 #: oc-admin/comments.php:52
