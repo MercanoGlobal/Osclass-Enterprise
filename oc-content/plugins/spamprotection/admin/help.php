@@ -348,7 +348,7 @@ $info = osc_plugin_get_info("spamprotection/index.php");
             If you find any errors, please report it on the forums. 
             I will try to fix this immediately, so that everyone can use this plugin properly.<br /><br />
             Also I would be glad if you could rate this plugin. I needed weeks to develop it for free, you only need a few minutes to rate and review it.<br /><br />
-            <a class="btn btn-green ratenow" href="http://amfearliath.ml/osclass-spam-protection/" target="_blank">Rate and review now</a><br /><br /><br />
+            <a class="btn btn-green ratenow" href="https://amfearliath.tk/osclass-spam-protection/" target="_blank">Rate and review now</a><br /><br /><br />
             <strong>Thanks a lot!</strong>
             ', 'spamprotection'); ?></p>
         </div>
