@@ -105,11 +105,17 @@
          * @param type $language
          * @return array
          */
-        public function listAll() {
-            $result = $this->dao->query(sprintf('SELECT * FROM %s ORDER BY s_name ASC', $this->getTableName()));
+        public function listAll()
+        {
+            $this->dao->select($this->getFields());
+            $this->dao->from($this->getTableName());
+            $this->dao->orderBy('s_name', 'ASC');
+            $result = $this->dao->get();
+
             if($result == false) {
                 return array();
             }
+
             return $result->result();
         }
 

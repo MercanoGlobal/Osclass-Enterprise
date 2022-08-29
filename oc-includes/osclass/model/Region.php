@@ -152,6 +152,26 @@
             return $result->result();
         }
 
+        /**
+         * Get all the rows from the table t_region
+         *
+         * @access public
+         * @since unknown
+         * @return array
+         */
+        public function listAll()
+        {
+            $this->dao->select($this->getFields());
+            $this->dao->from($this->getTableName());
+            $this->dao->orderBy('s_name', 'ASC');
+            $result = $this->dao->get();
+
+            if($result == false) {
+                return array();
+            }
+
+            return $result->result();
+        }
 
         /**
          *  Delete a region with its cities and city areas
