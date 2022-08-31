@@ -81,9 +81,8 @@
     function osc_sanitize_username($value, $min = 3) {
         if(mb_strlen($value, 'UTF-8') >= $min) {
             return preg_replace("/(_+)/", "_", preg_replace("/([^0-9A-Za-z_]*)/", "", str_replace(" ", "_", trim($value))));
-        } else {
-            return '';
         }
+        return (int)$value;
     }
 
     /**
