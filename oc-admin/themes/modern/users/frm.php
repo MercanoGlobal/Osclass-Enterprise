@@ -69,7 +69,7 @@
     }
     osc_add_hook('admin_header','customHead', 10);
 
-    $aux    = customFrmText();
+    $aux = customFrmText();
 ?>
 <?php osc_current_admin_theme_path('parts/header.php'); ?>
 <?php if($aux['edit'] && count($aux['alerts'])>0) { ?>
@@ -261,13 +261,7 @@
                 <div class="form-row">
                     <div class="form-label"><?php _e('Additional information'); ?></div>
                     <div class="form-controls">
-                        <?php
-                            if(class_exists('ModelHTMLEditorUserForm')) {
-                                ModelHTMLEditorUserForm::html_editor_multilanguage_info($locales, $user);
-                            } else {
-                                UserForm::multilanguage_info($locales, $user);
-                            }
-                        ?>
+                        <?php UserForm::multilanguage_info($locales, $user); ?>
                     </div>
                 </div>
                 <h3 class="render-title"><?php _e('Location'); ?></h3>
@@ -330,7 +324,7 @@
                 } else {
                     osc_run_hook('user_profile_form', $user);
                     osc_run_hook('user_form', $user);
-                }; ?>
+                } ?>
 
                 <div class="clear"></div>
                 <div class="form-actions">
@@ -355,13 +349,13 @@
                             $new_search->setJsonAlert($array_conditions);
                             $new_search->limit(0, 2);
                             $results = $new_search->doSearch();
-                            ?>
+                        ?>
                             <div class="form-label">
                                 <?php echo sprintf(__('Alert #%d'), ($k+1)); ?>
                                 <br/>
                                 <?php if(isset($raw_data['sPattern']) && $raw_data['sPattern']!='') {?>
                                     <?php echo sprintf(__("<b>Pattern:</b> %s"), $raw_data['sPattern']); ?><br/>
-                                <?php }; ?>
+                                <?php } ?>
 
                                 <?php if(isset($raw_data['aCategories']) && !empty($raw_data['aCategories'])) {
                                     $l = min(count($raw_data['aCategories']), 2);
@@ -372,31 +366,31 @@
                                     if(count($raw_data['aCategories'])>$l) {
                                         $cat_array[] = '<a href="#" class="more-tooltip" categories="'.osc_esc_html(implode(", ", $raw_data['aCategories'])).'" >'.__("...More").'</a>';
                                     }
-                                    ?>
+                                ?>
                                     <?php echo sprintf(__("<b>Categories:</b> %s"), implode(", ", $cat_array)); ?><br/>
-                                <?php }; ?>
-                                
+                                <?php } ?>
+
                                 <a href="javascript:delete_alert('<?php echo $aux['alerts'][$k]['pk_i_id']; ?>');" ><?php _e("Delete"); ?></a>
                                 &nbsp;|&nbsp;
                                 <?php if($aux['alerts'][$k]['b_active']==1) { ?>
                                 <a href="<?php echo osc_admin_base_url(true)."?page=users&action=status_alerts&id[]=".$aux['alerts'][$k]['pk_i_id']."&status=0&user_id=".$user['pk_i_id']; ?>" ><?php _e("Disable"); ?></a>
                                 <?php } else { ?>
                                 <a href="<?php echo osc_admin_base_url(true)."?page=users&action=status_alerts&id[]=".$aux['alerts'][$k]['pk_i_id']."&status=1&user_id=".$user['pk_i_id']; ?>" ><?php _e("Enable"); ?></a>
-                                <?php }; ?>
+                                <?php } ?>
                             </div>
                             <div class="form-controls">
                                 <?php if(!empty($results)) {
                                     foreach($results as $r) { ?>
                                     <label><b><?php echo $r['s_title']; ?></b></label>
                                     <p><?php echo $r['s_description']; ?></p>
-                                    <?php };
+                                    <?php }
                                 } else { ?>
                                     <label>&nbsp;</label>
                                     <p>&nbsp;</p>
-                                <?php }; ?>
+                                <?php } ?>
                             </div>
                             <div class="clear"></div>
-                        <?php }; ?>
+                        <?php } ?>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -422,6 +416,6 @@
             </div>
         </form>
         <div id="more-tooltip"></div>
-    <?php }; ?>
+    <?php } ?>
     <!-- /add user form -->
 <?php osc_current_admin_theme_path('parts/footer.php'); ?>

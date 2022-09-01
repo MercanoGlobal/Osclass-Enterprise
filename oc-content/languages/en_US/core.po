@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-08-11 15:11+0300\n"
+"PO-Revision-Date: 2022-09-01 23:33+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: oc-admin/themes/modern/appearance/widgets.php:87 oc-admin/themes/modern/appearance/widgets.php:129 oc-admin/themes/modern/categories/index.php:340 oc-admin/themes/modern/categories/index.php:386 oc-admin/themes/modern/comments/index.php:181 oc-admin/themes/modern/comments/index.php:192 oc-admin/themes/modern/fields/index.php:138 oc-admin/themes/modern/fields/index.php:281
 #: oc-admin/themes/modern/fields/index.php:301 oc-admin/themes/modern/items/index.php:402 oc-admin/themes/modern/items/index.php:413 oc-admin/themes/modern/items/reported.php:149 oc-admin/themes/modern/items/reported.php:204 oc-admin/themes/modern/items/reported.php:215 oc-admin/themes/modern/languages/index.php:175 oc-admin/themes/modern/languages/index.php:187
 #: oc-admin/themes/modern/media/index.php:169 oc-admin/themes/modern/media/index.php:180 oc-admin/themes/modern/pages/index.php:203 oc-admin/themes/modern/pages/index.php:214 oc-admin/themes/modern/settings/currencies.php:110 oc-admin/themes/modern/settings/currencies.php:132 oc-admin/themes/modern/settings/currencies.php:175 oc-admin/themes/modern/settings/currencies.php:186
-#: oc-admin/themes/modern/settings/locations.php:412 oc-admin/themes/modern/users/alerts.php:150 oc-admin/themes/modern/users/alerts.php:205 oc-admin/themes/modern/users/alerts.php:216 oc-admin/themes/modern/users/ban.php:202 oc-admin/themes/modern/users/ban.php:213 oc-admin/themes/modern/users/frm.php:379 oc-admin/themes/modern/users/frm.php:419
+#: oc-admin/themes/modern/settings/locations.php:412 oc-admin/themes/modern/users/alerts.php:150 oc-admin/themes/modern/users/alerts.php:205 oc-admin/themes/modern/users/alerts.php:216 oc-admin/themes/modern/users/ban.php:202 oc-admin/themes/modern/users/ban.php:213 oc-admin/themes/modern/users/frm.php:373 oc-admin/themes/modern/users/frm.php:413
 #: oc-admin/themes/modern/users/index.php:331 oc-admin/themes/modern/users/index.php:342 oc-admin/users.php:534 oc-admin/users.php:535 oc-admin/users.php:667 oc-includes/osclass/classes/datatables/AlertsDataTable.php:71 oc-includes/osclass/classes/datatables/BanRulesDataTable.php:72 oc-includes/osclass/classes/datatables/CommentsDataTable.php:100
 #: oc-includes/osclass/classes/datatables/ItemsDataTable.php:268 oc-includes/osclass/classes/datatables/ItemsDataTable.php:370 oc-includes/osclass/classes/datatables/MediaDataTable.php:94 oc-includes/osclass/classes/datatables/PagesDataTable.php:85 oc-includes/osclass/classes/datatables/UsersDataTable.php:94 oc-includes/osclass/frm/Item.form.class.php:1178
 #: oc-includes/osclass/frm/Item.form.class.php:1353 oc-includes/osclass/frm/Item.form.class.php:1360 oc-includes/osclass/frm/Item.form.class.php:1505
@@ -218,7 +218,7 @@ msgstr ""
 msgid "Type your new password"
 msgstr ""
 
-#: oc-admin/gui/forgot_password.php:46 oc-admin/themes/modern/admins/frm.php:87 oc-admin/themes/modern/users/frm.php:312
+#: oc-admin/gui/forgot_password.php:46 oc-admin/themes/modern/admins/frm.php:87 oc-admin/themes/modern/users/frm.php:306
 msgid "New password"
 msgstr ""
 
@@ -243,7 +243,7 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: oc-admin/gui/login.php:47 oc-admin/themes/modern/settings/mailserver.php:129 oc-admin/themes/modern/users/frm.php:310 oc-includes/osclass/install-functions.php:688 oc-includes/osclass/install-functions.php:793 oc-includes/osclass/install-functions.php:926 oc-includes/osclass/classes/EmailVariables.php:99
+#: oc-admin/gui/login.php:47 oc-admin/themes/modern/settings/mailserver.php:129 oc-admin/themes/modern/users/frm.php:304 oc-includes/osclass/install-functions.php:688 oc-includes/osclass/install-functions.php:793 oc-includes/osclass/install-functions.php:926 oc-includes/osclass/classes/EmailVariables.php:99
 msgid "Password"
 msgstr ""
 
@@ -355,11 +355,11 @@ msgstr ""
 msgid "Configure"
 msgstr ""
 
-#: oc-admin/plugins.php:325 oc-admin/themes/modern/categories/index.php:287 oc-admin/themes/modern/categories/index.php:293 oc-admin/themes/modern/categories/index.php:338 oc-admin/themes/modern/users/frm.php:382
+#: oc-admin/plugins.php:325 oc-admin/themes/modern/categories/index.php:287 oc-admin/themes/modern/categories/index.php:293 oc-admin/themes/modern/categories/index.php:338 oc-admin/themes/modern/users/frm.php:376
 msgid "Disable"
 msgstr ""
 
-#: oc-admin/plugins.php:327 oc-admin/themes/modern/categories/index.php:277 oc-admin/themes/modern/categories/index.php:282 oc-admin/themes/modern/categories/index.php:338 oc-admin/themes/modern/users/frm.php:384
+#: oc-admin/plugins.php:327 oc-admin/themes/modern/categories/index.php:277 oc-admin/themes/modern/categories/index.php:282 oc-admin/themes/modern/categories/index.php:338 oc-admin/themes/modern/users/frm.php:378
 msgid "Enable"
 msgstr ""
 
@@ -435,7 +435,7 @@ msgstr ""
 msgid "If you want to change your password, type your current password here. Otherwise, leave this blank."
 msgstr ""
 
-#: oc-admin/themes/modern/admins/frm.php:94 oc-admin/themes/modern/users/frm.php:321
+#: oc-admin/themes/modern/admins/frm.php:94 oc-admin/themes/modern/users/frm.php:315
 msgid "Type your new password again"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 #: oc-admin/themes/modern/items/index.php:412 oc-admin/themes/modern/items/reported.php:203 oc-admin/themes/modern/items/reported.php:214 oc-admin/themes/modern/languages/index.php:174 oc-admin/themes/modern/languages/index.php:186 oc-admin/themes/modern/languages/index.php:223 oc-admin/themes/modern/market/header.php:168 oc-admin/themes/modern/media/index.php:168
 #: oc-admin/themes/modern/media/index.php:179 oc-admin/themes/modern/pages/frm.php:130 oc-admin/themes/modern/pages/index.php:202 oc-admin/themes/modern/pages/index.php:213 oc-admin/themes/modern/plugins/index.php:244 oc-admin/themes/modern/plugins/index.php:261 oc-admin/themes/modern/settings/currencies.php:174 oc-admin/themes/modern/settings/currencies.php:185
 #: oc-admin/themes/modern/settings/currency_form.php:132 oc-admin/themes/modern/settings/locations.php:129 oc-admin/themes/modern/settings/locations.php:193 oc-admin/themes/modern/settings/locations.php:220 oc-admin/themes/modern/settings/locations.php:246 oc-admin/themes/modern/settings/locations.php:275 oc-admin/themes/modern/settings/locations.php:303
-#: oc-admin/themes/modern/settings/locations.php:332 oc-admin/themes/modern/settings/locations.php:411 oc-admin/themes/modern/settings/locations.php:448 oc-admin/themes/modern/users/alerts.php:204 oc-admin/themes/modern/users/alerts.php:215 oc-admin/themes/modern/users/ban.php:201 oc-admin/themes/modern/users/ban.php:212 oc-admin/themes/modern/users/frm.php:418
+#: oc-admin/themes/modern/settings/locations.php:332 oc-admin/themes/modern/settings/locations.php:411 oc-admin/themes/modern/settings/locations.php:448 oc-admin/themes/modern/users/alerts.php:204 oc-admin/themes/modern/users/alerts.php:215 oc-admin/themes/modern/users/ban.php:201 oc-admin/themes/modern/users/ban.php:212 oc-admin/themes/modern/users/frm.php:412
 #: oc-admin/themes/modern/users/index.php:330 oc-admin/themes/modern/users/index.php:341 oc-includes/osclass/frm/Item.form.class.php:1503
 msgid "Cancel"
 msgstr ""
@@ -1167,31 +1167,31 @@ msgstr ""
 msgid "Show phone"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:241 oc-admin/themes/modern/users/frm.php:273 oc-includes/osclass/classes/datatables/ItemsDataTable.php:141 oc-includes/osclass/install-functions.php:820
+#: oc-admin/themes/modern/items/frm.php:241 oc-admin/themes/modern/users/frm.php:267 oc-includes/osclass/classes/datatables/ItemsDataTable.php:141 oc-includes/osclass/install-functions.php:820
 msgid "Location"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:243 oc-admin/themes/modern/items/index.php:197 oc-admin/themes/modern/settings/locations.php:184 oc-admin/themes/modern/settings/locations.php:208 oc-admin/themes/modern/stats/users.php:134 oc-admin/themes/modern/users/frm.php:275 oc-admin/themes/modern/users/index.php:195
+#: oc-admin/themes/modern/items/frm.php:243 oc-admin/themes/modern/items/index.php:197 oc-admin/themes/modern/settings/locations.php:184 oc-admin/themes/modern/settings/locations.php:208 oc-admin/themes/modern/stats/users.php:134 oc-admin/themes/modern/users/frm.php:269 oc-admin/themes/modern/users/index.php:195
 msgid "Country"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:247 oc-admin/themes/modern/items/index.php:205 oc-admin/themes/modern/settings/locations.php:240 oc-admin/themes/modern/settings/locations.php:263 oc-admin/themes/modern/stats/users.php:146 oc-admin/themes/modern/users/frm.php:281 oc-admin/themes/modern/users/index.php:204
+#: oc-admin/themes/modern/items/frm.php:247 oc-admin/themes/modern/items/index.php:205 oc-admin/themes/modern/settings/locations.php:240 oc-admin/themes/modern/settings/locations.php:263 oc-admin/themes/modern/stats/users.php:146 oc-admin/themes/modern/users/frm.php:275 oc-admin/themes/modern/users/index.php:204
 msgid "Region"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:251 oc-admin/themes/modern/items/index.php:213 oc-admin/themes/modern/settings/locations.php:297 oc-admin/themes/modern/settings/locations.php:320 oc-admin/themes/modern/users/frm.php:287 oc-admin/themes/modern/users/index.php:213
+#: oc-admin/themes/modern/items/frm.php:251 oc-admin/themes/modern/items/index.php:213 oc-admin/themes/modern/settings/locations.php:297 oc-admin/themes/modern/settings/locations.php:320 oc-admin/themes/modern/users/frm.php:281 oc-admin/themes/modern/users/index.php:213
 msgid "City"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:255 oc-admin/themes/modern/users/frm.php:293
+#: oc-admin/themes/modern/items/frm.php:255 oc-admin/themes/modern/users/frm.php:287
 msgid "City area"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:259 oc-admin/themes/modern/users/frm.php:299
+#: oc-admin/themes/modern/items/frm.php:259 oc-admin/themes/modern/users/frm.php:293
 msgid "Zip code"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:263 oc-admin/themes/modern/users/frm.php:305
+#: oc-admin/themes/modern/items/frm.php:263 oc-admin/themes/modern/users/frm.php:299
 msgid "Address"
 msgstr ""
 
@@ -3356,7 +3356,7 @@ msgstr ""
 msgid "Views"
 msgstr ""
 
-#: oc-admin/themes/modern/stats/items.php:103 oc-admin/themes/modern/users/alerts.php:24 oc-admin/themes/modern/users/frm.php:349 oc-includes/osclass/classes/AdminMenu.php:71
+#: oc-admin/themes/modern/stats/items.php:103 oc-admin/themes/modern/users/alerts.php:24 oc-admin/themes/modern/users/frm.php:343 oc-includes/osclass/classes/AdminMenu.php:71
 msgid "Alerts"
 msgstr ""
 
@@ -3682,11 +3682,11 @@ msgstr ""
 msgid "Are you sure you want to %s the selected alerts?"
 msgstr ""
 
-#: oc-admin/themes/modern/users/alerts.php:193 oc-admin/themes/modern/users/frm.php:407
+#: oc-admin/themes/modern/users/alerts.php:193 oc-admin/themes/modern/users/frm.php:401
 msgid "Delete alert"
 msgstr ""
 
-#: oc-admin/themes/modern/users/alerts.php:200 oc-admin/themes/modern/users/frm.php:414
+#: oc-admin/themes/modern/users/alerts.php:200 oc-admin/themes/modern/users/frm.php:408
 msgid "Are you sure you want to delete this alert?"
 msgstr ""
 
@@ -3814,27 +3814,27 @@ msgstr ""
 msgid "Additional information"
 msgstr ""
 
-#: oc-admin/themes/modern/users/frm.php:312
+#: oc-admin/themes/modern/users/frm.php:306
 msgid "(twice, required)"
 msgstr ""
 
-#: oc-admin/themes/modern/users/frm.php:316
+#: oc-admin/themes/modern/users/frm.php:310
 msgid "If you'd like to change the password, type a new one. Otherwise leave this blank."
 msgstr ""
 
-#: oc-admin/themes/modern/users/frm.php:360
+#: oc-admin/themes/modern/users/frm.php:354
 msgid "Alert #%d"
 msgstr ""
 
-#: oc-admin/themes/modern/users/frm.php:363 oc-includes/osclass/classes/datatables/AlertsDataTable.php:98
+#: oc-admin/themes/modern/users/frm.php:357 oc-includes/osclass/classes/datatables/AlertsDataTable.php:98
 msgid "<b>Pattern:</b> %s"
 msgstr ""
 
-#: oc-admin/themes/modern/users/frm.php:373 oc-includes/osclass/classes/datatables/AlertsDataTable.php:107
+#: oc-admin/themes/modern/users/frm.php:367 oc-includes/osclass/classes/datatables/AlertsDataTable.php:107
 msgid "...More"
 msgstr ""
 
-#: oc-admin/themes/modern/users/frm.php:376 oc-includes/osclass/classes/datatables/AlertsDataTable.php:110
+#: oc-admin/themes/modern/users/frm.php:370 oc-includes/osclass/classes/datatables/AlertsDataTable.php:110
 msgid "<b>Categories:</b> %s"
 msgstr ""
 
