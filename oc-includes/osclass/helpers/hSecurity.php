@@ -325,7 +325,6 @@
         $loader->addPsr4('phpseclib\\', LIB_PATH . 'phpseclib');
         $loader->register();
 
-
         $cipher = new phpseclib\Crypt\Rijndael();
         $cipher->disablePadding();
         $cipher->setBlockLength(256);
@@ -359,7 +358,6 @@
         $loader = new \Composer\Autoload\ClassLoader();
         $loader->addPsr4('phpseclib\\', LIB_PATH . 'phpseclib');
         $loader->register();
-
 
         $cipher = new phpseclib\Crypt\Rijndael();
         $cipher->disablePadding();

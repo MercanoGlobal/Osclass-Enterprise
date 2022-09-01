@@ -58,7 +58,6 @@
         return ucwords( osc_sanitize_allcaps( trim( $value ) ) );
     }
 
-
     /**
      * Sanitize string that's all-caps
      *
@@ -97,7 +96,6 @@
         }
         return $value;
     }
-
 
     /**
      * Format phone number. Supports 10-digit with extensions,

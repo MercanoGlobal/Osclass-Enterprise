@@ -171,7 +171,6 @@
         return AdminThemes::newInstance()->getCurrentThemeUrl() . $file;
     }
 
-
     /**
      * Gets the complete path of a given admin's file
      *
@@ -219,7 +218,7 @@
      */
     function osc_current_web_theme_url($file = '') {
         $info = WebThemes::newInstance()->loadThemeInfo(WebThemes::newInstance()->getCurrentTheme());
-        if (!file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) && isset($info['template']) && $info['template'] != ''){
+        if (!file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) && isset($info['template']) && $info['template'] != '') {
             WebThemes::newInstance()->setParentTheme();
         }
         return WebThemes::newInstance()->getCurrentThemeUrl() . $file;
@@ -232,24 +231,25 @@
      * @return string
      */
     function osc_current_web_theme_path($file = '') {
-		$info = WebThemes::newInstance()->loadThemeInfo(WebThemes::newInstance()->getCurrentTheme());
-
-        if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ){
+        if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ) {
             require WebThemes::newInstance()->getCurrentThemePath() . $file;
-        } elseif($info['template'] != '') {
-			WebThemes::newInstance()->setParentTheme();
-            if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ) {
-              require WebThemes::newInstance()->getCurrentThemePath() . $file;
-            } else {
-				WebThemes::newInstance()->setGuiTheme();
-	            if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ) {
-	                require WebThemes::newInstance()->getCurrentThemePath() . $file;
-	            }
-			}
         } else {
-            WebThemes::newInstance()->setGuiTheme();
-            if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ) {
-                require WebThemes::newInstance()->getCurrentThemePath() . $file;
+            $info = WebThemes::newInstance()->loadThemeInfo(WebThemes::newInstance()->getCurrentTheme());
+            if($info['template'] != '') {
+                WebThemes::newInstance()->setParentTheme();
+                if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ) {
+                    require WebThemes::newInstance()->getCurrentThemePath() . $file;
+                } else {
+                    WebThemes::newInstance()->setGuiTheme();
+                    if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ) {
+                        require WebThemes::newInstance()->getCurrentThemePath() . $file;
+                    }
+                }
+            } else {
+                WebThemes::newInstance()->setGuiTheme();
+                if( file_exists(WebThemes::newInstance()->getCurrentThemePath() . $file) ) {
+                    require WebThemes::newInstance()->getCurrentThemePath() . $file;
+                }
             }
         }
     }
@@ -921,7 +921,6 @@
     //functions for locations & search //
     /////////////////////////////////////
 
-
     /**
      * Gets list of countries
      *
@@ -982,7 +981,6 @@
         }
         return View::newInstance()->_get('currencies');
     }
-
 
     /**
      * Prints the additional options to the menu
@@ -1251,8 +1249,6 @@
         return ( Rewrite::newInstance()->get_location() === 'error' );
     }
 
-
-
     /**
      * Get location
      *
@@ -1270,7 +1266,6 @@
     function osc_get_osclass_section() {
         return Rewrite::newInstance()->get_section();
     }
-
 
     /**
      * Check is an admin is a super admin or only a moderator
@@ -1314,5 +1309,5 @@
     function osc_is_subdomain() {
         return View::newInstance()->_get('subdomain_slug')!='';
     }
-    /* file end: ./oc-includes/osclass/helpers/hDefines.php */
 
+    /* file end: ./oc-includes/osclass/helpers/hDefines.php */
