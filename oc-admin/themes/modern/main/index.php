@@ -374,7 +374,7 @@
                       <span class="date"><?php echo osc_format_date($i['dt_pub_date'], 'd. M, H:i'); ?></span>
                       <a href="<?php echo osc_admin_base_url(true); ?>?page=items&action=item_edit&id=<?php echo $i['pk_i_id']; ?>">
                         <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
-                        <span><?php echo osc_highlight($i['s_title'], 12); ?></span>
+                        <span title="<?php echo $i['s_title']; ?>"><?php echo osc_highlight($i['s_title'], 12); ?></span>
                       </a>
                     </div>
                   <?php } ?>
@@ -432,7 +432,7 @@
                       <span class="date"><?php echo osc_format_date($u['dt_reg_date'], 'd. M, H:i'); ?></span>
                       <a href="<?php echo osc_admin_base_url(true); ?>?page=users&action=edit&id=<?php echo $u['pk_i_id']; ?>">
                         <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
-                        <span><?php echo osc_highlight($u['s_name'], 12); ?></span>
+                        <span title="<?php echo $u['s_name']; ?>"><?php echo osc_highlight($u['s_name'], 12); ?></span>
                       </a>
                     </div>
                   <?php } ?>
@@ -498,7 +498,7 @@
                       <span class="date"><?php echo osc_format_date($c['dt_pub_date'], 'd. M, H:i'); ?></span>
                       <a href="<?php echo osc_admin_base_url(true); ?>?page=comments&action=comment_edit&id=<?php echo $c['pk_i_id']; ?>">
                         <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
-                        <span><?php echo osc_highlight($c['s_title'], 12); ?></span>
+                        <span title="<?php echo $c['s_title']; ?>"><?php echo ($c['s_title'] == '' ? __('Comment #' . $c['pk_i_id']) : osc_highlight($c['s_title'], 12)); ?></span>
                       </a>
                     </div>
                   <?php } ?>
