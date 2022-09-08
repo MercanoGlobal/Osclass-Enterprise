@@ -163,7 +163,7 @@
                                 <?php } else { echo osc_comment_author_name(); } ?>:
                             </em></h3>
 
-                            <?php if(osc_enable_comment_rating()) { ?>
+                            <?php if(osc_enable_comment_rating() && osc_comment_rating() > 0) { ?>
                                 <p class="comment-rating">
                                     <?php for($i = 1; $i <= 5; $i++) { ?>
                                         <?php

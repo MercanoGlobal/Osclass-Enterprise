@@ -100,6 +100,12 @@
                 </div>
             </div>
             <div class="form-row">
+                <div class="form-label"><?php _e('Rating'); ?></div>
+                <div class="form-controls input-description-wide">
+                    <?php CommentForm::rating_input_text($comment); ?>
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="form-label"><?php _e('Comment'); ?></div>
                 <div class="form-controls input-description-wide">
                     <?php CommentForm::body_input_textarea($comment); ?>

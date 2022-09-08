@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-09-08 15:58+0300\n"
+"PO-Revision-Date: 2022-09-08 22:34+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -448,7 +448,7 @@ msgid "For security, type <b>your current password</b>"
 msgstr ""
 
 #: oc-admin/themes/modern/admins/frm.php:112 oc-admin/themes/modern/admins/index.php:174 oc-admin/themes/modern/admins/index.php:185 oc-admin/themes/modern/appearance/add.php:103 oc-admin/themes/modern/appearance/index.php:153 oc-admin/themes/modern/appearance/index.php:173 oc-admin/themes/modern/appearance/widgets.php:128 oc-admin/themes/modern/categories/iframe.php:55
-#: oc-admin/themes/modern/categories/index.php:385 oc-admin/themes/modern/comments/frm.php:110 oc-admin/themes/modern/comments/index.php:180 oc-admin/themes/modern/comments/index.php:191 oc-admin/themes/modern/fields/iframe.php:83 oc-admin/themes/modern/fields/index.php:302 oc-admin/themes/modern/items/frm.php:292 oc-admin/themes/modern/items/index.php:401
+#: oc-admin/themes/modern/categories/index.php:385 oc-admin/themes/modern/comments/frm.php:116 oc-admin/themes/modern/comments/index.php:180 oc-admin/themes/modern/comments/index.php:191 oc-admin/themes/modern/fields/iframe.php:83 oc-admin/themes/modern/fields/index.php:302 oc-admin/themes/modern/items/frm.php:292 oc-admin/themes/modern/items/index.php:401
 #: oc-admin/themes/modern/items/index.php:412 oc-admin/themes/modern/items/reported.php:203 oc-admin/themes/modern/items/reported.php:214 oc-admin/themes/modern/languages/index.php:174 oc-admin/themes/modern/languages/index.php:186 oc-admin/themes/modern/languages/index.php:223 oc-admin/themes/modern/market/header.php:168 oc-admin/themes/modern/media/index.php:168
 #: oc-admin/themes/modern/media/index.php:179 oc-admin/themes/modern/pages/frm.php:130 oc-admin/themes/modern/pages/index.php:202 oc-admin/themes/modern/pages/index.php:213 oc-admin/themes/modern/plugins/index.php:244 oc-admin/themes/modern/plugins/index.php:261 oc-admin/themes/modern/settings/currencies.php:174 oc-admin/themes/modern/settings/currencies.php:185
 #: oc-admin/themes/modern/settings/currency_form.php:132 oc-admin/themes/modern/settings/locations.php:129 oc-admin/themes/modern/settings/locations.php:193 oc-admin/themes/modern/settings/locations.php:220 oc-admin/themes/modern/settings/locations.php:246 oc-admin/themes/modern/settings/locations.php:275 oc-admin/themes/modern/settings/locations.php:303
@@ -848,11 +848,15 @@ msgstr ""
 msgid "Blocked"
 msgstr ""
 
+#: oc-admin/themes/modern/comments/frm.php:103
+msgid "Rating"
+msgstr ""
+
 #: oc-admin/themes/modern/main/index.php:363 oc-admin/themes/modern/main/index.php:424 oc-admin/themes/modern/main/index.php:487
 msgid "Not validated"
 msgstr ""
 
-#: oc-admin/themes/modern/comments/frm.php:103 oc-admin/themes/modern/stats/comments.php:174 oc-includes/osclass/classes/datatables/CommentsDataTable.php:76
+#: oc-admin/themes/modern/comments/frm.php:109 oc-admin/themes/modern/stats/comments.php:174 oc-includes/osclass/classes/datatables/CommentsDataTable.php:76
 msgid "Comment"
 msgstr ""
 
