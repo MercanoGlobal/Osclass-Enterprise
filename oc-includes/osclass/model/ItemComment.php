@@ -125,6 +125,7 @@
                                 'b_active'      => 1,
                                 'b_enabled'     => 1);
             $this->dao->where($conditions);
+            $this->dao->orderBy('pk_i_id', 'DESC');
 
             if( $page !== 'all' && $commentsPerPage > 0 ) {
                 $this->dao->limit(($page*$commentsPerPage), $commentsPerPage);
