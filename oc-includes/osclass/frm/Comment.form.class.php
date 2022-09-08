@@ -69,6 +69,18 @@
             parent::generic_input_text("authorEmail", $commentAuthorEmail, null, false);
         }
 
+        static public function rating_input_text( $comment = null )
+        {
+            $commentRating = '';
+            if( isset($comment['i_rating']) ) {
+                $commentRating = $comment['i_rating'];
+            }
+            if(Session::newInstance()->_getForm('commentRating') != '') {
+                $commentRating = Session::newInstance()->_getForm('commentRating');
+            }
+            parent::generic_input_text( 'rating' , $commentRating);
+        }
+
         static public function body_input_textarea($comment = null)
         {
             $commentBody = '';

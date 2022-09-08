@@ -118,6 +118,11 @@ $(document).ready(function(){
                         </div>
                         <div class="form-label-checkbox">
                             <label>
+                                <input type="checkbox" <?php echo ( osc_enable_comment_rating() ? 'checked="checked"' : '' ); ?> name="enable_comment_rating" value="1" /> <?php _e('Enable ratings on comments'); ?>
+                            </label>
+                        </div>
+                        <div class="form-label-checkbox">
+                            <label>
                                 <input type="checkbox" <?php echo ( ( osc_moderate_comments() == -1 ) ? '' : 'checked="checked"' ); ?> name="moderate_comments" value="1" /> <?php _e('A comment is being held for moderation'); ?>
                             </label>
                         </div>

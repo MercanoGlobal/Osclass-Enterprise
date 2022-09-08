@@ -162,6 +162,23 @@
                                 <?php if ( (osc_item_user_id() == osc_comment_user_id()) && osc_comment_user_id() != 0 ) { echo osc_comment_author_name(); ?>&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true" style="color:#29b7cd" title="<?php _e('Owner', 'bender'); ?>"></i>
                                 <?php } else { echo osc_comment_author_name(); } ?>:
                             </em></h3>
+
+                            <?php if(osc_enable_comment_rating()) { ?>
+                                <p class="comment-rating">
+                                    <?php for($i = 1; $i <= 5; $i++) { ?>
+                                        <?php
+                                            $class = '';
+                                            if(osc_comment_rating() >= $i) {
+                                                $class = ' fill';
+                                            }
+                                        ?>
+                                        <i class="fa fa-star<?php echo $class; ?>"></i>
+                                    <?php } ?>
+
+                                    <span>(<?php echo sprintf(__('%d of 5', 'bender'), osc_comment_rating()); ?>)</span>
+                                </p>
+                            <?php } ?>
+
                             <p><?php echo nl2br( osc_comment_body() ); ?> </p>
                             <?php if ( osc_comment_user_id() && (osc_comment_user_id() == osc_logged_user_id()) ) { ?>
                             <p>
@@ -202,7 +219,26 @@
                                         <?php CommentForm::email_input_text(); ?>
                                     </div>
                                 </div>
-                            <?php }; ?>
+                            <?php } ?>
+                            <?php if(osc_enable_comment_rating()) { ?>
+                                <div class="control-group">
+                                    <label class="control-label" for="title"><?php _e('Rating', 'bender'); ?></label>
+                                    <div class="controls">
+                                        <?php //CommentForm::rating_input_text(); ?>
+                                        <input type="hidden" name="rating" value="" />
+
+                                        <div class="comment-leave-rating">
+                                            <i class="fa fa-star is-rating-item" data-value="1"></i> 
+                                            <i class="fa fa-star is-rating-item" data-value="2"></i> 
+                                            <i class="fa fa-star is-rating-item" data-value="3"></i> 
+                                            <i class="fa fa-star is-rating-item" data-value="4"></i> 
+                                            <i class="fa fa-star is-rating-item" data-value="5"></i> 
+                                        </div>
+
+                                        <span class="comment-rating-selected"></span>
+                                    </div>
+                                </div>
+                            <?php } ?>
                             <div class="control-group">
                                 <label class="control-label" for="title"><?php _e('Title', 'bender'); ?></label>
                                 <div class="controls">
@@ -227,4 +263,15 @@
         <?php } ?>
     <?php } ?>
 </div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').on('click', '.is-rating-item', function(e) {
+      e.preventDefault();
+      $('input[name="rating"]').val($(this).attr('data-value'));
+      $('.comment-rating-selected').text('(' + $(this).attr('data-value') + ' <?php echo osc_esc_js(__('of', 'bender')); ?> 5)');
+      $(this).parent().find('i.is-rating-item').addClass('fill');
+      $(this).nextAll('i.is-rating-item').removeClass('fill');
+    })
+  });
+</script>
 <?php osc_current_web_theme_path('footer.php') ; ?>

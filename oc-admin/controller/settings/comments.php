@@ -32,6 +32,8 @@
                     $iUpdated         = 0;
                     $enabledComments  = Params::getParam('enabled_comments');
                     $enabledComments  = (($enabledComments != '') ? true : false);
+                    $enabledRating    = Params::getParam('enable_comment_rating');
+                    $enabledRating    = (($enabledRating != '') ? true : false);
                     $moderateComments = Params::getParam('moderate_comments');
                     $moderateComments = (($moderateComments != '') ? true : false);
                     $numModerateComments = Params::getParam('num_moderate_comments');
@@ -56,6 +58,7 @@
                     }
 
                     $iUpdated += osc_set_preference('enabled_comments', $enabledComments);
+                    $iUpdated += osc_set_preference('enable_comment_rating', $enabledRating);
                     if($moderateComments) {
                         $iUpdated += osc_set_preference('moderate_comments', $numModerateComments);
                     } else {

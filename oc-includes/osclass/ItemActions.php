@@ -996,15 +996,23 @@
             $authorName  = trim(strip_tags($aItem['authorName']));
             $authorEmail = trim(strip_tags($aItem['authorEmail']));
             $body        = trim(strip_tags($aItem['body']));
+            $rating      = (int)trim(strip_tags($aItem['rating']));
             $title       = trim(strip_tags($aItem['title']));
             $itemId      = $aItem['id'];
             $userId      = $aItem['userId'];
             $status_num  = -1;
 
+            if($rating > 5) {
+                $rating = 5;
+            } else if ($rating <= 0) {
+                $rating = null;
+            }
+
             $banned = osc_is_banned(trim(strip_tags($aItem['authorEmail'])));
             if($banned==1 || $banned==2) {
                 Session::newInstance()->_setForm('commentAuthorName', $authorName);
                 Session::newInstance()->_setForm('commentTitle', $title);
+                Session::newInstance()->_setForm('commentRating', $rating);
                 Session::newInstance()->_setForm('commentBody', $body);
                 Session::newInstance()->_setForm('commentAuthorEmail', $authorEmail);
                 return 5;
@@ -1020,6 +1028,7 @@
             if(osc_reg_user_post_comments() && !osc_is_web_user_logged_in()) {
                 Session::newInstance()->_setForm('commentAuthorName', $authorName);
                 Session::newInstance()->_setForm('commentTitle', $title);
+                Session::newInstance()->_setForm('commentRating', $rating);
                 Session::newInstance()->_setForm('commentBody', $body);
                 return 6;
             }
@@ -1027,6 +1036,7 @@
             if( !preg_match('|^.*?@.{2,}\..{2,3}$|', $authorEmail)) {
                 Session::newInstance()->_setForm('commentAuthorName', $authorName);
                 Session::newInstance()->_setForm('commentTitle', $title);
+                Session::newInstance()->_setForm('commentRating', $rating);
                 Session::newInstance()->_setForm('commentBody', $body);
                 return 3;
             }
@@ -1035,6 +1045,7 @@
                 Session::newInstance()->_setForm('commentAuthorName', $authorName);
                 Session::newInstance()->_setForm('commentAuthorEmail', $authorEmail);
                 Session::newInstance()->_setForm('commentTitle', $title);
+                Session::newInstance()->_setForm('commentRating', $rating);
                 return 4;
             }
 
@@ -1074,6 +1085,7 @@
                               ,'s_author_name'  => $authorName
                               ,'s_author_email' => $authorEmail
                               ,'s_title'        => $title
+                              ,'i_rating'       => $rating
                               ,'s_body'         => $body
                               ,'b_active'       => ($status=='ACTIVE' ? 1 : 0)
                               ,'b_enabled'      => 1
@@ -1157,6 +1169,7 @@
                     $aItem['authorEmail']    = Params::getParam('authorEmail');
                     $aItem['body']           = Params::getParam('body');
                     $aItem['title']          = Params::getParam('title');
+                    $aItem['rating']         = Params::getParam('rating');
                     $aItem['id']             = Params::getParam('id');
                     $aItem['userId']         = Session::newInstance()->_get('userId');
                     if($aItem['userId'] == ''){
@@ -1204,7 +1217,7 @@
                 $aItem['contactName']   = Params::getParam('contactName');
                 $aItem['contactEmail']  = Params::getParam('contactEmail');
             }
-            $aItem['userId']        = $userId;
+            $aItem['userId'] = $userId;
 
             if( $is_add ) {   // ADD
                 if($this->is_admin) {

@@ -317,6 +317,7 @@ CREATE TABLE /*TABLE_PREFIX*/t_item_comment (
     s_author_name VARCHAR(100) NOT NULL,
     s_author_email VARCHAR(100) NOT NULL,
     s_body TEXT NOT NULL,
+    i_rating INT(3) NULL,
     b_enabled TINYINT(1) NOT NULL DEFAULT 1,
     b_active TINYINT(1) NOT NULL DEFAULT 0,
     b_spam TINYINT(1) NOT NULL DEFAULT 0,

@@ -67,6 +67,7 @@
                 's_author_name',
                 's_author_email',
                 's_body',
+                'i_rating',
                 'b_enabled',
                 'b_active',
                 'b_spam',
@@ -156,7 +157,7 @@
         }
 
         /**
-         * Return total of comments, given an item id. (active & enabled)
+         * Return total number of comments, given an item id. (active & enabled)
          *
          * @access public
          * @since 2.3
@@ -181,6 +182,34 @@
             } else {
                 $total = $result->row();
                 return $total['total'];
+            }
+        }
+
+        /**
+         * Return average rating, given an item id. (active & enabled)
+         *
+         * @access public
+         * @since 3.8.1
+         * @param integer $id
+         * @return integer
+         */
+        function averageRating($id)
+        {
+            $this->dao->select('avg(i_rating) as rating');
+            $this->dao->from($this->getTableName());
+            $conditions = array('fk_i_item_id' => $id, 'b_active' => 1, 'b_enabled' => 1);
+            $this->dao->where($conditions);
+            $this->dao->where('i_rating is not null');
+            $this->dao->groupBy('fk_i_item_id');
+            $result = $this->dao->get();
+
+            if( $result == false ) {
+                return false;
+            } else if($result->numRows() === 0) {
+                return 0;
+            } else {
+                $total = $result->row();
+                return $total['rating'];
             }
         }
 

@@ -789,6 +789,15 @@
     }
 
     /**
+     * Gets rating of current comment
+     *
+     * @return int
+     */
+    function osc_comment_rating() {
+        return (int) osc_comment_field("i_rating");
+    }
+
+    /**
      * Gets user id of current comment
      *
      * @return int
@@ -1022,6 +1031,15 @@
             View::newInstance()->_exportVariableToView('comments', ItemComment::newInstance()->findByItemID( osc_item_id(), osc_item_comments_page(), osc_comments_per_page() ) );
         }
         return View::newInstance()->_count('comments');
+    }
+
+    /**
+     * Gets number of item comments of current item
+     *
+     * @return int
+     */
+    function osc_count_item_comments_rating() {
+        return ItemComment::newInstance()->averageRating(osc_item_id());
     }
 
     /**

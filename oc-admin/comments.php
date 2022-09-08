@@ -172,10 +172,18 @@
                                                 $this->redirectTo( osc_admin_base_url(true) . "?page=comments&action=comment_edit&id=".Params::getParam('id') );
                                             }
 
+                                            $rating = (int)Params::getParam('rating');
+                                            if($rating > 5) {
+                                                $rating = 5;
+                                            } else if ($rating <= 0) {
+                                                $rating = null;
+                                            }
+
                                             $this->itemCommentManager->update(
                                                 array(
                                                     's_title'        => Params::getParam('title'),
                                                     's_body'         => Params::getParam('body'),
+                                                    'i_rating'       => $rating,
                                                     's_author_name'  => Params::getParam('authorName'),
                                                     's_author_email' => Params::getParam('authorEmail')
                                                 ),
@@ -247,7 +255,6 @@
                                                     $this->redirectTo($url);
                                                 }
                                             }
-
 
                                             $this->_exportVariableToView('aData', $aData);
                                             $this->_exportVariableToView('aRawRows', $commentsDataTable->rawRows());

@@ -222,6 +222,15 @@
     }
 
     /**
+     * Gets if rating is enabled on comments or not
+     *
+     * @return boolean
+     */
+    function osc_enable_comment_rating() {
+        return getBoolPreference('enable_comment_rating');
+    }
+
+    /**
      * Gets how many comments should be posted before auto-moderation
      *
      * @return int

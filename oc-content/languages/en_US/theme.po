@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2022-06-30 14:24+0300\n"
+"PO-Revision-Date: 2022-09-08 15:59+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: 404.php:30
 msgid "Sorry but I can't find the page you're looking for"
@@ -266,7 +266,7 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
-#: contact.php:40 item-send-friend.php:44 item-sidebar.php:100 item.php:194 user-public-sidebar.php:33
+#: contact.php:40 item-send-friend.php:44 item-sidebar.php:100 item.php:211 user-public-sidebar.php:33
 msgid "Your name"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: contact.php:68 item-send-friend.php:87 item-sidebar.php:125 item.php:219 user-public-sidebar.php:69
+#: contact.php:68 item-send-friend.php:87 item-sidebar.php:125 item.php:255 user-public-sidebar.php:69
 msgid "Send"
 msgstr ""
 
@@ -442,7 +442,7 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
-#: item-post.php:65 item.php:207
+#: item-post.php:65 item.php:243
 msgid "Title"
 msgstr ""
 
@@ -506,7 +506,7 @@ msgstr ""
 msgid "Publish"
 msgstr ""
 
-#: item-send-friend.php:50 item.php:200
+#: item-send-friend.php:50 item.php:217
 msgid "Your e-mail"
 msgstr ""
 
@@ -664,16 +664,28 @@ msgstr ""
 msgid "Owner"
 msgstr ""
 
-#: item.php:168
+#: item.php:178
+msgid "%d of 5"
+msgstr ""
+
+#: item.php:185
 msgid "Delete your comment"
 msgstr ""
 
-#: item.php:180
+#: item.php:197
 msgid "Leave your comment (spam and offensive messages will be removed)"
 msgstr ""
 
-#: item.php:213
+#: item.php:225
+msgid "Rating"
+msgstr ""
+
+#: item.php:249
 msgid "Comment"
+msgstr ""
+
+#: item.php:271
+msgid "of"
 msgstr ""
 
 #: loop-single-premium.php:48 loop-single.php:52
