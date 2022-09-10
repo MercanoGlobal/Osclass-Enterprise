@@ -200,7 +200,7 @@ Options -Indexes
 	# RewriteCond %{REQUEST_URI} /php(unit)?/ [NC,OR]
 	RewriteCond %{REQUEST_URI} \.(aspx?|env|git(ignore)?|phtml|rar) [NC,OR]
 	RewriteCond %{REQUEST_URI} /(cms|control_panel|home_url=|lr-admin|manager|panel|staff|webadmin) [NC,OR]
-	RewriteCond %{REQUEST_URI} /(adm(in)?|controlpanel|magento(-1|web)?|mg|onli(n|k)e|tmplconnector|uxm|web?store)/ [NC,OR]
+	RewriteCond %{REQUEST_URI} /(controlpanel|magento(-1|web)?|mg|tmplconnector|uxm|web?store)/ [NC,OR]
 
 	RewriteCond %{REQUEST_URI} (_timthumb_|timthumb.php) [NC,OR]
 	RewriteCond %{REQUEST_URI} /(install|wp-config|xmlrpc)\.php [NC,OR]
