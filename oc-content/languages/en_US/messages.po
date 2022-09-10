@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-09-08 15:58+0300\n"
+"PO-Revision-Date: 2022-09-10 13:42+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -443,64 +443,64 @@ msgstr ""
 msgid "Re-generation complete"
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:571
+#: oc-admin/controller/settings/permalinks.php:590
 msgid "All fields are required."
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:571
+#: oc-admin/controller/settings/permalinks.php:590
 msgid "One field was not updated"
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:571
+#: oc-admin/controller/settings/permalinks.php:590
 msgid "%s fields were not updated"
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:574 oc-admin/controller/settings/permalinks.php:583
-#: oc-admin/controller/settings/permalinks.php:622
+#: oc-admin/controller/settings/permalinks.php:593 oc-admin/controller/settings/permalinks.php:602
+#: oc-admin/controller/settings/permalinks.php:641
 msgid "Permalinks structure updated"
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:585
+#: oc-admin/controller/settings/permalinks.php:604
 msgid ""
 "However, we can't check if Apache module <b>mod_rewrite</b> is loaded. If you experience some problems with "
 "the URLs, you should deactivate <em>Friendly URLs</em>"
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:592 oc-admin/controller/settings/permalinks.php:602
+#: oc-admin/controller/settings/permalinks.php:611 oc-admin/controller/settings/permalinks.php:621
 msgid "File <b>.htaccess</b> couldn't be filled out with the right content."
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:594
+#: oc-admin/controller/settings/permalinks.php:613
 msgid ""
 "Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file, please "
 "deactivate the <em>Friendly URLs</em> option."
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:604
+#: oc-admin/controller/settings/permalinks.php:623
 msgid ""
 "Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file or experience "
 "some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:616
+#: oc-admin/controller/settings/permalinks.php:635
 msgid "File <b>.htaccess</b> already exists and was not modified."
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:618
+#: oc-admin/controller/settings/permalinks.php:637
 msgid ""
 "Here's the content you have to add to the <b>.htaccess</b> file. If you can't modify the file or experience "
 "some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:651
+#: oc-admin/controller/settings/permalinks.php:670
 msgid "Friendly URLs successfully deactivated"
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:654
+#: oc-admin/controller/settings/permalinks.php:673
 msgid "Friendly URLs deactivated, but .htaccess file could not be deleted. Please, remove it manually"
 msgstr ""
 
-#: oc-admin/controller/settings/permalinks.php:656
+#: oc-admin/controller/settings/permalinks.php:675
 msgid "Friendly URLs deactivated, but .htaccess file was modified outside Osclass and was not deleted"
 msgstr ""
 

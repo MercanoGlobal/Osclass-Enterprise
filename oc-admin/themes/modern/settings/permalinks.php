@@ -689,6 +689,7 @@ Options -Indexes
 	RewriteCond %{QUERY_STRING} (ckfinder|fck|fckeditor|fullclick) [NC,OR]
 	RewriteCond %{QUERY_STRING} ((.*)header:|(.*)set-cookie:(.*)=) [NC,OR]
 	RewriteCond %{QUERY_STRING} (cmd|command)(=|%3d)(chdir|mkdir)(.*)(x20) [NC,OR]
+	RewriteCond %{QUERY_STRING} .*mosConfig.* [OR]
 	RewriteCond %{QUERY_STRING} (/|%2f)((wp-)?config)((\.|%2e)inc)?((\.|%2e)php) [NC,OR]
 	RewriteCond %{QUERY_STRING} (thumbs?(_editor|open)?|tim(thumbs?)?)((\.|%2e)php) [NC,OR]
 	RewriteCond %{QUERY_STRING} (absolute_|base|root_)(dir|path)(=|%3d)(ftp|https?) [NC,OR]
@@ -810,6 +811,25 @@ Options -Indexes
 	RewriteRule .* - [F,L]
 
 	# RewriteRule .* /7G_log.php?log [END,NE,E=7G_REQUEST_METHOD:%1]
+
+</IfModule>
+
+# 7G Addon: Stop Aggressive Scanning for Uploads-Related Targets
+<IfModule mod_rewrite.c>
+
+	# RewriteCond %{REQUEST_URI} /php(unit)?/ [NC,OR]
+	RewriteCond %{REQUEST_URI} \.(aspx?|env|git(ignore)?|phtml|rar) [NC,OR]
+	RewriteCond %{REQUEST_URI} /(cms|control_panel|home_url=|lr-admin|manager|panel|staff|webadmin) [NC,OR]
+	RewriteCond %{REQUEST_URI} /(adm(in)?|controlpanel|magento(-1|web)?|mg|onli(n|k)e|tmplconnector|uxm|web?store)/ [NC,OR]
+
+	RewriteCond %{REQUEST_URI} (_timthumb_|timthumb.php) [NC,OR]
+	RewriteCond %{REQUEST_URI} /(install|wp-config|xmlrpc)\.php [NC,OR]
+	RewriteCond %{REQUEST_URI} /(uploadify|uploadbg|up__uzegp)\.php [NC,OR]
+	RewriteCond %{REQUEST_URI} /(comm\.js|mysql-date-function|simplebootadmin|vuln\.htm|www\.root\.) [NC,OR]
+	RewriteCond %{REQUEST_URI} /(admin-uploadify|fileupload|jquery-file-upload|upload_file|upload|uploadify|webforms)/ [NC,OR]
+	RewriteCond %{REQUEST_URI} /(ajax_pluginconf|apikey|connector(.minimal)?|eval-stdin|f0x|login|router|setup-config|sssp|vuln|xattacker)\.php [NC]
+
+	RewriteRule .* - [F,L]
 
 </IfModule>
 HTACCESS;
