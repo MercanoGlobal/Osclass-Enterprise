@@ -220,7 +220,7 @@
                                     </div>
                                 </div>
                             <?php } ?>
-                            <?php if(osc_enable_comment_rating()) { ?>
+                            <?php if(osc_enable_comment_rating() && (!osc_is_web_user_logged_in() || osc_logged_user_id() != osc_item_user_id())) { ?>
                                 <div class="control-group">
                                     <label class="control-label" for="title"><?php _e('Rating', 'bender'); ?></label>
                                     <div class="controls">

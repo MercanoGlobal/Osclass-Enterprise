@@ -1034,7 +1034,7 @@
     }
 
     /**
-     * Gets number of item comments of current item
+     * Gets number of item comments ratings of current item
      *
      * @return int
      */

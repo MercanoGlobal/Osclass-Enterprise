@@ -543,6 +543,15 @@
     }
 
     /**
+     * Gets number of premium comments ratings of current premium item
+     *
+     * @return int
+     */
+    function osc_count_premium_comments_rating() {
+        return ItemComment::newInstance()->averageRating(osc_premium_id());
+    }
+
+    /**
      * Gets next comment of current premium comments
      *
      * @return array
