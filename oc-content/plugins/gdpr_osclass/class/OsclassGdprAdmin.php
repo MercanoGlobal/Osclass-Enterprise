@@ -6,7 +6,7 @@ class OsclassGdprAdmin {
 
         osc_add_hook('init_admin', function(){
             osc_add_admin_submenu_divider('plugins', __('Osclass GDPR', 'gdpr_osclass'), 'gdpr_osclass_div');
-            osc_admin_menu_plugins(__('Settings', 'gdpr_osclass'), osc_admin_render_plugin_url('gdpr_osclass/admin/dashboard.php'), 'settings_gdpr_osclass');
+            osc_admin_menu_plugins(__('&raquo; Settings', 'gdpr_osclass'), osc_admin_render_plugin_url('gdpr_osclass/admin/dashboard.php'), 'settings_gdpr_osclass');
         }); 
 
         if(strpos(Params::getParam('file'),'gdpr_osclass/admin/')!==false) { 

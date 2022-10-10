@@ -55,7 +55,7 @@ Plugin update URI: http://www.osclass.org/files/plugins/google_maps/update.php
     osc_add_route('google_maps_settings', 'google_maps_settings', 'google_maps_settings', 'google_maps/admin/settings.php');
     osc_add_hook('admin_menu_init', function() {
         osc_add_admin_submenu_divider('plugins', 'Google Maps Plugin', 'google_maps_divider', 'administrator');
-        osc_add_admin_submenu_page('plugins', __('Settings', 'google_maps'), osc_route_admin_url('google_maps_settings'), 'google_maps_setting', 'administrator');
+        osc_add_admin_submenu_page('plugins', __('&raquo; Settings', 'google_maps'), osc_route_admin_url('google_maps_settings'), 'google_maps_setting', 'administrator');
     });
 
 

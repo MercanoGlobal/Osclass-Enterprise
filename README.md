@@ -32,12 +32,13 @@ ft_min_word_len=2
 location / {
     try_files $uri $uri/ /index.php?$args;
 }
+
+## If you encounter errors using the above, try replacing '$args' with '$query_string'.
 ```
--If you encounter errors using the above, try replacing `$args` with `$query_string`.
 
 ## Documented Core Changes
 
-*We now have some settings that allow us to enhance the core functionality of Osclass, as it follows:*
+*We now have some options that allow us to enhance the core functionality of Osclass, as it follows:*
 - In `oc-includes/osclass/UserActions.php - Line 281` and `oc-includes/osclass/controller/login.php - Line 228` we have the option to limit multiple password requests within a predefined time frame (default is 1 request per hour). You can change this value to anything you like.
 - In `oc-includes/osclass/classes/datatables/UsersDataTable.php - Lines 65, 135, 136` we have the option to show the user avatar in oc-admin, if an avatar plugin is used. It's set by default to the *Madhouse Avatar Plugin*, but can be changed just by modifying the function name.
 - In `oc-content/themes/bender/item-sidebar.php - Line 76-86` we've added JS bot protection to the e-mail field. This code can be used by any theme.

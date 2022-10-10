@@ -1,11 +1,10 @@
-Osclass 3.8.1 2022-09-08
+Osclass 3.8.1 2022-10-10
 ------------------------
 
 - Removed ties to Osclass Market API
 - Added Seller Verification Plugin to the bundled plugins (for setup check the Readme.txt in the plugin folder)
 - Added Admin Email Search Plugin to the bundled plugins
 - Added Osclass GDPR Plugin to the bundled plugins
-- Added Find By ID Plugin to the bundled plugins
 - Added Anti Spam & Protection System v2.0 to the bundled plugins
 - Added the ability to disable the publishing of listings for all users except admins (eCommerce feature)
 - Added options to completely disable Item contact form and the Web contact form (incl. post requests)

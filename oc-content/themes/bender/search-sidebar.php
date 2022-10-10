@@ -18,10 +18,10 @@
      *      You should have received a copy of the GNU Affero General Public
      * License along with this program.  If not, see <http://www.gnu.org/licenses/>.
      */
-     $category = (array) __get("category");
-     if(!isset($category['pk_i_id']) ) {
-         $category['pk_i_id'] = null;
-     }
+    $category = (array) __get("category");
+    if(!isset($category['pk_i_id']) ) {
+        $category['pk_i_id'] = null;
+    }
 
 ?>
 <div id="sidebar">
@@ -49,20 +49,20 @@
         </fieldset>
         <?php if( osc_images_enabled_at_items() ) { ?>
         <fieldset>
-            <h3><?php _e('Show only', 'bender') ; ?></h3>
+            <h3><?php _e('Show only', 'bender'); ?></h3>
             <div class="row">
                 <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> />
-                <label for="withPicture"><?php _e('listings with pictures', 'bender') ; ?></label>
+                <label for="withPicture"><?php _e('listings with pictures', 'bender'); ?></label>
             </div>
         </fieldset>
         <?php } ?>
         <?php if( osc_price_enabled_at_items() ) { ?>
         <fieldset>
             <div class="row price-slice">
-                <h3><?php _e('Price', 'bender') ; ?></h3>
-                <span><?php _e('Min', 'bender') ; ?>.</span>
+                <h3><?php _e('Price', 'bender'); ?></h3>
+                <span><?php _e('Min', 'bender'); ?>.</span>
                 <input class="input-text" type="text" id="priceMin" name="sPriceMin" value="<?php echo osc_esc_html(osc_search_price_min()); ?>" size="6" maxlength="6" />
-                <span><?php _e('Max', 'bender') ; ?>.</span>
+                <span><?php _e('Max', 'bender'); ?>.</span>
                 <input class="input-text" type="text" id="priceMax" name="sPriceMax" value="<?php echo osc_esc_html(osc_search_price_max()); ?>" size="6" maxlength="6" />
             </div>
         </fieldset>
@@ -72,7 +72,7 @@
             if(osc_search_category_id()) {
                 osc_run_hook('search_form', osc_search_category_id()) ;
             } else {
-                osc_run_hook('search_form') ;
+                osc_run_hook('search_form');
             }
             ?>
         </div>
@@ -82,7 +82,7 @@
             <input type="hidden" name="sCategory[]" value="<?php echo osc_esc_html($cat_id); ?>"/>
         <?php } ?>
         <div class="actions">
-            <button type="submit"><?php _e('Apply', 'bender') ; ?></button>
+            <button type="submit"><?php _e('Apply', 'bender'); ?></button>
         </div>
     </form>
     <fieldset>
