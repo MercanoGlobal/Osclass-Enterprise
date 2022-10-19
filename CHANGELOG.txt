@@ -1,4 +1,4 @@
-Osclass 3.8.1 2022-10-10
+Osclass 3.8.1 2022-10-19
 ------------------------
 
 - Removed ties to Osclass Market API

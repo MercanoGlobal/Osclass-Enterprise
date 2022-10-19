@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Admin search email
-Plugin URI: http://www.osclass.org/
+Plugin Name: Admin Search Email
+Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
 Description: Helps to find out where an email is used
 Version: 1.0.0
 Author: Osclass
-Author URI: http://www.osclass.org/
+Author URI: https://github.com/MercanoG/Osclass-Enterprise
 Short Name: admin_search_email
 */
 

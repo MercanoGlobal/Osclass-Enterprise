@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Google Maps
-Plugin URI: http://www.osclass.org/
+Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
 Description: This plugin shows a Google Map on the location space of every item.
 Version: 2.1.7
 Author: Osclass & kingsult
-Author URI: http://www.osclass.org/
-Plugin update URI: http://www.osclass.org/files/plugins/google_maps/update.php
+Author URI: https://github.com/MercanoG/Osclass-Enterprise
+Plugin update URI: 
 */
 
     function google_maps_location() {
