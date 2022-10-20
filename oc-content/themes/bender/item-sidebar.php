@@ -69,7 +69,7 @@
             </p>
         <?php } else { ?>
             <?php if( osc_item_user_id() != null ) { ?>
-                <p class="name"><?php _e('Name', 'bender') ?>: <a href="<?php echo osc_user_public_profile_url( osc_item_user_id() ); ?>" ><?php echo osc_item_contact_name(); ?></a></p>
+                <p class="name"><?php _e('Name', 'bender') ?>: <a href="<?php echo osc_user_public_profile_url( osc_item_user_id() ); ?>" ><?php echo osc_item_contact_name(); ?></a> <?php osc_run_hook('seller_verification_show', osc_item_user_id()); ?></p>
             <?php } else { ?>
                 <p class="name"><?php printf(__('Name: %s', 'bender'), osc_item_contact_name()); ?></p>
             <?php } ?>

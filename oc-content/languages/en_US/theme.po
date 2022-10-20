@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the {package-name} package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Osclass\n"
+"Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2022-09-08 15:59+0300\n"
+"PO-Revision-Date: 2022-10-19 15:51+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -124,14 +124,12 @@ msgid "Footer link"
 msgstr ""
 
 #: admin/settings.php:48
-msgid ""
-"I want to help Osclass by linking to <a href=\"https://github.com/osclass/Osclass\" target=\"_blank\">osclass.org</a> from my site with the following "
-"text:"
+msgid "I want to help Osclass by linking to <a href=\"https://github.com/MercanoG/Osclass-Enterprise\" target=\"_blank\">Osclass Enterprise</a> from my site with the following text:"
 msgstr ""
 
 #: admin/settings.php:49
 msgid ""
-"This website is proudly using the <a title=\"Osclass web\" href=\"https://github.com/osclass/Osclass\">classifieds software</a> <strong>Osclass</strong>"
+"This website is proudly using the <a title=\"Osclass Enterprise\" href=\"https://github.com/MercanoG/Osclass-Enterprise\"><strong>Osclass Enterprise</strong></a> classifieds software"
 msgstr ""
 
 #: admin/settings.php:56
@@ -175,9 +173,7 @@ msgid "Header 728x90"
 msgstr ""
 
 #: admin/settings.php:99
-msgid ""
-"This ad will be shown at the top of your website, next to the site title and above the search results. Note that the size of the ad has to be 728x90 "
-"pixels."
+msgid "This ad will be shown at the top of your website, next to the site title and above the search results. Note that the size of the ad has to be 728x90 pixels."
 msgstr ""
 
 #: admin/settings.php:103
@@ -185,9 +181,7 @@ msgid "Homepage 728x90"
 msgstr ""
 
 #: admin/settings.php:107
-msgid ""
-"This ad will be shown on the main site of your website. It will appear both at the top and bottom of your site homepage. Note that the size of the ad "
-"has to be 728x90 pixels."
+msgid "This ad will be shown on the main site of your website. It will appear both at the top and bottom of your site homepage. Note that the size of the ad has to be 728x90 pixels."
 msgstr ""
 
 #: admin/settings.php:111
@@ -319,7 +313,7 @@ msgid "Contact"
 msgstr ""
 
 #: footer.php:73
-msgid "This website is proudly using the <a target=\"_blank\" title=\"Osclass web\" href=\"%s\">classifieds scripts</a> software <strong>Osclass</strong>"
+msgid "This website is proudly using the <a target=\"_blank\" title=\"Osclass Enterprise\" href=\"%s\"><strong>Osclass Enterprise</strong></a> classifieds software</strong>"
 msgstr ""
 
 #: footer.php:78
@@ -644,8 +638,8 @@ msgstr ""
 
 #: item.php:136
 msgid ""
-"This site is never involved in any transaction, and does not handle payments, shipping, guarantee transactions, provide escrow services, or offer "
-"\"buyer protection\" or \"seller certification\""
+"This site is never involved in any transaction, and does not handle payments, shipping, guarantee transactions, provide escrow services, or offer \"buyer protection\" or \"seller "
+"certification\""
 msgstr ""
 
 #: item.php:143

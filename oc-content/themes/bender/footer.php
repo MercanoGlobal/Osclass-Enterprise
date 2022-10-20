@@ -70,7 +70,7 @@
             <?php } ?>
         </ul>
         <?php if( (!defined('MULTISITE') || MULTISITE==0) && osc_get_preference('footer_link', 'bender') !== '0') {
-            echo '<div>' . sprintf(__('This website is proudly using the <a target="_blank" title="Osclass web" href="%s">classifieds software</a> <strong>Osclass</strong>'), 'https://github.com/osclass/Osclass') . '</div>';
+            echo '<div>' . sprintf(__('This website is proudly using the <a target="_blank" title="Osclass Enterprise" href="%s"><strong>Osclass Enterprise</strong></a> classifieds software'), 'https://github.com/MercanoG/Osclass-Enterprise') . '</div>';
         }
         ?>
         <?php if ( osc_count_web_enabled_locales() > 1) { ?>

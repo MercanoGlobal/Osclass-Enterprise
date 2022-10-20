@@ -23,46 +23,51 @@
         }
 
 /**
-* Do not touch this one
-*/
- public function import($file)
+ * Do not touch this one
+ */
+    public function import($file)
         {
             $path = osc_plugin_resource($file) ;
             $sql = file_get_contents($path);
 
-            if(! $this->dao->importSQL($sql) ){
+            if( !$this->dao->importSQL($sql) ) {
                 throw new Exception( "Error importSQL::SellerVerification<br>".$file ) ;
             }
         }
+
 /**
-* Do not touch this one
-*/
+ * Do not touch this one
+ */
     public function uninstall()
         {
-          $this->dao->query(sprintf('DROP TABLE %s', $this->getTable_Plugin()) ) ;
+            $this->dao->query(sprintf('DROP TABLE %s', $this->getTable_Plugin()) ) ;
         }
 
 /**
-* Do not touch this one IF 
+ * Do not touch this one IF 
  * fk_i_user_id  IS THE SAME  name as IN struct.sql
-*/
-   public function deleteItem($userId)
+ */
+    public function deleteItem($userId)
         {
+            if(is_numeric($userId)) {
+                return $this->dao->delete($this->getTable_Plugin(), 'fk_i_user_id = '.$userId);
+            }
+            return false;
         }
 
 /**
-* Do not touch this one IF 
+ * Do not touch this one IF 
  * fk_i_user_id  IS THE SAME  name as IN struct.sql
-*/
-   public function getSellerVerificationAttr($userId)
+ */
+    public function getSellerVerificationAttr($userId)
         {
-        if(!is_numeric($userId)){
+        if(!is_numeric($userId)) {
            return false;
         }
             $this->dao->select();
             $this->dao->from($this->getTable_Plugin());
             $this->dao->where('fk_i_user_id', $userId);
-            
+
             $result = $this->dao->get();
             if( !$result ) {
                 return array() ;
@@ -71,28 +76,28 @@
         }
 
 /**
-* Do not touch this one IF 
+ * Do not touch this one IF 
  * fk_i_user_id  IS THE SAME  name as IN struct.sql
-*/
-  public function insertSellerVerificationAttr( $arrayInsert, $userId )
+ */
+    public function insertSellerVerificationAttr( $arrayInsert, $userId )
         {
-        if(!is_numeric($userId)){
+        if(!is_numeric($userId)) {
            return false;
         }
             $aSet = $this->toArrayInsert($arrayInsert);
             $aSet['fk_i_user_id'] = $userId;
-            
+
             return $this->dao->insert($this->getTable_Plugin(), $aSet);
         }
 
-    public function insertValue($seller_verification, $seller_description, $userID)    {
+    public function insertValue($seller_verification, $seller_description, $userID) {
         $args = array(
             'b_seller_verification' => $seller_verification,
             's_seller_description' => $seller_description,
             'fk_i_user_id' => $userID
         );
         return $this->dao->insert($this->getTable_Plugin(), $args);
-    }  
+    }
 
     public function updateAttr($seller_verification, $seller_description, $userID)
         {
@@ -107,12 +112,12 @@
         } 
 
 /**
-* Do not touch this one IF 
+ * Do not touch this one IF 
  * fk_i_user_id  IS THE SAME  name as IN struct.sql
-*/
+ */
         public function updateSellerVerificationAttr( $arrayUpdate, $userId )
         {
-            if(!is_numeric($userId)){
+            if(!is_numeric($userId)) {
                 return false;
             }
             $aUpdate = $this->toArrayInsert($arrayUpdate) ;
@@ -120,8 +125,8 @@
         }
 
 /**
-* Here u must play ... 
- * fields are sended by index.php 
+ * Here u must play ... 
+ * fields are set by index.php
  * 
  * _getSelerVerificationParameters... 
  * 
@@ -133,7 +138,7 @@
  * 
  * 
  * 
-*/
+ */
         private function toArrayInsert( $arrayInsert )
         {
             $array = array(  
@@ -144,7 +149,7 @@
             return $array;
         }
 
-        // not to touch
+        // do not touch
         function _update($table, $values, $where)
         {
             $this->dao->from($table) ;

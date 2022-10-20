@@ -3,7 +3,7 @@
 Plugin Name: Seller Verification
 Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
 Description: This plugin extends the User Profiles with a seller verification attribute that can only be added by admins
-Version: 1.1
+Version: 1.2.0
 Author: Achmad Zacky Rachmatullah
 Author URI: https://www.facebook.com/achmadzackyr
 Short Name: sellerver
@@ -69,10 +69,10 @@ function sellerver_user_edit_post($userID) {
     } else { return false; }
 }
 
-// will delete from our table the data with pk_i_id =$user_id
-function sellerver_delete_user($user_id) {
-    if( is_numeric($user_id)) {
-        SellerVerification::newInstance()->deleteItem($user_id);
+// will delete from our table the data with pk_i_id =$userId
+function sellerver_delete_user($userId) {
+    if( is_numeric($userId)) {
+        SellerVerification::newInstance()->deleteItem($userId);
     } 
 }
 
