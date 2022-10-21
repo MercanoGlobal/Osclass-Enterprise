@@ -59,6 +59,37 @@
         private function addTableHeader()
         {
 
+            $arg_date = '&sort=date';
+            if(Params::getParam('sort') == 'date') {
+                if(Params::getParam('direction') == 'desc') {
+                    $arg_date .= '&direction=asc';
+                }
+            }
+            $arg_update_date = '&sort=update_date';
+            if(Params::getParam('sort') == 'update_date') {
+                if(Params::getParam('direction') == 'desc') {
+                    $arg_update_date .= '&direction=asc';
+                }
+            }
+            $arg_access_date = '&sort=access_date';
+            if(Params::getParam('sort') == 'access_date') {
+                if(Params::getParam('direction') == 'desc') {
+                    $arg_access_date .= '&direction=asc';
+                }
+            }
+            $arg_items = '&sort=items';
+            if(Params::getParam('sort') == 'items') {
+                if(Params::getParam('direction') == 'desc') {
+                    $arg_items .= '&direction=asc';
+                }
+            }
+
+            Rewrite::newInstance()->init();
+            $page  = (int)Params::getParam('iPage');
+            if($page==0) { $page = 1; }
+            Params::setParam('iPage', $page);
+            $url_base = preg_replace('|&direction=([^&]*)|', '', preg_replace('|&sort=([^&]*)|', '', osc_base_url().Rewrite::newInstance()->get_raw_request_uri()));
+
             $this->addColumn('status-border', '');
             $this->addColumn('status', __('Status'));
             $this->addColumn('bulkactions', '<input id="check_all" type="checkbox" />');
@@ -70,10 +101,10 @@
             $this->addColumn('name', __('Name'));
             $this->addColumn('phone', __('Phone'));
             $this->addColumn('ip', __('IP'));
-            $this->addColumn('date', __('Register Date'));
-            $this->addColumn('update_date', __('Update date'));
-            $this->addColumn('access_date', __('Last access date'));
-            $this->addColumn('items', __('Items'));
+            $this->addColumn('date', '<a href="'.osc_esc_html($url_base.$arg_date).'">'.__('Register Date').'</a>');
+            $this->addColumn('update_date', '<a href="'.osc_esc_html($url_base.$arg_update_date).'">'.__('Update date').'</a>');
+            $this->addColumn('access_date', '<a href="'.osc_esc_html($url_base.$arg_access_date).'">'.__('Last access date').'</a>');
+            $this->addColumn('items', '<a href="'.osc_esc_html($url_base.$arg_items).'">'.__('Items').'</a>');
 
             $dummy = &$this;
             osc_run_hook("admin_users_table", $dummy);
@@ -242,6 +273,22 @@
                 $this->withFilters = true;
             }
 
+            // column sort
+            $this->order_by['type'] = $direction = $_get['direction'];
+            $arrayDirection = array('desc', 'asc');
+            if(!in_array($direction, $arrayDirection)) {
+                Params::setParam('direction', 'desc');
+                $this->order_by['type'] = 'desc';
+            }
+
+            $sort = $_get['sort'];
+            $arraySortColumns = array('date' => 'dt_reg_date', 'update_date' => 'dt_mod_date', 'access_date' => 'dt_access_date', 'items' => 'i_items');
+            if(!key_exists($sort, $arraySortColumns)) {
+                $this->order_by['column_name'] = 'dt_reg_date';
+            } else {
+                $this->order_by['column_name'] = $arraySortColumns[$sort];
+            }
+
             // set start and limit using iPage param
             $start = ($this->iPage - 1) * $_get['iDisplayLength'];
 
@@ -278,14 +325,14 @@
         private function get_row_status($user)
         {
 
-            if( $user['b_enabled']==0 ) {
+            if( $user['b_enabled'] == 0 ) {
                 return array(
                     'class' => 'status-blocked',
                     'text'  => __('Blocked')
                 );
             }
 
-            if( $user['b_active']==0 ) {
+            if( $user['b_active'] == 0 ) {
                 return array(
                     'class' => 'status-inactive',
                     'text'  => __('Inactive')

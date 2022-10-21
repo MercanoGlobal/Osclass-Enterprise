@@ -69,12 +69,25 @@
         private function addTableHeader()
         {
 
+            $arg_date = '&sort=date';
+            if(Params::getParam('sort') == 'date') {
+                if(Params::getParam('direction') == 'desc') {
+                    $arg_date .= '&direction=asc';
+                }
+            }
+
+            Rewrite::newInstance()->init();
+            $page  = (int)Params::getParam('iPage');
+            if($page==0) { $page = 1; }
+            Params::setParam('iPage', $page);
+            $url_base = preg_replace('|&direction=([^&]*)|', '', preg_replace('|&sort=([^&]*)|', '', osc_base_url().Rewrite::newInstance()->get_raw_request_uri()));
+
             $this->addColumn('status-border', '');
             $this->addColumn('status', __('Status'));
             $this->addColumn('bulkactions', '<input id="check_all" type="checkbox" />');
             $this->addColumn('author', __('Author'));
             $this->addColumn('comment', __('Comment'));
-            $this->addColumn('date', __('Date'));
+            $this->addColumn('date', '<a href="'.osc_esc_html($url_base.$arg_date).'">'.__('Date').'</a>');
 
             $dummy = &$this;
             osc_run_hook("admin_comments_table", $dummy);
@@ -164,6 +177,22 @@
                 }
             }
 
+            // column sort
+            $this->order_by['type'] = $direction = $_get['direction'];
+            $arrayDirection = array('desc', 'asc');
+            if(!in_array($direction, $arrayDirection)) {
+                Params::setParam('direction', 'desc');
+                $this->order_by['type'] = 'desc';
+            }
+
+            $sort = $_get['sort'];
+            $arraySortColumns = array('date' => 'dt_pub_date');
+            if(!key_exists($sort, $arraySortColumns)) {
+                $this->order_by['column_name'] = 'dt_pub_date';
+            } else {
+                $this->order_by['column_name'] = $arraySortColumns[$sort];
+            }
+
             // set start and limit using iPage param
             $start = ((int)Params::getParam('iPage')-1) * $_get['iDisplayLength'];
 
@@ -174,7 +203,7 @@
 
         public function row_class($class, $rawRow, $row)
         {
-            $status = $this->get_row_status($rawRow);
+            $status  = $this->get_row_status($rawRow);
             $class[] = $status['class'];
             return $class;
         }
@@ -196,14 +225,14 @@
         private function get_row_status($user)
         {
 
-            if( $user['b_enabled']==0 ) {
+            if( $user['b_enabled'] == 0 ) {
                 return array(
                     'class' => 'status-blocked',
                     'text'  => __('Blocked')
                 );
             }
 
-            if( $user['b_active']==0 ) {
+            if( $user['b_active'] == 0 ) {
                 return array(
                     'class' => 'status-inactive',
                     'text'  => __('Inactive')
