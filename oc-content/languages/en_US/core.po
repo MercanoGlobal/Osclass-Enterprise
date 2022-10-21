@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the {package-name} package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Osclass\n"
+"Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-09-10 13:42+0300\n"
+"PO-Revision-Date: 2022-10-21 11:46+0300\n"
 "Last-Translator: Tango\n"
-"Language-Team: Translations <translations@osclass.org>\n"
+"Language-Team: Translations\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -238,12 +238,12 @@ msgstr ""
 msgid "Back to %s"
 msgstr ""
 
-#: oc-admin/gui/login.php:41 oc-admin/themes/modern/admins/index.php:123 oc-admin/themes/modern/settings/mailserver.php:123 oc-admin/themes/modern/users/frm.php:225 oc-admin/themes/modern/users/index.php:171 oc-includes/osclass/classes/datatables/UsersDataTable.php:69 oc-includes/osclass/install-functions.php:784 oc-includes/osclass/install-functions.php:918
+#: oc-admin/gui/login.php:41 oc-admin/themes/modern/admins/index.php:123 oc-admin/themes/modern/settings/mailserver.php:123 oc-admin/themes/modern/users/frm.php:225 oc-admin/themes/modern/users/index.php:171 oc-includes/osclass/classes/datatables/UsersDataTable.php:69 oc-includes/osclass/install-functions.php:814 oc-includes/osclass/install-functions.php:948
 #: oc-includes/osclass/classes/EmailVariables.php:98
 msgid "Username"
 msgstr ""
 
-#: oc-admin/gui/login.php:47 oc-admin/themes/modern/settings/mailserver.php:129 oc-admin/themes/modern/users/frm.php:304 oc-includes/osclass/install-functions.php:688 oc-includes/osclass/install-functions.php:793 oc-includes/osclass/install-functions.php:926 oc-includes/osclass/classes/EmailVariables.php:99
+#: oc-admin/gui/login.php:47 oc-admin/themes/modern/settings/mailserver.php:129 oc-admin/themes/modern/users/frm.php:304 oc-includes/osclass/install-functions.php:718 oc-includes/osclass/install-functions.php:823 oc-includes/osclass/install-functions.php:956 oc-includes/osclass/classes/EmailVariables.php:99
 msgid "Password"
 msgstr ""
 
@@ -1171,7 +1171,7 @@ msgstr ""
 msgid "Show phone"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:241 oc-admin/themes/modern/users/frm.php:267 oc-includes/osclass/classes/datatables/ItemsDataTable.php:141 oc-includes/osclass/install-functions.php:820
+#: oc-admin/themes/modern/items/frm.php:241 oc-admin/themes/modern/users/frm.php:267 oc-includes/osclass/classes/datatables/ItemsDataTable.php:141 oc-includes/osclass/install-functions.php:850
 msgid "Location"
 msgstr ""
 
@@ -1988,7 +1988,7 @@ msgstr ""
 msgid "User based"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/advanced.php:106 oc-includes/osclass/install-functions.php:673
+#: oc-admin/themes/modern/settings/advanced.php:106 oc-includes/osclass/install-functions.php:703
 msgid "Host"
 msgstr ""
 
@@ -2206,7 +2206,7 @@ msgstr ""
 msgid "Page description"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/index.php:161 oc-includes/osclass/install-functions.php:814
+#: oc-admin/themes/modern/settings/index.php:161 oc-includes/osclass/install-functions.php:844
 msgid "Contact e-mail"
 msgstr ""
 
@@ -4014,7 +4014,7 @@ msgstr ""
 msgid "Media"
 msgstr ""
 
-#: oc-includes/osclass/classes/AdminMenu.php:97 oc-includes/osclass/install-functions.php:701
+#: oc-includes/osclass/classes/AdminMenu.php:97 oc-includes/osclass/install-functions.php:731
 msgid "Advanced"
 msgstr ""
 
@@ -4928,7 +4928,7 @@ msgstr ""
 msgid "Contact seller"
 msgstr ""
 
-#: oc-includes/osclass/functions.php:99 oc-includes/osclass/install-functions.php:862
+#: oc-includes/osclass/functions.php:99 oc-includes/osclass/install-functions.php:894
 msgid "Error"
 msgstr ""
 
@@ -5204,96 +5204,92 @@ msgstr ""
 msgid "Can't insert basic configuration. This user has no privileges to 'INSERT' into the database."
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:668
+#: oc-includes/osclass/install-functions.php:698
 msgid "Database information"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:675
+#: oc-includes/osclass/install-functions.php:705
 msgid "Server name or IP where the database engine resides"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:678
+#: oc-includes/osclass/install-functions.php:708
 msgid "Database name"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:680
+#: oc-includes/osclass/install-functions.php:710
 msgid "The name of the database you want to run Osclass in"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:683
+#: oc-includes/osclass/install-functions.php:713
 msgid "User Name"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:685
+#: oc-includes/osclass/install-functions.php:715
 msgid "Your MySQL username"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:690
+#: oc-includes/osclass/install-functions.php:720
 msgid "Your MySQL password"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:693
+#: oc-includes/osclass/install-functions.php:723
 msgid "Table prefix"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:695
+#: oc-includes/osclass/install-functions.php:725
 msgid "If you want to run multiple Osclass installations in a single database, change this"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:737
+#: oc-includes/osclass/install-functions.php:767
 msgid "Create DB"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:738
+#: oc-includes/osclass/install-functions.php:768
 msgid "Check here if the database is not created and you want to create it now"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:741
+#: oc-includes/osclass/install-functions.php:771
 msgid "DB admin username"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:746
+#: oc-includes/osclass/install-functions.php:776
 msgid "DB admin password"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:747
+#: oc-includes/osclass/install-functions.php:777
 msgid "Password copied from above"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:778
+#: oc-includes/osclass/install-functions.php:808
 msgid "Information needed"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:780
+#: oc-includes/osclass/install-functions.php:810
 msgid "Admin user"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:789
+#: oc-includes/osclass/install-functions.php:819
 msgid "Admin user is required"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:802
+#: oc-includes/osclass/install-functions.php:832
 msgid "A password will be automatically generated for you if you leave this blank."
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:803
+#: oc-includes/osclass/install-functions.php:833
 msgid "You can modify username and password if you like, just change the input value."
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:805
+#: oc-includes/osclass/install-functions.php:835
 msgid "Contact information"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:809
+#: oc-includes/osclass/install-functions.php:839
 msgid "Web title"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:816
+#: oc-includes/osclass/install-functions.php:846
 msgid "Enter your e-mail here"
-msgstr ""
-
-#: oc-includes/osclass/install-functions.php:833
-msgid "Create market.osclass.org account"
 msgstr ""
 
 #: oc-includes/osclass/install-functions.php:834
@@ -5312,43 +5308,47 @@ msgstr ""
 msgid "Once you type a country, you'll be able to choose region and city as well. Therefore, the installation will be more specific."
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:821
-msgid "Choose a country where your target users are located (you can add more later)"
+#: oc-includes/osclass/install-functions.php:851
+msgid "Choose a main country where your target users are located"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:828
+#: oc-includes/osclass/install-functions.php:852
+msgid "You can add more later."
+msgstr ""
+
+#: oc-includes/osclass/install-functions.php:860
 msgid "Skip location"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:829
+#: oc-includes/osclass/install-functions.php:861
 msgid "International"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:840
+#: oc-includes/osclass/install-functions.php:872
 msgid "No internet connection. You can continue the installation and insert countries later."
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:854
+#: oc-includes/osclass/install-functions.php:886
 msgid "Loading..."
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:866
+#: oc-includes/osclass/install-functions.php:898
 msgid "Go back"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:907
+#: oc-includes/osclass/install-functions.php:937
 msgid "The selected location could not been installed"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:910
+#: oc-includes/osclass/install-functions.php:940
 msgid "Congratulations!"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:911
-msgid "Osclass has been installed. Were you expecting more steps? Sorry to disappoint you!"
+#: oc-includes/osclass/install-functions.php:941
+msgid "Osclass Enterprise has been installed. Were you expecting more steps? Sorry to disappoint you!"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:912
+#: oc-includes/osclass/install-functions.php:942
 msgid "An e-mail with the password for oc-admin has been sent to: <b>%s</b>"
 msgstr ""
 
@@ -5368,7 +5368,7 @@ msgstr ""
 msgid "Try Osclass Free"
 msgstr ""
 
-#: oc-includes/osclass/install-functions.php:938
+#: oc-includes/osclass/install-functions.php:968
 msgid "Finish and go to the administration panel"
 msgstr ""
 

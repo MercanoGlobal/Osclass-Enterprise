@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The basic Osclass settings
+ * The basic Osclass Enterprise settings
  */
 
 // Multi-site setup

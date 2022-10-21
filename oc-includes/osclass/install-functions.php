@@ -534,28 +534,58 @@ function create_config_file($dbname, $username, $password, $dbhost, $tableprefix
     $config_text = <<<CONFIG
 <?php
 /**
- * The base MySQL settings of Osclass
+ * The basic Osclass Enterprise settings
  */
+
+// Multi-site setup
 define('MULTISITE', 0);
 
-/** MySQL database name for Osclass */
-define('DB_NAME', '$dbname');
-
-/** MySQL database username */
-define('DB_USER', '$username');
-
-/** MySQL database password */
-define('DB_PASSWORD', '$password');
-
-/** MySQL hostname */
+// MySQL hostname
 define('DB_HOST', '$dbhost');
 
-/** Database Table prefix */
+// MySQL database name
+define('DB_NAME', '$dbname');
+
+// MySQL database username
+define('DB_USER', '$username');
+
+// MySQL database password
+define('DB_PASSWORD', '$password');
+
+// Database Table prefix
 define('DB_TABLE_PREFIX', '$tableprefix');
 
+// Relative web URL
 define('REL_WEB_URL', '$rel_url');
 
+// Web address - modify here for SSL version of the site
 define('WEB_PATH', '$abs_url');
+
+
+// *************************************** //
+// ** OPTIONAL CONFIGURATION PARAMETERS ** //
+// *************************************** //
+
+// Enable debugging for PHP and MySQL (DB)
+// define('OSC_DEBUG', true);
+// define('OSC_DEBUG_LOG', true);
+// define('OSC_DEBUG_DB', true);
+// define('OSC_DEBUG_DB_LOG', true);
+// define('OSC_DEBUG_DB_EXPLAIN', true);
+
+// PHP memory limit (ideally should be more than 128MB)
+// define('OSC_MEMORY_LIMIT', 128);
+
+// MemCache caching option (database queries cache)
+// define('OSC_CACHE', 'memcache');
+// $ _cache_config[] = array('default_host' => 'localhost', 'default_port' => 11211, 'default_weight' => 1);
+
+// Increase default login time for the user - in seconds (30 days)
+// session_set_cookie_params(2592000);
+// ini_set('session.gc_maxlifetime', 2592000);
+
+// Lowers the password hashing mechanism from the default 15 to a safe 10, in order to improve performance
+// define('BCRYPT_COST', 10);
 
 CONFIG;
 
@@ -800,7 +830,7 @@ function display_target() {
             </table>
             <div class="admin-user">
                 <?php _e('A password will be automatically generated for you if you leave this blank.'); ?>
-                <img src="<?php echo get_absolute_url() ?>oc-includes/images/question.png" class="question-skip vtip" title="<?php echo osc_esc_html( __( 'You can modify username and password if you like, just change the input value.' ) ); ?>" />
+                <img src="<?php echo get_absolute_url(); ?>oc-includes/images/question.png" class="question-skip vtip" title="<?php echo osc_esc_html( __( 'You can modify username and password if you like, just change the input value.' ) ); ?>" />
             </div>
             <h2 class="title"><?php _e('Contact information'); ?></h2>
             <table class="contact-info">
@@ -818,7 +848,9 @@ function display_target() {
                 </tbody>
             </table>
             <h2 class="title"><?php _e('Location'); ?></h2>
-            <p class="space-left-25 left no-bottom"><?php _e( 'Choose a country where your target users are located (you can add more later)' ); ?>.</p>
+            <p class="space-left-25 left no-bottom"><?php _e( 'Choose a main country where your target users are located' ); ?>.
+                <img src="<?php echo get_absolute_url(); ?>oc-includes/images/question.png" class="question-skip vtip" title="<?php echo osc_esc_html( __( 'You can add more later.' ) ); ?>" />
+            </p>
             <div class="clear"></div>
             <div id="location">
                 <?php if(!$internet_error) { ?>
@@ -868,9 +900,9 @@ function display_database_error($error ,$step) {
 <?php
 }
 
-function ping_search_engines($bool){
+function ping_search_engines($bool) {
     $mPreference = Preference::newInstance();
-    if($bool == 1){
+    if($bool == 1) {
         $mPreference->insert (
             array(
                 's_section' => 'osclass'
@@ -881,8 +913,6 @@ function ping_search_engines($bool){
         );
         // GOOGLE
         osc_doRequest( 'https://www.google.com/ping?sitemap='.urlencode(osc_search_url(array('sFeed' => 'rss') )), array());
-        // BING
-        osc_doRequest( 'https://www.bing.com/ping?sitemap='.urlencode( osc_search_url(array('sFeed' => 'rss') ) ), array());
     } else {
         $mPreference->insert (
             array(
@@ -908,7 +938,7 @@ function display_finish($password) {
         </div>
     <?php } ?>
     <h2 class="target"><?php _e('Congratulations!');?></h2>
-    <p class="space-left-10"><?php _e("Osclass has been installed. Were you expecting more steps? Sorry to disappoint you!");?></p>
+    <p class="space-left-10"><?php _e("Osclass Enterprise has been installed. Were you expecting more steps? Sorry to disappoint you!");?></p>
     <p class="space-left-10"><?php echo sprintf(__('An e-mail with the password for oc-admin has been sent to: <b>%s</b>'), $data['s_email']);?></p>
     <div style="clear:both;"></div>
     <div class="form-table finish">
