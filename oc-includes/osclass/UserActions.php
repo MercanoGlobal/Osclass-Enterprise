@@ -318,7 +318,7 @@
                 if( Params::getParam('s_password', false, false) != '') {
                     $input['s_password'] = osc_hash_password(Params::getParam('s_password', false, false));
                 }
-                $input['s_username']     = osc_sanitize_username(Params::getParam('s_username'));
+                $input['s_username']     = osc_sanitize_user_name(Params::getParam('s_username'));
             }
 
             $input['s_name']         = trim(Params::getParam('s_name'));

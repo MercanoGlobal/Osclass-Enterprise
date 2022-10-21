@@ -72,6 +72,18 @@
     }
 
     /**
+     * Sanitize the user's name
+     *
+     * @param string $value
+     * @return string sanitized
+     */
+    function osc_sanitize_user_name($value) {
+        $value = preg_replace('/(_+)/', '-', preg_replace('/([^0-9A-Za-z_]*)/', '', str_replace(' ', '-', trim($value))));
+        $value = preg_replace('/-{2,}/','-', $value);
+        return $value;
+    }
+
+    /**
      * Sanitize a username
      *
      * @param string $value
