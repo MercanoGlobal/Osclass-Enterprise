@@ -86,6 +86,7 @@
                             <li>Added the ability to disable the publishing of listings for all users except admins (eCommerce feature)</li>
                             <li>Added options to completely disable Item contact form and the Web contact form (incl. post requests)</li>
                             <li>Added Extended Item Moderation</li>
+                            <li>Added Settings for managing the redirect page after the listing is published (you can choose either to the category page or to the listing page)</li>
                             <li>Added Login as Any User for admins</li>
                             <li>Added Sortable Custom Fields</li>
                             <li>Added Comment Statistics to the Admin page Statistics Widget</li>

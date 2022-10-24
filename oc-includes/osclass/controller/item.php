@@ -174,8 +174,15 @@
                         $itemId   = Params::getParam('itemId');
 
                         $category = Category::newInstance()->findByPrimaryKey(Params::getParam('catId'));
-                        View::newInstance()->_exportVariableToView('category', $category);
-                        $this->redirectTo(osc_search_category_url());
+
+                        if(osc_item_posted_redirect() == 'item') {
+                            View::newInstance()->_exportVariableToView("item", Item::newInstance()->findByPrimaryKey($itemId));
+                            $redirectUrl = osc_item_url();
+                        } else {
+                            View::newInstance()->_exportVariableToView('category', $category);
+                            $redirectUrl = osc_search_category_url();
+                        }
+                        $this->redirectTo($redirectUrl);
                     }
                 break;
                 case 'item_edit':   // edit item
@@ -261,7 +268,7 @@
                             View::newInstance()->_exportVariableToView("item", Item::newInstance()->findByPrimaryKey($id));
                             $this->redirectTo( osc_item_url() );
                         } else {
-                            osc_add_flash_error_message( $success);
+                            osc_add_flash_error_message($success);
                             $this->redirectTo( osc_item_edit_url($secret, $id) );
                         }
                     }
@@ -454,8 +461,8 @@
                     if ((osc_recaptcha_private_key() != '')) {
                         if(!osc_check_recaptcha()) {
                             osc_add_flash_error_message( _m('The reCAPTCHA is invalid') );
-                            $this->redirectTo(osc_item_send_friend_url() );
-                            return false; // BREAK THE PROCESS, THE RECAPTCHA IS WRONG
+                            $this->redirectTo(osc_item_send_friend_url());
+                            return false; // BREAK THE PROCESS, THE RECAPTCHA IS INVALID
                         }
                     }
 
@@ -470,7 +477,7 @@
                         Session::newInstance()->_clearVariables();
                         $this->redirectTo( osc_item_url() );
                     } else {
-                        $this->redirectTo(osc_item_send_friend_url() );
+                        $this->redirectTo( osc_item_send_friend_url() );
                     }
                 break;
                 case 'contact':
@@ -491,7 +498,7 @@
                             $this->redirectTo( osc_item_url() );
                         }
 
-                        if( osc_reg_user_can_contact() && osc_is_web_user_logged_in() || !osc_reg_user_can_contact() ){
+                        if( osc_reg_user_can_contact() && osc_is_web_user_logged_in() || !osc_reg_user_can_contact() ) {
                             $this->doView('item-contact.php');
                         } else {
                             osc_add_flash_warning_message( _m("You can't contact the seller, only registered users can").'. <br />'.sprintf( _m("<a href=\"%s\">Click here to sign-in</a>"), osc_user_login_url() ) );
@@ -521,7 +528,7 @@
                             Session::newInstance()->_setForm("phoneNumber", Params::getParam('phoneNumber'));
                             Session::newInstance()->_setForm("message_body",Params::getParam('message'));
                             $this->redirectTo( osc_item_url( ) );
-                            return false; // BREAK THE PROCESS, THE RECAPTCHA IS WRONG
+                            return false; // BREAK THE PROCESS, THE RECAPTCHA IS INVALID
                         }
                     }
 

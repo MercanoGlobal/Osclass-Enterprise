@@ -1,4 +1,4 @@
-Osclass 3.8.1 2022-10-21
+Osclass 3.8.1 2022-10-24
 ------------------------
 
 - Removed ties to Osclass Market API
@@ -9,6 +9,7 @@ Osclass 3.8.1 2022-10-21
 - Added the ability to disable the publishing of listings for all users except admins (eCommerce feature)
 - Added options to completely disable Item contact form and the Web contact form (incl. post requests)
 - Added Extended Item Moderation
+- Added Settings for managing the redirect page after the listing is published (you can choose either to the category page or to the listing page)
 - Added Login as Any User for admins
 - Added Sortable Custom Fields
 - Added Comment Statistics to the Admin page Statistics Widget

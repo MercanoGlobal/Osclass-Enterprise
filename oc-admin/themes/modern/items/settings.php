@@ -134,6 +134,15 @@
                             </div>
                         </div>
                         <div class="form-row">
+                            <div class="form-label"><?php _e('Redirect after item post'); ?></div>
+                            <div class="form-controls">
+                                <select name="item_posted_redirect">
+                                    <option value="category" <?php if(osc_item_posted_redirect() == 'category') echo 'selected'; ?>><?php _e('Category Page'); ?></option>
+                                    <option value="item" <?php if(osc_item_posted_redirect() == 'item') echo 'selected'; ?>><?php _e('Item Page'); ?></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
                             <div class="form-label"> <?php _e('Renewal'); ?></div>
                             <div class="form-controls">
                                 <div class="form-label-checkbox">

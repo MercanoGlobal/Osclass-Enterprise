@@ -609,10 +609,10 @@
                                             $this->redirectTo( osc_admin_base_url(true) . "?page=items&action=post" );
                                         }
                 break;
-                case('settings'):          // calling the items settings view
+                case('settings'):       // calling the items settings view
                                         $this->doView('items/settings.php');
                 break;
-                case('settings_post'):     // update item settings
+                case('settings_post'):  // update item settings
                                         osc_csrf_check();
                                         $iUpdated                   = 0;
                                         $enabledRecaptchaItems      = Params::getParam('enabled_recaptcha_items');
@@ -638,7 +638,7 @@
                                         $enabledFieldImagesItems    = Params::getParam('enableField#images@items');
                                         $enabledFieldImagesItems    = (($enabledFieldImagesItems != '') ? true : false);
                                         $numImagesItems             = Params::getParam('numImages@items');
-                                        if($numImagesItems=='') { $numImagesItems = 0; }
+                                        if($numImagesItems=='')     { $numImagesItems = 0; }
                                         $itemContactFormDisabled    = Params::getParam('item_contact_form_disabled');
                                         $itemContactFormDisabled    = (($itemContactFormDisabled != '') ? true : false);
                                         $regUserCanContact          = Params::getParam('reg_user_can_contact');
@@ -658,7 +658,7 @@
                                         $renewalUpdatePublish       = Params::getParam('renewal_update_pub_date');
                                         $renewalUpdatePublish       = (($renewalUpdatePublish != '') ? true : false);
                                         $renewalLimit               = (int)Params::getParam('renewal_limit');
-
+                                        $redirectAfterItemPosted    = Params::getParam('item_posted_redirect');
 
                                         $msg = '';
                                         if(!osc_validate_int(Params::getParam("items_wait_time"))) {
@@ -683,7 +683,6 @@
                                             osc_add_flash_error_message( $msg, 'admin');
                                             $this->redirectTo(osc_admin_base_url(true) . '?page=items&action=settings');
                                         }
-
 
                                         $iUpdated += osc_set_preference('enabled_recaptcha_items', $enabledRecaptchaItems);
                                         if($moderateItems) {
@@ -713,6 +712,7 @@
                                         $iUpdated += osc_set_preference('enabled_renewal_items', $enableRenewal);
                                         $iUpdated += osc_set_preference('renewal_update_pub_date', $renewalUpdatePublish);
                                         $iUpdated += osc_set_preference('renewal_limit', $renewalLimit);
+                                        $iUpdated += osc_set_preference('item_posted_redirect', $redirectAfterItemPosted);
 
                                         if($iUpdated > 0) {
                                             osc_add_flash_ok_message( _m("Listings' settings have been updated"), 'admin');

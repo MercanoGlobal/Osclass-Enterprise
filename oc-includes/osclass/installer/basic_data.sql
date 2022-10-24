@@ -121,6 +121,7 @@ INSERT INTO /*TABLE_PREFIX*/t_preference VALUES
     ,('osclass', 'defaultOrderField@search', 'dt_pub_date', 'STRING')
     ,('osclass', 'defaultOrderType@search', '1', 'BOOLEAN')
     ,('osclass', 'admin_theme', 'modern', 'STRING')
+    ,('osclass', 'item_posted_redirect', 'category', 'STRING')
     ,('osclass', 'akismetKey', '', 'STRING')
     ,('osclass', 'recaptchaPrivKey', '', 'STRING')
     ,('osclass', 'recaptchaPubKey', '', 'STRING')

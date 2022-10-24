@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-10-21 22:01+0300\n"
+"PO-Revision-Date: 2022-10-24 12:59+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: index.php:52 oc-admin/themes/modern/tools/maintenance.php:38
 msgid "Maintenance &raquo; %s"
@@ -583,7 +583,7 @@ msgstr ""
 msgid "Edit widget"
 msgstr ""
 
-#: oc-admin/themes/modern/appearance/add_widget.php:27 oc-admin/themes/modern/appearance/add_widget.php:55 oc-admin/themes/modern/appearance/customization.php:76 oc-admin/themes/modern/categories/iframe.php:54 oc-admin/themes/modern/emails/frm.php:134 oc-admin/themes/modern/fields/iframe.php:82 oc-admin/themes/modern/items/settings.php:257 oc-admin/themes/modern/languages/frm.php:112
+#: oc-admin/themes/modern/appearance/add_widget.php:27 oc-admin/themes/modern/appearance/add_widget.php:55 oc-admin/themes/modern/appearance/customization.php:76 oc-admin/themes/modern/categories/iframe.php:54 oc-admin/themes/modern/emails/frm.php:134 oc-admin/themes/modern/fields/iframe.php:82 oc-admin/themes/modern/items/settings.php:266 oc-admin/themes/modern/languages/frm.php:112
 #: oc-admin/themes/modern/pages/frm.php:36 oc-admin/themes/modern/settings/advanced.php:113 oc-admin/themes/modern/settings/comments.php:166 oc-admin/themes/modern/settings/index.php:415 oc-admin/themes/modern/settings/mailserver.php:171 oc-admin/themes/modern/settings/media.php:331 oc-admin/themes/modern/settings/permalinks.php:842 oc-admin/themes/modern/settings/searches.php:142
 #: oc-admin/themes/modern/settings/spamNbots.php:80 oc-admin/themes/modern/settings/spamNbots.php:124 oc-admin/themes/modern/users/settings.php:84
 msgid "Save changes"
@@ -1135,7 +1135,7 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
-#: oc-admin/themes/modern/items/frm.php:177 oc-admin/themes/modern/items/settings.php:241
+#: oc-admin/themes/modern/items/frm.php:177 oc-admin/themes/modern/items/settings.php:250
 msgid "Price"
 msgstr ""
 
@@ -1424,98 +1424,110 @@ msgid "<strong>Remember</strong> that you must <a href=\"%s\" target=\"_blank\">
 msgstr ""
 
 #: oc-admin/themes/modern/items/settings.php:137
+msgid "Redirect after item post"
+msgstr ""
+
+#: oc-admin/themes/modern/items/settings.php:140
+msgid "Category Page"
+msgstr ""
+
+#: oc-admin/themes/modern/items/settings.php:141
+msgid "Item Page"
+msgstr ""
+
+#: oc-admin/themes/modern/items/settings.php:146
 msgid "Renewal"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:142
+#: oc-admin/themes/modern/items/settings.php:151
 msgid "User can renew his listings once expired. This feature is available only to registered users and admins."
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:148
+#: oc-admin/themes/modern/items/settings.php:157
 msgid "Publish date of renewed listing is updated to current date"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:152
+#: oc-admin/themes/modern/items/settings.php:161
 msgid "Listing can be republished a maximum of %s times"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:154
+#: oc-admin/themes/modern/items/settings.php:163
 msgid "If the value is set to zero, there is no renewal limit"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:160 oc-includes/osclass/classes/Breadcrumb.php:348
+#: oc-admin/themes/modern/items/settings.php:169 oc-includes/osclass/classes/Breadcrumb.php:348
 msgid "Contact publisher"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:165
+#: oc-admin/themes/modern/items/settings.php:174
 msgid "Disable the contact publisher form"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:171
+#: oc-admin/themes/modern/items/settings.php:180
 msgid "Only allow registered users to contact the publisher"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:177
+#: oc-admin/themes/modern/items/settings.php:186
 msgid "Allow attached files in contact publisher form"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:183
+#: oc-admin/themes/modern/items/settings.php:192
 msgid "Only allow registered users to see the contact phone number"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:189 oc-admin/themes/modern/settings/comments.php:143
+#: oc-admin/themes/modern/items/settings.php:198 oc-admin/themes/modern/settings/comments.php:143
 msgid "Notifications"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:194
+#: oc-admin/themes/modern/items/settings.php:203
 msgid "Notify the admin when a new listing is added"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:200
+#: oc-admin/themes/modern/items/settings.php:209
 msgid "Send admin a copy of the \"contact publisher\" email"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:206
+#: oc-admin/themes/modern/items/settings.php:215
 msgid "Send admin a copy to \"share listing\" email"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:212
+#: oc-admin/themes/modern/items/settings.php:221
 msgid "Warn about expiration"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:215
+#: oc-admin/themes/modern/items/settings.php:224
 msgid "days"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:217
+#: oc-admin/themes/modern/items/settings.php:226
 msgid "This option will send an email X days before an ad expires to the author. 0 for no email."
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:220
+#: oc-admin/themes/modern/items/settings.php:229
 msgid "Title length"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:223 oc-admin/themes/modern/items/settings.php:231
+#: oc-admin/themes/modern/items/settings.php:232 oc-admin/themes/modern/items/settings.php:240
 msgid "%s characters "
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:228
+#: oc-admin/themes/modern/items/settings.php:237
 msgid "Description length"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:236
+#: oc-admin/themes/modern/items/settings.php:245
 msgid "Optional fields"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:246
+#: oc-admin/themes/modern/items/settings.php:255
 msgid "Attach images"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:250
+#: oc-admin/themes/modern/items/settings.php:259
 msgid "Attach %s images per listing"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:251
+#: oc-admin/themes/modern/items/settings.php:260
 msgid "If the value is zero, it means an unlimited number of images is allowed"
 msgstr ""
 
@@ -3605,7 +3617,7 @@ msgid "Checking for updates (Current version %s)"
 msgstr ""
 
 #: oc-admin/themes/modern/tools/upgrade.php:54
-msgid "Congratulations! Your Osclass installation is up to date!"
+msgid "To check for new releases, please visit the <a href=\"https://github.com/MercanoG/Osclass-Enterprise/releases\" target=\"_blank\">official release channel</a> and follow the <a href=\"https://doc.osc4u.com/Updating_Osclass.html\" target=\"_blank\">upgrade instructions</a>."
 msgstr ""
 
 #: oc-admin/themes/modern/tools/upgrade.php:48
@@ -3621,7 +3633,7 @@ msgid "Upgrade"
 msgstr ""
 
 #: oc-admin/themes/modern/tools/upgrade.php:26
-msgid "Check to see if you're using the latest version of Osclass. If you're not, the system will let you know so you can update and use the newest features."
+msgid "Check to see if you're using the latest version of Osclass Enterprise."
 msgstr ""
 
 #: oc-admin/themes/modern/tools/upgrade.php:39
@@ -5436,7 +5448,7 @@ msgstr ""
 msgid "Requirements help:"
 msgstr ""
 
-#: oc-includes/osclass/install.php:192 oc-includes/osclass/upgrade-funcs.php:581 oc-includes/osclass/upgrade-funcs.php:586
+#: oc-includes/osclass/install.php:192 oc-includes/osclass/upgrade-funcs.php:582 oc-includes/osclass/upgrade-funcs.php:587
 msgid "Need more help?"
 msgstr ""
 
@@ -5912,11 +5924,11 @@ msgstr ""
 msgid "here"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:585
+#: oc-includes/osclass/upgrade-funcs.php:586
 msgid "Osclass &raquo; Updated correctly"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:581 oc-includes/osclass/upgrade-funcs.php:586
+#: oc-includes/osclass/upgrade-funcs.php:582 oc-includes/osclass/upgrade-funcs.php:587
 msgid "Osclass has been updated successfully."
 msgstr ""
 

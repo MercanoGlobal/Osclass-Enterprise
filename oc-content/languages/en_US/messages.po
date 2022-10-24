@@ -2,18 +2,18 @@
 # This file is distributed under the same license as the {package-name} package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Osclass\n"
+"Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-09-10 13:42+0300\n"
+"PO-Revision-Date: 2022-10-24 13:00+0300\n"
 "Last-Translator: Tango\n"
-"Language-Team: Translations <translations@osclass.org>\n"
+"Language-Team: Translations\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: oc-admin/admins.php:30 oc-admin/items.php:38 oc-includes/osclass/core/AdminSecBaseModel.php:28
 msgid "You don't have enough permissions"
@@ -228,7 +228,7 @@ msgstr ""
 msgid "Great! We updated your comment"
 msgstr ""
 
-#: oc-admin/comments.php:203 oc-includes/osclass/controller/item.php:640
+#: oc-admin/comments.php:203 oc-includes/osclass/controller/item.php:647
 msgid "The comment has been deleted"
 msgstr ""
 
@@ -1357,49 +1357,49 @@ msgid "The specified e-mail is already used by %s"
 msgstr ""
 
 #: oc-includes/osclass/controller/ajax.php:87 oc-includes/osclass/controller/ajax.php:152
-#: oc-includes/osclass/controller/item.php:406
+#: oc-includes/osclass/controller/item.php:413
 msgid "The selected photo has been successfully deleted"
 msgstr ""
 
 #: oc-includes/osclass/controller/ajax.php:87 oc-includes/osclass/controller/ajax.php:159
-#: oc-includes/osclass/controller/item.php:411
+#: oc-includes/osclass/controller/item.php:418
 msgid "The selected photo couldn't be deleted"
 msgstr ""
 
-#: oc-includes/osclass/controller/ajax.php:102 oc-includes/osclass/controller/item.php:375
+#: oc-includes/osclass/controller/ajax.php:102 oc-includes/osclass/controller/item.php:382
 msgid "The selected photo couldn't be deleted, the URL doesn't exist"
 msgstr ""
 
 #: oc-includes/osclass/controller/ajax.php:121 oc-includes/osclass/controller/ajax.php:129
-#: oc-includes/osclass/controller/item.php:387 oc-includes/osclass/controller/item.php:392
+#: oc-includes/osclass/controller/item.php:394 oc-includes/osclass/controller/item.php:399
 msgid "The listing doesn't belong to you"
 msgstr ""
 
-#: oc-includes/osclass/controller/ajax.php:155 oc-includes/osclass/controller/item.php:408
+#: oc-includes/osclass/controller/ajax.php:155 oc-includes/osclass/controller/item.php:415
 msgid "The selected photo does not belong to you"
 msgstr ""
 
 #: oc-includes/osclass/controller/contact.php:33 oc-includes/osclass/controller/contact.php:170
-#: oc-includes/osclass/controller/item.php:478 oc-includes/osclass/controller/item.php:504
+#: oc-includes/osclass/controller/item.php:485 oc-includes/osclass/controller/item.php:511
 msgid "Sorry, the contact form is disabled"
 msgstr ""
 
 #: oc-includes/osclass/controller/contact.php:45 oc-includes/osclass/controller/item.php:126
-#: oc-includes/osclass/controller/item.php:241 oc-includes/osclass/controller/item.php:456
-#: oc-includes/osclass/controller/item.php:518 oc-includes/osclass/controller/user-non-secure.php:164
+#: oc-includes/osclass/controller/item.php:248 oc-includes/osclass/controller/item.php:463
+#: oc-includes/osclass/controller/item.php:525 oc-includes/osclass/controller/user-non-secure.php:164
 #: oc-includes/osclass/controller/login.php:224 oc-admin/login.php:119 oc-includes/osclass/UserActions.php:37
 msgid "The reCAPTCHA is invalid"
 msgstr ""
 
 #: oc-includes/osclass/controller/contact.php:57 oc-includes/osclass/controller/contact.php:66
-#: oc-includes/osclass/controller/item.php:146 oc-includes/osclass/controller/item.php:530
+#: oc-includes/osclass/controller/item.php:146 oc-includes/osclass/controller/item.php:537
 #: oc-includes/osclass/controller/login.php:90 oc-includes/osclass/controller/register.php:58
 #: oc-includes/osclass/controller/user-non-secure.php:175
 msgid "Your current email is not allowed"
 msgstr ""
 
 #: oc-includes/osclass/controller/contact.php:60 oc-includes/osclass/controller/item.php:149
-#: oc-includes/osclass/controller/item.php:533 oc-includes/osclass/controller/login.php:93
+#: oc-includes/osclass/controller/item.php:540 oc-includes/osclass/controller/login.php:93
 #: oc-includes/osclass/controller/register.php:61 oc-includes/osclass/controller/user-non-secure.php:178
 msgid "Your current IP is not allowed"
 msgstr ""
@@ -1440,141 +1440,141 @@ msgstr ""
 msgid "Only authorized users are allowed to edit listings."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:204
+#: oc-includes/osclass/controller/item.php:211
 msgid "Sorry, we don't have any listings with that ID"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:257
+#: oc-includes/osclass/controller/item.php:264
 msgid "Your listing will be published after a moderator approves the changes."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:259
+#: oc-includes/osclass/controller/item.php:266
 msgid "Great! We've just updated your listing."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:271
+#: oc-includes/osclass/controller/item.php:278
 msgid "Only authorized users are allowed to activate listings."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:291
+#: oc-includes/osclass/controller/item.php:298
 msgid "The listing has been validated"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:293
+#: oc-includes/osclass/controller/item.php:300
 msgid "The listing can't be validated"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:296
+#: oc-includes/osclass/controller/item.php:303
 msgid "The listing has already been validated"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:303
+#: oc-includes/osclass/controller/item.php:310
 msgid "Only authorized users are allowed to renew listings."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:324 oc-admin/items.php:803
+#: oc-includes/osclass/controller/item.php:331 oc-admin/items.php:803
 msgid "The listing has been renewed"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:326 oc-includes/osclass/controller/item.php:329
+#: oc-includes/osclass/controller/item.php:333 oc-includes/osclass/controller/item.php:336
 #: oc-admin/items.php:805
 msgid "The listing can't be renewed"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:336
+#: oc-includes/osclass/controller/item.php:343
 msgid "Only authorized users are allowed to delete listings."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:346
+#: oc-includes/osclass/controller/item.php:353
 msgid "Your listing has been deleted"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:348 oc-includes/osclass/controller/item.php:356
+#: oc-includes/osclass/controller/item.php:355 oc-includes/osclass/controller/item.php:363
 msgid "The listing you are trying to delete couldn't be deleted"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:433
+#: oc-includes/osclass/controller/item.php:440
 msgid "Thanks! That's very helpful"
 msgstr ""
 
-#: oc-includes/osclass/controller/ajax.php:112 oc-includes/osclass/controller/item.php:381
-#: oc-includes/osclass/controller/item.php:484 oc-includes/osclass/controller/item.php:610
+#: oc-includes/osclass/controller/ajax.php:112 oc-includes/osclass/controller/item.php:388
+#: oc-includes/osclass/controller/item.php:491 oc-includes/osclass/controller/item.php:617
 msgid "The listing doesn't exist"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:490 oc-includes/osclass/controller/item.php:538
+#: oc-includes/osclass/controller/item.php:497 oc-includes/osclass/controller/item.php:545
 msgid "We're sorry, but the listing has expired. You can't contact the seller"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:497 oc-includes/osclass/controller/item.php:510
+#: oc-includes/osclass/controller/item.php:504 oc-includes/osclass/controller/item.php:517
 msgid "You can't contact the seller, only registered users can"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:497
+#: oc-includes/osclass/controller/item.php:504
 msgid "<a href=\"%s\">Click here to sign-in</a>"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:551
+#: oc-includes/osclass/controller/item.php:558
 msgid "We've just sent an e-mail to the seller"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:568
+#: oc-includes/osclass/controller/item.php:575
 msgid "Sorry, we couldn't save your comment. Please try again later"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:571
+#: oc-includes/osclass/controller/item.php:578
 msgid "Your comment is awaiting moderation"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:574
+#: oc-includes/osclass/controller/item.php:581
 msgid "Your comment has been approved"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:577
+#: oc-includes/osclass/controller/item.php:584
 msgid "Please fill in the required field (e-mail)"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:580
+#: oc-includes/osclass/controller/item.php:587
 msgid "Please enter a comment"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:583
+#: oc-includes/osclass/controller/item.php:590
 msgid "Your comment has been marked as spam"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:586
+#: oc-includes/osclass/controller/item.php:593
 msgid "You need to be logged in to comment"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:589
+#: oc-includes/osclass/controller/item.php:596
 msgid "Sorry, comments are disabled"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:617
+#: oc-includes/osclass/controller/item.php:624
 msgid "You must be logged in to delete a comment"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:625
+#: oc-includes/osclass/controller/item.php:632
 msgid "The comment doesn't exist"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:630
+#: oc-includes/osclass/controller/item.php:637
 msgid "The comment is not active, you cannot delete it"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:635
+#: oc-includes/osclass/controller/item.php:642
 msgid "The comment was not added by you, you cannot delete it"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:663
+#: oc-includes/osclass/controller/item.php:670
 msgid "The listing hasn't been validated. Please validate it in order to make it public."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:670
+#: oc-includes/osclass/controller/item.php:677
 msgid "The listing hasn't been enabled. Please enable it in order to make it public."
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:672
+#: oc-includes/osclass/controller/item.php:679
 msgid "The listing has been blocked or is awaiting moderation"
 msgstr ""
 

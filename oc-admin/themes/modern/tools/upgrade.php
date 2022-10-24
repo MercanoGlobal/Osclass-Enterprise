@@ -23,7 +23,7 @@
     }
 
     function addHelp() {
-        echo '<p>' . __("Check to see if you're using the latest version of Osclass. If you're not, the system will let you know so you can update and use the newest features.") . '</p>';
+        echo '<p>' . __("Check to see if you're using the latest version of Osclass Enterprise.") . '</p>';
     }
     osc_add_hook('help_box','addHelp');
 
@@ -51,7 +51,7 @@
                             <div class="form-row">
                                 <div class="tools upgrade">
                                 <p class="text">
-                                   <?php _e('Congratulations! Your Osclass installation is up to date!'); ?>
+                                   <?php _e('To check for new releases, please visit the <a href="https://github.com/MercanoG/Osclass-Enterprise/releases" target="_blank">official release channel</a> and follow the <a href="https://doc.osc4u.com/Updating_Osclass.html" target="_blank">upgrade instructions</a>.'); ?>
                                 </p>
                                     <div id="steps_div">
                                         <div id="steps">

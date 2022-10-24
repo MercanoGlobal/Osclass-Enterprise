@@ -359,6 +359,15 @@
     }
 
     /**
+     * Get redirection page after an item is posted
+     *
+     * @return string
+     */
+    function osc_item_posted_redirect() {
+        return (getPreference('item_posted_redirect'));
+    }
+
+    /**
      * Gets if the prices are o not enabled on the item's form
      *
      * @return boolean

@@ -572,6 +572,7 @@ CREATE TABLE %st_item_description_tmp (
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'web_contact_form_disabled', '0', 'BOOLEAN')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'custom_css', '', 'STRING')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'custom_html', '', 'STRING')", DB_TABLE_PREFIX));
+        osc_set_preference('item_posted_redirect', 'category', 'osclass', 'STRING');
     }
 
     osc_changeVersionTo( strtr( OSCLASS_VERSION , array ( '.' => '' ) ));

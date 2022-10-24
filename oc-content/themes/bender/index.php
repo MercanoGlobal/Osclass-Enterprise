@@ -21,11 +21,11 @@
 
 /*
 Theme Name: Bender
-Theme URI: http://osclass.org/
+Theme URI: https://github.com/MercanoG/Osclass-Enterprise
 Description: Bender Theme
 Version: 3.2.0
 Author: Osclass
-Author URI: http://osclass.org/
+Author URI: https://github.com/MercanoG/Osclass-Enterprise
 Widgets:  Header, Footer
 Theme update URI: bender
 */
@@ -36,7 +36,7 @@ Theme update URI: bender
             ,'version'     => '3.2.0'
             ,'description' => 'Bender Theme'
             ,'author_name' => 'Osclass'
-            ,'author_url'  => 'http://osclass.org'
+            ,'author_url'  => 'https://github.com/MercanoG/Osclass-Enterprise'
             ,'locations'   => array()
         );
     }
