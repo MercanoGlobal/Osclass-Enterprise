@@ -87,6 +87,9 @@
             $this->addColumn('bulkactions', '<input id="check_all" type="checkbox" />');
             $this->addColumn('author', __('Author'));
             $this->addColumn('comment', __('Comment'));
+            if(osc_enable_comment_rating()) {
+                $this->addColumn('rating', __('Rating'));
+            }
             $this->addColumn('date', '<a href="'.osc_esc_html($url_base.$arg_date).'">'.__('Date').'</a>');
 
             $dummy = &$this;
@@ -146,6 +149,13 @@
                     }
                     $row['author'] = $aRow['s_author_name'] . ' (<a target="_blank" href="' . osc_item_url() . '">' . osc_item_title() . '</a>)'. $actions;
                     $row['comment'] = $aRow['s_body'];
+                    if(osc_enable_comment_rating()) {
+                        if($aRow['i_rating'] > 0) {
+                            $row['rating'] = $aRow['i_rating'] . __(' stars');
+                        } else {
+                            $row['rating'] = '-';
+                        }
+                    }
                     $row['date'] = osc_format_date($aRow['dt_pub_date']);
 
                     $row = osc_apply_filter('comments_processing_row', $row, $aRow);
@@ -163,7 +173,7 @@
             $this->order_by['column_name'] = 'c.dt_pub_date';
             $this->order_by['type'] = 'desc';
 
-            $this->showAll   = Params::getParam('showAll')=='off'?false:true;
+            $this->showAll = Params::getParam('showAll') == 'off' ? false:true;
 
             foreach($_get as $k => $v) {
                 if( ( $k == 'resourceId' ) && !empty($v) ) {
