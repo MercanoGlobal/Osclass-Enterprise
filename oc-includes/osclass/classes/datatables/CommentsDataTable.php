@@ -134,8 +134,8 @@
                     foreach( $options as $actual ) {
                         $auxOptions .= '<li>'.$actual.'</li>'.PHP_EOL;
                     }
-                    $auxOptions  .= $moreOptions;
-                    $auxOptions  .= '</ul>'.PHP_EOL;
+                    $auxOptions .= $moreOptions;
+                    $auxOptions .= '</ul>'.PHP_EOL;
 
                     $actions = '<div class="actions">'.$auxOptions.'</div>'.PHP_EOL;
 
@@ -147,11 +147,11 @@
                         $user = User::newInstance()->findByPrimaryKey( $aRow['fk_i_user_id'] );
                         $aRow['s_author_name'] = $user['s_email'];
                     }
-                    $row['author'] = $aRow['s_author_name'] . ' (<a target="_blank" href="' . osc_item_url() . '">' . osc_item_title() . '</a>)'. $actions;
+                    $row['author']  = $aRow['s_author_name'] . ' (<a target="_blank" href="' . osc_item_url() . '">' . osc_item_title() . '</a>)'. $actions;
                     $row['comment'] = $aRow['s_body'];
                     if(osc_enable_comment_rating()) {
                         if($aRow['i_rating'] > 0) {
-                            $row['rating'] = $aRow['i_rating'] . __(' stars');
+                            $row['rating'] = $aRow['i_rating'] . __(' ★');
                         } else {
                             $row['rating'] = '-';
                         }

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-10-26 18:36+0300\n"
+"PO-Revision-Date: 2022-10-27 11:26+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -850,10 +850,6 @@ msgstr ""
 
 #: oc-admin/themes/modern/comments/frm.php:103 oc-includes/osclass/classes/datatables/CommentsDataTable.php:91
 msgid "Rating"
-msgstr ""
-
-#: oc-includes/osclass/classes/datatables/CommentsDataTable.php:154
-msgid " stars"
 msgstr ""
 
 #: oc-admin/themes/modern/main/index.php:363 oc-admin/themes/modern/main/index.php:424 oc-admin/themes/modern/main/index.php:487
