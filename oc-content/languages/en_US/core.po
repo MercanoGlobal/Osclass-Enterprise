@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-10-27 11:26+0300\n"
+"PO-Revision-Date: 2022-11-02 21:23+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -666,7 +666,7 @@ msgid "Update"
 msgstr ""
 
 #: oc-admin/themes/modern/appearance/index.php:169
-msgid "This action can not be undone. Are you sure you want to delete the theme?"
+msgid "This action cannot be undone. Are you sure you want to delete the theme?"
 msgstr ""
 
 #: oc-admin/themes/modern/appearance/index.php:190 oc-admin/themes/modern/functions.php:327 oc-admin/themes/modern/languages/index.php:238 oc-admin/themes/modern/plugins/index.php:284
@@ -1945,7 +1945,7 @@ msgid "%d plugins"
 msgstr ""
 
 #: oc-admin/themes/modern/plugins/index.php:257
-msgid "This action can not be undone. Uninstalling plugins may result in a permanent loss of data. Are you sure you want to continue?"
+msgid "This action cannot be undone. Uninstalling plugins may result in a permanent loss of data. Are you sure you want to continue?"
 msgstr ""
 
 #: oc-admin/themes/modern/plugins/index.php:330

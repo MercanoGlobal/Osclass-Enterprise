@@ -49,7 +49,7 @@
                             <a href="<?php echo osc_item_renew_url();?>" ><?php _e('Renew', 'bender'); ?></a>
                             <span>|</span>
                         <?php } ?>
-                        <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'bender')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'bender'); ?></a>
+                        <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action cannot be undone. Are you sure you want to continue?', 'bender')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'bender'); ?></a>
                         <?php if(osc_item_is_inactive()) {?>
                         <span>|</span>
                         <a href="<?php echo osc_item_activate_url();?>" ><?php _e('Activate', 'bender'); ?></a>

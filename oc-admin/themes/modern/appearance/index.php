@@ -166,7 +166,7 @@
     <input type="hidden" name="webtheme" value="" />
     <div class="form-horizontal">
         <div class="form-row">
-            <?php _e('This action can not be undone. Are you sure you want to delete the theme?'); ?>
+            <?php _e('This action cannot be undone. Are you sure you want to delete the theme?'); ?>
         </div>
         <div class="form-actions">
             <div class="wrapper">

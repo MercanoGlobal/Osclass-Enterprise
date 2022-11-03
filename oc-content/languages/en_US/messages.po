@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-10-24 13:00+0300\n"
+"PO-Revision-Date: 2022-11-02 21:24+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -141,7 +141,7 @@ msgid "There was a problem removing the theme"
 msgstr ""
 
 #: oc-admin/appearance.php:91
-msgid "Current theme can not be deleted"
+msgid "Current theme cannot be deleted"
 msgstr ""
 
 #: oc-admin/appearance.php:94

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2022-10-24 13:00+0300\n"
+"PO-Revision-Date: 2022-11-02 21:24+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -683,7 +683,7 @@ msgid "of"
 msgstr ""
 
 #: loop-single-premium.php:48 loop-single.php:52
-msgid "This action can not be undone. Are you sure you want to continue?"
+msgid "This action cannot be undone. Are you sure you want to continue?"
 msgstr ""
 
 #: loop-single-premium.php:51 loop-single.php:55

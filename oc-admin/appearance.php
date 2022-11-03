@@ -88,7 +88,7 @@
                                 osc_add_flash_error_message(_m("There was a problem removing the theme"), "admin");
                             }
                         } else {
-                            osc_add_flash_error_message(_m("Current theme can not be deleted"), "admin");
+                            osc_add_flash_error_message(_m("Current theme cannot be deleted"), "admin");
                         }
                     } else {
                         osc_add_flash_error_message(_m("No theme selected"), "admin");
