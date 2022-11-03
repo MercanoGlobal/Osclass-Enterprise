@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-11-02 21:23+0200\n"
+"PO-Revision-Date: 2022-11-03 15:08+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -450,7 +450,7 @@ msgstr ""
 #: oc-admin/themes/modern/admins/frm.php:112 oc-admin/themes/modern/admins/index.php:174 oc-admin/themes/modern/admins/index.php:185 oc-admin/themes/modern/appearance/add.php:103 oc-admin/themes/modern/appearance/index.php:153 oc-admin/themes/modern/appearance/index.php:173 oc-admin/themes/modern/appearance/widgets.php:128 oc-admin/themes/modern/categories/iframe.php:55
 #: oc-admin/themes/modern/categories/index.php:385 oc-admin/themes/modern/comments/frm.php:116 oc-admin/themes/modern/comments/index.php:180 oc-admin/themes/modern/comments/index.php:191 oc-admin/themes/modern/fields/iframe.php:83 oc-admin/themes/modern/fields/index.php:302 oc-admin/themes/modern/items/frm.php:292 oc-admin/themes/modern/items/index.php:401
 #: oc-admin/themes/modern/items/index.php:412 oc-admin/themes/modern/items/reported.php:203 oc-admin/themes/modern/items/reported.php:214 oc-admin/themes/modern/languages/index.php:174 oc-admin/themes/modern/languages/index.php:186 oc-admin/themes/modern/languages/index.php:223 oc-admin/themes/modern/market/header.php:168 oc-admin/themes/modern/media/index.php:168
-#: oc-admin/themes/modern/media/index.php:179 oc-admin/themes/modern/pages/frm.php:130 oc-admin/themes/modern/pages/index.php:202 oc-admin/themes/modern/pages/index.php:213 oc-admin/themes/modern/plugins/index.php:244 oc-admin/themes/modern/plugins/index.php:261 oc-admin/themes/modern/settings/currencies.php:174 oc-admin/themes/modern/settings/currencies.php:185
+#: oc-admin/themes/modern/media/index.php:179 oc-admin/themes/modern/pages/frm.php:131 oc-admin/themes/modern/pages/index.php:202 oc-admin/themes/modern/pages/index.php:213 oc-admin/themes/modern/plugins/index.php:244 oc-admin/themes/modern/plugins/index.php:261 oc-admin/themes/modern/settings/currencies.php:174 oc-admin/themes/modern/settings/currencies.php:185
 #: oc-admin/themes/modern/settings/currency_form.php:132 oc-admin/themes/modern/settings/locations.php:129 oc-admin/themes/modern/settings/locations.php:193 oc-admin/themes/modern/settings/locations.php:220 oc-admin/themes/modern/settings/locations.php:246 oc-admin/themes/modern/settings/locations.php:275 oc-admin/themes/modern/settings/locations.php:303
 #: oc-admin/themes/modern/settings/locations.php:332 oc-admin/themes/modern/settings/locations.php:411 oc-admin/themes/modern/settings/locations.php:448 oc-admin/themes/modern/users/alerts.php:204 oc-admin/themes/modern/users/alerts.php:215 oc-admin/themes/modern/users/ban.php:201 oc-admin/themes/modern/users/ban.php:212 oc-admin/themes/modern/users/frm.php:412
 #: oc-admin/themes/modern/users/index.php:330 oc-admin/themes/modern/users/index.php:341 oc-includes/osclass/frm/Item.form.class.php:1503
@@ -583,7 +583,7 @@ msgstr ""
 msgid "Edit widget"
 msgstr ""
 
-#: oc-admin/themes/modern/appearance/add_widget.php:27 oc-admin/themes/modern/appearance/add_widget.php:55 oc-admin/themes/modern/appearance/customization.php:76 oc-admin/themes/modern/categories/iframe.php:54 oc-admin/themes/modern/emails/frm.php:134 oc-admin/themes/modern/fields/iframe.php:82 oc-admin/themes/modern/items/settings.php:266 oc-admin/themes/modern/languages/frm.php:112
+#: oc-admin/themes/modern/appearance/add_widget.php:27 oc-admin/themes/modern/appearance/add_widget.php:55 oc-admin/themes/modern/appearance/customization.php:76 oc-admin/themes/modern/categories/iframe.php:54 oc-admin/themes/modern/emails/frm.php:135 oc-admin/themes/modern/fields/iframe.php:82 oc-admin/themes/modern/items/settings.php:266 oc-admin/themes/modern/languages/frm.php:112
 #: oc-admin/themes/modern/pages/frm.php:36 oc-admin/themes/modern/settings/advanced.php:113 oc-admin/themes/modern/settings/comments.php:166 oc-admin/themes/modern/settings/index.php:415 oc-admin/themes/modern/settings/mailserver.php:171 oc-admin/themes/modern/settings/media.php:331 oc-admin/themes/modern/settings/permalinks.php:842 oc-admin/themes/modern/settings/searches.php:142
 #: oc-admin/themes/modern/settings/spamNbots.php:80 oc-admin/themes/modern/settings/spamNbots.php:124 oc-admin/themes/modern/users/settings.php:84
 msgid "Save changes"
@@ -597,15 +597,15 @@ msgstr ""
 msgid "Appearance &raquo; %s"
 msgstr ""
 
-#: oc-admin/themes/modern/appearance/add_widget.php:98 oc-includes/osclass/frm/Language.form.class.php:129 oc-includes/osclass/frm/Language.form.class.php:130
+#: oc-admin/themes/modern/appearance/add_widget.php:99 oc-includes/osclass/frm/Language.form.class.php:129 oc-includes/osclass/frm/Language.form.class.php:130
 msgid "Description: this field is required"
 msgstr ""
 
-#: oc-admin/themes/modern/appearance/add_widget.php:129
+#: oc-admin/themes/modern/appearance/add_widget.php:130
 msgid "Description (for internal purposes only)"
 msgstr ""
 
-#: oc-admin/themes/modern/appearance/add_widget.php:135
+#: oc-admin/themes/modern/appearance/add_widget.php:136
 msgid "HTML Code for the Widget"
 msgstr ""
 
@@ -894,31 +894,31 @@ msgstr ""
 msgid "Are you sure you want to delete this comment?"
 msgstr ""
 
-#: oc-admin/themes/modern/emails/frm.php:58 oc-admin/themes/modern/emails/frm.php:154
+#: oc-admin/themes/modern/emails/frm.php:58 oc-admin/themes/modern/emails/frm.php:155
 msgid "Send email"
 msgstr ""
 
-#: oc-admin/themes/modern/emails/frm.php:92
+#: oc-admin/themes/modern/emails/frm.php:93
 msgid "Edit email template &raquo; %s"
 msgstr ""
 
-#: oc-admin/themes/modern/emails/frm.php:105
+#: oc-admin/themes/modern/emails/frm.php:106
 msgid "Edit email template"
 msgstr ""
 
-#: oc-admin/themes/modern/emails/frm.php:122 oc-admin/themes/modern/pages/frm.php:98 oc-includes/osclass/classes/datatables/PagesDataTable.php:56
+#: oc-admin/themes/modern/emails/frm.php:123 oc-admin/themes/modern/pages/frm.php:99 oc-includes/osclass/classes/datatables/PagesDataTable.php:56
 msgid "Internal name"
 msgstr ""
 
-#: oc-admin/themes/modern/emails/frm.php:125
+#: oc-admin/themes/modern/emails/frm.php:126
 msgid "Used to identify the email template"
 msgstr ""
 
-#: oc-admin/themes/modern/emails/frm.php:135
+#: oc-admin/themes/modern/emails/frm.php:136
 msgid "Test it"
 msgstr ""
 
-#: oc-admin/themes/modern/emails/frm.php:141
+#: oc-admin/themes/modern/emails/frm.php:142
 msgid "Legend"
 msgstr ""
 
@@ -1812,19 +1812,19 @@ msgstr ""
 msgid "Pages"
 msgstr ""
 
-#: oc-admin/themes/modern/pages/frm.php:101
+#: oc-admin/themes/modern/pages/frm.php:102
 msgid "Used to quickly identify this page"
 msgstr ""
 
-#: oc-admin/themes/modern/pages/frm.php:107
+#: oc-admin/themes/modern/pages/frm.php:108
 msgid "Page template"
 msgstr ""
 
-#: oc-admin/themes/modern/pages/frm.php:109
+#: oc-admin/themes/modern/pages/frm.php:110
 msgid "Default template"
 msgstr ""
 
-#: oc-admin/themes/modern/pages/frm.php:121
+#: oc-admin/themes/modern/pages/frm.php:122
 msgid "Show a link in footer"
 msgstr ""
 

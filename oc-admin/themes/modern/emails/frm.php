@@ -32,10 +32,11 @@
                 language: 'en',
                 theme_advanced_toolbar_align : "left",
                 theme_advanced_toolbar_location : "top",
+                toolbar : 'insertfile undo redo | styleselect fontselect fontsizeselect | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
                 plugins : [
                     "advlist autolink lists link image charmap preview anchor",
                     "searchreplace visualblocks code fullscreen",
-                    "insertdatetime media table contextmenu paste"
+                    "insertdatetime media table contextmenu paste textcolor colorpicker"
                 ],
                 entity_encoding : "raw",
                 theme_advanced_buttons1_add : "forecolorpicker,fontsizeselect",
