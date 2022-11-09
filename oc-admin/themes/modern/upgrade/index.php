@@ -1,6 +1,6 @@
 <?php if ( ! defined('OC_ADMIN')) exit('Direct access is not allowed.');
 /*
- * Copyright 2014 Osclass
+ * Copyright 2022 Osclass Enterprise
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,7 +60,7 @@
             </div>
             <div id="tohide">
                 <p>
-                    <?php _e('You have uploaded a new version of Osclass, you need to upgrade Osclass for it to work correctly.'); ?>
+                    <?php _e('You have uploaded a new version of Osclass Enterprise, you need to upgrade your setup for it to work correctly.'); ?>
                 </p>
                 <a class="btn" href="<?php echo osc_admin_base_url(true); ?>?page=upgrade&confirm=true"><?php _e('Upgrade now'); ?></a>
             </div>

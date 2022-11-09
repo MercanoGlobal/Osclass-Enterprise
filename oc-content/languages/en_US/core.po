@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-11-03 15:08+0200\n"
+"PO-Revision-Date: 2022-11-10 00:15+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -3675,7 +3675,7 @@ msgid "Upgrading your Osclass installation (this could take a while): "
 msgstr ""
 
 #: oc-admin/themes/modern/upgrade/index.php:63
-msgid "You have uploaded a new version of Osclass, you need to upgrade Osclass for it to work correctly."
+msgid "You have uploaded a new version of Osclass Enterprise, you need to upgrade your setup for it to work correctly."
 msgstr ""
 
 #: oc-admin/themes/modern/upgrade/index.php:65
@@ -5996,6 +5996,6 @@ msgstr ""
 msgid "Input code not valid"
 msgstr ""
 
-#: oc-load.php:217
+#: oc-load.php:214
 msgid "The website is currently undergoing maintenance"
 msgstr ""

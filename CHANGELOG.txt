@@ -1,7 +1,8 @@
-Osclass 3.8.1 2022-11-03
-------------------------
+Osclass Enterprise 3.10.0 2022-11-10
+------------------------------------
 
-- Removed ties to Osclass Market API
+- Rebranded the project as 'Osclass Enterprise'
+- Removed ties to the deprecated Osclass Market API
 - Added Seller Verification Plugin to the bundled plugins (for setup check the Readme.txt in the plugin folder)
 - Added Admin Email Search Plugin to the bundled plugins
 - Added Osclass GDPR Plugin to the bundled plugins
@@ -37,9 +38,13 @@ Osclass 3.8.1 2022-11-03
 - Updated PclZip to 2.8.4
 - Updated the default Bender Theme to v3.2.0
 - Updated Breadcrumb to Schema
-- Increased the PHP minimum version to 7.1.0
+- Increased the PHP minimum required version to 7.1.0
 - Fixed the Internal CRON
 - Multiple fixes and improvements
+
+Osclass 3.8.1 2019-09-15 - 2022-04-18
+-------------------------------------
+- Closed-source fork of the vanilla v3.8.0 repository, with hundreds of fixes - check the above
 
 Osclass 3.8.0 2018-07-25
 ------------------------

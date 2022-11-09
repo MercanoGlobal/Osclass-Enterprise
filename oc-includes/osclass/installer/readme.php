@@ -65,10 +65,10 @@ function osc_getAbsoluteWebURL() {
         <div id="header" class="readme">
             <h1 id="logo">
                 <a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank">
-                    <img src="<?php echo osc_getAbsoluteWebURL(); ?>/oc-includes/images/osclass-logo.png" alt="Osclass" title="Osclass" />
+                    <img src="<?php echo osc_getAbsoluteWebURL(); ?>/oc-includes/images/osclass-logo.png" alt="Osclass Enterprise" title="Osclass Enterprise" />
                 </a>
                 <br/>
-                Version 3.8.1
+                Version 3.10.0
             </h1>
         </div>
         <div id="content">
@@ -76,8 +76,8 @@ function osc_getAbsoluteWebURL() {
                 <h2 class="title">Introduction</h2>
                 <div class="space-left-10">
                     <p>
-                        Osclass is an open source project for classifieds. In a few steps you can build
-                        a classifieds site. Some features: easy installation, multi-language, extensibility through plugins,
+                        Osclass Enterprise is an open source project for classifieds. In a few steps, you can build a classifieds site.
+                        Some features include: easy installation, multi-language, extensibility through plugins and themes,
                         search engines friendly (sitemap, robots, seo-friendly URLs) and more.
                     </p>
                 </div>
@@ -87,7 +87,7 @@ function osc_getAbsoluteWebURL() {
                 <div class="space-left-10">
                     <p>Here’s a quick step-by-step guide of the installation process:</p>
                     <ol>
-                        <li>Download and unzip the Osclass package.</li>
+                        <li>Download and unzip the Osclass Enterprise package.</li>
                         <li>Move the Osclass unzipped files to the desired location on your server.</li>
                         <li>Execute the Osclass installation script by accessing <code>oc-includes/osclass/install.php</code> from your browser:
                             <ul>
@@ -110,24 +110,23 @@ function osc_getAbsoluteWebURL() {
             <div id="upgrade">
                 <h2 class="title">How to upgrade</h2>
                 <p>
-                    Osclass will show an autoupgrade message at admin panel if a new (and stable) version is available. Only need follow instructions for begin the upgrade.
-                    We recommend to do a backup before you attempt to upgrade your Osclass installation, you could perform that from the admin panel (if you modified any
-                    core file, it will probably be replaced by new version software. Be carefull).
+                    Osclass will show an autoupgrade message in the admin panel when you manually upload a new version to your server. You only need to follow the instructions to begin the upgrade.
+                    We recommend to do a backup before you attempt to upgrade your Osclass installation - you can perform that from the admin panel (if you modified any
+                    core file, it will probably be replaced by new the version software. Be carefull!).
                 </p>
                 <div class="space-left-10"><h3 style="border-bottom: 1px solid grey;color: #444444;">Autoupgrade (Disabled)</h3>
                     <p>The Autoupgrade feature will perform the following steps for you :
                     <ul>
-                        <li>Step 1: Check if there's a new version os Osclass.</li>
-                        <li>Step 2: Download it.</li>
-                        <li>Step 3: Unzip it.</li>
-                        <li>Step 4: Remove old files, copy new ones (remember: if you edited any core file, it will probable be replaced by a new one).</li>
-                        <li>Step 5: Perform changes in the tables (if necessary).</li>
-                        <li>Step 6: Perform extra-actions (if necessary).</li>
+                        <li>Step 1: Check if there's a new version of Osclass uploaded.</li>
+                        <li>Step 2: If true, it will prompt you to perform the update.</li>
+                        <li>Step 3: Remember: if you edited any core file, it will probable be replaced by a new one.</li>
+                        <li>Step 4: Perform changes in the tables (if necessary).</li>
+                        <li>Step 5: Perform extra-actions (if necessary).</li>
                     </ul>
                     </p>
                 </div>
                 <p>Follow the link and after a few moments you will be enjoying
-                    a new version of your favorite open source classifieds software. Had you expected more steps or difficult instructions? Sorry! but we made that easy.
+                    a new version of your favorite open source classifieds software. Had you expected more steps or difficult instructions? Sorry, but we made that easy!
                 </p>
                 <div class="space-left-10"><h3 style="border-bottom: 1px solid grey;color: #444444;">Manual upgrade</h3>
                     <p>
@@ -135,7 +134,7 @@ function osc_getAbsoluteWebURL() {
                         Then run manually oc-includes/osclass/upgrade-funcs.php for do upgrade complete.
                     </p>
                 </div>
-                <p>If you experienced any problem during the process, please don't hesitate in contact us in <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/">Osclass Support Forums</a>.
+                <p>If you experienced any problem during the process, please don't hesitate to contact us in the <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/">Osclass Support Forums</a>.
                     We recommend to perform a backup of database and files before each upgrade. You could backup your data from the "Backup" option in the admin panel.
                     If you want to run the autoupgrade manually you could do that from the following URL : http://www.yourdomain.com/path/to/osclass/oc-admin/tools.php?action=upgrade
                 </p>
@@ -164,7 +163,7 @@ function osc_getAbsoluteWebURL() {
             </div>
             <div id="license">
                 <h2 class="title">License</h2>
-                <p class="space-left-10">Osclass is released under the Apache v2 license (see <a href="<?php echo osc_getAbsoluteWebURL(); ?>/licenses.txt" target="_blank">licenses.txt</a>).</p>
+                <p class="space-left-10">Osclass Enterprise is released under the Apache v2 license (see <a href="<?php echo osc_getAbsoluteWebURL(); ?>/licenses.txt" target="_blank">licenses.txt</a>).</p>
             </div>
         </div>
         <div id="footer">

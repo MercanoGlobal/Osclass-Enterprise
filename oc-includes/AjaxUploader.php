@@ -5,7 +5,7 @@ class AjaxUploader {
     private $_sizeLimit;
     private $_file;
 
-    function __construct(array $allowedExtensions = null, $sizeLimit = null){
+    function __construct(array $allowedExtensions = null, $sizeLimit = null) {
         if($allowedExtensions===null) { $allowedExtensions = osc_allowed_extension(); }
         if($sizeLimit===null) { $sizeLimit = 1024*osc_max_size_kb(); }
         $this->_allowedExtensions = $allowedExtensions;
@@ -20,11 +20,11 @@ class AjaxUploader {
         }
     }
 
-    public function getOriginalName(){ return $this->_file->getOriginalName(); }
+    public function getOriginalName() { return $this->_file->getOriginalName(); }
 
-    function handleUpload($uploadFilename, $replace = false){
-        if(!is_writable(dirname($uploadFilename))){ return array('error' => __("Server error. Upload directory isn't writable.")); }
-        if(!$this->_file){ return array('error' => __('No files were uploaded.')); }
+    function handleUpload($uploadFilename, $replace = false) {
+        if(!is_writable(dirname($uploadFilename))) { return array('error' => __("Server error. Upload directory isn't writable.")); }
+        if(!$this->_file) { return array('error' => __('No files were uploaded.')); }
         $size = $this->_file->getSize();
         if($size == 0) { return array('error' => __('File is empty')); }
         if($size > $this->_sizeLimit) { return array('error' => __('File is too large')); }
@@ -38,13 +38,13 @@ class AjaxUploader {
             return array('error' => sprintf(__('File has an invalid extension, it should be one of %s.'), $this->_allowedExtensions));
         }
 
-        if(!$replace){
+        if(!$replace) {
             if(file_exists($uploadFilename)) {
                 return array('error' => 'Could not save uploaded file. File already exists.');
             }
         }
 
-        if($this->_file->save($uploadFilename)){
+        if($this->_file->save($uploadFilename)) {
             $result = $this->checkAllowedExt($uploadFilename);
             if(!$result) {
                 @unlink($uploadFilename); // Wrong extension, remove it for security reasons
@@ -67,11 +67,11 @@ class AjaxUploader {
         if($file!='') {
             $aMimesAllowed = array();
             $aExt = explode(',', osc_allowed_extension());
-            foreach($aExt as $ext){
+            foreach($aExt as $ext) {
                 if(isset($mimes[$ext])) {
                     $mime = $mimes[$ext];
-                    if( is_array($mime) ){
-                        foreach($mime as $aux){
+                    if( is_array($mime) ) {
+                        foreach($mime as $aux) {
                             if( !in_array($aux, $aMimesAllowed) ) {
                                 array_push($aMimesAllowed, $aux );
                             }
@@ -104,8 +104,8 @@ class AjaxUploader {
                     } else {
                         $fileMime = '';
                     }
-                };
-            };
+                }
+            }
 
             if(in_array($fileMime,$aMimesAllowed)) {
                 return true;
@@ -124,7 +124,7 @@ class AjaxUploadedFileXhr {
         $temp = tmpfile();
         $realSize = stream_copy_to_stream($input, $temp);
         fclose($input);
-        if ($realSize != $this->getSize()){ return false; }
+        if ($realSize != $this->getSize()) { return false; }
         $target = fopen($path, "w");
         fseek($temp, 0, SEEK_SET);
         stream_copy_to_stream($temp, $target);

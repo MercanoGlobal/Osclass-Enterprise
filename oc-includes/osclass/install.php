@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2014 Osclass
+ * Copyright 2022 Osclass Enterprise
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -144,12 +144,12 @@ switch( $step ) {
             <div id="container">
                 <div id="header" class="installation">
                     <h1 id="logo">
-                        <img src="<?php echo get_absolute_url(); ?>oc-includes/images/osclass-logo.png" alt="Osclass" title="Osclass" />
+                        <img src="<?php echo get_absolute_url(); ?>oc-includes/images/osclass-logo.png" alt="Osclass Enterprise" title="Osclass Enterprise" />
                     </h1>
                     <?php if(in_array($step, array(2,3))) { ?>
                     <ul id="nav">
-                        <li class="<?php if($step == 2) { ?>actual<?php } elseif($step < 2) { ?>next<?php } else { ?>past<?php }?>">1 - Database</li>
-                        <li class="<?php if($step == 3) { ?>actual<?php } elseif($step < 3) { ?>next<?php } else { ?>past<?php }?>">2 - Target</li>
+                        <li class="<?php if($step == 2) { ?>actual<?php } elseif($step < 2) { ?>next<?php } else { ?>past<?php } ?>">1 - Database</li>
+                        <li class="<?php if($step == 3) { ?>actual<?php } elseif($step < 3) { ?>next<?php } else { ?>past<?php } ?>">2 - Target</li>
                     </ul>
                     <div class="clear"></div>
                     <?php } ?>
@@ -160,8 +160,8 @@ switch( $step ) {
 
                     <?php if($error) { ?>
                     <div class="form-table">
-                        <h3 style="font-weight: 400;font-size: 1.2rem;margin: 0;margin-bottom: .5em;"><?php _e('Oops! You need a compatible Hosting');?></h3>
-                        <span style="color: red;font-weight: 300;font-size: 1.09em;"><?php _e('Your hosting seems to be incompatible, check your settings.');?></span>
+                        <h3 style="font-weight: 400;font-size: 1.2rem;margin: 0;margin-bottom: .5em;"><?php _e('Oops! You need a compatible Hosting'); ?></h3>
+                        <span style="color: red;font-weight: 300;font-size: 1.09em;"><?php _e('Your hosting seems to be incompatible, check your settings.'); ?></span>
                     </div>
                     <br>
                     <?php } ?>

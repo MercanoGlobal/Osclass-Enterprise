@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright 2014 Osclass
+ * Copyright 2022 Osclass Enterprise
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  */
 
     if( !defined('OSCLASS_VERSION') ) {
-        define('OSCLASS_VERSION', '3.8.1');
+        define('OSCLASS_VERSION', '3.10.0');
     }
 
     if( !defined('MULTISITE') ) {

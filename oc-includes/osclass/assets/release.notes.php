@@ -70,15 +70,15 @@
     <td style="background-color: #33bed4; width: 1px;"><img src="<?php echo osc_base_url().'oc-includes/osclass/assets/'; ?>images/t.gif" width="1" height="1" alt=""></td>
     <td colspan="11" style="background-color: #f4f8fb; font-size: 12px; width: 550px;">
         <!-- -->
-        <img src=" " width="550" height="20" alt="">
         <table height="5" border="0" cellpadding="0" cellspacing="0" style="font-size: 12px; height: 12px; background-color: #f4f8fb; border: 0px; border-collapse: collapse; font-family: Arial, Helvetica, Verdana, sans-serif;">
             <tbody><tr valign="top">
-                <td width="85" style="width: 85px;"><img src=" " width="85" height="48" alt=""></td>
+                <td width="85" style="width: 85px;"><img src="<?php echo osc_base_url().'oc-includes/osclass/assets/'; ?>images/stars.png" width="85" height="85" alt="Success"></td>
                 <td width="420" style="width: 420px;">
-                    <div style="font-size:25px;line-height:25px;border-bottom:solid 1px #dbdbdb;padding-bottom:5px;padding-top:5px"><a href=" " style="color:#555555;text-decoration:none;">Osclass Enterprise 3.8.1 Highlights</a></div><img src="<?php echo osc_base_url().'oc-includes/osclass/assets/'; ?>images/t.gif" width="420" height="25" alt="">
+                    <div style="font-size:25px;line-height:25px;border-bottom:solid 1px #dbdbdb;padding-bottom:5px;padding-top:5px"><a href=" " style="color:#555555;text-decoration:none;">Osclass Enterprise 3.10.0 Highlights</a></div><img src="<?php echo osc_base_url().'oc-includes/osclass/assets/'; ?>images/t.gif" width="420" height="25" alt="">
                     <div style="font-size:13px; line-height:15px;color:#555555;">
                         <ul style="color:#555555;margin: 0;padding: 0;padding-left: 16px; list-style-type: disc !important;">
-                            <li>Removed ties to Osclass Market API</li>
+                            <li>Rebranded the project as 'Osclass Enterprise'</li>
+                            <li>Removed ties to the deprecated Osclass Market API</li>
                             <li>Added Seller Verification Plugin to the bundled plugins (for setup check the Readme.txt in the plugin folder)</li>
                             <li>Added Admin Email Search Plugin to the bundled plugins</li>
                             <li>Added Osclass GDPR Plugin to the bundled plugins</li>
@@ -114,7 +114,7 @@
                             <li>Updated PclZip to 2.8.4</li>
                             <li>Updated the default Bender Theme to v3.2.0</li>
                             <li>Updated Breadcrumb to Schema</li>
-                            <li>Increased the PHP minimum version to 7.1.0</li>
+                            <li>Increased the PHP minimum required version to 7.1.0</li>
                             <li>Fixed the Internal CRON</li>
                             <li>Multiple fixes and improvements</li>
                         </ul>

@@ -967,7 +967,7 @@ class spam_prot extends DAO {
 
     function _refreshTOR() {
         $file = osc_plugin_path('spamprotection/tor_nodes.txt');
-        $data = file_get_contents('https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip='.$_SERVER['SERVER_ADDR']);
+        $data = file_get_contents('https://check.torproject.org/torbulkexitlist?ip='.$_SERVER['SERVER_ADDR']);
         if (file_put_contents($file, $data)) {
             $this->_addGlobalLog('TOR Network Nodes refreshed', '', 'TOR Block');
             return true;

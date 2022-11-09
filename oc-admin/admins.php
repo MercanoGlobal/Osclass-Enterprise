@@ -1,7 +1,7 @@
 <?php if ( ! defined('ABS_PATH')) exit('ABS_PATH is not loaded. Direct access is not allowed.');
 
 /*
- * Copyright 2014 Osclass
+ * Copyright 2022 Osclass Enterprise
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

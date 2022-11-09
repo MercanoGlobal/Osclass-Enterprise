@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2014 Osclass
+ * Copyright 2022 Osclass Enterprise
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
  */
 
 
-define('OSCLASS_VERSION', '3.8.1');
+define('OSCLASS_VERSION', '3.10.0');
 
 if( !defined('ABS_PATH') ) {
     define( 'ABS_PATH', str_replace('\\', '/', dirname(__FILE__) . '/' ));
@@ -187,14 +187,11 @@ require_once LIB_PATH . 'osclass/frm/BanRule.form.class.php';
 require_once LIB_PATH . 'osclass/functions.php';
 require_once LIB_PATH . 'osclass/helpers/hAdminMenu.php';
 
-
 require_once LIB_PATH . 'osclass/core/iObject_Cache.php';
 require_once LIB_PATH . 'osclass/core/Object_Cache_Factory.php';
 require_once LIB_PATH . 'osclass/helpers/hCache.php';
 require_once LIB_PATH . 'openssl-cryptor/Cryptor.php';
 require_once LIB_PATH . 'osclass/compatibility.php';
-
-
 
 if( !defined('OSC_CRYPT_KEY') ) {
     define('OSC_CRYPT_KEY', osc_get_preference('crypt_key'));
@@ -214,7 +211,7 @@ if( osc_timezone() != '' ) {
 function osc_show_maintenance() {
     if(defined('__OSC_MAINTENANCE__')) { ?>
         <div id="maintenance" name="maintenance">
-             <?php _e("The website is currently undergoing maintenance"); ?>
+            <?php _e("The website is currently undergoing maintenance"); ?>
         </div>
         <style>
             #maintenance {
@@ -232,6 +229,7 @@ function osc_show_maintenance() {
         </style>
     <?php }
 }
+
 function osc_meta_generator() {
     echo '<meta name="generator" content="Osclass ' . OSCLASS_VERSION . '" />';
 }
@@ -255,7 +253,6 @@ osc_register_script('jquery-migrate', osc_assets_url('js/jquery-migrate.min.js')
 osc_register_script('php-date', osc_assets_url('js/date.js'));
 osc_register_script('jquery-fineuploader', osc_assets_url('js/fineuploader/jquery.fineuploader.min.js'), 'jquery');
 
-
 Plugins::init();
 Translation::init();
 osc_csrfguard_start();
@@ -277,4 +274,3 @@ if( !class_exists('PHPMailer') ) {
 if( !class_exists('SMTP') ) {
     require_once osc_lib_path() . 'phpmailer/class.smtp.php';
 }
-
