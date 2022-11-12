@@ -1,4 +1,4 @@
-Osclass Enterprise 3.10.0 2022-11-10
+Osclass Enterprise 3.10.0 2022-11-12
 ------------------------------------
 
 - Rebranded the project as 'Osclass Enterprise'
@@ -44,6 +44,7 @@ Osclass Enterprise 3.10.0 2022-11-10
 
 Osclass 3.8.1 2019-09-15 - 2022-04-18
 -------------------------------------
+
 - Closed-source fork of the vanilla v3.8.0 repository, with hundreds of fixes - check the above
 
 Osclass 3.8.0 2018-07-25

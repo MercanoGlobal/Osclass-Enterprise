@@ -1,5 +1,9 @@
+<p align="center">
+  <a href="https://enterprise-classifieds.com/"><img src="https://raw.githubusercontent.com/MercanoG/Osclass-Enterprise/main/oc-includes/images/osclass-logo.png" alt="Enterprise-Classifieds.com"></a>
+</p>
+
 # Osclass Enterprise
-Osclass Enterprise is a fork of the Osclass v3.8.0 repository, containing many fixes and improvements (check the CHANGELOG).
+Osclass Enterprise is a fork of the Osclass v3.8.0 repository, containing hundreds of fixes and improvements (check the CHANGELOG).
 
 > [Release Announcement](https://www.valueweb.gr/forums/osclass-enterprise-release/release-osclass-enterprise/)
 

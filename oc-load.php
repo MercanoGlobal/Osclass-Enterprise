@@ -31,8 +31,8 @@ define('TRANSLATIONS_PATH', CONTENT_PATH . 'languages/');
 if( !file_exists(ABS_PATH . 'config.php') ) {
     require_once LIB_PATH . 'osclass/helpers/hErrors.php';
 
-    $title   = 'Osclass &raquo; Error';
-    $message = 'There doesn\'t seem to be a <code>config.php</code> file. Osclass isn\'t installed. <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Need some help?</a></p>';
+    $title   = 'Osclass Enterprise &raquo; Error';
+    $message = 'There doesn\'t seem to be a <code>config.php</code> file. Osclass Enterprise isn\'t installed. <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Need some help?</a></p>';
     $message .= '<p><a class="button" href="' . osc_get_absolute_url() .'oc-includes/osclass/install.php">Install</a></p>';
     osc_die($title, $message);
 }
@@ -72,8 +72,8 @@ if( !getBoolPreference('osclass_installed') && MULTISITE ) {
 } else if( !getBoolPreference('osclass_installed') ) {
     require_once LIB_PATH . 'osclass/helpers/hErrors.php';
 
-    $title    = 'Osclass &raquo; Error';
-    $message  = 'Osclass isn\'t installed. <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Need some help?</a></p>';
+    $title    = 'Osclass Enterprise &raquo; Error';
+    $message  = 'Osclass Enterprise isn\'t installed. <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Need some help?</a></p>';
     $message .= '<p><a class="button" href="' . osc_get_absolute_url() .'oc-includes/osclass/install.php">Install</a></p>';
 
     osc_die($title, $message);

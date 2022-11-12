@@ -386,7 +386,7 @@
     <!-- settings form -->
                     <div id="mail-settings">
                         <h2 class="render-title"><?php _e('Permalinks'); ?></h2>
-                        <?php _e('By default Osclass uses web URLs which have question marks and lots of numbers in them. However, Osclass offers you friendly URLs. This can improve the aesthetics, usability, and forward-compatibility of your links. By activating the Permalinks, you will also enable the <a href="https://perishablepress.com/7g-firewall/" target="_blank">7G WAF</a> that offers server-level protection against a wide range of malicious requests, bad bots, automated attacks, spam, and many other types of threats.'); ?>
+                        <?php _e('By default, Osclass Enterprise uses web URLs which have question marks and lots of numbers in them. However, Osclass also offers you friendly URLs. This can improve the aesthetics, usability, and forward-compatibility of your links. By activating the Permalinks, you will also enable the <a href="https://perishablepress.com/7g-firewall/" target="_blank">7G WAF</a> that offers server-level protection against a wide range of malicious requests, bad bots, automated attacks, spam, and many other types of threats.'); ?>
                         <ul id="error_list"></ul>
                         <form name="settings_form" action="<?php echo osc_admin_base_url(true); ?>" method="post">
                             <input type="hidden" name="page" value="settings" />
