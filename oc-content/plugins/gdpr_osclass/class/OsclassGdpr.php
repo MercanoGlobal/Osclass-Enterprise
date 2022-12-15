@@ -286,7 +286,7 @@ class OsclassGdpr {
     function _validate_needed() { 
         if(osc_is_current_page('item', 'item_add_post') && !osc_is_web_user_logged_in()) { return true; }
         if(osc_is_current_page('item', 'item_edit_post') && !osc_is_web_user_logged_in()) { return true; }
-        if(osc_is_current_page('ajax', 'alerts') && !osc_is_web_user_logged_in() ) { return true; }
+        // if(osc_is_current_page('ajax', 'alerts') && !osc_is_web_user_logged_in() ) { return true; }
         if(osc_is_current_page('item', 'send_friend_post')) { return true; }
         if(osc_is_current_page('item', 'contact_post')) { return true; }
         if(osc_is_current_page('item', 'add_comment') && !osc_is_web_user_logged_in() && osc_comments_enabled()) { return true; }
