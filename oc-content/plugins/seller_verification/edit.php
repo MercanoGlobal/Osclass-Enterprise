@@ -12,7 +12,7 @@
         <label for="seller_description" title="Will show if you mouseover the verification image">Seller Description</label>
     </div>
     <div class="form-controls">
-        <input type="text" name="plugin_seller_description" value="<?php echo @$detail['s_seller_description']; ?>" />
-            <p class="help-inline">You can also use <a href="https://fsymbols.com/" target="_blank">symbols</a> like: ✔ ♛ ツ ✪ ★ ► ◄ ⚡</p>
+        <input type="text" name="plugin_seller_description" value="<?php echo osc_esc_html(@$detail['s_seller_description']); ?>" />
+            <p class="help-inline">You can also use <a href="https://fsymbols.com/" target="_blank" rel="noopener nofollow">symbols</a> like: ✔ ♛ ツ ✪ ★ ► ◄ ⚡</p>
     </div>
 </div>

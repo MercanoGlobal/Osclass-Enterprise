@@ -109,7 +109,7 @@
             $aWhere = array( 'fk_i_user_id' => $userID);
 
             return $this->_update($this->getTable_Plugin(), $aSet, $aWhere);
-        } 
+        }
 
 /**
  * Do not touch this one IF 
@@ -133,11 +133,6 @@
  * must match exactly  name and values
  * 
  * 
- * 
- * 
- * 
- * 
- * 
  */
         private function toArrayInsert( $arrayInsert )
         {
@@ -159,4 +154,3 @@
         }
 
     }
-?>

@@ -46,7 +46,7 @@
     <?php } else { ?>
         <div class="actions">
             <span class="doublebutton <?php echo $buttonClass; ?>">
-                <a href="<?php echo osc_user_list_items_url() . $rw; ?>ShowAs=list" class="list-button" data-class-toggle="listing-grid" data-destination="#listing-card-list"><span>Lista</span></a>
+                <a href="<?php echo osc_user_list_items_url() . $rw; ?>ShowAs=list" class="list-button" data-class-toggle="listing-grid" data-destination="#listing-card-list"><span>List</span></a>
                 <a href="<?php echo osc_user_list_items_url() . $rw; ?>ShowAs=gallery" class="grid-button" data-class-toggle="listing-grid" data-destination="#listing-card-list"><span>Grid</span></a>
             </span>
         </div>

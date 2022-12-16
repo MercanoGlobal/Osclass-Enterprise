@@ -42,8 +42,8 @@ function sellerver_form_post($userID) {
 }
 
 function sellerver_pre_user_post() {
-    Session::newInstance()->_setForm('pplugin_seller_verification',  Params::getParam('plugin_seller_verification') );
-    Session::newInstance()->_setForm('pplugin_seller_description',  Params::getParam('plugin_seller_description') );
+    Session::newInstance()->_setForm('pplugin_seller_verification', Params::getParam('plugin_seller_verification') );
+    Session::newInstance()->_setForm('pplugin_seller_description', Params::getParam('plugin_seller_description') );
     // keep values on session
     Session::newInstance()->_keepForm('pplugin_seller_verification');
     Session::newInstance()->_keepForm('pplugin_seller_description');
@@ -96,6 +96,17 @@ function _getSellerVerificationParameters() {
     return $array;
 }
 
+function sellerver_admin_menu() {
+    echo '<h3><a href="#">' . __('Seller Verification', 'seller_verification') . '</a></h3>
+    <ul> 
+        <li><a href="' . osc_admin_render_plugin_url(osc_plugin_path(dirname(__FILE__)) . '/help.php') . '">&raquo; ' . __('Help', 'seller_verification') . '</a></li>
+    </ul>';
+}
+
+function sellerver_help() {
+    osc_admin_render_plugin(osc_plugin_path(dirname(__FILE__)) . '/help.php');
+}
+
 // end admin
 
 // this is needed in order to be able to activate the plugin
@@ -108,11 +119,12 @@ osc_add_hook(osc_plugin_path(__FILE__) . '_uninstall', 'sellerver_call_after_uni
 
 // when publishing an item we show an extra form with more attributes
 osc_add_hook('seller_verification', 'sellerver_user_edit');
+
 // to add that new information to our custom table
 osc_add_hook('user_edit_completed', 'sellerver_check_user');
 
 osc_add_hook('pre_user_post','sellerver_pre_user_post');
-  //sellerver_user_edit_post');
+//sellerver_user_edit_post');
 
 // show an item special attributes
 osc_add_hook('seller_verification_show', 'sellerver_user_detail');
@@ -120,4 +132,5 @@ osc_add_hook('seller_verification_show', 'sellerver_user_detail');
 // delete item
 osc_add_hook('delete_user', 'sellerver_delete_user');
 
-?>
+// Add the Help URL to the menu
+osc_add_hook('admin_menu', 'sellerver_admin_menu');

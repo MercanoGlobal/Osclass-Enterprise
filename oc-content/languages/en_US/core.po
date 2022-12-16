@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2022-11-11 16:35+0200\n"
+"PO-Revision-Date: 2022-12-15 19:34+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: index.php:52 oc-admin/themes/modern/tools/maintenance.php:38
 msgid "Maintenance &raquo; %s"
@@ -4723,7 +4723,7 @@ msgid "DATE INTERVAL"
 msgstr ""
 
 #: oc-includes/osclass/frm/Field.form.class.php:254
-msgid "from"
+msgid " from"
 msgstr ""
 
 #: oc-includes/osclass/frm/Field.form.class.php:259 oc-includes/osclass/helpers/hItems.php:1289

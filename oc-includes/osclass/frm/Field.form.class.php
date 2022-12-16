@@ -251,7 +251,7 @@ FB;
                         echo '<label for="meta_'.$field['s_slug'].'">'.$field['s_name'].': </label>';
                     }
 
-                    echo __('from'). ' ';
+                    echo __(' from'). ' ';
                     echo '<input type="hidden" id="meta_'.$field['s_slug'].'_from" name="meta['.$field['pk_i_id'].'][from]" value="'.$field['s_value']['from'].'" />';
                     echo '<input type="text" id="" class="meta_'.$field['s_slug'].'_from cf_date_interval" value="" />';
                     FieldForm::initDatePicker('meta_'.$field['s_slug'].'_from', osc_date_format(), $field['s_value']['from'], 'from');
