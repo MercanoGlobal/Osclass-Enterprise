@@ -244,6 +244,10 @@
     osc_current_admin_theme_path( 'parts/header.php' ); ?>
 <div id="dashboard">
 <div class="grid-system">
+    <div class="grid-row grid-100">
+        <div class="row-wrapper"><?php osc_run_hook('admin_dashboard_top'); ?></div>
+    </div>
+
     <div class="grid-row grid-first-row grid-50">
         <div class="row-wrapper">
             <div class="widget-box">

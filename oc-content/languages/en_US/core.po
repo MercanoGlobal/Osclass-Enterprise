@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-02-01 22:28+0200\n"
+"PO-Revision-Date: 2023-02-02 00:23+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -802,7 +802,7 @@ msgstr ""
 msgid "Add comment"
 msgstr ""
 
-#: oc-admin/themes/modern/comments/frm.php:37 oc-admin/themes/modern/items/frm.php:29 oc-admin/themes/modern/items/frm.php:33 oc-admin/themes/modern/items/settings.php:50 oc-admin/themes/modern/main/index.php:262 oc-admin/themes/modern/main/index.php:267
+#: oc-admin/themes/modern/comments/frm.php:37 oc-admin/themes/modern/items/frm.php:29 oc-admin/themes/modern/items/frm.php:33 oc-admin/themes/modern/items/settings.php:50 oc-admin/themes/modern/main/index.php:266 oc-admin/themes/modern/main/index.php:271
 msgid "Listing"
 msgstr ""
 
@@ -831,7 +831,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: oc-admin/themes/modern/comments/frm.php:90 oc-admin/themes/modern/items/index.php:246 oc-admin/themes/modern/main/index.php:360 oc-admin/themes/modern/main/index.php:421 oc-admin/themes/modern/main/index.php:484 oc-admin/themes/modern/users/index.php:179 oc-includes/osclass/classes/datatables/CommentsDataTable.php:254 oc-includes/osclass/classes/datatables/ItemsDataTable.php:601
+#: oc-admin/themes/modern/comments/frm.php:90 oc-admin/themes/modern/items/index.php:246 oc-admin/themes/modern/main/index.php:364 oc-admin/themes/modern/main/index.php:425 oc-admin/themes/modern/main/index.php:488 oc-admin/themes/modern/users/index.php:179 oc-includes/osclass/classes/datatables/CommentsDataTable.php:254 oc-includes/osclass/classes/datatables/ItemsDataTable.php:601
 #: oc-includes/osclass/classes/datatables/UsersDataTable.php:344
 msgid "Active"
 msgstr ""
@@ -844,7 +844,7 @@ msgstr ""
 msgid "Unblocked"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:369 oc-admin/themes/modern/main/index.php:427 oc-admin/themes/modern/main/index.php:493 oc-admin/themes/modern/comments/frm.php:98 oc-includes/osclass/classes/datatables/CommentsDataTable.php:241 oc-includes/osclass/classes/datatables/ItemsDataTable.php:574 oc-includes/osclass/classes/datatables/UsersDataTable.php:331
+#: oc-admin/themes/modern/main/index.php:373 oc-admin/themes/modern/main/index.php:431 oc-admin/themes/modern/main/index.php:497 oc-admin/themes/modern/comments/frm.php:98 oc-includes/osclass/classes/datatables/CommentsDataTable.php:241 oc-includes/osclass/classes/datatables/ItemsDataTable.php:574 oc-includes/osclass/classes/datatables/UsersDataTable.php:331
 msgid "Blocked"
 msgstr ""
 
@@ -852,7 +852,7 @@ msgstr ""
 msgid "Rating"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:363 oc-admin/themes/modern/main/index.php:424 oc-admin/themes/modern/main/index.php:487
+#: oc-admin/themes/modern/main/index.php:367 oc-admin/themes/modern/main/index.php:428 oc-admin/themes/modern/main/index.php:491
 msgid "Not validated"
 msgstr ""
 
@@ -1047,76 +1047,24 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: oc-admin/themes/modern/functions.php:281
-msgid "downloads"
+#: oc-admin/themes/modern/functions.php:271
+msgid "Your server does not meet the minimum PHP version requirements. Your version is %s, minimum required version is %s! Please update your PHP version in order to avoid errors."
 msgstr ""
 
-#: oc-admin/themes/modern/functions.php:284 oc-admin/themes/modern/settings/locations.php:127 oc-admin/themes/modern/settings/locations.php:371
+#: oc-admin/themes/modern/functions.php:284
+msgid "The website is in maintenance mode, users will not be able to access it."
+msgstr ""
+
+#: oc-admin/themes/modern/functions.php:285
+msgid "Manage maintenance mode"
+msgstr ""
+
+#: oc-admin/themes/modern/settings/locations.php:127 oc-admin/themes/modern/settings/locations.php:371
 msgid "View more"
 msgstr ""
 
-#: oc-admin/themes/modern/functions.php:286
-msgid "Buy $%s"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:288 oc-admin/themes/modern/functions.php:330
-msgid "Download"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:326
-msgid "There was a problem, try again later please"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:332
-msgid "Last update"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:333
-msgid "Downloads"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:334
-msgid "Requires at least"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:335
-msgid "Compatible up to"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:336
-msgid "Screenshots"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:337
-msgid "Preview theme"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:339
-msgid "Buy"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:340
-msgid "Warning! This package is not compatible with your current version of Osclass (%s)"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:341
-msgid "Are you sure?"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:342
-msgid "Ok, proceed anyway"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:343
-msgid "Warning! This theme is not compatible with your current version of Osclass (%s)"
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:348 oc-admin/themes/modern/plugins/index.php:291
+#: oc-admin/themes/modern/plugins/index.php:291
 msgid "The plugin has been downloaded correctly, proceed to install and configure."
-msgstr ""
-
-#: oc-admin/themes/modern/functions.php:351
-msgid "The language has been downloaded correctly, proceed to activate."
 msgstr ""
 
 #: oc-admin/themes/modern/items/frm.php:30 oc-admin/themes/modern/items/frm.php:31 oc-admin/themes/modern/items/index.php:29
@@ -1219,7 +1167,7 @@ msgstr ""
 msgid "Manage all the listings on your site: edit, delete or block the latest listings published. You can also filter by several parameters: user, region, city, etc."
 msgstr ""
 
-#: oc-admin/themes/modern/comments/index.php:29 oc-admin/themes/modern/fields/index.php:33 oc-admin/themes/modern/items/index.php:26 oc-admin/themes/modern/items/reported.php:24 oc-admin/themes/modern/main/index.php:65 oc-admin/themes/modern/main/index.php:262 oc-admin/themes/modern/main/index.php:267 oc-includes/osclass/classes/AdminMenu.php:53 oc-includes/osclass/classes/AdminMenu.php:58
+#: oc-admin/themes/modern/comments/index.php:29 oc-admin/themes/modern/fields/index.php:33 oc-admin/themes/modern/items/index.php:26 oc-admin/themes/modern/items/reported.php:24 oc-admin/themes/modern/main/index.php:65 oc-admin/themes/modern/main/index.php:266 oc-admin/themes/modern/main/index.php:271 oc-includes/osclass/classes/AdminMenu.php:53 oc-includes/osclass/classes/AdminMenu.php:58
 msgid "Listings"
 msgstr ""
 
@@ -1259,7 +1207,7 @@ msgstr ""
 msgid "OFF"
 msgstr ""
 
-#: oc-admin/themes/modern/items/index.php:270 oc-admin/themes/modern/stats/reports.php:72 oc-admin/themes/modern/main/index.php:366 oc-admin/themes/modern/main/index.php:490 oc-includes/osclass/classes/datatables/ItemsDataTable.php:203 oc-includes/osclass/classes/datatables/ItemsDataTable.php:567
+#: oc-admin/themes/modern/items/index.php:270 oc-admin/themes/modern/stats/reports.php:72 oc-admin/themes/modern/main/index.php:370 oc-admin/themes/modern/main/index.php:494 oc-includes/osclass/classes/datatables/ItemsDataTable.php:203 oc-includes/osclass/classes/datatables/ItemsDataTable.php:567
 msgid "Spam"
 msgstr ""
 
@@ -1652,112 +1600,112 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:250
+#: oc-admin/themes/modern/main/index.php:254
 msgid "Listings by category"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:280
+#: oc-admin/themes/modern/main/index.php:284
 msgid "There aren't any uploaded listings yet"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:289 oc-admin/themes/modern/stats/comments.php:46 oc-admin/themes/modern/stats/items.php:54 oc-admin/themes/modern/stats/reports.php:43 oc-admin/themes/modern/stats/users.php:49 oc-includes/osclass/classes/AdminMenu.php:52
+#: oc-admin/themes/modern/main/index.php:293 oc-admin/themes/modern/stats/comments.php:46 oc-admin/themes/modern/stats/items.php:54 oc-admin/themes/modern/stats/reports.php:43 oc-admin/themes/modern/stats/users.php:49 oc-includes/osclass/classes/AdminMenu.php:52
 msgid "Statistics"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:289 oc-admin/themes/modern/main/index.php:292
+#: oc-admin/themes/modern/main/index.php:293 oc-admin/themes/modern/main/index.php:296
 msgid "New listings"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:289 oc-admin/themes/modern/main/index.php:298 oc-admin/themes/modern/stats/users.php:84 oc-admin/themes/modern/stats/users.php:181
+#: oc-admin/themes/modern/main/index.php:293 oc-admin/themes/modern/main/index.php:302 oc-admin/themes/modern/stats/users.php:84 oc-admin/themes/modern/stats/users.php:181
 msgid "New users"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:293
+#: oc-admin/themes/modern/main/index.php:297
 msgid "Total number of listings: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:295
+#: oc-admin/themes/modern/main/index.php:299
 msgid "Listing statistics"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:299
+#: oc-admin/themes/modern/main/index.php:303
 msgid "Total number of users: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:301
+#: oc-admin/themes/modern/main/index.php:305
 msgid "User statistics"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:305
+#: oc-admin/themes/modern/main/index.php:309
 msgid "Total number of comments: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:307
+#: oc-admin/themes/modern/main/index.php:311
 msgid "Comments statistics"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:316
+#: oc-admin/themes/modern/main/index.php:320
 msgid "Listings activity"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:326 oc-admin/themes/modern/main/index.php:458
+#: oc-admin/themes/modern/main/index.php:330 oc-admin/themes/modern/main/index.php:462
 msgid "Published in last 24 hours: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:330 oc-admin/themes/modern/main/index.php:462
+#: oc-admin/themes/modern/main/index.php:334 oc-admin/themes/modern/main/index.php:466
 msgid "Published in last 7 days: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:334 oc-admin/themes/modern/main/index.php:466
+#: oc-admin/themes/modern/main/index.php:338 oc-admin/themes/modern/main/index.php:470
 msgid "Overall published: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:338 oc-admin/themes/modern/main/index.php:470
+#: oc-admin/themes/modern/main/index.php:342 oc-admin/themes/modern/main/index.php:474
 msgid "Pending validation: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:343 oc-admin/themes/modern/main/index.php:475
+#: oc-admin/themes/modern/main/index.php:347 oc-admin/themes/modern/main/index.php:479
 msgid "Recently published"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:359
+#: oc-admin/themes/modern/main/index.php:358
 msgid "No listings have been found"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:389
+#: oc-admin/themes/modern/main/index.php:393
 msgid "Users activity"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:399
+#: oc-admin/themes/modern/main/index.php:403
 msgid "Registered in last 24 hours: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:403
+#: oc-admin/themes/modern/main/index.php:407
 msgid "Registered in last 7 days: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:407
+#: oc-admin/themes/modern/main/index.php:411
 msgid "Overall registered: %s"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:412
+#: oc-admin/themes/modern/main/index.php:416
 msgid "Recently registered"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:415
+#: oc-admin/themes/modern/main/index.php:419
 msgid "No users have been found"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:447
+#: oc-admin/themes/modern/main/index.php:451
 msgid "Comments activity"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:478
+#: oc-admin/themes/modern/main/index.php:482
 msgid "No comments have been found"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:316
-msgid "Has been a problem loading the contents, sorry for the inconvenience"
+#: oc-admin/themes/modern/main/index.php:505
+msgid "Comment #"
 msgstr ""
 
 #: oc-admin/themes/modern/plugins/add.php:25 oc-admin/themes/modern/plugins/configuration.php:26 oc-admin/themes/modern/plugins/view.php:20 oc-includes/osclass/classes/AdminMenu.php:54 oc-includes/osclass/classes/AdminMenu.php:81
@@ -4980,7 +4928,7 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: oc-admin/themes/modern/main/index.php:289 oc-admin/themes/modern/main/index.php:304 oc-includes/osclass/functions.php:456
+#: oc-admin/themes/modern/main/index.php:293 oc-admin/themes/modern/main/index.php:308 oc-includes/osclass/functions.php:456
 msgid "New comments"
 msgstr ""
 

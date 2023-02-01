@@ -261,4 +261,33 @@ function check_plugins_admin_footer() {
 <?php
 }
 
+// Notify the admin about the minimum PHP version required
+function admin_warn_php_version() {
+    $php_min = '7.1';
+
+    if(!version_compare(PHP_VERSION, $php_min . '.0', '>=')) {
+    ?>
+        <div id="flashmessage" class="flashmessage flashmessage-error" style="display:block;">
+            <?php echo sprintf(__('Your server does not meet the minimum PHP version requirements. Your version is %s, minimum required version is %s! Please update your PHP version in order to avoid errors.'), PHP_VERSION, $php_min . '.0'); ?>
+        </div>
+    <?php 
+    }
+}
+
+osc_add_hook('admin_dashboard_top', 'admin_warn_php_version');
+
+// Inform admin about Maintenance Mode being enabled
+function admin_warn_maintenance() {
+    if(defined('__OSC_MAINTENANCE__') && __OSC_MAINTENANCE__ === true) {
+    ?>
+        <div id="flashmessage" class="flashmessage flashmessage-warning" style="display:block;">
+            <?php _e('The website is in maintenance mode, users will not be able to access it.'); ?>
+            <a href="<?php echo osc_admin_base_url(true); ?>?page=tools&amp;action=maintenance"><?php _e('Manage maintenance mode'); ?></a>.
+        </div>
+    <?php 
+    }
+}
+
+osc_add_hook('admin_dashboard_top', 'admin_warn_maintenance');
+
 /* end of file */
