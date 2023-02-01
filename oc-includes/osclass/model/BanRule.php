@@ -47,7 +47,8 @@
                 'pk_i_id',
                 's_name',
                 's_ip',
-                's_email'
+                's_email',
+                'dt_date'
             );
             $this->setFields($array_fields);
         }

@@ -554,6 +554,8 @@ CREATE TABLE %st_item_description_tmp (
         osc_delete_preference('marketAPIConnect');
         osc_delete_preference('marketCategories');
         osc_delete_preference('marketDataUpdate');
+        $comm->query(sprintf("ALTER TABLE %st_ban_rule CHANGE s_ip s_ip VARCHAR(64) NOT NULL DEFAULT '';", DB_TABLE_PREFIX));
+        $comm->query(sprintf("ALTER TABLE %st_ban_rule ADD COLUMN dt_date DATETIME NULL AFTER s_email;", DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_city ADD COLUMN d_coord_lat DECIMAL(20, 10) NULL AFTER b_active;', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_city ADD COLUMN d_coord_long DECIMAL(20, 10) NULL AFTER d_coord_lat;', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_user CHANGE dt_access_date dt_access_date DATETIME NULL;', DB_TABLE_PREFIX));

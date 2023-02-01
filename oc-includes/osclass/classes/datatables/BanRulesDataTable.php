@@ -52,6 +52,7 @@
             $this->addColumn('name', __('Ban name / Reason'));
             $this->addColumn('ip', __('IP rule'));
             $this->addColumn('email', __('E-mail rule'));
+            $this->addColumn('date', __('Date'));
 
             $dummy = &$this;
             osc_run_hook("admin_rules_table", $dummy);
@@ -64,8 +65,8 @@
                 $csrf_token_url = osc_csrf_token_url();
                 foreach($rules as $aRow) {
                     $row = array();
-                    $options        = array();
-                    $options_more   = array();
+                    $options      = array();
+                    $options_more = array();
                     // first column
 
                     $options[]  = '<a href="' . osc_admin_base_url(true) . '?page=users&action=edit_ban_rule&amp;id=' . $aRow['pk_i_id'] . '">' . __('Edit') . '</a>';
@@ -98,6 +99,7 @@
                     $row['name'] = $aRow['s_name'] . $actions;
                     $row['ip'] = $aRow['s_ip'];
                     $row['email'] = $aRow['s_email'];
+                    $row['date'] = ($aRow['dt_date'] <> '' ? $aRow['dt_date'] : '-');
 
                     $row = osc_apply_filter('rules_processing_row', $row, $aRow);
 
