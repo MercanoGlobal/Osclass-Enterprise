@@ -43,6 +43,7 @@
             <tr>
                 <th class="col-name"><?php _e('Name'); ?></th>
                 <th class="col-title"><?php _e('Title'); ?></th>
+                <th class="col-pub-date"><?php _e('Creation date'); ?></th>
             </tr>
         </thead>
         <tbody>

@@ -136,13 +136,14 @@
                         $row = array();
                         $row[] = $email['s_internal_name'] . $actions;
                         $row[] = $title['s_title'];
+                        $row[] = ($email['dt_pub_date'] <> '' ? $email['dt_pub_date'] : '-');
                         $aData[] = $row;
                     }
                     // ----
-                    $array['iTotalRecords']         = $displayRecords;
-                    $array['iTotalDisplayRecords']  = count($emails);
-                    $array['iDisplayLength']        = $limit;
-                    $array['aaData'] = $aData;
+                    $array['iTotalRecords']        = $displayRecords;
+                    $array['iTotalDisplayRecords'] = count($emails);
+                    $array['iDisplayLength']       = $limit;
+                    $array['aaData']               = $aData;
 
                     $page  = (int)Params::getParam('iPage');
                     if(count($array['aaData']) == 0 && $page!=1) {

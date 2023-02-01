@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-02-02 00:23+0200\n"
+"PO-Revision-Date: 2023-02-02 00:50+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -485,7 +485,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: oc-admin/themes/modern/admins/index.php:146 oc-admin/themes/modern/comments/index.php:159 oc-admin/themes/modern/emails/index.php:62 oc-admin/themes/modern/items/index.php:373 oc-admin/themes/modern/items/reported.php:180 oc-admin/themes/modern/languages/index.php:151 oc-admin/themes/modern/media/index.php:142 oc-admin/themes/modern/pages/index.php:174
+#: oc-admin/themes/modern/admins/index.php:146 oc-admin/themes/modern/comments/index.php:159 oc-admin/themes/modern/emails/index.php:63 oc-admin/themes/modern/items/index.php:373 oc-admin/themes/modern/items/reported.php:180 oc-admin/themes/modern/languages/index.php:151 oc-admin/themes/modern/media/index.php:142 oc-admin/themes/modern/pages/index.php:174
 #: oc-admin/themes/modern/plugins/index.php:135 oc-admin/themes/modern/plugins/index.php:207 oc-admin/themes/modern/users/alerts.php:175 oc-admin/themes/modern/users/ban.php:172 oc-admin/themes/modern/users/index.php:302
 msgid "No data available in table"
 msgstr ""
@@ -936,6 +936,10 @@ msgstr ""
 
 #: oc-admin/themes/modern/emails/index.php:39
 msgid "Emails templates"
+msgstr ""
+
+#: oc-admin/themes/modern/emails/index.php:46
+msgid "Creation date"
 msgstr ""
 
 #: oc-admin/themes/modern/fields/iframe.php:30
