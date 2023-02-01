@@ -50,7 +50,7 @@
                 <pre>&lt;?php View::newInstance()->_exportVariableToView('user', User::newInstance()->findByPrimaryKey(osc_item_user_id())); ?&gt;
 &lt;?php $user_var = User::newInstance()->findByPrimaryKey(osc_item_user_id()); ?&gt;
 </pre>
-                <p><b>Enjoy!</p></p>
+                <p><b>Enjoy!</b></p>
             </fieldset>
         </div>
     </div>

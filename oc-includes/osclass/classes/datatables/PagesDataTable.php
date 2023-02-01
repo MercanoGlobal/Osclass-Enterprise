@@ -53,8 +53,10 @@
         {
 
             $this->addColumn('bulkactions', '<input id="check_all" type="checkbox" />');
-            $this->addColumn('internal_name', __('Internal name'));
             $this->addColumn('title', __('Title'));
+            $this->addColumn('internal_name', __('Internal name'));
+            $this->addColumn('link', __('Add to footer'));
+            $this->addColumn('pub_date', __('Publish Date'));
             $this->addColumn('order', __('Order'));
 
             $dummy = &$this;
@@ -91,9 +93,11 @@
                     }
                     $actions = '<div class="actions">'.$auxOptions.'</div>'.PHP_EOL;
 
-                    $row['bulkactions']   = '<input type="checkbox" name="id[]"" value="' . $aRow['pk_i_id'] . '"" />';
-                    $row['internal_name'] = $aRow['s_internal_name'] . $actions;
-                    $row['title'] = $content['s_title'];
+                    $row['bulkactions'] = '<input type="checkbox" name="id[]"" value="' . $aRow['pk_i_id'] . '"" />';
+                    $row['title'] = $content['s_title'] . $actions;
+                    $row['internal_name'] = $aRow['s_internal_name'];
+                    $row['link'] = ($aRow['b_link'] == 1 ? __('Yes') : __('No'));
+                    $row['pub_date'] = ($aRow['dt_pub_date'] <> '' ? $aRow['dt_pub_date'] : '-');
                     $row['order'] = '<div class="order-box">' . $aRow['i_order'] . ' <img class="up" onclick="order_up(' . $aRow['pk_i_id'] . ');" src="' . osc_current_admin_theme_url('images/arrow_up.png') . '" alt="' . __('Up') . '" title="' . __('Up') . '" />  <img class="down" onclick="order_down(' . $aRow['pk_i_id'] . ');" src="' . osc_current_admin_theme_url('images/arrow_down.png') .'" alt="' . __('Down') . '" title="' . __('Down') . '" /></div>';
 
                     $row = osc_apply_filter('pages_processing_row', $row, $aRow);
@@ -106,5 +110,3 @@
         }
 
     }
-
-?>
