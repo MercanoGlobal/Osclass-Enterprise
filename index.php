@@ -152,4 +152,3 @@
     }
 
     /* file end: ./index.php */
-?>

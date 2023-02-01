@@ -20,8 +20,15 @@
     }
     osc_add_hook('help_box','addHelp');
 
-    function customPageHeader(){ ?>
-        <h1><?php _e('Listing'); ?>
+    function customPageHeader() { ?>
+        <h1>
+            <?php
+                if(Params::getParam('itemId') > 0) {
+                    echo sprintf(__('Listing #%d'), Params::getParam('itemId'));
+                } else {
+                    _e('Listings'); 
+                }
+            ?>
             <a href="<?php echo osc_admin_base_url(true) . '?page=settings&action=comments'; ?>" class="btn ico ico-32 ico-engine float-right"><?php _e('Settings'); ?></a>
             <a href="#" class="btn ico ico-32 ico-help float-right"></a>
         </h1>
@@ -134,7 +141,7 @@
                     <tr>
                         <?php foreach($columns as $k => $v) {
                             echo '<th class="col-'.$k.' '.($sort==$k?($direction=='desc'?'sorting_desc':'sorting_asc'):'').'">'.$v.'</th>';
-                        }; ?>
+                        } ?>
                     </tr>
                 </thead>
                 <tbody>
@@ -145,7 +152,7 @@
                                 <td class="col-<?php echo $k; ?>"><?php echo $v; ?></td>
                             <?php }; ?>
                         </tr>
-                    <?php }; ?>
+                    <?php } ?>
                 <?php } else { ?>
                     <tr>
                         <td colspan="6" class="text-center">

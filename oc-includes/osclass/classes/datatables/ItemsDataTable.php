@@ -267,9 +267,9 @@
                     $options[] = '<a href="' . osc_admin_base_url(true) . '?page=items&amp;action=item_edit&amp;id=' . $aRow['pk_i_id'] . '">' . __('Edit') . '</a>';
                     $options[] = '<a onclick="return delete_dialog(\'' . $aRow['pk_i_id'] . '\');" href="' . osc_admin_base_url(true) . '?page=items&amp;action=delete&amp;id[]=' . $aRow['pk_i_id'] . '">' . __('Delete') . '</a>';
 
-                    // only show if there are data
+                    // only show if there is data
                     if(ItemComment::newInstance()->totalComments( $aRow['pk_i_id'] ) > 0) {
-                        $options[] = '<a target="_blank" href="' . osc_admin_base_url(true) . '?page=comments&amp;action=list&amp;id=' . $aRow['pk_i_id'] . '">' . __('View comments') . '</a>';
+                        $options[] = '<a target="_blank" href="' . osc_admin_base_url(true) . '?page=comments&amp;action=list&amp;itemId=' . $aRow['pk_i_id'] . '">' . __('View comments') . '</a>';
                     }
                     if(ItemResource::newInstance()->countResources( $aRow['pk_i_id'] ) > 0) {
                         $options[] = '<a target="_blank" href="' . osc_admin_base_url(true) . '?page=media&amp;action=list&amp;resourceId=' . $aRow['pk_i_id'] . '">' . __('View media') . '</a>';
@@ -625,5 +625,3 @@
             return implode(', ', $location);
         }
     }
-
-?>

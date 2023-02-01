@@ -27,7 +27,7 @@
     class CommentsDataTable extends DataTable
     {
 
-        private $resourceID;
+        private $itemId;
         private $order_by;
         private $showAll;
 
@@ -43,7 +43,7 @@
             $this->addTableHeader();
             $this->getDBParams($params);
 
-            $comments = ItemComment::newInstance()->search($this->resourceID, $this->start, $this->limit,
+            $comments = ItemComment::newInstance()->search($this->itemId, $this->start, $this->limit,
                     ( $this->order_by['column_name'] ? $this->order_by['column_name'] : 'pk_i_id' ),
                     ( $this->order_by['type'] ? $this->order_by['type'] : 'desc' ),
                     $this->showAll);
@@ -55,11 +55,11 @@
                 $this->total          = ItemComment::newInstance()->countAll( '( c.b_active = 0 OR c.b_enabled = 0 OR c.b_spam = 1 )' );
             }
 
-            if( $this->resourceID == null ) {
+            if( $this->itemId == null ) {
                 $this->total_filtered = $this->total;
                 $this->totalFiltered  = $this->total;
             } else {
-                $this->total_filtered = ItemComment::newInstance()->count( $this->resourceID );
+                $this->total_filtered = ItemComment::newInstance()->count( $this->itemId );
                 $this->totalFiltered  = $this->total_filtered;
             }
 
@@ -176,8 +176,8 @@
             $this->showAll = Params::getParam('showAll') == 'off' ? false:true;
 
             foreach($_get as $k => $v) {
-                if( ( $k == 'resourceId' ) && !empty($v) ) {
-                    $this->resourceID = intval($v);
+                if( ( $k == 'itemId' ) && !empty($v) ) {
+                    $this->itemId = intval($v);
                 }
                 if( $k == 'iDisplayStart' ) {
                     $this->start = intval($v);
@@ -256,5 +256,3 @@
         }
 
     }
-
-?>
