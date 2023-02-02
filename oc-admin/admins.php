@@ -339,15 +339,16 @@
                                         $row[] = $admin['s_username'] . $actions;
                                         $row[] = $admin['s_name'];
                                         $row[] = $admin['s_email'];
+                                        $row[] = ($admin['b_moderator'] == 1 ? __('Moderator') : __('Administrator'));
 
                                         $aData[] = $row;
                                     }
-                                    $array['iTotalRecords']         = $displayRecords;
-                                    $array['iTotalDisplayRecords']  = count($admins);
-                                    $array['iDisplayLength']        = $limit;
-                                    $array['aaData'] = $aData;
+                                    $array['iTotalRecords']        = $displayRecords;
+                                    $array['iTotalDisplayRecords'] = count($admins);
+                                    $array['iDisplayLength']       = $limit;
+                                    $array['aaData']               = $aData;
 
-                                    $page  = (int)Params::getParam('iPage');
+                                    $page = (int)Params::getParam('iPage');
                                     if(count($array['aaData']) == 0 && $page!=1) {
                                         $total = (int)$array['iTotalDisplayRecords'];
                                         $maxPage = ceil( $total / (int)$array['iDisplayLength'] );

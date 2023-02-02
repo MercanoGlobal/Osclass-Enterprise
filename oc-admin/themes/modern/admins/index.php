@@ -123,6 +123,7 @@
                         <th><?php _e('Username'); ?></th>
                         <th><?php _e('Name'); ?></th>
                         <th><?php _e('E-mail'); ?></th>
+                        <th><?php _e('Type'); ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -154,7 +155,7 @@
     </form>
 </div>
 <?php
-    function showingResults(){
+    function showingResults() {
         $aData = __get('aAdmins');
         echo '<ul class="showing-results"><li><span>'.osc_pagination_showing((Params::getParam('iPage')-1)*$aData['iDisplayLength']+1, ((Params::getParam('iPage')-1)*$aData['iDisplayLength'])+count($aData['aaData']), $aData['iTotalDisplayRecords']).'</span></li></ul>';
     }

@@ -105,6 +105,8 @@
                             <li>Added listings views count in oc-admin > Listings. It also shows how many times a premium* listing was shown in the "Premium block"</li>
                             <li>Added the ability to customize the appearance of your theme/plugins by using custom CSS/HTML code</li>
                             <li>Added Item Comment Ratings, so users can leave item reviews with star ratings</li>
+                            <li>Added more information to different backend tables</li>
+                            <li>Added notices for the admin about the website being in maintenance mode and about the min PHP version required</li>
                             <li>Added Locations at install and in the admin</li>
                             <li>Updated the Geodata to 2021 (it now contains 248 countries with all the cities and their coordinates)</li>
                             <li>Updated PHPMailer to 5.2.28</li>
