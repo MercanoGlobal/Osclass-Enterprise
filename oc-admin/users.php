@@ -552,7 +552,7 @@
                                             $this->redirectTo(osc_admin_base_url(true) . '?page=users&action=ban');
                                         }
 
-                                        BanRule::newInstance()->update(array('s_name' => Params::getParam('s_name'), 's_ip' => Params::getParam('s_ip'), 's_email' => strtolower(Params::getParam('s_email'))), array('pk_i_id' => Params::getParam('id')));
+                                        BanRule::newInstance()->update(array('s_name' => Params::getParam('s_name'), 's_ip' => Params::getParam('s_ip'), 's_email' => strtolower(Params::getParam('s_email')), 'dt_date' => date('Y-m-d H:i:s')), array('pk_i_id' => Params::getParam('id')));
                                         osc_add_flash_ok_message(_m('Rule updated correctly'), 'admin');
                                         $this->redirectTo(osc_admin_base_url(true) . '?page=users&action=ban');
                 break;
@@ -567,7 +567,7 @@
                                             $this->redirectTo(osc_admin_base_url(true) . '?page=users&action=ban');
                                         }
 
-                                        BanRule::newInstance()->insert(array('s_name' => Params::getParam('s_name'), 's_ip' => Params::getParam('s_ip'), 's_email' => strtolower(Params::getParam('s_email'))));
+                                        BanRule::newInstance()->insert(array('s_name' => Params::getParam('s_name'), 's_ip' => Params::getParam('s_ip'), 's_email' => strtolower(Params::getParam('s_email')), 'dt_date' => date('Y-m-d H:i:s')));
                                         osc_add_flash_ok_message(_m('Rule saved correctly'), 'admin');
                                         $this->redirectTo(osc_admin_base_url(true) . '?page=users&action=ban');
                 break;
@@ -690,4 +690,3 @@
     }
 
     /* file end: ./oc-admin/users.php */
-?>
