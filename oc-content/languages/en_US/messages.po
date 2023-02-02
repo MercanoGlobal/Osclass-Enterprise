@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2022-11-02 21:24+0200\n"
+"PO-Revision-Date: 2023-02-02 15:15+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: oc-admin/admins.php:30 oc-admin/items.php:38 oc-includes/osclass/core/AdminSecBaseModel.php:28
 msgid "You don't have enough permissions"
@@ -240,15 +240,15 @@ msgstr ""
 msgid "Cache flushed correctly"
 msgstr ""
 
-#: oc-admin/controller/settings/comments.php:50
+#: oc-admin/controller/settings/comments.php:51
 msgid "Number of moderated comments must contain only numeric characters"
 msgstr ""
 
-#: oc-admin/controller/settings/comments.php:53
+#: oc-admin/controller/settings/comments.php:54
 msgid "Comments per page must contain only numeric characters"
 msgstr ""
 
-#: oc-admin/controller/settings/comments.php:74
+#: oc-admin/controller/settings/comments.php:75
 msgid "Comment settings have been updated"
 msgstr ""
 
@@ -875,8 +875,8 @@ msgstr ""
 
 #: oc-admin/plugins.php:90
 msgid ""
-"The plugin generated %d characters of <strong>unexpected output</strong> during the installation. Output: \"%s"
-"\""
+"The plugin generated %d characters of <strong>unexpected output</strong> during the installation. Output: "
+"\"%s\""
 msgstr ""
 
 #: oc-admin/plugins.php:93
@@ -1306,11 +1306,15 @@ msgstr ""
 msgid "We just sent your message to %s"
 msgstr ""
 
-#: oc-includes/osclass/ItemActions.php:1475
+#: oc-includes/osclass/ItemActions.php:1015
+msgid "Your rating has been removed as you already rated this listing %d time(s)"
+msgstr ""
+
+#: oc-includes/osclass/ItemActions.php:1484
 msgid "One of the files you tried to upload exceeds the maximum size."
 msgstr ""
 
-#: oc-includes/osclass/ItemActions.php:1529 oc-includes/osclass/controller/contact.php:163
+#: oc-includes/osclass/ItemActions.php:1538 oc-includes/osclass/controller/contact.php:163
 msgid "The file you tried to upload does not have a valid extension."
 msgstr ""
 

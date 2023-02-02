@@ -231,6 +231,15 @@
     }
 
     /**
+     * Gets the limit of how many ratings can a user leave on a listing
+     *
+     * @return int
+     */
+    function osc_comment_rating_limit() {
+        return (int)(getPreference('comment_rating_limit'));
+    }
+
+    /**
      * Gets how many comments should be posted before auto-moderation
      *
      * @return int

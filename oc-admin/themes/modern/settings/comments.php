@@ -121,6 +121,10 @@ $(document).ready(function(){
                                 <input type="checkbox" <?php echo ( osc_enable_comment_rating() ? 'checked="checked"' : '' ); ?> name="enable_comment_rating" value="1" /> <?php _e('Enable ratings on comments'); ?>
                             </label>
                         </div>
+                        <div class="form-label-checkbox-offset">
+                            <?php printf(__('User can rate each listing maximum %s time(s)'), '<input type="text" class="input-small" name="comment_rating_limit" value="' . ((osc_comment_rating_limit() == -1) ? '0' : osc_esc_html(osc_comment_rating_limit())) . '" />'); ?>
+                            <div class="help-box"><?php _e('If the value is zero, there will be no limit on ratings per item and user'); ?></div>
+                        </div>
                         <div class="form-label-checkbox">
                             <label>
                                 <input type="checkbox" <?php echo ( ( osc_moderate_comments() == -1 ) ? '' : 'checked="checked"' ); ?> name="moderate_comments" value="1" /> <?php _e('A comment is being held for moderation'); ?>

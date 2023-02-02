@@ -798,6 +798,20 @@
     }
 
     /**
+     * Check if user hasn't already reached the rating limit
+     *
+     * @return boolean
+     */
+    function osc_comment_rating_limit_check() {
+        if(osc_comment_rating_limit() > 0 && osc_item_id() > 0 && osc_is_web_user_logged_in()) {
+            if(ItemComment::newInstance()->countItemUserRatings(osc_item_id(), osc_logged_user_id()) >= osc_comment_rating_limit()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
      * Gets user id of current comment
      *
      * @return int
@@ -807,7 +821,7 @@
     }
 
     /**
-     * Gets  link to delete the current comment of current item
+     * Gets link to delete the current comment of current item
      *
      * @return string
      */
@@ -1524,5 +1538,3 @@
         }
         View::newInstance()->_exportVariableToView("customItems", $mSearch->doSearch());
     }
-
- ?>

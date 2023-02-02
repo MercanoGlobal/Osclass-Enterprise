@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-02-02 13:41+0200\n"
+"PO-Revision-Date: 2023-02-02 14:54+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -580,7 +580,7 @@ msgid "Edit widget"
 msgstr ""
 
 #: oc-admin/themes/modern/appearance/add_widget.php:27 oc-admin/themes/modern/appearance/add_widget.php:55 oc-admin/themes/modern/appearance/customization.php:76 oc-admin/themes/modern/categories/iframe.php:54 oc-admin/themes/modern/emails/frm.php:135 oc-admin/themes/modern/fields/iframe.php:82 oc-admin/themes/modern/items/settings.php:266 oc-admin/themes/modern/languages/frm.php:112
-#: oc-admin/themes/modern/pages/frm.php:36 oc-admin/themes/modern/settings/advanced.php:113 oc-admin/themes/modern/settings/comments.php:166 oc-admin/themes/modern/settings/index.php:415 oc-admin/themes/modern/settings/mailserver.php:171 oc-admin/themes/modern/settings/media.php:331 oc-admin/themes/modern/settings/permalinks.php:842 oc-admin/themes/modern/settings/searches.php:142
+#: oc-admin/themes/modern/pages/frm.php:36 oc-admin/themes/modern/settings/advanced.php:113 oc-admin/themes/modern/settings/comments.php:170 oc-admin/themes/modern/settings/index.php:415 oc-admin/themes/modern/settings/mailserver.php:171 oc-admin/themes/modern/settings/media.php:331 oc-admin/themes/modern/settings/permalinks.php:842 oc-admin/themes/modern/settings/searches.php:142
 #: oc-admin/themes/modern/settings/spamNbots.php:80 oc-admin/themes/modern/settings/spamNbots.php:124 oc-admin/themes/modern/users/settings.php:84
 msgid "Save changes"
 msgstr ""
@@ -1427,7 +1427,7 @@ msgstr ""
 msgid "Only allow registered users to see the contact phone number"
 msgstr ""
 
-#: oc-admin/themes/modern/items/settings.php:198 oc-admin/themes/modern/settings/comments.php:143
+#: oc-admin/themes/modern/items/settings.php:198 oc-admin/themes/modern/settings/comments.php:147
 msgid "Notifications"
 msgstr ""
 
@@ -2012,43 +2012,51 @@ msgstr ""
 msgid "Enable ratings on comments"
 msgstr ""
 
+#: oc-admin/themes/modern/settings/comments.php:125
+msgid "User can rate each listing maximum %s time(s)"
+msgstr ""
+
 #: oc-admin/themes/modern/settings/comments.php:126
-msgid "A comment is being held for moderation"
+msgid "If the value is zero, there will be no limit on ratings per item and user"
 msgstr ""
 
 #: oc-admin/themes/modern/settings/comments.php:130
+msgid "A comment is being held for moderation"
+msgstr ""
+
+#: oc-admin/themes/modern/settings/comments.php:134
 msgid "Before a comment appears, comment author must have at least %s previously approved comments"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:131
+#: oc-admin/themes/modern/settings/comments.php:135
 msgid "If the value is zero, an administrator must always approve comments"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:136
+#: oc-admin/themes/modern/settings/comments.php:140
 msgid "Other comment settings"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:138
+#: oc-admin/themes/modern/settings/comments.php:142
 msgid "Break comments into pages with %s comments per page"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:139
+#: oc-admin/themes/modern/settings/comments.php:143
 msgid "If the value is zero all comments are shown"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:146
+#: oc-admin/themes/modern/settings/comments.php:150
 msgid "E-mail admin whenever"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:150
+#: oc-admin/themes/modern/settings/comments.php:154
 msgid "A new comment is posted"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:156
+#: oc-admin/themes/modern/settings/comments.php:160
 msgid "E-mail user whenever"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/comments.php:160
+#: oc-admin/themes/modern/settings/comments.php:164
 msgid "There's a new comment on his listing"
 msgstr ""
 
@@ -4685,7 +4693,7 @@ msgstr ""
 msgid " from"
 msgstr ""
 
-#: oc-includes/osclass/frm/Field.form.class.php:259 oc-includes/osclass/helpers/hItems.php:1289
+#: oc-includes/osclass/frm/Field.form.class.php:259 oc-includes/osclass/helpers/hItems.php:1303
 msgid "to"
 msgstr ""
 
@@ -4947,15 +4955,15 @@ msgstr ""
 msgid "You must login to see the phone number"
 msgstr ""
 
-#: oc-includes/osclass/helpers/hItems.php:1191
+#: oc-includes/osclass/helpers/hItems.php:1205
 msgid "Check with seller"
 msgstr ""
 
-#: oc-includes/osclass/helpers/hItems.php:1192
+#: oc-includes/osclass/helpers/hItems.php:1206
 msgid "Free"
 msgstr ""
 
-#: oc-includes/osclass/helpers/hItems.php:1288
+#: oc-includes/osclass/helpers/hItems.php:1302
 msgid "From"
 msgstr ""
 
@@ -5883,11 +5891,11 @@ msgstr ""
 msgid "here"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:588
+#: oc-includes/osclass/upgrade-funcs.php:589
 msgid "Osclass &raquo; Updated correctly"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:584 oc-includes/osclass/upgrade-funcs.php:589
+#: oc-includes/osclass/upgrade-funcs.php:585 oc-includes/osclass/upgrade-funcs.php:590
 msgid "Osclass has been updated successfully. <a href=\"https://www.valueweb.gr/forums/osclass-enterprise-release/\" target=\"_blank\">Need more help?</a>"
 msgstr ""
 

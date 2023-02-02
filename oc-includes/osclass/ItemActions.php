@@ -1002,9 +1002,18 @@
             $userId      = $aItem['userId'];
             $status_num  = -1;
 
+            $mComments = ItemComment::newInstance();
+
             if($rating > 5) {
                 $rating = 5;
             } else if ($rating <= 0) {
+                $rating = null;
+            }
+
+            if(osc_comment_rating_limit() > 0 && $mComments->countItemUserRatings($itemId, $userId, $authorEmail) >= osc_comment_rating_limit()) {
+                if($rating != null) {
+                    osc_add_flash_info_message(sprintf(_m('Your rating has been removed as you already rated this listing %d time(s)'), osc_comment_rating_limit()));
+                }
                 $rating = null;
             }
 

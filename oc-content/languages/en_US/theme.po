@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2022-11-02 21:24+0200\n"
+"PO-Revision-Date: 2023-02-02 14:55+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: 404.php:30
 msgid "Sorry but I can't find the page you're looking for"
@@ -280,7 +280,7 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: contact.php:68 item-send-friend.php:87 item-sidebar.php:125 item.php:255 user-public-sidebar.php:69
+#: contact.php:68 item-send-friend.php:87 item-sidebar.php:125 item.php:259 user-public-sidebar.php:69
 msgid "Send"
 msgstr ""
 
@@ -436,7 +436,7 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
-#: item-post.php:65 item.php:243
+#: item-post.php:65 item.php:247
 msgid "Title"
 msgstr ""
 
@@ -674,11 +674,15 @@ msgstr ""
 msgid "Rating"
 msgstr ""
 
-#: item.php:249
+#: item.php:241
+msgid "Not available, you have already rated this item %d time(s)"
+msgstr ""
+
+#: item.php:253
 msgid "Comment"
 msgstr ""
 
-#: item.php:271
+#: item.php:275
 msgid "of"
 msgstr ""
 

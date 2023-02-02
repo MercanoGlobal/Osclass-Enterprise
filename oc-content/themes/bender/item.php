@@ -224,18 +224,22 @@
                                 <div class="control-group">
                                     <label class="control-label" for="title"><?php _e('Rating', 'bender'); ?></label>
                                     <div class="controls">
-                                        <?php //CommentForm::rating_input_text(); ?>
-                                        <input type="hidden" name="rating" value="" />
+                                        <?php if(osc_comment_rating_limit_check()) { ?>
+                                            <?php //CommentForm::rating_input_text(); ?>
+                                            <input type="hidden" name="rating" value="" />
 
-                                        <div class="comment-leave-rating">
-                                            <i class="fa fa-star is-rating-item" data-value="1"></i> 
-                                            <i class="fa fa-star is-rating-item" data-value="2"></i> 
-                                            <i class="fa fa-star is-rating-item" data-value="3"></i> 
-                                            <i class="fa fa-star is-rating-item" data-value="4"></i> 
-                                            <i class="fa fa-star is-rating-item" data-value="5"></i> 
-                                        </div>
+                                            <div class="comment-leave-rating">
+                                                <i class="fa fa-star is-rating-item" data-value="1"></i> 
+                                                <i class="fa fa-star is-rating-item" data-value="2"></i> 
+                                                <i class="fa fa-star is-rating-item" data-value="3"></i> 
+                                                <i class="fa fa-star is-rating-item" data-value="4"></i> 
+                                                <i class="fa fa-star is-rating-item" data-value="5"></i> 
+                                            </div>
 
-                                        <span class="comment-rating-selected"></span>
+                                            <span class="comment-rating-selected"></span>
+                                        <?php } else { ?>
+                                            <div class="red"><?php echo sprintf(__('Not available, you have already rated this item %d time(s)', 'bender'), osc_comment_rating_limit()); ?></div>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             <?php } ?>

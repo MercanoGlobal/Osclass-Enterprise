@@ -565,6 +565,7 @@ CREATE TABLE %st_item_description_tmp (
         $comm->query(sprintf('ALTER TABLE %st_item ADD i_renewed INT(3) NULL DEFAULT 0 AFTER b_show_phone', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_item_comment ADD i_rating INT(3) NULL AFTER s_body', DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'enable_comment_rating', '0', 'BOOLEAN')", DB_TABLE_PREFIX));
+        $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'comment_rating_limit', '1', 'INTEGER')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'enabled_renewal_items', '0', 'BOOLEAN')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'renewal_update_pub_date', '0', 'BOOLEAN')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'renewal_limit', 0, 'INTEGER')", DB_TABLE_PREFIX));

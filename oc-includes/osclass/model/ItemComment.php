@@ -214,6 +214,42 @@
         }
 
         /**
+         * Return the number of ratings per user and item
+         *
+         * @access public
+         * @since 3.10.0
+         * @param integer $item_d
+         * @param integer $user_id
+         * @param string $user_email
+         * @return integer
+         */
+        public function countItemUserRatings($item_id, $user_id = 0, $user_email = '') {
+            $this->dao->select('count(i_rating) as rating');
+            $this->dao->from($this->getTableName());
+            //$conditions = array('fk_i_item_id' => $item_id, 'b_active' => 1, 'b_enabled' => 1);
+            $conditions = array('fk_i_item_id' => $item_id);
+            $this->dao->where($conditions);
+            $this->dao->where('i_rating is not null');
+
+            if($user_id > 0) {
+                $this->dao->where('fk_i_user_id', $user_id);
+            } else {
+                $this->dao->where('s_author_email', $user_email);
+            }
+
+            $result = $this->dao->get();
+
+            if($result == false) {
+                return false;
+            } else if($result->numRows() === 0) {
+                return 0;
+            } else {
+                $total = $result->row();
+                return $total['rating'];
+            }
+        }
+
+        /**
          * Searches for comments information, given an user id.
          *
          * @access public
@@ -443,4 +479,3 @@
 
     }
     /* file end: ./oc-includes/osclass/model/ItemComment.php */
-?>

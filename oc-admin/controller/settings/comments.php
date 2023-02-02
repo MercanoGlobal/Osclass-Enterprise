@@ -29,21 +29,22 @@
                 case('comments_post'):
                     // updating comment
                     osc_csrf_check();
-                    $iUpdated         = 0;
-                    $enabledComments  = Params::getParam('enabled_comments');
-                    $enabledComments  = (($enabledComments != '') ? true : false);
-                    $enabledRating    = Params::getParam('enable_comment_rating');
-                    $enabledRating    = (($enabledRating != '') ? true : false);
-                    $moderateComments = Params::getParam('moderate_comments');
-                    $moderateComments = (($moderateComments != '') ? true : false);
-                    $numModerateComments = Params::getParam('num_moderate_comments');
-                    $commentsPerPage  = Params::getParam('comments_per_page');
-                    $notifyNewComment = Params::getParam('notify_new_comment');
-                    $notifyNewComment = (($notifyNewComment != '') ? true : false);
+                    $iUpdated             = 0;
+                    $enabledComments      = Params::getParam('enabled_comments');
+                    $enabledComments      = (($enabledComments != '') ? true : false);
+                    $enabledRating        = Params::getParam('enable_comment_rating');
+                    $enabledRating        = (($enabledRating != '') ? true : false);
+                    $moderateComments     = Params::getParam('moderate_comments');
+                    $moderateComments     = (($moderateComments != '') ? true : false);
+                    $numModerateComments  = Params::getParam('num_moderate_comments');
+                    $commentsPerPage      = Params::getParam('comments_per_page');
+                    $notifyNewComment     = Params::getParam('notify_new_comment');
+                    $notifyNewComment     = (($notifyNewComment != '') ? true : false);
                     $notifyNewCommentUser = Params::getParam('notify_new_comment_user');
                     $notifyNewCommentUser = (($notifyNewCommentUser != '') ? true : false);
                     $regUserPostComments  = Params::getParam('reg_user_post_comments');
                     $regUserPostComments  = (($regUserPostComments != '') ? true : false);
+                    $commentRatingLimit   = (int)Params::getParam('comment_rating_limit');
 
                     $msg = '';
                     if(!osc_validate_int(Params::getParam("num_moderate_comments"))) {
@@ -67,8 +68,8 @@
                     $iUpdated += osc_set_preference('notify_new_comment', $notifyNewComment);
                     $iUpdated += osc_set_preference('notify_new_comment_user', $notifyNewCommentUser);
                     $iUpdated += osc_set_preference('comments_per_page', $commentsPerPage);
-
                     $iUpdated += osc_set_preference('reg_user_post_comments', $regUserPostComments);
+                    $iUpdated += osc_set_preference('comment_rating_limit', $commentRatingLimit);
 
                     if($iUpdated > 0) {
                         osc_add_flash_ok_message( _m("Comment settings have been updated"), 'admin');
