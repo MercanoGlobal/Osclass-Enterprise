@@ -163,7 +163,7 @@
                 <tbody>
                 <?php if( count($rows) > 0 ) { ?>
                     <?php foreach($rows as $key => $row) { ?>
-                        <tr>
+                        <tr class="<?php echo implode(' ', osc_apply_filter('datatable_alert_class', array(), $aRawRows[$key], $row)); ?>">
                             <?php foreach($row as $k => $v) { ?>
                                 <td class="col-<?php echo $k; ?>"><?php echo $v; ?></td>
                             <?php }; ?>

@@ -30,6 +30,12 @@
         private $search;
         private $order_by;
 
+        public function __construct()
+        {
+            parent::__construct();
+            osc_add_filter('datatable_alert_class', array(&$this, 'row_class'));
+        }
+
         public function table($params)
         {
 
@@ -48,10 +54,13 @@
         private function addTableHeader()
         {
 
-            $this->addColumn('bulkactions', '<input id="check_all" type="checkbox" />');
+            $this->addColumn('status-border', '');
+            $this->addColumn('status', __('Status'));
+            $this->addColumn('bulkactions', '<input id="check_all" type="checkbox"/>');
             $this->addColumn('email', __('E-mail'));
             $this->addColumn('alert', __('Alert'));
-            $this->addColumn('date', __('Date'));
+            $this->addColumn('create_date', __('Creation date'));
+            $this->addColumn('unsub_date', __('Unsubscribe date'));
 
             $dummy = &$this;
             osc_run_hook("admin_alerts_table", $dummy);
@@ -64,19 +73,19 @@
                 $csrf_token_url = osc_csrf_token_url();
                 foreach($alerts['alerts'] as $aRow) {
                     $row = array();
-                    $options        = array();
-                    // first column
+                    $options = array();
+
+                    $row['status-border'] = '';
+                    $row['status'] = ($aRow['b_active'] == 1 ? __('Active') : __('Inactive'));
                     $row['bulkactions'] = '<input type="checkbox" name="alert_id[]" value="' . $aRow['pk_i_id'] . '" /></div>';
 
                     $options[]  = '<a onclick="return delete_alert(\'' . $aRow['pk_i_id'] . '\');" href="#">' . __('Delete') . '</a>';
-
 
                     if( $aRow['b_active'] == 1 ) {
                         $options[] = '<a href="' . osc_admin_base_url(true) . '?page=users&action=status_alerts&amp;alert_id[]=' . $aRow['pk_i_id'] . '&amp;' . $csrf_token_url . '&amp;status=0" >' . __('Deactivate') . '</a>';
                     } else {
                         $options[] = '<a href="' . osc_admin_base_url(true) . '?page=users&action=status_alerts&amp;alert_id[]=' . $aRow['pk_i_id'] . '&amp;' . $csrf_token_url . '&amp;status=1" >' . __('Activate') . '</a>';
                     }
-
 
                     $options = osc_apply_filter('actions_manage_alerts', $options, $aRow);
                     // create list of actions
@@ -87,10 +96,8 @@
                     $auxOptions  .= '</ul>'.PHP_EOL;
 
                     $actions = '<div class="actions">'.$auxOptions.'</div>'.PHP_EOL;
-                    // second column
-                    $row['email'] = '<a href="' . osc_admin_base_url(true) . '?page=items&userId=">' . $aRow['s_email'] . '</a>'. $actions;
 
-                    // third row
+                    $row['email'] = '<a href="' . osc_admin_base_url(true) . '?page=items&userId=">' . $aRow['s_email'] . '</a>'. $actions;
 
                     $pieces = array();
                     $conditions = osc_get_raw_search((array)json_decode($aRow['s_search'], true));
@@ -110,9 +117,10 @@
                         $pieces[] = sprintf(__("<b>Categories:</b> %s"), implode(", ", $cat_array));
                     }
 
-                    $row['alert'] = implode($pieces, ", ");
-                    // fourth row
-                    $row['date'] = osc_format_date($aRow['dt_date']);
+                    $row['alert'] = implode(', ', $pieces);
+
+                    $row['create_date'] = osc_format_date($aRow['dt_date']);
+                    $row['unsub_date'] = ($aRow['dt_unsub_date'] <> '' ? osc_format_date($aRow['dt_unsub_date']) : '-');
 
                     $row = osc_apply_filter('alerts_processing_row', $row, $aRow);
 
@@ -168,6 +176,19 @@
             $this->start = intval( $start );
             $this->limit = intval( $_get['iDisplayLength'] );
 
+        }  
+
+        /**
+         * @param $class
+         * @param $rawRow
+         * @param $row
+         *
+         * @return array
+         */
+        public function row_class($class, $rawRow, $row)
+        {
+            $class[] = ($rawRow['b_active'] == 1 ? 'status-active' : 'status-inactive');
+            return $class;
         }
 
     }
