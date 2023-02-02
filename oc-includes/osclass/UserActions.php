@@ -377,7 +377,7 @@
             $input['d_coord_long']      = (Params::getParam('d_coord_long') != '') ? Params::getParam('d_coord_long') : null;
             $input['b_company']         = (Params::getParam('b_company') != '' && Params::getParam('b_company') != 0) ? 1 : 0;
 
-            return($input);
+            return $input;
         }
 
         public function activate($user_id)
@@ -532,5 +532,3 @@
             return 3;
         }
     }
-
-?>

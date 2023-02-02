@@ -269,7 +269,7 @@
                 break;
                 default:                //login
                                         Session::newInstance()->_setReferer(osc_get_http_referer());
-                                        if( osc_logged_user_id() != '') {
+                                        if(osc_logged_user_id() > 0) {
                                             $this->redirectTo(osc_user_dashboard_url());
                                         }
                                         $this->doView( 'user-login.php' );
@@ -286,4 +286,3 @@
     }
 
     /* file end: ./login.php */
-?>
