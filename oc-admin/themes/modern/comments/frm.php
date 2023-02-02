@@ -51,6 +51,7 @@
     osc_add_hook('admin_header','customHead', 10);
 
     $comment = __get('comment');
+    $item = __get('item');
 ?>
 <?php osc_current_admin_theme_path( 'parts/header.php' ); ?>
 <h2 class="render-title"><?php echo $title; ?></h2>
@@ -61,30 +62,18 @@
         <input type="hidden" name="page" value="comments" />
         <input type="hidden" name="id" value="<?php echo (isset($comment['pk_i_id'])) ? $comment['pk_i_id'] : '' ?>" />
         <div class="form-horizontal">
-            <div class="form-row">
-                <div class="form-label"><?php _e('Title'); ?></div>
-                <div class="form-controls">
-                    <?php CommentForm::title_input_text($comment); ?>
+            <?php if($item !== false) { ?>
+                <div class="form-row">
+                    <div class="form-label"><?php _e('Listing'); ?></div>
+                    <div class="form-controls">
+                        <div class="form-label-checkbox">
+                            <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=items&action=item_edit&id=<?php echo $comment['fk_i_item_id']; ?>">#<?php echo $comment['fk_i_item_id']; ?></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
             <div class="form-row">
-                <div class="form-label"><?php _e('Author'); ?></div>
-                <div class="form-controls">
-                    <?php CommentForm::author_input_text($comment); ?>
-                    <?php if(isset($comment['fk_i_user_id']) && $comment['fk_i_user_id']!='') {
-                    _e("Registered user"); ?> 
-                    ( <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=users&action=edit&id=<?php echo $comment['fk_i_user_id']; ?>"><?php _e('Edit user'); ?></a> )
-                    <?php }?>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-label"><?php _e("Author's e-mail"); ?></div>
-                <div class="form-controls">
-                    <?php CommentForm::email_input_text($comment); ?>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-label"><?php _e('Status'); ?></div>
+                <div class="form-label"><?php _e('Validated'); ?></div>
                 <div class="form-controls">
                     <div class="form-label-checkbox">
                         <?php echo ( $comment['b_active'] ? __('Active') : __('Inactive') ); ?> ( <a href="<?php echo osc_admin_base_url( true ); ?>?page=comments&action=status&id=<?php echo $comment['pk_i_id']; ?>&<?php echo $csrf_token_url; ?>&value=<?php echo ( ( $comment['b_active'] == 1) ? 'INACTIVE' : 'ACTIVE' ); ?>"><?php echo ( ( $comment['b_active'] == 1 ) ? __('Deactivate') : __('Activate') ); ?></a> )
@@ -100,9 +89,32 @@
                 </div>
             </div>
             <div class="form-row">
+                <div class="form-label"><?php _e('Author'); ?></div>
+                <div class="form-controls">
+                    <?php CommentForm::author_input_text($comment); ?>
+                    <?php if(isset($comment['fk_i_user_id']) && $comment['fk_i_user_id']!='') {
+                        _e("Registered user"); ?> 
+                        ( <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=users&action=edit&id=<?php echo $comment['fk_i_user_id']; ?>"><?php _e('Edit user'); ?></a> )
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label"><?php _e("Author's e-mail"); ?></div>
+                <div class="form-controls">
+                    <?php CommentForm::email_input_text($comment); ?>
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="form-label"><?php _e('Rating'); ?></div>
                 <div class="form-controls input-description-wide">
                     <?php CommentForm::rating_input_text($comment); ?>
+                    <?php _e('Rating value between 0 and 5'); ?>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label"><?php _e('Title'); ?></div>
+                <div class="form-controls">
+                    <?php CommentForm::title_input_text($comment); ?>
                 </div>
             </div>
             <div class="form-row">
