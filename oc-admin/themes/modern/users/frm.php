@@ -74,7 +74,7 @@
 <?php osc_current_admin_theme_path('parts/header.php'); ?>
 <?php if($aux['edit'] && count($aux['alerts'])>0) { ?>
         <style>
-            #more-tooltip{
+            #more-tooltip {
                 position:absolute;
                 background:#f2f2f2;
                 border:solid 2px #bababa;
@@ -162,7 +162,12 @@
 
 <div class="grid-row no-bottom-margin">
     <div class="row-wrapper">
-<h2 class="render-title"><?php echo $aux['title']; ?></h2>
+        <h2 class="render-title">
+            <?php echo $aux['title']; ?>
+            <?php if(isset($user['pk_i_id'])) { ?>
+                #<?php echo $user['pk_i_id']; ?>
+            <?php } ?>
+        </h2>
     </div>
 </div>
 
@@ -202,7 +207,7 @@
                     <div class="form-label"><?php _e('Last access'); ?></div>
                     <div class="form-controls">
                         <div class='form-label-checkbox'>
-                        <?php echo sprintf(__("%s on %s"), "<a target=_blank href='https://tools.keycdn.com/geo?host=" . $user['s_access_ip'] . "'>" . $user['s_access_ip'] . "</a>" , $user['dt_access_date']);?>
+                            <?php echo sprintf(__("%s on %s"), "<a target=_blank href='https://tools.keycdn.com/geo?host=" . $user['s_access_ip'] . "'>" . $user['s_access_ip'] . "</a>" , $user['dt_access_date']); ?>
                         </div>
                     </div>
                 </div>
@@ -339,6 +344,7 @@
         <div class="settings-user">
             <ul id="error_list"></ul>
             <form>
+                <fieldset>
                 <div class="form-horizontal">
                     <h3 class="render-title"><?php _e('Alerts'); ?></h3>
                     <div class="form-row">
@@ -373,15 +379,15 @@
                                 <a href="javascript:delete_alert('<?php echo $aux['alerts'][$k]['pk_i_id']; ?>');" ><?php _e("Delete"); ?></a>
                                 &nbsp;|&nbsp;
                                 <?php if($aux['alerts'][$k]['b_active']==1) { ?>
-                                <a href="<?php echo osc_admin_base_url(true)."?page=users&action=status_alerts&id[]=".$aux['alerts'][$k]['pk_i_id']."&status=0&user_id=".$user['pk_i_id']; ?>" ><?php _e("Disable"); ?></a>
+                                    <a href="<?php echo osc_admin_base_url(true)."?page=users&action=status_alerts&id[]=".$aux['alerts'][$k]['pk_i_id']."&status=0&user_id=".$user['pk_i_id']; ?>" ><?php _e("Disable"); ?></a>
                                 <?php } else { ?>
-                                <a href="<?php echo osc_admin_base_url(true)."?page=users&action=status_alerts&id[]=".$aux['alerts'][$k]['pk_i_id']."&status=1&user_id=".$user['pk_i_id']; ?>" ><?php _e("Enable"); ?></a>
+                                    <a href="<?php echo osc_admin_base_url(true)."?page=users&action=status_alerts&id[]=".$aux['alerts'][$k]['pk_i_id']."&status=1&user_id=".$user['pk_i_id']; ?>" ><?php _e("Enable"); ?></a>
                                 <?php } ?>
                             </div>
                             <div class="form-controls">
                                 <?php if(!empty($results)) {
                                     foreach($results as $r) { ?>
-                                    <label><b><?php echo $r['s_title']; ?></b></label>
+                                    <label><b><a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=items&action=item_edit&id=<?php echo $r['fk_i_item_id']; ?>"><?php echo $r['s_title']; ?></a></b></label>
                                     <p><?php echo $r['s_description']; ?></p>
                                     <?php }
                                 } else { ?>
@@ -409,8 +415,8 @@
                 </div>
                 <div class="form-actions">
                     <div class="wrapper">
-                    <a class="btn" href="javascript:void(0);" onclick="$('#dialog-alert-delete').dialog('close');"><?php _e('Cancel'); ?></a>
-                    <input id="alert-delete-submit" type="submit" value="<?php echo osc_esc_html( __('Delete') ); ?>" class="btn btn-red" />
+                        <a class="btn" href="javascript:void(0);" onclick="$('#dialog-alert-delete').dialog('close');"><?php _e('Cancel'); ?></a>
+                        <input id="alert-delete-submit" type="submit" value="<?php echo osc_esc_html( __('Delete') ); ?>" class="btn btn-red" />
                     </div>
                 </div>
             </div>
