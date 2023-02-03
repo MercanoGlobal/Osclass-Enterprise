@@ -71,7 +71,7 @@
          * @param string server ip or name
          * @param string database user
          * @param string database password
-         * @param string datatabase name
+         * @param string database name
          */
         function osc_dbConnect() {
             $this->db = @new mysqli($this->dbHost, $this->dbUser, $this->dbPassword, $this->dbName);
@@ -300,15 +300,15 @@
         }
 
         function get_last_id() {
-            return($this->db->insert_id);
+            return $this->db->insert_id;
         }
 
         function get_affected_rows() {
-            return($this->db->affected_rows);
+            return $this->db->affected_rows;
         }
 
         function get_errno() {
-            return($this->db_errno);
+            return $this->db_errno;
         }
 
         /**
@@ -487,5 +487,3 @@
 
         return ($instance[$dbName . "_" . $dbHost]);
     }
-
-?>

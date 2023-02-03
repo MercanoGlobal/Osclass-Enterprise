@@ -15,8 +15,7 @@
  * limitations under the License.
  */
 
-
-     $user_agents = array(
+    $user_agents = array(
         'MSIE ([0-9].*)$',
         '^Mozilla/[0-9].([^c][^o][^m].)$',
         '^Mozilla/5.*Gecko',
@@ -31,5 +30,3 @@
         'WebTV',
         'BlackBerry.*'
     );
-
-?>

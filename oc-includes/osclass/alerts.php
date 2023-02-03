@@ -21,7 +21,7 @@
             return;
         }
 
-        if($last_exec==null) {
+        if($last_exec == null) {
             $cron = Cron::newInstance()->getCronByType($type);
             if( is_array($cron) ) {
                 $last_exec = $cron['d_last_exec'];
@@ -46,9 +46,8 @@
             break;
         }
 
-        $active   = TRUE;
+        $active   = true;
         $searches = Alerts::newInstance()->findByTypeGroup($type, $active);
-
 
         foreach($searches as $s_search) {
             // Get if there're new ads on this search
@@ -76,7 +75,7 @@
 
                     foreach($alerts as $alert) {
                         $user = array();
-                        if($alert['fk_i_user_id']!=0) {
+                        if($alert['fk_i_user_id'] > 0) {
                             $user = $mUser->findByPrimaryKey($alert['fk_i_user_id']);
                         }
                         if(!isset($user['s_name'])) {
@@ -85,7 +84,7 @@
                                 's_email' => $alert['s_email']
                             );
                         }
-                        if(count($alert)>0) {
+                        if(count($alert) > 0) {
                             osc_run_hook('hook_'.$internal_name, $user, $ads, $alert, $items, $totalItems);
                             AlertsStats::newInstance()->increase(date('Y-m-d'));
                         }

@@ -45,7 +45,7 @@
         function _get($key)
         {
             if ($this->_exists($key)) {
-                return($this->aExported[$key]);
+                return $this->aExported[$key];
             } else {
                 return '';
             }
@@ -88,7 +88,7 @@
         {
             if ( is_array($this->aExported[$key]) ) {
                 $_key = key( $this->aExported[$key] ) -1;
-                if($_key==-1) {
+                if($_key == -1) {
                     $_key = count($this->aExported[$key]) -1;
                 }
                 return $_key;
@@ -137,9 +137,6 @@
 
         function _erase($key)
         {
-            unset($this->aExported[$key]);
-            unset($this->aCurrent[$key]);
+            unset( $this->aExported[$key] , $this->aCurrent[$key] );
         }
     }
-
-?>

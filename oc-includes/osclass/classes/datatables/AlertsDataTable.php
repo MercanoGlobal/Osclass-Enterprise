@@ -93,11 +93,11 @@
                     foreach( $options as $actual ) {
                         $auxOptions .= '<li>'.$actual.'</li>'.PHP_EOL;
                     }
-                    $auxOptions  .= '</ul>'.PHP_EOL;
+                    $auxOptions .= '</ul>'.PHP_EOL;
 
                     $actions = '<div class="actions">'.$auxOptions.'</div>'.PHP_EOL;
 
-                    $row['email'] = '<a href="' . osc_admin_base_url(true) . '?page=items&userId=">' . $aRow['s_email'] . '</a>'. $actions;
+                    $row['email'] = '<a href="' . osc_admin_base_url(true) . '?page=items&userId='. $aRow['pk_i_id'] .'">' . $aRow['s_email'] . '</a>'. $actions;
 
                     $pieces = array();
                     $conditions = osc_get_raw_search((array)json_decode($aRow['s_search'], true));

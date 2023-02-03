@@ -191,7 +191,7 @@ function meta_title() {
         }
     }
 
-    return (osc_apply_filter('meta_title_filter', $text));
+    return osc_apply_filter('meta_title_filter', $text);
 }
 
 function meta_description( ) {
@@ -268,7 +268,7 @@ function meta_keywords( ) {
         $text = implode(', ', $keywords);
     }
 
-    return (osc_apply_filter('meta_keywords_filter', $text));
+    return osc_apply_filter('meta_keywords_filter', $text);
 }
 
 function osc_search_footer_links() {
@@ -321,7 +321,7 @@ function osc_search_footer_links() {
 
     $comm->where('l.fk_i_region_id IS NOT NULL');
     $comm->where('l.fk_i_city_id IS NOT NULL');
-    if( $regionID != '' ) {
+    if( $regionID > 0 ) {
         $comm->where('l.fk_i_region_id', $regionID);
         $comm->groupBy('l.fk_i_city_id');
     } else {
@@ -519,8 +519,8 @@ function _osc_check_plugins_update() {
         if(osc_check_plugin_update(@$info['plugin_update_uri'], @$info['version'])) {
             $array[] = @$info['plugin_update_uri'];
             $total++;
-        }else{
         }
+
         $array_downloaded[] = @$info['plugin_update_uri'];
     }
 
@@ -708,5 +708,3 @@ function osc_custom_html_footer() {
 }
 
 osc_add_hook('footer', 'osc_custom_html_footer', 10);
-
-?>

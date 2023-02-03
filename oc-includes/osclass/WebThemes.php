@@ -49,8 +49,8 @@
                                 'user-login',
                                 'user-profile',
                                 'user-recover',
-                                'user-register',
-                                );
+                                'user-register'
+                            );
 
         public static function newInstance()
         {

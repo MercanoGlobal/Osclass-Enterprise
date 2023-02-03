@@ -108,4 +108,3 @@
             return $this->_set($domain, $reader);
         }
     }
-

@@ -40,8 +40,8 @@
 			if ( isset( $_COOKIE[$this->name] ) )
             {
 			    $tmp = explode("&", $_COOKIE[$this->name]);
-			    $vars = $tmp[0];
-			    $vals = isset($tmp[1])?$tmp[1]:array();
+			    $vars = isset($tmp[0]) ? $tmp[0] : '';
+			    $vals = isset($tmp[1]) ? $tmp[1] : '';
 			    $vars = explode("._.", $vars);
 			    $vals = explode("._.", $vals);
 
@@ -98,12 +98,12 @@
 		}
 
         function num_vals() {
-            return(count($this->val));
+            return count($this->val);
         }
 
         function get_value($str) {
-            if (isset($this->val[$str])) return($this->val[$str]);
-            return('');
+            if (isset($this->val[$str])) return $this->val[$str];
+            return '';
         }
 
         //$tm: time in seconds
@@ -111,5 +111,3 @@
         	$this->expires = time() + $tm;
 		}
 	}
-
-?>

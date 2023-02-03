@@ -47,7 +47,7 @@
                 }
             }
 
-            return ($value);
+            return $value;
         }
 
         static function existParam($param)
@@ -72,7 +72,7 @@
                 }
             }
 
-            return ($value);
+            return $value;
         }
 
         static function existServerParam($param)
@@ -92,7 +92,7 @@
         static function getFiles($param)
         {
             if (isset($_FILES[$param])) {
-                return ($_FILES[$param]);
+                return $_FILES[$param];
             }
 
             return array();
@@ -166,5 +166,3 @@
             return $value;
         }
     }
-
-?>

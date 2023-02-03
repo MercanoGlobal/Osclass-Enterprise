@@ -198,7 +198,7 @@
                     's_contact_email'       => $contactEmail,
                     's_contact_phone'       => $contactPhone,
                     's_secret'              => $code,
-                    'b_active'              => ($active=='ACTIVE'?1:0),
+                    'b_active'              => $active == 'ACTIVE' ? 1:0,
                     'b_enabled'             => $enabled,
                     'b_show_email'          => $aItem['showEmail'],
                     'b_show_phone'          => $aItem['showPhone'],

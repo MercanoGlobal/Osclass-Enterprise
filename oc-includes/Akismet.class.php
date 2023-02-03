@@ -335,7 +335,7 @@ class SocketWriteRead {
 	/**
 	 *  Sends the data to the remote host.
 	 *
-	 * @throws	An exception is thrown if a connection cannot be made to the remote host.
+	 * @throws exception - An exception is thrown if a connection cannot be made to the remote host.
 	 */
 	public function send() {
 		$this->response = '';
@@ -388,5 +388,3 @@ class SocketWriteRead {
 		return $this->errorString;
 	}
 }
-
-?>
