@@ -1,4 +1,4 @@
-Osclass Enterprise 3.10.0 2023-02-02
+Osclass Enterprise 3.10.0 2023-02-03
 ------------------------------------
 
 - Rebranded the project as 'Osclass Enterprise'
@@ -31,6 +31,7 @@ Osclass Enterprise 3.10.0 2023-02-02
 - Added Item Comment Ratings, so users can leave item reviews with star ratings
 - Added more information to different backend tables
 - Added notices for the admin about the website being in maintenance mode and about the min PHP version required
+- Added a new hook 'osc_run_hook('main_dashboard');' that improves support for some external plugins
 - Added Locations at install and in the admin
 - Updated the Geodata to 2021 (it now contains 248 countries with all the cities and their coordinates)
 - Updated PHPMailer to 5.2.28

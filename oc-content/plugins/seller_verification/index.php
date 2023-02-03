@@ -4,7 +4,7 @@ Plugin Name: Seller Verification
 Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
 Description: This plugin extends the User Profiles with a seller verification attribute that can only be added by admins
 Version: 1.2.0
-Author: Achmad Zacky Rachmatullah
+Author: AZR & Osclass Enterprise
 Author URI: https://www.facebook.com/achmadzackyr
 Short Name: sellerver
 */
