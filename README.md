@@ -3,8 +3,8 @@
 </p>
 
 # Osclass Enterprise
-Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contains hundreds of fixes and improvements (check the CHANGELOG).
-Create your own online business with the best open-source classifieds software.
+Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contains hundreds of fixes and improvements (check the CHANGELOG).<br>
+:arrow_right: Create your own online business with the best open-source classifieds software. :arrow_left:
 
 > [Release Announcement](https://www.valueweb.gr/forums/osclass-enterprise-release/release-osclass-enterprise/)
 

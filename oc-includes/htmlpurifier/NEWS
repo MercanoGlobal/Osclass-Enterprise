@@ -9,6 +9,52 @@ NEWS ( CHANGELOG and HISTORY )                                     HTMLPurifier
     . Internal change
 ==========================
 
+4.15.0, released 2022-09-18
+! PHP 8.1 and 8.2 support, esp. fixes for deprecation warnings.  A joint effort
+  by David Rans, Tim Düsterhus, Kieran and John Flatness.
+! Allow contenteditable="false" (#336), contributed by Kieran.
+- Replace PHP 8.1 deprecated utf8_ functions with mbstring (#326),
+  contributed by John Flatness.
+- Enhanced composer suggestions with extensions (#317), contributed by
+  func0der.
+
+4.14.0, released 2021-12-24
+! Add "background-size" support (#289), contributed by Václav Smítal
+! Transform deprecated width attribute when tidying HTML, contributed by
+  Kieran.
+- PHP 8 support, contributed by Maksims Sļotovs.
+- Improved PHP 7.3 compatibility, contributed by kishor.
+- Avoid spurious magic quotes notice in PHP 7.4.  Thanks
+  Jasper Zonneveld for the fix.
+- Do not remove thead from table even if there are no tbody/tr (#264).
+  Thanks Marcus Artner for the fix.
+- Fix "Parameter must be an array or an object that implements
+  Countable" (#285)".  Thanks Kieran for this fix.
+. Fix unnecessary reference assignment, handling behavior change from
+  PHP5 and PHP7.  Thanks Arkadiusz Biczewski for the fix.
+
+4.13.0, released 2020-06-28
+! Add %HTML.Forms directive, which lets you accept forms in user
+  HTML without requiring full %HTML.Trusted.  Note that forms can
+  be (trivially) used to setup phishing; e.g., an attacker can
+  use CSS absolute positioning to overlay a form on top of a login
+  element, so please be sure to use this with care!   Fixes #213.
+  Thanks Mateusz Turcza for contributing this feature.
+! tr@bgcolor attribute is now supported.  Thanks Kieran Brahney
+  for this enhancement.
+- Further improvements to PHP 7.4 support, contributed by Witold
+  Wasiczko and Eloy Lafuente.
+- Fix PSR-0 compatibility.  Thanks Jordi Boggiano for contributing
+  part of this fix.
+- Fix bug with purifyArray where it doesn't work on empty arrays.
+  Thanks Fräntz Miccoli for the fix.
+- Reduce amount of maintenance scripts included in distribution
+  packages.  Thanks Sergei Morozov for this patch.
+- Remove leading zeros unless if it is only a zero, fixes #239.  Thanks
+  lubomirbartos for this fix.
+- Correct type hinting of maybeGet*, fixes #240.   Thanks Anders Jenbo
+  for this fix.
+
 4.12.0, released 2019-10-27
 ! PHP 7.4 is supported, thank you Witold Wasiczko, Mateuz Turcza and
   Edi Modrić

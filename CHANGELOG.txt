@@ -1,4 +1,4 @@
-Osclass Enterprise 3.10.0 2023-02-03
+Osclass Enterprise 3.10.0 2023-02-04
 ------------------------------------
 
 - Rebranded the project as 'Osclass Enterprise'
@@ -36,7 +36,7 @@ Osclass Enterprise 3.10.0 2023-02-03
 - Updated the Geodata to 2021 (it now contains 248 countries with all the cities and their coordinates)
 - Updated PHPMailer to 5.2.28
 - Updated Google reCAPTCHA to v1.2.4
-- Updated HTML Purifier to v4.12.0
+- Updated HTML Purifier to v4.15.0
 - Updated phpseclib to 2.0.35
 - Updated PclZip to 2.8.4
 - Updated the default Bender Theme to v3.2.0
