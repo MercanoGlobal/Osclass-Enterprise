@@ -59,7 +59,7 @@ osc_add_hook('admin_header', 'admin_header_favicons');
 // admin footer
 function admin_footer_html() { ?>
     <div class="float-left">
-        <a title="<?php _e('Documentation'); ?>" href="https://doc.osc4u.com/Main_Page.html" target="_blank"><?php _e('Documentation'); ?></a>
+        <a title="<?php _e('Documentation'); ?>" href="https://docs.enterprise-classifieds.com/" target="_blank"><?php _e('Documentation'); ?></a>
     </div>
     <div class="float-right">
         <strong>Version <?php echo OSCLASS_VERSION; ?></strong>

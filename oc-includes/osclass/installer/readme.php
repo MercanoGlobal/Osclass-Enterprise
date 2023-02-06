@@ -144,11 +144,11 @@ function osc_getAbsoluteWebURL() {
                 <div class="space-left-10">
                     <p>If you have any questions that aren't addressed in this document, please look at the online resources:</p>
                     <dl class="space-left-25">
-                        <dt><a href="https://doc.osc4u.com/Main_Page.html" target="_blank">Osclass Wiki</a></dt>
+                        <dt><a href="https://docs.enterprise-classifieds.com/" target="_blank">Osclass Wiki</a></dt>
                         <dd>
                             The wiki is where all information about Osclass is placed.
                         </dd>
-                        <dt><a href="https://osclass.calinbehtuk.ro/blog" target="_blank">Osclass Blog</a></dt>
+                        <dt><a href="https://enterprise-classifieds.com/blog/" target="_blank">Osclass Blog</a></dt>
                         <dd>
                             This is where you'll find updates and tutorials related to Osclass.
                         </dd>

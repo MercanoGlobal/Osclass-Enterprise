@@ -51,7 +51,7 @@
                             <div class="form-row">
                                 <div class="tools upgrade">
                                 <p class="text">
-                                   <?php _e('To check for new releases, please visit the <a href="https://github.com/MercanoG/Osclass-Enterprise/releases" target="_blank">official release channel</a> and follow the <a href="https://doc.osc4u.com/Updating_Osclass.html" target="_blank">upgrade instructions</a>.'); ?>
+                                   <?php _e('To check for new releases, please visit the <a href="https://github.com/MercanoG/Osclass-Enterprise/releases" target="_blank">official release channel</a> and follow the <a href="https://docs.enterprise-classifieds.com/updating_osclass.html" target="_blank">upgrade instructions</a>.'); ?>
                                 </p>
                                     <div id="steps_div">
                                         <div id="steps">

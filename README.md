@@ -8,6 +8,11 @@ Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contain
 
 > [Release Announcement](https://www.valueweb.gr/forums/osclass-enterprise-release/release-osclass-enterprise/)
 
+## Project Info
+- [Official Website](https://enterprise-classifieds.com/)
+- [Code Repository](https://github.com/MercanoG/Osclass-Enterprise)
+- [Documentation](https://docs.enterprise-classifieds.com/)
+
 ## Hosting Requirements and Settings
 - Apache 2.4.17+ / LiteSpeed 5.4+
 - PHP 7.1 =< 7.4
