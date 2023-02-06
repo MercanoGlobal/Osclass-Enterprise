@@ -278,12 +278,12 @@ function osc_unserialize($data) {
             $port = $url['port'];
         }
 
-        if (isset($url['scheme']) && $url['scheme'] === 'https') {
+        if (isset($url['scheme']) && $url['scheme'] === 'https' && !filter_var($host, FILTER_VALIDATE_IP)) {
             $host = 'ssl://' . $host;
             $port = 443;
         }
 
-        $fp = fsockopen($host, $port);
+        $fp = @fsockopen($host, $port);
         if ($fp === false) {
             return false;
         }

@@ -1,9 +1,9 @@
-Osclass Enterprise 3.10.0 2023-02-04
+Osclass Enterprise 3.10.0 2023-02-06
 ------------------------------------
 
 - Rebranded the project as 'Osclass Enterprise'
 - Removed ties to the deprecated Osclass Market API
-- Added Seller Verification Plugin to the bundled plugins (for setup check the Readme.txt in the plugin folder)
+- Added Seller Verification Plugin to the bundled plugins
 - Added Admin Email Search Plugin to the bundled plugins
 - Added Osclass GDPR Plugin to the bundled plugins
 - Added Anti Spam & Protection System v2.0 to the bundled plugins
@@ -19,7 +19,7 @@ Osclass Enterprise 3.10.0 2023-02-04
 - Added CRON history in oc-admin > General Settings
 - Added Phone Number field on publish listings with show/hide settings
 - Added listing renewal feature for registered users
-- Added a new hook in the Main Admin Dashboard 'main_dashboard'
+- Added a new hook in the oc-admin Main Dashboard 'osc_run_hook('main_dashboard');' that improves support for some external plugins
 - Added a new function 'osc_user_is_online' that returns true if user has been online in last 5 minutes and false otherwise
 - Added bot protection to the E-mail field on the item sidebar
 - Added the 7G Firewall to the Permalinks .htaccess
@@ -31,7 +31,6 @@ Osclass Enterprise 3.10.0 2023-02-04
 - Added Item Comment Ratings, so users can leave item reviews with star ratings
 - Added more information to different backend tables
 - Added notices for the admin about the website being in maintenance mode and about the min PHP version required
-- Added a new hook 'osc_run_hook('main_dashboard');' that improves support for some external plugins
 - Added Locations at install and in the admin
 - Updated the Geodata to 2021 (it now contains 248 countries with all the cities and their coordinates)
 - Updated PHPMailer to 5.2.28
