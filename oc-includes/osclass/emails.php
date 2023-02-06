@@ -1329,7 +1329,7 @@
             $body .= '<p>We failed trying to upgrade your site to Osclass {VERSION}. Heres is the error message: {MESSAGE}</p>';
         }
         $body .= '<p>If you experience any issues or need support, we will be happy to help you at the Osclass support forums</p>';
-        $body .= '<p><a href="https://www.valueweb.gr/forums/osclass-enterprise-release/">https://www.valueweb.gr/forums/osclass-enterprise-release/</a></p>';
+        $body .= '<p><a href="https://www.valueweb.gr/forums/enterprise-release/">https://www.valueweb.gr/forums/enterprise-release/</a></p>';
         $body .= '<p>The Osclass team</p>';
 
         $words   = array();

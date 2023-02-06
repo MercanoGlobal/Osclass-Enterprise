@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-02-06 18:57+0200\n"
+"PO-Revision-Date: 2023-02-06 22:16+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -5388,7 +5388,7 @@ msgid "Cheers,"
 msgstr ""
 
 #: oc-includes/osclass/install-location.php:107
-msgid "The <a href=\"https://www.valueweb.gr/forums/osclass-enterprise-release/\">Osclass</a> team"
+msgid "The <a href=\"https://www.valueweb.gr/forums/enterprise-release/\">Osclass</a> team"
 msgstr ""
 
 #: oc-includes/osclass/install.php:89
@@ -5904,7 +5904,7 @@ msgid "Osclass &raquo; Updated correctly"
 msgstr ""
 
 #: oc-includes/osclass/upgrade-funcs.php:585 oc-includes/osclass/upgrade-funcs.php:590
-msgid "Osclass has been updated successfully. <a href=\"https://www.valueweb.gr/forums/osclass-enterprise-release/\" target=\"_blank\">Need more help?</a>"
+msgid "Osclass has been updated successfully. <a href=\"https://www.valueweb.gr/forums/enterprise-release/\" target=\"_blank\">Need more help?</a>"
 msgstr ""
 
 #: oc-includes/osclass/utils.php:1955

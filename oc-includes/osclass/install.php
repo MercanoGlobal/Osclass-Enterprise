@@ -254,7 +254,7 @@ switch( $step ) {
                             <a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank" hreflang="en"><?php _e( 'Feedback' ); ?></a>
                         </li>
                         <li>
-                            <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank" hreflang="en"><?php _e('Forums');?></a>
+                            <a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank" hreflang="en"><?php _e('Forums');?></a>
                         </li>
                     </ul>
                 </div>

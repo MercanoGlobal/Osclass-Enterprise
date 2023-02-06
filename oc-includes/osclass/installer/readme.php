@@ -134,7 +134,7 @@ function osc_getAbsoluteWebURL() {
                         Then run manually oc-includes/osclass/upgrade-funcs.php for do upgrade complete.
                     </p>
                 </div>
-                <p>If you experienced any problem during the process, please don't hesitate to contact us in the <a href="https://www.valueweb.gr/forums/osclass-enterprise-release/">Osclass Support Forums</a>.
+                <p>If you experienced any problem during the process, please don't hesitate to contact us in the <a href="https://www.valueweb.gr/forums/enterprise-release/">Osclass Support Forums</a>.
                     We recommend to perform a backup of database and files before each upgrade. You could backup your data from the "Backup" option in the admin panel.
                     If you want to run the autoupgrade manually you could do that from the following URL : http://www.yourdomain.com/path/to/osclass/oc-admin/tools.php?action=upgrade
                 </p>
@@ -152,7 +152,7 @@ function osc_getAbsoluteWebURL() {
                         <dd>
                             This is where you'll find updates and tutorials related to Osclass.
                         </dd>
-                        <dt><a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Osclass Support Forums</a></dt>
+                        <dt><a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Osclass Support Forums</a></dt>
                         <dd>
                             If you've looked everywhere and still can't find an answer.
                             To help them help you, be sure to use a descriptive thread title
@@ -169,7 +169,7 @@ function osc_getAbsoluteWebURL() {
         <div id="footer">
             <ul>
                 <li><a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank">Feedback</a></li>
-                <li><a href="https://www.valueweb.gr/forums/osclass-enterprise-release/" target="_blank">Forums</a></li>
+                <li><a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Forums</a></li>
             </ul>
         </div>
     </div>
