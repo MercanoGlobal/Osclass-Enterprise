@@ -1,4 +1,4 @@
-Osclass Enterprise 3.10.0 2023-02-06
+Osclass Enterprise 3.10.0 2023-03-06
 ------------------------------------
 
 - Rebranded the project as 'Osclass Enterprise'

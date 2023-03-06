@@ -320,26 +320,26 @@
                 <div class="widget-box-title"><h3><span><?php _e('Listings activity'); ?></span></h3></div>
                 <div class="widget-box-content">
                 <?php
-                  $items_last_day = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 1 day')))); 
-                  $items_last_week = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 7 day')))); 
-                  $items_all = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item', DB_TABLE_PREFIX)); 
-                  $items_pending = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item WHERE b_active = 1 and b_spam = 0 and b_enabled = 0', DB_TABLE_PREFIX));
+                    $items_last_day = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 1 day'))));
+                    $items_last_week = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 7 day'))));
+                    $items_all = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item', DB_TABLE_PREFIX));
+                    $items_pending = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item WHERE b_active = 1 and b_spam = 0 and b_enabled = 0', DB_TABLE_PREFIX));
                 ?>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Published in last 24 hours: %s'), '<strong>' . $items_last_day . '</strong>'); ?>
+                    <?php echo sprintf(__('Published in last 24 hours: %s'), '<strong>' . $items_last_day . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Published in last 7 days: %s'), '<strong>' . $items_last_week . '</strong>'); ?>
+                    <?php echo sprintf(__('Published in last 7 days: %s'), '<strong>' . $items_last_week . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Overall published: %s'), '<strong>' . $items_all . '</strong>'); ?>
+                    <?php echo sprintf(__('Overall published: %s'), '<strong>' . $items_all . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <a href="<?php echo osc_admin_base_url(true); ?>?page=items&iDisplayLength=10&sort=date&direction=desc&sSearch=&catId=&countryName=&countryId=&region=&regionId=&city=&cityId=&user=&userId=&b_premium=&b_active=&b_enabled=0&b_spam="><?php echo sprintf(__('Pending validation: %s'), '<strong>' . $items_pending . '</strong>'); ?></a>
+                    <a href="<?php echo osc_admin_base_url(true); ?>?page=items&iDisplayLength=10&sort=date&direction=desc&sSearch=&catId=&countryName=&countryId=&region=&regionId=&city=&cityId=&user=&userId=&b_premium=&b_active=&b_enabled=0&b_spam="><?php echo sprintf(__('Pending validation: %s'), '<strong>' . $items_pending . '</strong>'); ?></a>
                 </div>
 
                 <div class="row"></div>
@@ -347,41 +347,41 @@
                 <h4><?php _e('Recently published'); ?></h4>
 
                 <?php
-                  $mSearch = new Search();
-                  $mSearch->addConditions('1=1 OR 1=1');
-                  $mSearch->order('dt_pub_date', 'DESC');
-                  $mSearch->limit(0, 6);
-                  $items = $mSearch->doSearch(); 
+                    $mSearch = new Search();
+                    $mSearch->addConditions('1=1 OR 1=1');
+                    $mSearch->order('dt_pub_date', 'DESC');
+                    $mSearch->limit(0, 6);
+                    $items = $mSearch->doSearch();
                 ?>
 
                 <?php if(count($items) <= 0) { ?>
-                  <div class="empty"><?php _e('No listings have been found'); ?></div>
+                    <div class="empty"><?php _e('No listings have been found'); ?></div>
                 <?php } else { ?>
-                  <?php foreach($items as $i) { ?>
-                    <div class="row">
-                      <?php 
-                        if($i['b_active'] == 1 && $i['b_enabled'] == 1 && $i['b_spam'] == 0) {
-                          $title = __('Active');
-                          $class = 'active';
-                        } else if($i['b_active'] == 0) {
-                          $title = __('Not validated');
-                          $class = 'inactive';
-                        } else if($i['b_spam'] == 1) {
-                          $title = __('Spam');
-                          $class = 'spam';
-                        } else if($i['b_enabled'] == 0) {
-                          $title = __('Blocked');
-                          $class = 'blocked';
-                        }
-                      ?>
+                    <?php foreach($items as $i) { ?>
+                        <div class="row">
+                            <?php 
+                                if($i['b_active'] == 1 && $i['b_enabled'] == 1 && $i['b_spam'] == 0) {
+                                    $title = __('Active');
+                                    $class = 'active';
+                                } else if($i['b_active'] == 0) {
+                                    $title = __('Not validated');
+                                    $class = 'inactive';
+                                } else if($i['b_spam'] == 1) {
+                                    $title = __('Spam');
+                                    $class = 'spam';
+                                } else if($i['b_enabled'] == 0) {
+                                    $title = __('Blocked');
+                                    $class = 'blocked';
+                                }
+                            ?>
 
-                      <span class="date"><?php echo osc_format_date($i['dt_pub_date'], 'd M, H:i'); ?></span>
-                      <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=items&action=item_edit&id=<?php echo $i['pk_i_id']; ?>">
-                        <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
-                        <span title="<?php echo $i['s_title']; ?>"><?php echo osc_highlight($i['s_title'], 12); ?></span>
-                      </a>
-                    </div>
-                  <?php } ?>
+                            <span class="date"><?php echo osc_format_date($i['dt_pub_date'], 'd M, H:i'); ?></span>
+                            <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=items&action=item_edit&id=<?php echo $i['pk_i_id']; ?>">
+                                <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
+                                <span title="<?php echo $i['s_title']; ?>"><?php echo osc_highlight($i['s_title'], 12); ?></span>
+                            </a>
+                        </div>
+                    <?php } ?>
                 <?php } ?>
                 </div>
             </div>
@@ -393,53 +393,57 @@
                 <div class="widget-box-title"><h3><span><?php _e('Users activity'); ?></span></h3></div>
                 <div class="widget-box-content">
                 <?php
-                  $users = osc_get_query_results(sprintf('SELECT * FROM %st_user ORDER BY dt_reg_date DESC LIMIT 0, 7', DB_TABLE_PREFIX)); 
-                  $users_last_day = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_user WHERE dt_reg_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 1 day')))); 
-                  $users_last_week = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_user WHERE dt_reg_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 7 day')))); 
-                  $users_all = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_user', DB_TABLE_PREFIX)); 
+                    $users = osc_get_query_results(sprintf('SELECT * FROM %st_user ORDER BY dt_reg_date DESC LIMIT 0, 7', DB_TABLE_PREFIX));
+                    $users_last_day = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_user WHERE dt_reg_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 1 day'))));
+                    $users_last_week = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_user WHERE dt_reg_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 7 day'))));
+                    $users_all = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_user', DB_TABLE_PREFIX));
                 ?>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Registered in last 24 hours: %s'), '<strong>' . $users_last_day . '</strong>'); ?>
+                    <?php echo sprintf(__('Registered in last 24 hours: %s'), '<strong>' . $users_last_day . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Registered in last 7 days: %s'), '<strong>' . $users_last_week . '</strong>'); ?>
+                    <?php echo sprintf(__('Registered in last 7 days: %s'), '<strong>' . $users_last_week . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Overall registered: %s'), '<strong>' . $users_all . '</strong>'); ?>
+                    <?php echo sprintf(__('Overall registered: %s'), '<strong>' . $users_all . '</strong>'); ?>
                 </div>
 
                 <div class="row"></div>
 
                 <h4><?php _e('Recently registered'); ?></h4>
 
-                <?php if(count($users) <= 0) { ?>
-                  <div class="empty"><?php _e('No users have been found'); ?></div>
+                <?php if( !osc_users_enabled() || !osc_user_registration_enabled() ) { ?>
+                    <?php _e('User registration is disabled'); ?> <a href="<?php echo osc_admin_base_url(true); ?>?page=users&action=settings" title="<?php _e('User Settings'); ?>"><i class="fa fa-cog" aria-hidden="true"></i></a>
                 <?php } else { ?>
-                  <?php foreach($users as $u) { ?>
-                    <div class="row">
-                      <?php 
-                        if($u['b_active'] == 1 && $u['b_enabled'] == 1) {
-                          $title = __('Active');
-                          $class = 'active';
-                        } else if($u['b_active'] == 0) {
-                          $title = __('Not validated');
-                          $class = 'inactive';
-                        } else if($u['b_enabled'] == 0) {
-                          $title = __('Blocked');
-                          $class = 'blocked';
-                        }
-                      ?>
+                    <?php if(count($users) <= 0) { ?>
+                        <div class="empty"><?php _e('No users have been found'); ?></div>
+                    <?php } else { ?>
+                        <?php foreach($users as $u) { ?>
+                            <div class="row">
+                                <?php 
+                                    if($u['b_active'] == 1 && $u['b_enabled'] == 1) {
+                                        $title = __('Active');
+                                        $class = 'active';
+                                    } else if($u['b_active'] == 0) {
+                                        $title = __('Not validated');
+                                        $class = 'inactive';
+                                    } else if($u['b_enabled'] == 0) {
+                                        $title = __('Blocked');
+                                        $class = 'blocked';
+                                    }
+                                ?>
 
-                      <span class="date"><?php echo osc_format_date($u['dt_reg_date'], 'd M, H:i'); ?></span>
-                      <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=users&action=edit&id=<?php echo $u['pk_i_id']; ?>">
-                        <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
-                        <span title="<?php echo $u['s_name']; ?>"><?php echo osc_highlight($u['s_name'], 12); ?></span>
-                      </a>
-                    </div>
-                  <?php } ?>
+                                <span class="date"><?php echo osc_format_date($u['dt_reg_date'], 'd M, H:i'); ?></span>
+                                <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=users&action=edit&id=<?php echo $u['pk_i_id']; ?>">
+                                    <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
+                                    <span title="<?php echo $u['s_name']; ?>"><?php echo osc_highlight($u['s_name'], 12); ?></span>
+                                </a>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 <?php } ?>
                 </div>
             </div>
@@ -451,61 +455,65 @@
                 <div class="widget-box-title"><h3><span><?php _e('Comments activity'); ?></span></h3></div>
                 <div class="widget-box-content">
                 <?php
-                  $comments = osc_get_query_results(sprintf('SELECT * FROM %st_item_comment ORDER BY dt_pub_date DESC LIMIT 0, 6', DB_TABLE_PREFIX)); 
-                  $comments_last_day = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 1 day')))); 
-                  $comments_last_week = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 7 day')))); 
-                  $comments_all = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment', DB_TABLE_PREFIX)); 
-                  $comments_pending = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment WHERE b_active = 0 and b_spam = 0 and b_enabled = 1', DB_TABLE_PREFIX)); 
+                    $comments = osc_get_query_results(sprintf('SELECT * FROM %st_item_comment ORDER BY dt_pub_date DESC LIMIT 0, 6', DB_TABLE_PREFIX));
+                    $comments_last_day = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 1 day'))));
+                    $comments_last_week = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment WHERE dt_pub_date >= "%s"', DB_TABLE_PREFIX, date('Y-m-d H:i:s', strtotime('- 7 day'))));
+                    $comments_all = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment', DB_TABLE_PREFIX));
+                    $comments_pending = osc_get_count_query_data(sprintf('SELECT count(*) FROM %st_item_comment WHERE b_active = 0 and b_spam = 0 and b_enabled = 1', DB_TABLE_PREFIX));
                 ?>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Published in last 24 hours: %s'), '<strong>' . $comments_last_day . '</strong>'); ?>
+                    <?php echo sprintf(__('Published in last 24 hours: %s'), '<strong>' . $comments_last_day . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Published in last 7 days: %s'), '<strong>' . $comments_last_week . '</strong>'); ?>
+                    <?php echo sprintf(__('Published in last 7 days: %s'), '<strong>' . $comments_last_week . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <?php echo sprintf(__('Overall published: %s'), '<strong>' . $comments_all . '</strong>'); ?>
+                    <?php echo sprintf(__('Overall published: %s'), '<strong>' . $comments_all . '</strong>'); ?>
                 </div>
 
                 <div class="row st">
-                  <a href="<?php echo osc_admin_base_url(true); ?>?page=comments&showAll=off"><?php echo sprintf(__('Pending validation: %s'), '<strong>' . $comments_pending . '</strong>'); ?></a>
+                    <a href="<?php echo osc_admin_base_url(true); ?>?page=comments&showAll=off"><?php echo sprintf(__('Pending validation: %s'), '<strong>' . $comments_pending . '</strong>'); ?></a>
                 </div>
 
                 <div class="row"></div>
 
                 <h4><?php _e('Recently published'); ?></h4>
 
-                <?php if(count($comments) <= 0) { ?>
-                  <div class="empty"><?php _e('No comments have been found'); ?></div>
+                <?php if( !osc_comments_enabled() ) { ?>
+                    <?php _e('Comments are disabled'); ?> <a href="<?php echo osc_admin_base_url(true); ?>?page=settings&action=comments" title="<?php _e('Comment Settings'); ?>"><i class="fa fa-cog" aria-hidden="true"></i></a>
                 <?php } else { ?>
-                  <?php foreach($comments as $c) { ?>
-                    <div class="row">
-                      <?php 
-                        if($c['b_active'] == 1 && $c['b_enabled'] == 1 && $c['b_spam'] == 0) {
-                          $title = __('Active');
-                          $class = 'active';
-                        } else if($c['b_active'] == 0) {
-                          $title = __('Not validated');
-                          $class = 'inactive';
-                        } else if($c['b_spam'] == 1) {
-                          $title = __('Spam');
-                          $class = 'spam';
-                        } else if($c['b_enabled'] == 0) {
-                          $title = __('Blocked');
-                          $class = 'blocked';
-                        }
-                      ?>
+                    <?php if(count($comments) <= 0) { ?>
+                        <div class="empty"><?php _e('No comments have been found'); ?></div>
+                    <?php } else { ?>
+                        <?php foreach($comments as $c) { ?>
+                            <div class="row">
+                                <?php 
+                                    if($c['b_active'] == 1 && $c['b_enabled'] == 1 && $c['b_spam'] == 0) {
+                                        $title = __('Active');
+                                        $class = 'active';
+                                    } else if($c['b_active'] == 0) {
+                                        $title = __('Not validated');
+                                        $class = 'inactive';
+                                    } else if($c['b_spam'] == 1) {
+                                        $title = __('Spam');
+                                        $class = 'spam';
+                                    } else if($c['b_enabled'] == 0) {
+                                        $title = __('Blocked');
+                                        $class = 'blocked';
+                                    }
+                                ?>
 
-                      <span class="date"><?php echo osc_format_date($c['dt_pub_date'], 'd M, H:i'); ?></span>
-                      <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=comments&action=comment_edit&id=<?php echo $c['pk_i_id']; ?>">
-                        <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
-                        <span title="<?php echo $c['s_title']; ?>"><?php echo ($c['s_title'] == '' ? __('Comment #' . $c['pk_i_id']) : osc_highlight($c['s_title'], 12)); ?></span>
-                      </a>
-                    </div>
-                  <?php } ?>
+                                <span class="date"><?php echo osc_format_date($c['dt_pub_date'], 'd M, H:i'); ?></span>
+                                <a target="_blank" href="<?php echo osc_admin_base_url(true); ?>?page=comments&action=comment_edit&id=<?php echo $c['pk_i_id']; ?>">
+                                    <i class="fa fa-circle <?php echo $class; ?>" title="<?php echo osc_esc_html($title); ?>"></i>
+                                    <span title="<?php echo $c['s_title']; ?>"><?php echo ($c['s_title'] == '' ? __('Comment #' . $c['pk_i_id']) : osc_highlight($c['s_title'], 12)); ?></span>
+                                </a>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 <?php } ?>
                 </div>
             </div>
