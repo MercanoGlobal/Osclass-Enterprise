@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2023-02-02 14:55+0200\n"
+"PO-Revision-Date: 2023-03-13 17:57+0200\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations <translations@osclass.org>\n"
 "Language: en_US\n"
@@ -659,6 +659,7 @@ msgid "Owner"
 msgstr ""
 
 #: item.php:178
+#, php-format
 msgid "%d of 5"
 msgstr ""
 
@@ -675,6 +676,7 @@ msgid "Rating"
 msgstr ""
 
 #: item.php:241
+#, php-format
 msgid "Not available, you have already rated this item %d time(s)"
 msgstr ""
 
@@ -751,6 +753,7 @@ msgid "There are no results matching \"%s\""
 msgstr ""
 
 #: search.php:75
+#, php-format
 msgid "%1$d - %2$d of %3$d listings"
 msgstr ""
 
@@ -883,10 +886,12 @@ msgid "Website"
 msgstr ""
 
 #: user-public-profile.php:67
+#, php-format
 msgid "<strong>Address:</strong> %1$s"
 msgstr ""
 
 #: user-public-profile.php:70
+#, php-format
 msgid "<strong>Location:</strong> %1$s"
 msgstr ""
 
