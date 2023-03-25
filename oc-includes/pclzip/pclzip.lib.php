@@ -222,7 +222,7 @@ class PclZip
 
         // ----- Set the attributes
         $this->zipname             = $p_zipname;
-        $this->zip_fd              = 0;
+        $this->zip_fd              = @fopen($this->zipname, 'wb');
         $this->magic_quotes_status = -1;
 
         // ----- Return
