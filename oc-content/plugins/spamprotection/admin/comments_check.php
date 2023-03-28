@@ -29,14 +29,22 @@ if (isset($params['action']) && isset($params['id']) && is_numeric($params['id']
                 $comments = $sp->_getResult('t_sp_comments');
 
                 if (is_array($comments) || is_object($comments)) {
-                foreach($comments as $key => $value) {
-                    $user = User::newInstance()->findByPrimaryKey($value['fk_i_user_id']);
+                    foreach ($comments as $key => $value) {
+                        if (isset($value['s_author_name']) && !empty($value['s_author_name'])) {
+                            $author_name = $value['s_author_name'];
+                        } else {
+                            if ($value['fk_i_user_id'] == NULL) {
+                                $author_name = 'Unregistered User';
+                            } else {
+                                $user = User::newInstance()->findByPrimaryKey($value['fk_i_user_id']);
+                                $author_name = '<a href="' . osc_admin_base_url(true) . '?page=users&action=edit&id=' . @$user['pk_i_id'] . '">' . @$user['s_name'] . '</a>';
+                            }
+                        }
                     echo '
                     <tr class="status-blocked">
                         <td class="col-status-border"></td>
                         <td class="col-status">'.__('blocked', 'spamprotection').'</td>
-                        <td class="col-author">
-                            <a href="'.osc_admin_base_url(true).'?page=users&action=edit&id='. @$user['pk_i_id'].'">'. @$user['s_name'].'</a>
+                        <td class="col-author">' . $author_name . '
                             <div class="actions">
                                 <ul>
                                     <li><a href="'.osc_admin_render_plugin_url(osc_plugin_folder(dirname(__FILE__)).'admin/comments_view.php?id='.$value['pk_i_id']).'">'.__('View', 'spamprotection').'</a></li>
@@ -49,7 +57,7 @@ if (isset($params['action']) && isset($params['id']) && is_numeric($params['id']
                         <td class="col-date">'.$value['dt_date'].'</td>
                     </tr>
                     ';
-                }
+                    }
                 }
             ?>
         </tbody>

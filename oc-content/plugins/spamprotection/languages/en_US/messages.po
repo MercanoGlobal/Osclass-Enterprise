@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OSClass Spam Protection\n"
 "POT-Creation-Date: 2017-09-05 01:39+0200\n"
-"PO-Revision-Date: 2022-08-27 12:05+0300\n"
+"PO-Revision-Date: 2023-03-28 14:19+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Liath <amfearliath@gmx.de>\n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -279,56 +279,56 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: admin/comments_check.php:37 admin/contact_check.php:40
+#: admin/comments_check.php:46 admin/contact_check.php:40
 msgid "blocked"
 msgstr ""
 
-#: admin/comments_check.php:42 admin/contact_check.php:45
+#: admin/comments_check.php:50 admin/contact_check.php:45
 msgid "View"
 msgstr ""
 
-#: admin/comments_check.php:43
+#: admin/comments_check.php:51
 msgid "Activate"
 msgstr ""
 
-#: admin/comments_check.php:44 admin/contact_check.php:47 admin/plugin.php:553
+#: admin/comments_check.php:52 admin/contact_check.php:47 admin/plugin.php:553
 msgid "Delete"
 msgstr ""
 
-#: admin/comments_view.php:25 admin/contact_view.php:28
+#: admin/comments_view.php:28 admin/contact_view.php:28
 msgid "About the Author"
 msgstr ""
 
-#: admin/comments_view.php:26 admin/contact_view.php:29
+#: admin/comments_view.php:29 admin/contact_view.php:29
 #, php-format
 msgid "Name: %s"
 msgstr ""
 
-#: admin/comments_view.php:27
+#: admin/comments_view.php:30
 #, php-format
 msgid "Registered since: %s"
 msgstr ""
 
-#: admin/comments_view.php:28 admin/contact_view.php:31
+#: admin/comments_view.php:31 admin/contact_view.php:31
 #, php-format
 msgid "Used E-Mail Address: %s"
 msgstr ""
 
-#: admin/comments_view.php:29
+#: admin/comments_view.php:32
 #, php-format
 msgid "Comments by user: %d"
 msgstr ""
 
-#: admin/comments_view.php:32
+#: admin/comments_view.php:35
 msgid "About the Comment"
 msgstr ""
 
-#: admin/comments_view.php:35
+#: admin/comments_view.php:38
 #, php-format
 msgid "Title: %s"
 msgstr ""
 
-#: admin/comments_view.php:36 admin/contact_view.php:38
+#: admin/comments_view.php:39
 #, php-format
 msgid "Comment: %s"
 msgstr ""
@@ -338,27 +338,27 @@ msgstr ""
 msgid "Message: %s"
 msgstr ""
 
-#: admin/comments_view.php:43
+#: admin/comments_view.php:46
 msgid "Are you sure you want to activate this comment?"
 msgstr ""
 
-#: admin/comments_view.php:43
+#: admin/comments_view.php:46
 msgid "Activate comment"
 msgstr ""
 
-#: admin/comments_view.php:44
+#: admin/comments_view.php:47
 msgid "Are you sure you want to delete this comment?"
 msgstr ""
 
-#: admin/comments_view.php:44
+#: admin/comments_view.php:47
 msgid "Delete comment"
 msgstr ""
 
-#: admin/comments_view.php:45
+#: admin/comments_view.php:48
 msgid "Are you sure you want to delete this comment and block this user from commenting?"
 msgstr ""
 
-#: admin/comments_view.php:45
+#: admin/comments_view.php:48
 msgid "Delete comment and block user"
 msgstr ""
 
@@ -465,12 +465,12 @@ msgstr ""
 msgid "About the Mail"
 msgstr ""
 
-#: admin/comments_view.php:33 admin/contact_view.php:37
+#: admin/comments_view.php:36 admin/contact_view.php:37
 #, php-format
 msgid "Item: %s"
 msgstr ""
 
-#: admin/comments_view.php:34 admin/contact_view.php:38
+#: admin/comments_view.php:37 admin/contact_view.php:38
 #, php-format
 msgid "Date: %s"
 msgstr ""

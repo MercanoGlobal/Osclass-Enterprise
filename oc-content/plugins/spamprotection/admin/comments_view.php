@@ -12,7 +12,10 @@ $comment      = $sp->_getRow('t_sp_comments', array('key' => 'pk_i_id', 'value' 
 $comment_data = $sp->_getRow('t_comment', array('key' => 'pk_i_id', 'value' => $comment['fk_i_comment_id']));
 $item         = $sp->_getRow('t_desc', array('key' => 'fk_i_item_id', 'value' => $comment['fk_i_item_id']));
 
-$user     = User::newInstance()->findByPrimaryKey($comment['fk_i_user_id']);
+$user = User::newInstance()->findByPrimaryKey($comment['fk_i_user_id']);
+if (empty($user) && empty($comment['fk_i_user_id'])) {
+    $user = User::newInstance()->findByUsername($comment_data['s_author_name']);
+}
 $comments = $sp->_countRows('t_comment', array('key' => 's_author_name', 'value' => isset($user['s_name']) ? $user['s_name'] : ''));
 ?>
 
@@ -23,7 +26,7 @@ $comments = $sp->_countRows('t_comment', array('key' => 's_author_name', 'value'
     <div class="comment_wrapper">
         <div class="author_info infobox halfrow">
             <h4><?php _e("About the Author", "spamprotection"); ?></h4>
-            <p><?php echo sprintf(__("Name: %s", "spamprotection"), isset($user['s_name']) ? $user['s_name'] : ''); ?></p>
+            <p><?php echo sprintf(__("Name: %s", "spamprotection"), (!empty($user) ? $user['s_name'] : $comment_data['s_author_name'])); ?></p>
             <p><?php echo sprintf(__("Registered since: %s", "spamprotection"), isset($user['dt_reg_date']) ? $user['dt_reg_date'] : ''); ?></p>
             <p><?php echo sprintf(__("Used E-Mail Address: %s", "spamprotection"), $comment['s_user_mail']); ?></p>
             <p><?php echo sprintf(__("Comments by user: %d", "spamprotection"), $comments); ?></p>
