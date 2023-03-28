@@ -18,6 +18,9 @@ if (isset($del)) {
 
 if (!empty($age)) {
     $user = spam_prot::newInstance()->_searchUnwantedUser($age, $max, $activated, $enabled, $zero, $neverLogged);
+    if ($user === false) {
+        echo 'No users found - Feature under development.';
+    }
 }
 
 if (isset($user) && !empty($user)) {

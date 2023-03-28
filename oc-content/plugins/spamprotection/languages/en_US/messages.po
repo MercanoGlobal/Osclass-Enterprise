@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OSClass Spam Protection\n"
 "POT-Creation-Date: 2017-09-05 01:39+0200\n"
-"PO-Revision-Date: 2023-03-28 14:19+0300\n"
+"PO-Revision-Date: 2023-03-28 18:43+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Liath <amfearliath@gmx.de>\n"
 "Language: en\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: admin/ban_log.php:24 admin/tools.php:70 admin/tools.php:114 admin/tools.php:172 functions/searchUser.php:32
+#: admin/ban_log.php:24 admin/tools.php:70 admin/tools.php:114 admin/tools.php:172 functions/searchUser.php:35
 msgid "Email"
 msgstr ""
 
@@ -1697,7 +1697,7 @@ msgstr ""
 msgid "Delete unused user accounts"
 msgstr ""
 
-#: admin/security.php:454 functions/searchUser.php:34
+#: admin/security.php:454 functions/searchUser.php:37
 msgid "Last Login"
 msgstr ""
 
@@ -1913,7 +1913,7 @@ msgstr ""
 msgid "Organize"
 msgstr ""
 
-#: admin/tools.php:69 admin/tools.php:113 admin/tools.php:171 functions/searchUser.php:31
+#: admin/tools.php:69 admin/tools.php:113 admin/tools.php:171 functions/searchUser.php:34
 msgid "Name"
 msgstr ""
 
@@ -2555,18 +2555,18 @@ msgstr ""
 msgid "<strong>Info!</strong> Your account has been reactivated, you can login as usual."
 msgstr ""
 
-#: functions/searchUser.php:33
+#: functions/searchUser.php:36
 msgid "Registered"
 msgstr ""
 
-#: functions/searchUser.php:35
+#: functions/searchUser.php:38
 msgid "Listings"
 msgstr ""
 
-#: functions/searchUser.php:36
+#: functions/searchUser.php:39
 msgid "Comments"
 msgstr ""
 
-#: functions/searchUser.php:70
+#: functions/searchUser.php:73
 msgid "Delete Now"
 msgstr ""
