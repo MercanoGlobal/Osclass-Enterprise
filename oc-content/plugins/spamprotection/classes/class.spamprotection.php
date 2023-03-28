@@ -890,7 +890,7 @@ class spam_prot extends DAO {
         } else {
             $check = explode(",", $this->_get('blocked_tld'));
         }
-        $check = explode(",", $this->_get('blocked_tld'));
+
         $tld = explode("@", $mail);
         if (in_array($tld[1], $check)) {
             return true;
