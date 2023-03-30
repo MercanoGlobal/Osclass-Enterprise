@@ -99,7 +99,7 @@
                     echo '<div id="' . $id . '" class="' . strtolower($class) . ' ' . strtolower($class) . '-' .$message['type'] . '"><a class="btn ico btn-mini ico-close">x</a>';
                     echo osc_apply_filter('flash_message_text', $message['msg']);
                     echo '</div>';
-                } else if($message!='') {
+                } else if(!is_array($message) && $message!='') {
                     echo '<div id="' . $id . '" class="' . $class . '">';
                     echo osc_apply_filter('flash_message_text', $message);
                     echo '</div>';
