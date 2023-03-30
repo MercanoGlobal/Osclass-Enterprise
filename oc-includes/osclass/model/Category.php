@@ -252,6 +252,7 @@
 
                 $this->_tree = $this->sideTree($this->_relation[0], $this->_categories, $this->_relation);
 
+                $cache = ($cache == false ? array() : $cache);
                 $cache['tree']         = $this->_tree;
                 $cache['empty_tree']   = $this->_emptyTree;
                 $cache['relation']     = $this->_relation;

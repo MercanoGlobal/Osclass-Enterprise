@@ -17,21 +17,35 @@
  */
 
     class Form {
-        static protected function generic_select($name, $items, $fld_key, $fld_name, $default_item, $id) {
+        static protected function generic_select($name, $items, $fld_key, $fld_name, $default_item, $id, $limit = 1000) {
             $name = osc_esc_html($name);
             echo '<select name="' . $name . '" id="' . preg_replace('|([^_a-zA-Z0-9-]+)|', '', $name) . '">';
             if (isset($default_item)) echo '<option value="">' . $default_item . '</option>';
-            foreach($items as $i) {
-                if(isset($fld_key) && isset($fld_name))
-                echo '<option value="' . osc_esc_html($i[$fld_key]) . '"' . ( ($id == $i[$fld_key]) ? ' selected="selected"' : '' ) . '>' . $i[$fld_name] . '</option>';
+            $counter = 0;
+            if(is_array($items) && !empty($items) && count($items) > 0) {
+                foreach($items as $i) {
+                    if(isset($fld_key) && isset($fld_name)) {
+                        if(isset($i[ $fld_key ])) {
+                            echo '<option value="' . osc_esc_html($i[$fld_key]) . '"' . ( ($id == $i[$fld_key]) ? ' selected="selected"' : '' ) . '>' . $i[$fld_name] . '</option>';
+                        }
+                    }
+                    if($counter > $limit) {
+                        break;
+                    }
+                    $counter++;
+                }
+            } else {
+                echo '<option value="">' . __('No value') . '</option>';
             }
             echo '</select>';
         }
 
-        static protected function generic_input_text($name, $value, $maxLength = null, $readOnly = false, $autocomplete = true) {
-            $name = osc_esc_html($name);
-            echo '<input id="' . preg_replace('|([^_a-zA-Z0-9-]+)|', '', $name) . '" type="text" name="' . $name . '" value="' . osc_esc_html(htmlentities($value, ENT_COMPAT, "UTF-8")) . '"';
-            if (isset($maxLength)) echo ' maxlength="' . osc_esc_html($maxLength) . '"';
+        static protected function generic_input_text($name, $value, $maxLength = null, $readOnly = false, $autocomplete = true, $type = 'text') {
+            $name  = osc_esc_html($name);
+            $type  = osc_esc_html(strtolower(trim($type)));
+            $value = ($value === NULL ? '' : $value);
+            echo '<input id="' . preg_replace('|([^_a-zA-Z0-9-]+)|', '', $name) . '" type="' . $type . '" name="' . $name . '" value="' . osc_esc_html(htmlentities($value, ENT_COMPAT, "UTF-8")) . '"';
+            if (isset($maxLength) && $maxLength > 0) echo ' maxlength="' . osc_esc_html($maxLength) . '"';
             if (!$autocomplete) echo ' autocomplete="off"';
             if ($readOnly) echo ' disabled="disabled" readonly="readonly"';
             echo ' />';
@@ -40,7 +54,7 @@
         static protected function generic_password($name, $value, $maxLength = null, $readOnly = false) {
             $name = osc_esc_html($name);
             echo '<input id="' . preg_replace('|([^_a-zA-Z0-9-]+)|', '', $name) . '" type="password" name="' . $name . '" value="' . osc_esc_html(htmlentities($value, ENT_COMPAT, "UTF-8")) . '"';
-            if (isset($maxLength)) echo ' maxlength="' . osc_esc_html($maxLength) . '"';
+            if (isset($maxLength) && $maxLength > 0) echo ' maxlength="' . osc_esc_html($maxLength) . '"';
             if ($readOnly) echo ' disabled="disabled" readonly="readonly"';
             echo ' autocomplete="off" />';
         }
@@ -61,7 +75,4 @@
             $name = osc_esc_html($name);
             echo '<textarea id="' . preg_replace('|([^_a-zA-Z0-9-]+)|', '', $name) . '" name="' . $name . '" rows="10">' . $value . '</textarea>';
         }
-
     }
-
-?>
