@@ -25,6 +25,25 @@
         <?php osc_current_web_theme_path('common/head.php') ; ?>
     </head>
 <body <?php bender_body_class(); ?>>
+
+<style>
+@media only screen and (min-width: 768px) {
+  .mobile-account {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobile-account {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 10px;
+  }
+}
+</style>
+
 <div id="header">
     <!-- header ad 728x60-->
     <div class="ads_header">
@@ -36,6 +55,9 @@
         <div id="logo">
             <?php echo logo_header(); ?>
             <span id="description"><?php echo osc_page_description(); ?></span>
+            <?php if( osc_users_enabled() ) { ?>
+                <div class="mobile-account"><a href="<?php echo osc_user_dashboard_url(); ?>"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
+            <?php } ?>
         </div>
         <ul class="nav">
             <?php if( osc_is_static_page() || osc_is_contact_page() ){ ?>
@@ -45,7 +67,7 @@
             <?php if( osc_users_enabled() ) { ?>
             <?php if( osc_is_web_user_logged_in() ) { ?>
                 <li class="first logged">
-                    <span><?php echo sprintf(__('Hi %s', 'bender'), osc_logged_user_name() . '!'); ?>  &middot;</span>
+                    <span><?php echo sprintf(__('Hi, %s', 'bender'), osc_logged_user_name() . '!'); ?>  &middot;</span>
                     <strong><a href="<?php echo osc_user_dashboard_url(); ?>"><?php _e('My account', 'bender'); ?></a></strong> &middot;
                     <a href="<?php echo osc_user_logout_url(); ?>"><?php _e('Logout', 'bender'); ?></a>
                 </li>

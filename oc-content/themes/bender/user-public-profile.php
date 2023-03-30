@@ -59,7 +59,7 @@
     <div class="user-card">
         <img src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( osc_user_email() ) ) ); ?>?s=120&d=identicon" />
         <ul id="user_data">
-            <li class="name"><?php echo osc_user_name(); ?> <?php osc_run_hook('seller_verification_show', osc_user_id()); ?></li>
+            <li class="name"><?php echo osc_user_name(); ?> <span style="position:relative;width:20px;float:right;"><?php osc_run_hook('seller_verification_show', osc_user_id()); ?></span></li>
             <?php if( osc_user_website() !== '' ) { ?>
             <li class="website"><a target="_blank" rel="noopener nofollow" href="<?php echo osc_user_website(); ?>"><?php echo osc_user_website(); ?></a></li>
             <?php } ?>

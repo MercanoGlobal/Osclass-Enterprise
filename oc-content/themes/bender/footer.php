@@ -32,7 +32,7 @@
             <?php if( osc_users_enabled() ) { ?>
             <?php if( osc_is_web_user_logged_in() ) { ?>
                 <li>
-                    <?php echo sprintf(__('Hi %s', 'bender'), osc_logged_user_name() . '!'); ?>  &middot;
+                    <?php echo sprintf(__('Hi, %s', 'bender'), osc_logged_user_name() . '!'); ?>  &middot;
                     <strong><a href="<?php echo osc_user_dashboard_url(); ?>"><?php _e('My account', 'bender'); ?></a></strong> &middot;
                     <a href="<?php echo osc_user_logout_url(); ?>"><?php _e('Logout', 'bender'); ?></a>
                 </li>
