@@ -49,7 +49,8 @@
             if( !isset($_SESSION) ) {
                 session_name('osclass');
                 if(!$this->_session_start()) {
-                    session_id(uniqid('', true));
+                    $ses_id = str_replace('.', '', uniqid('', true));
+                    session_id($ses_id);
                     session_start();
                     session_regenerate_id();
                 }

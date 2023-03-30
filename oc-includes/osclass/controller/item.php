@@ -660,7 +660,7 @@
 
                     $item = osc_apply_filter('pre_show_item', $this->itemManager->findByPrimaryKey( Params::getParam('id') ));
                     // if item doesn't exist show an error 410
-                    if( count($item) == 0 ) {
+                    if( !is_array($item) || count($item) == 0 ) {
                         $this->do410();
                         return;
                     }
