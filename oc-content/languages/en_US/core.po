@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-03-30 19:08+0300\n"
+"PO-Revision-Date: 2023-04-01 00:12+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -3053,7 +3053,7 @@ msgstr ""
 msgid "Search keyword pattern"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/permalinks.php:491 oc-includes/osclass/classes/Breadcrumb.php:364 oc-includes/osclass/controller/contact.php:99 oc-includes/osclass/functions.php:176
+#: oc-admin/themes/modern/settings/permalinks.php:491 oc-includes/osclass/classes/Breadcrumb.php:364 oc-includes/osclass/controller/contact.php:104 oc-includes/osclass/functions.php:176
 msgid "Contact"
 msgstr ""
 
@@ -4385,27 +4385,27 @@ msgstr ""
 msgid "Re-send activation email"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:78
+#: oc-includes/osclass/controller/contact.php:83
 msgid "Name: %s"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:79
+#: oc-includes/osclass/controller/contact.php:84
 msgid "Email: %s"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:80
+#: oc-includes/osclass/controller/contact.php:85
 msgid "Subject: %s"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:81
+#: oc-includes/osclass/controller/contact.php:86
 msgid "Message: %s"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:82
+#: oc-includes/osclass/controller/contact.php:87
 msgid "Date: %s at %s"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:83
+#: oc-includes/osclass/controller/contact.php:88
 msgid "IP Address: %s"
 msgstr ""
 

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2023-02-02 15:15+0200\n"
+"PO-Revision-Date: 2023-04-01 00:12+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -19,16 +19,15 @@ msgstr ""
 msgid "You don't have enough permissions"
 msgstr ""
 
-#: oc-admin/admins.php:50 oc-admin/admins.php:157 oc-admin/admins.php:265 oc-admin/appearance.php:37
-#: oc-admin/appearance.php:74 oc-admin/controller/settings/advanced.php:32
-#: oc-admin/controller/settings/locations.php:31 oc-admin/controller/settings/locations.php:51
-#: oc-admin/controller/settings/locations.php:93 oc-admin/controller/settings/locations.php:122
-#: oc-admin/controller/settings/locations.php:152 oc-admin/controller/settings/locations.php:208
-#: oc-admin/controller/settings/locations.php:244 oc-admin/controller/settings/locations.php:277
-#: oc-admin/controller/settings/locations.php:333 oc-admin/controller/settings/locations.php:366
-#: oc-admin/controller/settings/mailserver.php:31 oc-admin/controller/settings/media.php:170
-#: oc-admin/languages.php:41 oc-admin/login.php:112 oc-admin/plugins.php:40 oc-admin/plugins.php:77
-#: oc-admin/plugins.php:113 oc-admin/plugins.php:128 oc-admin/plugins.php:143
+#: oc-admin/admins.php:50 oc-admin/admins.php:157 oc-admin/admins.php:265 oc-admin/appearance.php:37 oc-admin/appearance.php:74
+#: oc-admin/controller/settings/advanced.php:32 oc-admin/controller/settings/locations.php:31
+#: oc-admin/controller/settings/locations.php:51 oc-admin/controller/settings/locations.php:93
+#: oc-admin/controller/settings/locations.php:122 oc-admin/controller/settings/locations.php:152
+#: oc-admin/controller/settings/locations.php:208 oc-admin/controller/settings/locations.php:244
+#: oc-admin/controller/settings/locations.php:277 oc-admin/controller/settings/locations.php:333
+#: oc-admin/controller/settings/locations.php:366 oc-admin/controller/settings/mailserver.php:31
+#: oc-admin/controller/settings/media.php:170 oc-admin/languages.php:41 oc-admin/login.php:112 oc-admin/plugins.php:40
+#: oc-admin/plugins.php:77 oc-admin/plugins.php:113 oc-admin/plugins.php:128 oc-admin/plugins.php:143
 msgid "This action can't be done because it's a demo site"
 msgstr ""
 
@@ -462,8 +461,8 @@ msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:604
 msgid ""
-"However, we can't check if Apache module <b>mod_rewrite</b> is loaded. If you experience some problems with "
-"the URLs, you should deactivate <em>Friendly URLs</em>"
+"However, we can't check if Apache module <b>mod_rewrite</b> is loaded. If you experience some problems with the URLs, you should "
+"deactivate <em>Friendly URLs</em>"
 msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:611 oc-admin/controller/settings/permalinks.php:621
@@ -472,14 +471,14 @@ msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:613
 msgid ""
-"Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file, please "
-"deactivate the <em>Friendly URLs</em> option."
+"Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file, please deactivate the <em>Friendly "
+"URLs</em> option."
 msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:623
 msgid ""
-"Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file or experience "
-"some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
+"Here's the content you have to add to the <b>.htaccess</b> file. If you can't create the file or experience some problems with the "
+"URLs, please deactivate the <em>Friendly URLs</em> option."
 msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:635
@@ -488,8 +487,8 @@ msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:637
 msgid ""
-"Here's the content you have to add to the <b>.htaccess</b> file. If you can't modify the file or experience "
-"some problems with the URLs, please deactivate the <em>Friendly URLs</em> option."
+"Here's the content you have to add to the <b>.htaccess</b> file. If you can't modify the file or experience some problems with the "
+"URLs, please deactivate the <em>Friendly URLs</em> option."
 msgstr ""
 
 #: oc-admin/controller/settings/permalinks.php:670
@@ -600,8 +599,8 @@ msgstr ""
 msgid "The listing has been activated"
 msgstr ""
 
-#: oc-admin/items.php:322 oc-admin/items.php:334 oc-admin/items.php:344 oc-admin/items.php:354
-#: oc-admin/items.php:383 oc-admin/items.php:409 oc-admin/items.php:553
+#: oc-admin/items.php:322 oc-admin/items.php:334 oc-admin/items.php:344 oc-admin/items.php:354 oc-admin/items.php:383
+#: oc-admin/items.php:409 oc-admin/items.php:553
 msgid "An error has occurred"
 msgstr ""
 
@@ -755,8 +754,8 @@ msgstr ""
 
 #: oc-admin/languages.php:310
 msgid ""
-"Directory '%s' couldn't be removed because it's the default language. <a href=\"%s\">Set another language</a> "
-"as default first and try again"
+"Directory '%s' couldn't be removed because it's the default language. <a href=\"%s\">Set another language</a> as default first and "
+"try again"
 msgstr ""
 
 #: oc-admin/login.php:44
@@ -874,9 +873,7 @@ msgid "There was a problem adding the plugin"
 msgstr ""
 
 #: oc-admin/plugins.php:90
-msgid ""
-"The plugin generated %d characters of <strong>unexpected output</strong> during the installation. Output: "
-"\"%s\""
+msgid "The plugin generated %d characters of <strong>unexpected output</strong> during the installation. Output: \"%s\""
 msgstr ""
 
 #: oc-admin/plugins.php:93
@@ -947,9 +944,8 @@ msgstr ""
 msgid "<code>downloads</code> folder has to be writable, i.e.: <code>chmod 0755 %soc-content/downloads/</code>"
 msgstr ""
 
-#: oc-admin/tools.php:36 oc-admin/tools.php:63 oc-admin/tools.php:73 oc-admin/tools.php:83 oc-admin/tools.php:94
-#: oc-admin/tools.php:130 oc-admin/tools.php:173 oc-admin/tools.php:200 oc-admin/tools.php:229
-#: oc-admin/upgrade.php:34 oc-admin/ajax/ajax.php:565
+#: oc-admin/tools.php:36 oc-admin/tools.php:63 oc-admin/tools.php:73 oc-admin/tools.php:83 oc-admin/tools.php:94 oc-admin/tools.php:130
+#: oc-admin/tools.php:173 oc-admin/tools.php:200 oc-admin/tools.php:229 oc-admin/upgrade.php:34 oc-admin/ajax/ajax.php:565
 msgid "This action cannot be done because it is a demo site"
 msgstr ""
 
@@ -1037,8 +1033,8 @@ msgstr ""
 msgid "The user has been updated and activated"
 msgstr ""
 
-#: oc-admin/users.php:145 oc-admin/users.php:168 oc-admin/users.php:193 oc-admin/users.php:217
-#: oc-admin/users.php:241 oc-admin/users.php:265 oc-admin/users.php:580
+#: oc-admin/users.php:145 oc-admin/users.php:168 oc-admin/users.php:193 oc-admin/users.php:217 oc-admin/users.php:241
+#: oc-admin/users.php:265 oc-admin/users.php:580
 msgid "User id isn't in the correct format"
 msgstr ""
 
@@ -1314,7 +1310,7 @@ msgstr ""
 msgid "One of the files you tried to upload exceeds the maximum size."
 msgstr ""
 
-#: oc-includes/osclass/ItemActions.php:1538 oc-includes/osclass/controller/contact.php:163
+#: oc-includes/osclass/ItemActions.php:1538 oc-includes/osclass/controller/contact.php:168
 msgid "The file you tried to upload does not have a valid extension."
 msgstr ""
 
@@ -1322,8 +1318,7 @@ msgstr ""
 msgid "The password cannot be empty"
 msgstr ""
 
-#: oc-includes/osclass/UserActions.php:48 oc-includes/osclass/UserActions.php:191
-#: oc-includes/osclass/controller/user.php:193
+#: oc-includes/osclass/UserActions.php:48 oc-includes/osclass/UserActions.php:191 oc-includes/osclass/controller/user.php:193
 msgid "Passwords don't match"
 msgstr ""
 
@@ -1335,8 +1330,7 @@ msgstr ""
 msgid "The name cannot be empty"
 msgstr ""
 
-#: oc-includes/osclass/UserActions.php:65 oc-includes/osclass/UserActions.php:185
-#: oc-includes/osclass/ItemActions.php:137
+#: oc-includes/osclass/UserActions.php:65 oc-includes/osclass/UserActions.php:185 oc-includes/osclass/ItemActions.php:137
 msgid "The name is not valid"
 msgstr ""
 
@@ -1360,13 +1354,11 @@ msgstr ""
 msgid "The specified e-mail is already used by %s"
 msgstr ""
 
-#: oc-includes/osclass/controller/ajax.php:87 oc-includes/osclass/controller/ajax.php:152
-#: oc-includes/osclass/controller/item.php:413
+#: oc-includes/osclass/controller/ajax.php:87 oc-includes/osclass/controller/ajax.php:152 oc-includes/osclass/controller/item.php:413
 msgid "The selected photo has been successfully deleted"
 msgstr ""
 
-#: oc-includes/osclass/controller/ajax.php:87 oc-includes/osclass/controller/ajax.php:159
-#: oc-includes/osclass/controller/item.php:418
+#: oc-includes/osclass/controller/ajax.php:87 oc-includes/osclass/controller/ajax.php:159 oc-includes/osclass/controller/item.php:418
 msgid "The selected photo couldn't be deleted"
 msgstr ""
 
@@ -1374,8 +1366,8 @@ msgstr ""
 msgid "The selected photo couldn't be deleted, the URL doesn't exist"
 msgstr ""
 
-#: oc-includes/osclass/controller/ajax.php:121 oc-includes/osclass/controller/ajax.php:129
-#: oc-includes/osclass/controller/item.php:394 oc-includes/osclass/controller/item.php:399
+#: oc-includes/osclass/controller/ajax.php:121 oc-includes/osclass/controller/ajax.php:129 oc-includes/osclass/controller/item.php:394
+#: oc-includes/osclass/controller/item.php:399
 msgid "The listing doesn't belong to you"
 msgstr ""
 
@@ -1383,36 +1375,35 @@ msgstr ""
 msgid "The selected photo does not belong to you"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:33 oc-includes/osclass/controller/contact.php:170
+#: oc-includes/osclass/controller/contact.php:33 oc-includes/osclass/controller/contact.php:175
 #: oc-includes/osclass/controller/item.php:485 oc-includes/osclass/controller/item.php:511
 msgid "Sorry, the contact form is disabled"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:45 oc-includes/osclass/controller/item.php:126
-#: oc-includes/osclass/controller/item.php:248 oc-includes/osclass/controller/item.php:463
-#: oc-includes/osclass/controller/item.php:525 oc-includes/osclass/controller/user-non-secure.php:164
-#: oc-includes/osclass/controller/login.php:224 oc-admin/login.php:119 oc-includes/osclass/UserActions.php:37
+#: oc-includes/osclass/controller/contact.php:50 oc-includes/osclass/controller/item.php:126 oc-includes/osclass/controller/item.php:248
+#: oc-includes/osclass/controller/item.php:463 oc-includes/osclass/controller/item.php:525
+#: oc-includes/osclass/controller/user-non-secure.php:164 oc-includes/osclass/controller/login.php:224 oc-admin/login.php:119
+#: oc-includes/osclass/UserActions.php:37
 msgid "The reCAPTCHA is invalid"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:57 oc-includes/osclass/controller/contact.php:66
-#: oc-includes/osclass/controller/item.php:146 oc-includes/osclass/controller/item.php:537
-#: oc-includes/osclass/controller/login.php:90 oc-includes/osclass/controller/register.php:58
-#: oc-includes/osclass/controller/user-non-secure.php:175
+#: oc-includes/osclass/controller/contact.php:62 oc-includes/osclass/controller/contact.php:71
+#: oc-includes/osclass/controller/item.php:146 oc-includes/osclass/controller/item.php:537 oc-includes/osclass/controller/login.php:90
+#: oc-includes/osclass/controller/register.php:58 oc-includes/osclass/controller/user-non-secure.php:175
 msgid "Your current email is not allowed"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:60 oc-includes/osclass/controller/item.php:149
-#: oc-includes/osclass/controller/item.php:540 oc-includes/osclass/controller/login.php:93
-#: oc-includes/osclass/controller/register.php:61 oc-includes/osclass/controller/user-non-secure.php:178
+#: oc-includes/osclass/controller/contact.php:65 oc-includes/osclass/controller/item.php:149 oc-includes/osclass/controller/item.php:540
+#: oc-includes/osclass/controller/login.php:93 oc-includes/osclass/controller/register.php:61
+#: oc-includes/osclass/controller/user-non-secure.php:178
 msgid "Your current IP is not allowed"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:71
+#: oc-includes/osclass/controller/contact.php:76
 msgid "Please enter a correct e-mail"
 msgstr ""
 
-#: oc-includes/osclass/controller/contact.php:161
+#: oc-includes/osclass/controller/contact.php:166
 msgid "Your message has been sent. Thank you for contacting us!"
 msgstr ""
 
@@ -1480,8 +1471,7 @@ msgstr ""
 msgid "The listing has been renewed"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:333 oc-includes/osclass/controller/item.php:336
-#: oc-admin/items.php:805
+#: oc-includes/osclass/controller/item.php:333 oc-includes/osclass/controller/item.php:336 oc-admin/items.php:805
 msgid "The listing can't be renewed"
 msgstr ""
 
@@ -1501,8 +1491,8 @@ msgstr ""
 msgid "Thanks! That's very helpful"
 msgstr ""
 
-#: oc-includes/osclass/controller/ajax.php:112 oc-includes/osclass/controller/item.php:388
-#: oc-includes/osclass/controller/item.php:491 oc-includes/osclass/controller/item.php:617
+#: oc-includes/osclass/controller/ajax.php:112 oc-includes/osclass/controller/item.php:388 oc-includes/osclass/controller/item.php:491
+#: oc-includes/osclass/controller/item.php:617
 msgid "The listing doesn't exist"
 msgstr ""
 
@@ -1510,7 +1500,7 @@ msgstr ""
 msgid "We're sorry, but the listing has expired. You can't contact the seller"
 msgstr ""
 
-#: oc-includes/osclass/controller/item.php:504 oc-includes/osclass/controller/item.php:517
+#: oc-includes/osclass/controller/contact.php:39 oc-includes/osclass/controller/item.php:504 oc-includes/osclass/controller/item.php:517
 msgid "You can't contact the seller, only registered users can"
 msgstr ""
 
@@ -1599,8 +1589,7 @@ msgstr ""
 msgid "Empty passwords are not allowed. Please provide a password"
 msgstr ""
 
-#: oc-includes/osclass/controller/login.php:66 oc-includes/osclass/controller/login.php:131
-#: oc-admin/users.php:292
+#: oc-includes/osclass/controller/login.php:66 oc-includes/osclass/controller/login.php:131 oc-admin/users.php:292
 msgid "The user doesn't exist"
 msgstr ""
 
@@ -1633,9 +1622,7 @@ msgid "Validation email re-sent"
 msgstr ""
 
 #: oc-includes/osclass/controller/login.php:194
-msgid ""
-"We have just sent you an email to validate your account, you will have to wait a few minutes to resend it "
-"again"
+msgid "We have just sent you an email to validate your account, you will have to wait a few minutes to resend it again"
 msgstr ""
 
 #: oc-includes/osclass/controller/login.php:207

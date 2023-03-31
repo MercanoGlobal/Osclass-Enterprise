@@ -35,6 +35,11 @@
                                         }
 
                                         osc_csrf_check();
+                                        if( osc_reg_user_can_contact() && !osc_is_web_user_logged_in() ) {
+                                            osc_add_flash_warning_message( _m("You can't contact the seller, only registered users can") );
+                                            $this->redirectTo(osc_base_url(true));
+                                        }
+
                                         $yourName  = Params::getParam('yourName');
                                         $yourEmail = Params::getParam('yourEmail');
                                         $subject   = Params::getParam('subject');
@@ -186,4 +191,3 @@ MESSAGE;
     }
 
     /* file end: ./contact.php */
-?>
