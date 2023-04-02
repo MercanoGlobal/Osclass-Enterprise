@@ -55,6 +55,12 @@
             );
             View::newInstance()->_exportVariableToView('_loggedUser', $user);
         }
+        // Check if the user email is banned
+        if (isset($user['s_email']) && osc_is_email_banned($user['s_email'])) {
+            // The user is banned, so we need to end their session
+            Session::newInstance()->session_destroy();
+            return false;
+        }
         if (isset($user['b_enabled'], $user['b_active']) && $user['b_enabled'] == 1 && $user['b_active'] == 1) {
             Session::newInstance()->_set('userId', $user['pk_i_id']);
             Session::newInstance()->_set('userName', $user['s_name']);
@@ -643,5 +649,3 @@
         }
         return View::newInstance()->_next('users');
     }
-
-?>
