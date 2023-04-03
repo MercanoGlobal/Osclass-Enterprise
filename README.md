@@ -56,4 +56,4 @@ location / {
 
 > [Installation Guide](https://www.youtube.com/watch?v=bOr7U81Y-IM)
 
-> Many thanks to all contributors at [MindStellar](https://www.mindstellar.com/) and [OsclassPoint](https://osclass-classifieds.com/)
+> Many thanks to all contributors at [MindStellar](https://github.com/mindstellar/Osclass) and [OsclassPoint](https://forums.osclasspoint.com/)

@@ -73,7 +73,7 @@
      * @return boolean
      */
     function osc_validate_number ($value = null, $required = false) {
-        if ($required || ($value !== null && strlen($value) > 0)) {
+        if ($required || ($value !== null && is_string($value) && strlen($value) > 0)) {
             if ( !is_numeric($value) ) {
                 return false;
             }
