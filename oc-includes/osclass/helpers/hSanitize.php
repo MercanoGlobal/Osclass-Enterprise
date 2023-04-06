@@ -29,6 +29,9 @@
      * @return string sanitized
      */
     function osc_sanitize_url($value) {
+        if ($value === '' || $value === null) {
+            return '';
+        }
         if(!function_exists('filter_var')) {
             return preg_replace('|([^a-zA-Z0-9\$\-\_\.\+!\*\'\(\),{}\|\^~\[\]`"#%;\/\?:@=<>\\\&]*)|', '', $value);
         } else {
@@ -55,6 +58,9 @@
      * @return string sanitized
      */
     function osc_sanitize_name($value) {
+        if ($value === '' || $value === null) {
+            return '';
+        }
         return ucwords( osc_sanitize_allcaps( trim( $value ) ) );
     }
 
@@ -65,6 +71,9 @@
      * @return string sanitized
      */
     function osc_sanitize_allcaps($value) {
+        if ($value === '' || $value === null) {
+            return '';
+        }
         if ( preg_match("/^([A-Z][^A-Z]*)+$/", $value) && !preg_match("/[a-z]+/", $value) ) {
             $value = ucfirst(strtolower($value));
         }
@@ -78,6 +87,9 @@
      * @return string sanitized
      */
     function osc_sanitize_user_name($value) {
+        if ($value === '' || $value === null) {
+            return '';
+        }
         $value = preg_replace('/(_+)/', '-', preg_replace('/([^0-9A-Za-z_]*)/', '', str_replace(' ', '-', trim($value))));
         $value = preg_replace('/-{2,}/','-', $value);
         return $value;
@@ -90,6 +102,9 @@
      * @return string sanitized
      */
     function osc_sanitize_username($value, $min = 3) {
+        if ($value === '' || $value === null) {
+            return '';
+        }
         if(mb_strlen($value, 'UTF-8') >= $min) {
             return preg_replace("/(_+)/", "_", preg_replace("/([^0-9A-Za-z_]*)/", "", str_replace(" ", "_", trim($value))));
         }
@@ -117,7 +132,12 @@
      * @return string sanitized
      */
     function osc_sanitize_phone($value) {
-        if (empty($value))  return;
+        if ($value === '' || $value === null) {
+            return '';
+        }
+        if (empty($value)) {
+            return '';
+        }
 
         // Remove strings that aren't letter and number.
         $value = preg_replace("/[^a-z0-9]/", "", strtolower($value));
@@ -154,7 +174,7 @@
      * @return  string
      */
     function osc_esc_html($str = '') {
-        if ($str === '') {
+        if ($str === '' || $str === null) {
             return '';
         }
 
@@ -186,8 +206,13 @@
      * @return string
      */
     function osc_esc_js($str) {
+        if ($str === '' || $str === null) {
+            return '';
+        }
+
         static $sNewLines = '<br><br/><br />';
         static $aNewLines = array('<br>','<br/>','<br />');
+
         $str = strip_tags($str, $sNewLines);
         $str = str_replace("\r", '', $str);
         $str = addslashes($str);
@@ -196,5 +221,3 @@
 
         return $str;
     }
-
-?>
