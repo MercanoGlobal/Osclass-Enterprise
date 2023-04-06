@@ -20,9 +20,13 @@
     $d_now = date('Y-m-d H:i:s');
     $i_now = strtotime($d_now);
     $i_now_truncated = strtotime(date('Y-m-d H:i:00'));
+
     if ( ! defined('CLI')) {
         define('CLI', (PHP_SAPI==='cli'));
     }
+
+    // Theme-defined cron
+    WebThemes::newInstance();
 
     // Hourly cron
     $cron = Cron::newInstance()->getCronByType('HOURLY');
@@ -34,9 +38,9 @@
             $d_next = date('Y-m-d H:i:s', $i_now_truncated + 3600);
             Cron::newInstance()->update(array('d_last_exec' => $d_now, 'd_next_exec' => $d_next),
                                         array('e_type'      => 'HOURLY'));
-            
-             osc_runAlert('HOURLY', $cron['d_last_exec']);
-            
+
+            osc_runAlert('HOURLY', $cron['d_last_exec']);
+
             // Run cron AFTER updating the next execution time to avoid double run of cron
             $purge = osc_purge_latest_searches();
             if( $purge == 'hour' ) {
@@ -47,7 +51,7 @@
             osc_update_location_stats(true, 'auto');
 
             // WARN EXPIRATION EACH HOUR (COMMENT TO DISABLE)
-            // NOTE: IF THIS IS ENABLE, SAME CODE SHOULD BE DISABLE ON CRON DAILY
+            // NOTE: IF THIS IS ENABLED, SAME CODE SHOULD BE DISABLED ON CRON DAILY
             if(is_numeric(osc_warn_expiration()) && osc_warn_expiration()>0) {
                 $items = Item::newInstance()->findByHourExpiration(24*osc_warn_expiration());
                 foreach($items as $item) {
@@ -80,8 +84,7 @@
             // update the next execution time in t_cron
             $d_next = date('Y-m-d H:i:s', $i_now_truncated + (24 * 3600));
             Cron::newInstance()->update(array('d_last_exec' => $d_now, 'd_next_exec' => $d_next),
-                array('e_type'      => 'DAILY'));
-
+                                        array('e_type'      => 'DAILY'));
 
             // osc_do_auto_upgrade();
 
@@ -117,9 +120,9 @@
             $d_next = date('Y-m-d H:i:s', $i_now_truncated + (7 * 24 * 3600));
             Cron::newInstance()->update(array('d_last_exec' => $d_now, 'd_next_exec' => $d_next),
                                         array('e_type'      => 'WEEKLY'));
-            
-             osc_runAlert('WEEKLY', $cron['d_last_exec']);
-            
+
+            osc_runAlert('WEEKLY', $cron['d_last_exec']);
+
             // Run cron AFTER updating the next execution time to avoid double run of cron
             $purge = osc_purge_latest_searches();
             if( $purge == 'week' ) {
