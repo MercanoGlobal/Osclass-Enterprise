@@ -235,11 +235,10 @@
                 return array('error_code' => '');
             }
 
-            if( $path !== false ) {
-                $plugins_list[] = $path;
-            } elseif( $plugins_list === false ) {
+            if (!is_array($plugins_list)) {
                 $plugins_list = array();
             }
+            $plugins_list[] = $path;
             osc_set_preference('installed_plugins', serialize($plugins_list));
 
             // Check if something failed
@@ -302,11 +301,10 @@
                 return false;
             }
 
-            if( $path !== false ) {
-                $plugins_list[] = $path;
-            } elseif( $plugins_list === false ) {
+            if (!is_array($plugins_list)) {
                 $plugins_list = array();
             }
+            $plugins_list[] = $path;
             osc_set_preference('active_plugins', serialize($plugins_list));
 
             self::reload();
