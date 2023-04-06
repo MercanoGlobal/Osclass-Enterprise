@@ -654,10 +654,9 @@
          */
         function offset($offset)
         {
+            $this->aOffset = 0;
             if(is_numeric($offset)) {
-                $this->aOffset = intval($offset);
-            } else {
-                $this->aOffset = 0;
+                $this->aOffset = (int)$offset;
             }
             return $this;
         }
@@ -1033,10 +1032,8 @@
 
             foreach($queries as $q) {
                 $q = trim($q);
-                if( !empty($q) ) {
-                    if( !$this->query($q) ) {
-                        return false;
-                    }
+                if (!empty($q) && !$this->query($q)) {
+                    return false;
                 }
             }
 
@@ -1076,7 +1073,7 @@
                 if(preg_match('|CREATE DATABASE ([^ ]*)|', $query, $match)) {
                     array_unshift($struct_queries, $query);
                 } else if(preg_match('|CREATE TABLE ([^ ]*)|', $query, $match)) {
-                    $struct_queries[trim(strtolower($match[1]), '`')] = $query;
+                    $struct_queries[strtolower(trim($match[1], '`'))] = $query;
                 } else if(preg_match('|INSERT INTO ([^ ]*)|', $query, $match)) {
                     $data_queries[] = $query;
                 } else if(preg_match('|UPDATE ([^ ]*)|', $query, $match)) {
@@ -1816,4 +1813,3 @@
     }
 
     /* file end: ./oc-includes/osclass/classes/database/DBCommandClass.php */
-?>

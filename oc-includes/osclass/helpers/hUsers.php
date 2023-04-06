@@ -119,10 +119,14 @@
         if($id==null) {
             $id = osc_user_id();
         }
-        if ($id != '') {
+        if ($id > 0) {
             if ( osc_rewrite_enabled() ) {
                 $user = User::newInstance()->findByPrimaryKey($id);
-                $path = osc_base_url().osc_get_preference('rewrite_user_profile')."/".$user['s_username'];
+                if($user !== false && isset($user['s_username']) && trim((string)$user['s_username']) != '') {
+                    $path = osc_base_url().osc_get_preference('rewrite_user_profile')."/".$user['s_username'];
+                } else {
+                    $path = '';
+                }
             } else {
                 $path = sprintf(osc_base_url(true) . '?page=user&action=pub_profile&id=%d', $id);
             }

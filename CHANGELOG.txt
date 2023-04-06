@@ -1,4 +1,4 @@
-Osclass Enterprise 3.10.0 2023-04-03
+Osclass Enterprise 3.10.0 2023-04-06
 ------------------------------------
 
 - Rebranded the project as 'Osclass Enterprise'
@@ -41,6 +41,7 @@ Osclass Enterprise 3.10.0 2023-04-03
 - Updated the default Bender Theme to v3.2.0
 - Updated Breadcrumb to Schema
 - Increased the PHP minimum required version to 7.1.0
+- Added experimental support for PHP 8.1+
 - Fixed the Internal CRON
 - Multiple fixes and improvements
 

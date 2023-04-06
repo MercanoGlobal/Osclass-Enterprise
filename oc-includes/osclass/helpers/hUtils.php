@@ -239,7 +239,7 @@ function osc_private_user_menu($options = null)
  * @return string
  */
 function osc_highlight($txt, $len = 300, $start_tag = '<strong>', $end_tag = '</strong>') {
-    $txt = strip_tags($txt);
+    $txt = strip_tags((string)$txt);
     $txt = str_replace(array("\n\r","\r\n","\n","\r","\t"), ' ', $txt);
     $txt = trim($txt);
     $txt = preg_replace('/\s+/', ' ', $txt);
@@ -340,5 +340,3 @@ function osc_get_locations_sql_url($location) {
     $location = rawurlencode($location);
     return 'https://raw.githubusercontent.com/Tangol/Osclass-Locations/main/locations/'.$location;
 }
-
-?>

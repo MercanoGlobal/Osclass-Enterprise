@@ -207,16 +207,16 @@
                 fwrite($fp, $title . PHP_EOL);
                 fwrite($fp, str_pad('', 211, "-", STR_PAD_BOTH) . PHP_EOL);
                 foreach($this->explain_messages[$i]['explain'] as $explain) {
-                    $row  = '|' . str_pad($explain['id'], 3, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['select_type'], 20, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['table'], 20, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['type'], 8, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['possible_keys'], 28, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['key'], 18, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['key_len'], 9, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['ref'], 48, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['rows'], 8, " ", STR_PAD_BOTH) . '|';
-                    $row .= str_pad($explain['Extra'], 38, " ", STR_PAD_BOTH) . '|';
+                    $row  = '|' . str_pad((string)$explain['id'], 3, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['select_type'], 20, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['table'], 20, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['type'], 8, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['possible_keys'], 28, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['key'], 18, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['key_len'], 9, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['ref'], 48, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['rows'], 8, " ", STR_PAD_BOTH) . '|';
+                    $row .= str_pad((string)$explain['Extra'], 38, " ", STR_PAD_BOTH) . '|';
                     fwrite($fp, $row . PHP_EOL);
                     fwrite($fp, str_pad('', 211, "-", STR_PAD_BOTH) . PHP_EOL);
                 }
@@ -247,4 +247,3 @@
     }
 
     /* file end: ./oc-includes/osclass/Logger/LogDatabase.php */
-?>

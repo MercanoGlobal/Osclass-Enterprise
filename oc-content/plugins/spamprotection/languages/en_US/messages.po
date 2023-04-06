@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OSClass Spam Protection\n"
 "POT-Creation-Date: 2017-09-05 01:39+0200\n"
-"PO-Revision-Date: 2023-03-28 18:43+0300\n"
+"PO-Revision-Date: 2023-04-06 03:24+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Liath <amfearliath@gmx.de>\n"
 "Language: en\n"
@@ -1114,7 +1114,7 @@ msgstr ""
 msgid "Tools"
 msgstr ""
 
-#: admin/main.php:128 classes/class.spamprotection.php:351 functions/backend.php:137 functions/backend.php:145
+#: admin/main.php:128 classes/class.spamprotection.php:357 functions/backend.php:137 functions/backend.php:145
 msgid "Help"
 msgstr ""
 
@@ -1143,7 +1143,7 @@ msgstr ""
 msgid "There is no filename given to delete!"
 msgstr ""
 
-#: admin/plugin.php:206 admin/plugin.php:261 admin/tools.php:393 admin/tools.php:405 classes/class.spamprotection.php:349 functions/backend.php:136 functions/backend.php:144
+#: admin/plugin.php:206 admin/plugin.php:261 admin/tools.php:393 admin/tools.php:405 classes/class.spamprotection.php:355 functions/backend.php:136 functions/backend.php:144
 msgid "Settings"
 msgstr ""
 
@@ -1155,11 +1155,11 @@ msgstr ""
 msgid "Export"
 msgstr ""
 
-#: admin/plugin.php:209 classes/class.spamprotection.php:2147
+#: admin/plugin.php:209 classes/class.spamprotection.php:2153
 msgid "Import"
 msgstr ""
 
-#: admin/plugin.php:210 classes/class.spamprotection.php:350
+#: admin/plugin.php:210 classes/class.spamprotection.php:356
 msgid "Global Log"
 msgstr ""
 
@@ -1195,7 +1195,7 @@ msgstr ""
 msgid "Show icon after"
 msgstr ""
 
-#: admin/plugin.php:255 classes/class.spamprotection.php:348 functions/backend.php:135
+#: admin/plugin.php:255 classes/class.spamprotection.php:354 functions/backend.php:135
 msgid "Dashboard"
 msgstr ""
 
@@ -1442,7 +1442,7 @@ msgstr ""
 msgid "Export settings and data"
 msgstr ""
 
-#: admin/plugin.php:488 admin/plugin.php:499 classes/class.spamprotection.php:2108
+#: admin/plugin.php:488 admin/plugin.php:499 classes/class.spamprotection.php:2114
 msgid "Error"
 msgstr ""
 
@@ -1865,11 +1865,11 @@ msgstr ""
 msgid "Here you can define if as spam marked listings should be deleted automatically after x days."
 msgstr ""
 
-#: admin/tools.php:13 classes/class.spamprotection.php:2548
+#: admin/tools.php:13 classes/class.spamprotection.php:2554
 msgid "Yes"
 msgstr ""
 
-#: admin/tools.php:14 classes/class.spamprotection.php:2549
+#: admin/tools.php:14 classes/class.spamprotection.php:2555
 msgid "No"
 msgstr ""
 
@@ -1889,7 +1889,7 @@ msgstr ""
 msgid "This Features allows you to set user to bad- or trusted lists. There you can define actions they are always trusted or forbidden."
 msgstr ""
 
-#: admin/tools.php:48 admin/tools.php:59 classes/class.spamprotection.php:1856 classes/class.spamprotection.php:1859
+#: admin/tools.php:48 admin/tools.php:59 classes/class.spamprotection.php:1862 classes/class.spamprotection.php:1865
 msgid "Trusted User"
 msgstr ""
 
@@ -1897,7 +1897,7 @@ msgstr ""
 msgid "This actions are always trusted and won't checked for spam"
 msgstr ""
 
-#: admin/tools.php:49 admin/tools.php:60 classes/class.spamprotection.php:1857 classes/class.spamprotection.php:1862
+#: admin/tools.php:49 admin/tools.php:60 classes/class.spamprotection.php:1863 classes/class.spamprotection.php:1868
 msgid "Bad User"
 msgstr ""
 
@@ -2033,7 +2033,7 @@ msgstr ""
 msgid "File Monitor"
 msgstr ""
 
-#: admin/tools.php:394 admin/tools.php:441 classes/class.spamprotection.php:2617
+#: admin/tools.php:394 admin/tools.php:441 classes/class.spamprotection.php:2623
 msgid "Check Now"
 msgstr ""
 
@@ -2090,330 +2090,330 @@ msgstr ""
 msgid "Checking file system, please be patient."
 msgstr ""
 
-#: classes/class.spamprotection.php:256 admin/tools.php:173
+#: classes/class.spamprotection.php:262 admin/tools.php:173
 msgid "Actions"
 msgstr ""
 
-#: classes/class.spamprotection.php:261
+#: classes/class.spamprotection.php:267
 #, php-format
 msgid "%s Spam found"
 msgstr ""
 
-#: classes/class.spamprotection.php:267
+#: classes/class.spamprotection.php:273
 msgid "Spam Detected"
 msgstr ""
 
-#: classes/class.spamprotection.php:276
+#: classes/class.spamprotection.php:282
 #, php-format
 msgid "%s Spam comment found"
 msgstr ""
 
-#: classes/class.spamprotection.php:282
+#: classes/class.spamprotection.php:288
 msgid "Spam comment"
 msgstr ""
 
-#: classes/class.spamprotection.php:291
+#: classes/class.spamprotection.php:297
 #, php-format
 msgid "%s Spam Contact Mail found"
 msgstr ""
 
-#: classes/class.spamprotection.php:297
+#: classes/class.spamprotection.php:303
 msgid "Spam Mail"
 msgstr ""
 
-#: classes/class.spamprotection.php:306
+#: classes/class.spamprotection.php:312
 #, php-format
 msgid "%s Banned user"
 msgstr ""
 
-#: classes/class.spamprotection.php:312
+#: classes/class.spamprotection.php:318
 msgid "Banned user"
 msgstr ""
 
-#: classes/class.spamprotection.php:335
+#: classes/class.spamprotection.php:341
 msgid "Spam ads"
 msgstr ""
 
-#: classes/class.spamprotection.php:338
+#: classes/class.spamprotection.php:344
 msgid "Spam comments"
 msgstr ""
 
-#: classes/class.spamprotection.php:341
+#: classes/class.spamprotection.php:347
 msgid "Spam mails"
 msgstr ""
 
-#: classes/class.spamprotection.php:344
+#: classes/class.spamprotection.php:350
 msgid "Bans found"
 msgstr ""
 
-#: classes/class.spamprotection.php:591
+#: classes/class.spamprotection.php:597
 msgid "Spam Protection - Banned because of spam ads"
 msgstr ""
 
-#: classes/class.spamprotection.php:956
+#: classes/class.spamprotection.php:962
 msgid "Posting a new ad is not allowed when using the TOR Network. Please disable TOR and try again."
 msgstr ""
 
-#: classes/class.spamprotection.php:1235
+#: classes/class.spamprotection.php:1241
 msgid "There have been some errors sending the message"
 msgstr ""
 
-#: classes/class.spamprotection.php:1317
+#: classes/class.spamprotection.php:1323
 msgid "Spam Protection - Too many false login attempts"
 msgstr ""
 
-#: classes/class.spamprotection.php:1366
+#: classes/class.spamprotection.php:1372
 #, php-format
 msgid "Spam Protection - Admin/Mod %s blocked in due to too many false login attempts"
 msgstr ""
 
-#: classes/class.spamprotection.php:1524
+#: classes/class.spamprotection.php:1530
 msgid "User was blocked because of"
 msgstr ""
 
-#: classes/class.spamprotection.php:1526
+#: classes/class.spamprotection.php:1532
 msgid "User was blocked and banned because of"
 msgstr ""
 
-#: classes/class.spamprotection.php:1528
+#: classes/class.spamprotection.php:1534
 msgid "User was banned because of"
 msgstr ""
 
-#: classes/class.spamprotection.php:1530
+#: classes/class.spamprotection.php:1536
 msgid "too many false logins"
 msgstr ""
 
-#: classes/class.spamprotection.php:1532
+#: classes/class.spamprotection.php:1538
 msgid "spam ads"
 msgstr ""
 
-#: classes/class.spamprotection.php:1689
+#: classes/class.spamprotection.php:1696
 msgid "False logins on {PAGE_NAME}"
 msgstr ""
 
-#: classes/class.spamprotection.php:1701 classes/class.spamprotection.php:1709
+#: classes/class.spamprotection.php:1707 classes/class.spamprotection.php:1715
 msgid "Hello {MAIL_USER},"
 msgstr ""
 
-#: classes/class.spamprotection.php:1702 classes/class.spamprotection.php:1710
+#: classes/class.spamprotection.php:1708 classes/class.spamprotection.php:1716
 msgid "We have detected some false logins for your account {MAIL_USED} on {PAGE_NAME}. Last false login was on {MAIL_DATE} from IP {MAIL_IP}"
 msgstr ""
 
-#: classes/class.spamprotection.php:1703 classes/class.spamprotection.php:1711
+#: classes/class.spamprotection.php:1709 classes/class.spamprotection.php:1717
 msgid ""
 "As per our security policy, we have temporarily disabled your account and banned the used IP in our System. You can use the following link to unban and reactivate your account. If "
 "this was not you, please contact the support and change your password. You can use the password recovery function, if you don't remember your password."
 msgstr ""
 
-#: classes/class.spamprotection.php:1704
+#: classes/class.spamprotection.php:1710
 msgid "Unban your account: <a href=\"{UNBAN_LINK}\">{UNBAN_LINK}</a> "
 msgstr ""
 
-#: classes/class.spamprotection.php:1705
+#: classes/class.spamprotection.php:1711
 msgid "Password recovery: <a href=\"{PASSWORD_LINK}\">{PASSWORD_LINK}</a> "
 msgstr ""
 
-#: classes/class.spamprotection.php:1706 classes/class.spamprotection.php:1714
+#: classes/class.spamprotection.php:1712 classes/class.spamprotection.php:1720
 msgid "Best regards,"
 msgstr ""
 
-#: classes/class.spamprotection.php:1712
+#: classes/class.spamprotection.php:1718
 msgid "Unban your account: {UNBAN_LINK} "
 msgstr ""
 
-#: classes/class.spamprotection.php:1713
+#: classes/class.spamprotection.php:1719
 msgid "Password recovery: {PASSWORD_LINK} "
 msgstr ""
 
-#: classes/class.spamprotection.php:1776
+#: classes/class.spamprotection.php:1782
 msgid "This user is on your bad user list"
 msgstr ""
 
-#: classes/class.spamprotection.php:1782
+#: classes/class.spamprotection.php:1788
 msgid "This user is on your trusted user list"
 msgstr ""
 
-#: classes/class.spamprotection.php:1860
+#: classes/class.spamprotection.php:1866
 msgid "Remove Bad User"
 msgstr ""
 
-#: classes/class.spamprotection.php:1863
+#: classes/class.spamprotection.php:1869
 msgid "Remove Trusted User"
 msgstr ""
 
-#: classes/class.spamprotection.php:1908
+#: classes/class.spamprotection.php:1914
 msgid "Add IP Ban"
 msgstr ""
 
-#: classes/class.spamprotection.php:1948
+#: classes/class.spamprotection.php:1954
 msgid "Spam Protection - Database needs an update!"
 msgstr ""
 
-#: classes/class.spamprotection.php:1950
+#: classes/class.spamprotection.php:1956
 msgid "Since you have updated this plugin, the database need an upgrade also.<br /><strong>To update it now, press the button below.</strong>"
 msgstr ""
 
-#: classes/class.spamprotection.php:1951
+#: classes/class.spamprotection.php:1957
 msgid "If you want to backup your data before, you can use the export function.<br />You will find an import function in the plugin settings."
 msgstr ""
 
-#: classes/class.spamprotection.php:1952
+#: classes/class.spamprotection.php:1958
 msgid "Of course you can do the upgrade manually.<br /><em>For this case you will find the database tables here</em>"
 msgstr ""
 
-#: classes/class.spamprotection.php:1962
+#: classes/class.spamprotection.php:1968
 msgid "Export Data"
 msgstr ""
 
-#: classes/class.spamprotection.php:1963
+#: classes/class.spamprotection.php:1969
 msgid "Upgrade now"
 msgstr ""
 
-#: classes/class.spamprotection.php:1964
+#: classes/class.spamprotection.php:1970
 msgid "Test again"
 msgstr ""
 
-#: classes/class.spamprotection.php:2078 classes/class.spamprotection.php:2088
+#: classes/class.spamprotection.php:2084 classes/class.spamprotection.php:2094
 msgid "Attention"
 msgstr ""
 
-#: classes/class.spamprotection.php:2079
+#: classes/class.spamprotection.php:2085
 msgid "The export file could not be created"
 msgstr ""
 
-#: classes/class.spamprotection.php:2085
+#: classes/class.spamprotection.php:2091
 msgid "Success"
 msgstr ""
 
-#: classes/class.spamprotection.php:2086
+#: classes/class.spamprotection.php:2092
 #, php-format
 msgid "Export file %s was created succesfully"
 msgstr ""
 
-#: classes/class.spamprotection.php:2086
+#: classes/class.spamprotection.php:2092
 msgid "for database"
 msgstr ""
 
-#: classes/class.spamprotection.php:2086
+#: classes/class.spamprotection.php:2092
 msgid "for plugin settings"
 msgstr ""
 
-#: classes/class.spamprotection.php:2089
+#: classes/class.spamprotection.php:2095
 msgid "There was an error while creating the export file"
 msgstr ""
 
-#: classes/class.spamprotection.php:2109
+#: classes/class.spamprotection.php:2115
 msgid "This is not a valid import file"
 msgstr ""
 
-#: classes/class.spamprotection.php:2123
+#: classes/class.spamprotection.php:2129
 #, php-format
 msgid "Error while importing settings: %s cannot be saved correctly"
 msgstr ""
 
-#: classes/class.spamprotection.php:2141
+#: classes/class.spamprotection.php:2147
 #, php-format
 msgid "Error while importing data to table %s"
 msgstr ""
 
-#: classes/class.spamprotection.php:2148
+#: classes/class.spamprotection.php:2154
 msgid "Import done"
 msgstr ""
 
-#: classes/class.spamprotection.php:2179
+#: classes/class.spamprotection.php:2185
 #, php-format
 msgid "Welcome to %s"
 msgstr ""
 
-#: classes/class.spamprotection.php:2180
+#: classes/class.spamprotection.php:2186
 msgid "<strong>Please read this notice carefully.</strong>"
 msgstr ""
 
-#: classes/class.spamprotection.php:2181
-msgid "This plugin changes the behaviour of your whole OSClass installation,<br />because of this please use it wise."
+#: classes/class.spamprotection.php:2187
+msgid "This plugin changes the behavior of your whole OSClass installation,<br />because of this, please use it wise."
 msgstr ""
 
-#: classes/class.spamprotection.php:2184
+#: classes/class.spamprotection.php:2190
 msgid "Don't activate functions that you don't understand. Take a look in the help to learn more."
 msgstr ""
 
-#: classes/class.spamprotection.php:2185
+#: classes/class.spamprotection.php:2191
 msgid "Don't panic if you get a lot of spam. You just need to fine-tune some options here."
 msgstr ""
 
-#: classes/class.spamprotection.php:2186
+#: classes/class.spamprotection.php:2192
 msgid "This Plugin can block or ban users and admins. Keep an eye of all actions done on your website."
 msgstr ""
 
-#: classes/class.spamprotection.php:2189
+#: classes/class.spamprotection.php:2195
 msgid "<em>We don't want you to ban or annoy users without a reason ;)</em>"
 msgstr ""
 
-#: classes/class.spamprotection.php:2192
+#: classes/class.spamprotection.php:2198
 msgid "<strong>If you are using the check for contact mails, please add some hints into your privacy policy that mails will be saved and moderated, if spam was found inside.</strong>"
 msgstr ""
 
-#: classes/class.spamprotection.php:2194
+#: classes/class.spamprotection.php:2200
 msgid "Feel free to contact me in OSClass-Forum for any kind of question.<br /><br />Best regards<br />Liath"
 msgstr ""
 
-#: classes/class.spamprotection.php:2198
+#: classes/class.spamprotection.php:2204
 msgid "Plugin Settings"
 msgstr ""
 
-#: classes/class.spamprotection.php:2199
+#: classes/class.spamprotection.php:2205
 msgid "Go to Forum"
 msgstr ""
 
-#: classes/class.spamprotection.php:2200
+#: classes/class.spamprotection.php:2206
 msgid "Close"
 msgstr ""
 
-#: classes/class.spamprotection.php:2551
+#: classes/class.spamprotection.php:2557
 msgid "New Files"
 msgstr ""
 
-#: classes/class.spamprotection.php:2552
+#: classes/class.spamprotection.php:2558
 msgid "Deleted Files"
 msgstr ""
 
-#: classes/class.spamprotection.php:2553
+#: classes/class.spamprotection.php:2559
 msgid "Changed Files"
 msgstr ""
 
-#: classes/class.spamprotection.php:2570
+#: classes/class.spamprotection.php:2576
 msgid "File"
 msgstr ""
 
-#: classes/class.spamprotection.php:2571
+#: classes/class.spamprotection.php:2577
 msgid "Size changed"
 msgstr ""
 
-#: classes/class.spamprotection.php:2572
+#: classes/class.spamprotection.php:2578
 msgid "Last change"
 msgstr ""
 
-#: classes/class.spamprotection.php:2574
+#: classes/class.spamprotection.php:2580
 msgid "Executable"
 msgstr ""
 
-#: classes/class.spamprotection.php:2575
+#: classes/class.spamprotection.php:2581
 msgid "Writable"
 msgstr ""
 
-#: classes/class.spamprotection.php:2576
+#: classes/class.spamprotection.php:2582
 msgid "Readable"
 msgstr ""
 
-#: classes/class.spamprotection.php:2616
+#: classes/class.spamprotection.php:2622
 msgid "No changes found, all seems to be ok"
 msgstr ""
 
-#: classes/class.spamprotection.php:2716
-msgid "FILE SYSTEM INTEGRITY HURT"
+#: classes/class.spamprotection.php:2722
+msgid "FILE SYSTEM INTEGRITY HURT!"
 msgstr ""
 
-#: classes/class.spamprotection.php:2750
+#: classes/class.spamprotection.php:2756
 #, php-format
 msgid "%s ATTENTION, FILE SYSTEM INTEGRITY HURT!!!"
 msgstr ""

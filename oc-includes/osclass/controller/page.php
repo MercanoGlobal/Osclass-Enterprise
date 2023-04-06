@@ -64,7 +64,7 @@
                 Session::newInstance()->_set('userLocale', Params::getParam('lang'));
             }
 
-            $meta = json_decode($page['s_meta'], true);
+            $meta = json_decode(isset($page['s_meta']) ? (string)$page['s_meta'] : '', true);
 
             // load the right template file
             if( file_exists(osc_themes_path() . osc_theme() . '/page-' . $page['s_internal_name'] . '.php') ) {
@@ -91,4 +91,3 @@
     }
 
     /* file end: ./page.php */
-?>

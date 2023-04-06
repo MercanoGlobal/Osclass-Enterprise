@@ -41,12 +41,11 @@
 
         static function applyFilter($hook)
         {
-            $args   = func_get_args();
-            $hook   = array_shift($args);
+            $args    = func_get_args();
+            $hook    = array_shift($args);
+            $content = '';
             if(isset($args[0])) {
                 $content = $args[0];
-            } else {
-                $content = '';
             }
 
             if(isset(self::$hooks[$hook])) {
@@ -107,7 +106,7 @@
                 foreach($plugins as $p) {
                     $extended_list[$p] = self::getInfo($p);
                 }
-                uasort($extended_list, array("self", "strnatcmpCustom"));
+                uasort($extended_list, self::class . '::strnatcmpCustom');
                 $plugins = array();
                 // Enabled
                 foreach($extended_list as $k => $v) {
@@ -215,11 +214,9 @@
             $data['s_value'] = osc_installed_plugins();
             $plugins_list    = unserialize($data['s_value']);
 
-            if( is_array($plugins_list) ) {
+            if ( is_array($plugins_list) && in_array($path, $plugins_list) ) {
                 // check if the plugin is already installed
-                if( in_array($path, $plugins_list) ) {
-                    return array('error_code' => 'error_installed');
-                }
+                return array('error_code' => 'error_installed');
             }
 
             if( !file_exists(osc_plugins_path() . $path) ) {
@@ -238,7 +235,11 @@
                 return array('error_code' => '');
             }
 
-            $plugins_list[]  = $path;
+            if( $path !== false ) {
+                $plugins_list[] = $path;
+            } elseif( $plugins_list === false ) {
+                $plugins_list = array();
+            }
             osc_set_preference('installed_plugins', serialize($plugins_list));
 
             // Check if something failed
@@ -296,14 +297,16 @@
             $data['s_value'] = osc_active_plugins();
             $plugins_list    = unserialize($data['s_value']);
 
-            if( is_array($plugins_list) ) {
+            if ( is_array($plugins_list) && in_array($path, $plugins_list) ) {
                 // check if the plugin is already active
-                if( in_array($path, $plugins_list) ) {
-                    return false;
-                }
+                return false;
             }
 
-            $plugins_list[]  = $path;
+            if( $path !== false ) {
+                $plugins_list[] = $path;
+            } elseif( $plugins_list === false ) {
+                $plugins_list = array();
+            }
             osc_set_preference('active_plugins', serialize($plugins_list));
 
             self::reload();
@@ -524,5 +527,3 @@
             self::loadActive();
         }
     }
-
-?>

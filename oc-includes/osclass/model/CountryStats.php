@@ -75,8 +75,8 @@
          */
         public function increaseNumItems($countryCode)
         {
-            $length = strlen($countryCode);
-            if(trim($countryCode) == '' || $length > 2 || $length == 0) {
+            $length = strlen((string)$countryCode);
+            if(trim((string)$countryCode) == '' || $length > 2 || $length == 0) {
                 return false;
             }
             $sql = sprintf('INSERT INTO %s (fk_c_country_code, i_num_items) VALUES (\'%s\', 1) ON DUPLICATE KEY UPDATE i_num_items = i_num_items + 1', $this->getTableName(), $countryCode);
@@ -93,8 +93,8 @@
          */
         public function decreaseNumItems($countryCode)
         {
-            $length = strlen($countryCode);
-            if(trim($countryCode) == '' || $length > 2 || $length == 0) {
+            $length = strlen((string)$countryCode);
+            if(trim((string)$countryCode) == '' || $length > 2 || $length == 0) {
                 return false;
             }
             $this->dao->select( 'i_num_items' );
@@ -207,4 +207,3 @@
     }
 
     /* file end: ./oc-includes/osclass/model/CountryStats.php */
-?>

@@ -455,16 +455,22 @@
          */
         function _connectToDb($host, $user, $password, &$connId)
         {
-            if( OSC_DEBUG ) {
-                $connId = new mysqli($host, $user, $password);
-            } else {
-                $connId = @new mysqli($host, $user, $password);
-            }
+            mysqli_report(MYSQLI_REPORT_OFF); // The default starting PHP 8.1 is MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT
 
-            if ( $connId->connect_errno ) {
+            try {
+                $connId = $this->db = @new mysqli($host, $user, $password);
+            } catch (mysqli_sql_exception $e) {
+                $this->errorLevel = $this->connErrorLevel = $e->getCode();
+                $this->errorDesc = $this->connErrorDesc = $e->getMessage();
+
                 return false;
             }
-            $this->set_sql_mode(array(), $connId);
+
+            if ($this->db->connect_errno) {
+                return false;
+            }
+
+            $this->set_sql_mode(array(), $this->db);
             return true;
         }
 
@@ -627,4 +633,3 @@
 	}
 
     /* file end: ./oc-includes/osclass/classes/database/DBConnectionClass.php */
-?>

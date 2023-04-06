@@ -51,8 +51,14 @@ class spam_prot extends DAO {
                 }   
             }
         }
-        $this->dao->query(sprintf('ALTER TABLE %s DROP i_reputation;', $this->_table_user));    
-        $this->dao->query(sprintf('ALTER TABLE %s DROP s_reputation;', $this->_table_user));    
+        $result = $this->dao->query(sprintf('SHOW COLUMNS FROM %s LIKE "i_reputation";', $this->_table_user));
+        if ($result && $result->numRows() > 0) {
+            $this->dao->query(sprintf('ALTER TABLE %s DROP i_reputation;', $this->_table_user));
+        }
+        $result = $this->dao->query(sprintf('SHOW COLUMNS FROM %s LIKE "s_reputation";', $this->_table_user));
+        if ($result && $result->numRows() > 0) {
+            $this->dao->query(sprintf('ALTER TABLE %s DROP s_reputation;', $this->_table_user));
+        }
     }
 
     function _install() {
@@ -1972,9 +1978,9 @@ class spam_prot extends DAO {
     function _upgradeNow() {
         $file = osc_plugin_resource('spamprotection/assets/create_table.sql');
         $sql = file_get_contents($file);
-        
+
         if (!$this->dao->importSQL($sql)) {
-            throw new Exception( "Error importSQL::spam_prot<br>".$file ) ;
+            throw new Exception( "Error importSQL::spam_prot<br>".$file );
         }
     }
 
@@ -2039,14 +2045,14 @@ class spam_prot extends DAO {
     function _prepareExport($type = 'database') {
         if ($type == 'database') {
             $export = array(
-                DB_TABLE_PREFIX.'t_ban_rule'                  => $this->_selectExport($this->_table_bans),
-                DB_TABLE_PREFIX.'t_spam_protection_ban_log'   => $this->_selectExport($this->_table_sp_ban_log),
-                DB_TABLE_PREFIX.'t_spam_protection_global_log'=> $this->_selectExport($this->_table_sp_globallog),
-                DB_TABLE_PREFIX.'t_spam_protection_items'     => $this->_selectExport($this->_table_sp_items),
-                DB_TABLE_PREFIX.'t_spam_protection_users'     => $this->_selectExport($this->_table_sp_users),
-                DB_TABLE_PREFIX.'t_spam_protection_comments'  => $this->_selectExport($this->_table_sp_comments),
-                DB_TABLE_PREFIX.'t_spam_protection_contacts'  => $this->_selectExport($this->_table_sp_contacts),
-                DB_TABLE_PREFIX.'t_spam_protection_logins'    => $this->_selectExport($this->_table_sp_logins)
+                DB_TABLE_PREFIX.'t_ban_rule'                   => $this->_selectExport($this->_table_bans),
+                DB_TABLE_PREFIX.'t_spam_protection_ban_log'    => $this->_selectExport($this->_table_sp_ban_log),
+                DB_TABLE_PREFIX.'t_spam_protection_global_log' => $this->_selectExport($this->_table_sp_globallog),
+                DB_TABLE_PREFIX.'t_spam_protection_items'      => $this->_selectExport($this->_table_sp_items),
+                DB_TABLE_PREFIX.'t_spam_protection_users'      => $this->_selectExport($this->_table_sp_users),
+                DB_TABLE_PREFIX.'t_spam_protection_comments'   => $this->_selectExport($this->_table_sp_comments),
+                DB_TABLE_PREFIX.'t_spam_protection_contacts'   => $this->_selectExport($this->_table_sp_contacts),
+                DB_TABLE_PREFIX.'t_spam_protection_logins'     => $this->_selectExport($this->_table_sp_logins)
             );
         } else {
             $export = $this->_selectExport($this->_table_pref, array('key' => 's_section', 'value' => $this->_sect()));
@@ -2178,7 +2184,7 @@ class spam_prot extends DAO {
                     <div id="spamprot_installed_info">
                         <h2>'.sprintf(__("Welcome to %s", "spamprotection"), $plugin).'</h2>
                         <p>'.__("<strong>Please read this notice carefully.</strong>", "spamprotection").'</p>
-                        <p>'.__("This plugin changes the behaviour of your whole OSClass installation,<br />because of this please use it wise.", "spamprotection").'</p>
+                        <p>'.__("This plugin changes the behavior of your whole OSClass installation,<br />because of this, please use it wise.", "spamprotection").'</p>
 
                         <ul style="margin: 25px auto;width: 450px;text-align: left; font-weight: bolder;">
                             <li style="margin-bottom: 10px"><strong>&raquo;</strong> '.__("Don't activate functions that you don't understand. Take a look in the help to learn more.", "spamprotection").'</li>
@@ -2513,8 +2519,8 @@ class spam_prot extends DAO {
                         $extension = pathinfo($file->getFilename(), PATHINFO_EXTENSION);
                         if (!in_array(strtolower($extension), $config['excludeFile'])) {
 
-                            $name       = $file->getPathname();
-                            $hash       = sha1_file($file->getPathname());
+                            $name        = $file->getPathname();
+                            $hash        = sha1_file($file->getPathname());
 
                             $data[$name] = array(
                                 'hash'  => $hash,
@@ -2713,7 +2719,7 @@ class spam_prot extends DAO {
             <div id="alertFilesOuter">
                 <div id="alertFilesInner">
                     <i class="alertFilesClose">x</i>
-                    <h2>'.__("FILE SYSTEM INTEGRITY HURT").'</h2>
+                    <h2>'.__("FILE SYSTEM INTEGRITY HURT!").'</h2>
                     <p>Please check immediately your file system monitor for possible break-in attempts.</p>
                     <a class="btn btn-green btn-success" href="'.osc_admin_render_plugin_url('spamprotection/admin/main.php&tab=sp_tools&sub=files').'">Go to file monitor</a>
                 </div>
@@ -2743,7 +2749,7 @@ class spam_prot extends DAO {
     function _emailFiles($data) {        
         $mail = $this->_get('sp_files_alerts');
         $info = osc_plugin_get_info("spamprotection/index.php");
-        
+
         $params = array(
             'from'      => osc_contact_email(),
             'from_name' => osc_page_title(),
@@ -2799,4 +2805,3 @@ class spam_prot extends DAO {
         }
     }
 }
-?>

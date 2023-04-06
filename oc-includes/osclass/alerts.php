@@ -52,7 +52,7 @@
         foreach($searches as $s_search) {
             // Get if there're new ads on this search
             $json             = $s_search['s_search'];
-            $array_conditions = (array)json_decode($json);
+            $array_conditions = (array)json_decode($json, true);
 
             $new_search = Search::newInstance();
             $new_search->setJsonAlert($array_conditions);
@@ -62,7 +62,7 @@
             $items      = $new_search->doSearch();
             $totalItems = $new_search->count();
 
-            if( count($items) > 0 ) {
+            if( is_array($items) && count($items) > 0 ) {
                 // If we have new items from last check
                 // Catch the user subscribed to this search
                 $alerts = Alerts::newInstance()->findUsersBySearchAndType($s_search['s_search'], $type, $active);

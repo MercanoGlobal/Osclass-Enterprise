@@ -75,15 +75,15 @@
 
             // Sanitize
             foreach(@$aItem['title'] as $key=>$value) {
-                $aItem['title'][$key] = strip_tags( trim ( $value ) );
+                $aItem['title'][$key] = strip_tags( trim ( (string)$value ) );
             }
 
-            $aItem['price']    = $aItem['price'] !== null ? strip_tags( trim( $aItem['price'] ) ) : $aItem['price'];
-            $contactName       = strip_tags( trim( $aItem['contactName'] ) );
-            $contactEmail      = strip_tags( trim( $aItem['contactEmail'] ) );
-            $contactPhone      = strip_tags(trim($aItem[ 'contactPhone' ]));
-            $aItem['cityArea'] = osc_sanitize_name( strip_tags( trim( $aItem['cityArea'] ) ) );
-            $aItem['address']  = osc_sanitize_name( strip_tags( trim( $aItem['address'] ) ) );
+            $aItem['price']    = $aItem['price'] !== null ? strip_tags( trim( (string)$aItem['price'] ) ) : $aItem['price'];
+            $contactName       = strip_tags( trim( (string)$aItem['contactName'] ) );
+            $contactEmail      = strip_tags( trim( (string)$aItem['contactEmail'] ) );
+            $contactPhone      = strip_tags( trim( (string)$aItem['contactPhone'] ) );
+            $aItem['cityArea'] = osc_sanitize_name( strip_tags( trim( (string)$aItem['cityArea'] ) ) );
+            $aItem['address']  = osc_sanitize_name( strip_tags( trim( (string)$aItem['address'] ) ) );
 
             // Anonymous
             $contactName = (osc_validate_text($contactName,3))? $contactName : __("Anonymous");
@@ -154,7 +154,7 @@
 
             if(is_array($_meta) && count($_meta) > 0) {
                 foreach($_meta as $_m) {
-                    if(isset($_m['pk_i_id']) && trim($_m['pk_i_id']) <> '') {
+                    if(isset($_m['pk_i_id']) && trim((string)$_m['pk_i_id']) <> '') {
                         $meta[$_m['pk_i_id']] = isset($meta[$_m['pk_i_id']]) ? $meta[$_m['pk_i_id']] : '';
                     }
                 }
@@ -354,7 +354,7 @@
             $flash_error .=
                 ((!osc_validate_category($aItem['catId'])) ? _m("Category invalid.") . PHP_EOL : '' ) .
                 ((!osc_validate_number($aItem['price'])) ? _m("Price must be a number.") . PHP_EOL : '' ) .
-                ((!osc_validate_max(number_format($aItem['price'],0,'',''), 15)) ? _m("Price too long.") . PHP_EOL : '' ) .
+                ((!osc_validate_max(number_format((float)$aItem['price'],0,'',''), 15)) ? _m("Price too long.") . PHP_EOL : '' ) .
                 (($aItem['price'] !== null && (int)$aItem['price'] < 0 ) ? _m('Price must be positive number.') . PHP_EOL : '' ) .
                 ((!osc_validate_text($aItem['countryName'], 3, false)) ? _m("Country too short.") . PHP_EOL : '' ) .
                 ((!osc_validate_max($aItem['countryName'], 50)) ? _m("Country too long.") . PHP_EOL : '' ) .
@@ -993,11 +993,11 @@
 
             $aItem  = $this->prepareDataForFunction('add_comment');
 
-            $authorName  = trim(strip_tags($aItem['authorName']));
-            $authorEmail = trim(strip_tags($aItem['authorEmail']));
-            $body        = trim(strip_tags($aItem['body']));
+            $authorName  = trim(strip_tags((string)$aItem['authorName']));
+            $authorEmail = trim(strip_tags((string)$aItem['authorEmail']));
+            $body        = trim(strip_tags((string)$aItem['body']));
             $rating      = (int)trim(strip_tags($aItem['rating']));
-            $title       = trim(strip_tags($aItem['title']));
+            $title       = trim(strip_tags((string)$aItem['title']));
             $itemId      = $aItem['id'];
             $userId      = $aItem['userId'];
             $status_num  = -1;
@@ -1017,7 +1017,7 @@
                 $rating = null;
             }
 
-            $banned = osc_is_banned(trim(strip_tags($aItem['authorEmail'])));
+            $banned = osc_is_banned(trim(strip_tags((string)$aItem['authorEmail'])));
             if($banned==1 || $banned==2) {
                 Session::newInstance()->_setForm('commentAuthorName', $authorName);
                 Session::newInstance()->_setForm('commentTitle', $title);
@@ -1412,7 +1412,7 @@
             }
 
             if ($aItem[ 'price' ] !== null) {
-                $price = str_replace(array(osc_locale_thousands_sep(), osc_locale_dec_point()), array('', '.'), trim($aItem['price']));
+                $price = str_replace(array(osc_locale_thousands_sep(), osc_locale_dec_point()), array('', '.'), trim((string)$aItem['price']));
 
                 // $aItem[ 'price' ] = $price * 1000000; 
                 $comma_split = explode(',', (string)$price);

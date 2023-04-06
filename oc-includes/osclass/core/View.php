@@ -63,7 +63,7 @@
 
         function _next($key)
         {
-            if (is_array($this->aExported[$key])) {
+            if (isset($this->aExported[$key]) && is_array($this->aExported[$key])) {
                 $this->aCurrent[$key] = current( $this->aExported[$key] );
                 if ( $this->aCurrent[$key] ) {
                     next( $this->aExported[$key] );
@@ -75,7 +75,7 @@
 
         function _current($key)
         {
-            if(is_array($this->aExported[$key])) {
+            if(isset($this->aExported[$key]) && is_array($this->aExported[$key])) {
                 if(!isset($this->aCurrent[$key]) ) {
                    $this->aCurrent[$key] = current( $this->aExported[$key] );
                 }
@@ -86,7 +86,7 @@
 
         function _key($key)
         {
-            if ( is_array($this->aExported[$key]) ) {
+            if ( isset($this->aExported[$key]) && is_array($this->aExported[$key]) ) {
                 $_key = key( $this->aExported[$key] ) -1;
                 if($_key == -1) {
                     $_key = count($this->aExported[$key]) -1;
@@ -98,7 +98,7 @@
 
         function _seek($key, $position)
         {
-            if ( is_array($this->aExported[$key]) ) {
+            if ( isset($this->aExported[$key]) && is_array($this->aExported[$key]) ) {
                 $this->_reset($key);
                 for($k = 0;$k<=$position;$k++) {
                     $res = $this->_next($key);

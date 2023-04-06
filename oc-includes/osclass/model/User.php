@@ -118,6 +118,9 @@
          */
         public function findByPrimaryKey($id, $locale = null)
         {
+            if(!is_numeric($id) || $id == null || $id <= 0) {
+                return array();
+            }
             $this->dao->select();
             $this->dao->from($this->getTableName());
             $this->dao->where($this->getPrimaryKey(), $id);
@@ -143,6 +146,7 @@
          */
         public function findByEmail($email, $locale = null)
         {
+            if(trim($email) == '') { return array(); }
             $this->dao->select();
             $this->dao->from($this->getTableName());
             $this->dao->where('s_email', $email);
@@ -167,6 +171,7 @@
          */
         public function findByUsername($username, $locale = null)
         {
+            if(trim($username) == '') { return array(); }
             $this->dao->select();
             $this->dao->from($this->getTableName());
             $this->dao->where('s_username', $username);
@@ -193,10 +198,8 @@
         public function findByCredentials($email, $password, $locale = null)
         {
             $user = $this->findByEmail($email);
-            if(isset($user['s_password'])) {
-                if(osc_verify_password($password, $user['s_password'])) {
-                    return $this->extendData($user, $locale);;
-                }
+            if (isset($user['s_password']) && osc_verify_password($password , $user['s_password'])) {
+                return $this->extendData($user , $locale);
             }
             return array();
         }
@@ -571,4 +574,3 @@
     }
 
     /* file end: ./oc-includes/osclass/model/User.php */
-?>

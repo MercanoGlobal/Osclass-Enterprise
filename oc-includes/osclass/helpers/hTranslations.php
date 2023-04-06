@@ -37,8 +37,8 @@
         if(!$gt) {
             return $key;
         }
-        $string = $gt->translate($key);
-        return osc_apply_filter('gettext', $string);
+        $string = $gt->translate((string)$key);
+        return osc_apply_filter('gettext', (string)$string);
     }
 
     /**
@@ -50,7 +50,7 @@
      * @param string $domain
      */
     function _e($key, $domain = 'core') {
-        echo __($key, $domain);
+        echo __((string)$key, (string)$domain);
     }
 
     /**
@@ -62,7 +62,7 @@
      * @return string
      */
     function _m($key) {
-        return __($key, 'messages');
+        return __((string)$key, 'messages');
     }
 
     /**
@@ -86,8 +86,8 @@
                 return $single_key;
             }
         }
-        $string = $gt->ngettext($single_key, $plural_key, $count);
-        return osc_apply_filter('ngettext', $string);
+        $string = $gt->ngettext((string)$single_key, (string)$plural_key, (int)$count);
+        return osc_apply_filter('ngettext', (string)$string);
     }
 
     /**
@@ -101,8 +101,7 @@
      * @return string
      */
     function _mn($single_key, $plural_key, $count) {
-        return _n($single_key, $plural_key, $count, 'messages');
+        return _n((string)$single_key, (string)$plural_key, (int)$count, 'messages');
     }
 
     /* file end: ./oc-includes/osclass/helpers/hTranslations.php */
-?>
