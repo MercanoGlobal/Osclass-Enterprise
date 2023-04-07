@@ -262,6 +262,7 @@
                             <option value="" <?php echo ( (Params::getParam('b_enabled') == '') ? 'selected="selected"' : '' )?>><?php _e('Choose an option'); ?></option>
                             <option value="0" <?php echo ( (Params::getParam('b_enabled') == '0') ? 'selected="selected"' : '' )?>><?php _e('ON'); ?></option>
                             <option value="1" <?php echo ( (Params::getParam('b_enabled') == '1') ? 'selected="selected"' : '' )?>><?php _e('OFF'); ?></option>
+                            <option value="moderation" <?php echo ( (Params::getParam('b_enabled') == 'moderation') ? 'selected="selected"' : '' )?>><?php _e('UNDER MODERATION ONLY'); ?></option>
                         </select>
                     </div>
                 </div>
