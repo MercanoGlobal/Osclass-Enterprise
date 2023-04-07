@@ -1,6 +1,6 @@
 bender.extend = function(el, opt) {
-        for (var name in opt) el[name] = opt[name];
-        return el;
+    for (var name in opt) el[name] = opt[name];
+    return el;
 }
 bender.responsive = function(options) {
     defaults = {'selector':'#responsive-trigger'};
@@ -33,7 +33,7 @@ bender.photoUploader = function(selector,options) {
 bender.addPhotoUploader = function(max) {
     if(max < $('input[name="'+$(this).attr('name')+'"]').length+$('.photos_div').length){
         var $image = $('<input type="file" name="photos[]">');
-            bender.photoUploaderActions(image);
+        bender.photoUploaderActions(image);
         $('#post-photos').append($image);
     }
 }
@@ -59,14 +59,14 @@ bender.photoUploaderActions = function($element,options) {
 }
 
 function createPlaceHolder($element){
-  var $wrapper = $('<div class="has-placeholder '+$element.attr('class')+'" />');
-  $element.wrap($wrapper);
-  var $label = $('<label/>');
-      $label.append($element.attr('placeholder').replace(/^\s*/gm, ''));
-      $element.removeAttr('placeholder');
+    var $wrapper = $('<div class="has-placeholder '+$element.attr('class')+'" />');
+    $element.wrap($wrapper);
+    var $label = $('<label/>');
+    $label.append($element.attr('placeholder').replace(/^\s*/gm, ''));
+    $element.removeAttr('placeholder');
 
-  $element.before($label);
-  $element.bind('remove', function() {
+    $element.before($label);
+    $element.bind('remove', function() {
         $wrapper.remove();
     });
 }
@@ -142,7 +142,7 @@ $(document).ready(function(event){
     });*/
 
 
-    /////// STARTS PLACE HOLDER
+    /////// STARTS PLACEHOLDER
     $('body').on('focus','.has-placeholder input, .has-placeholder textarea',function(){
         var placeholder = $(this).prev();
         var thatInput  = $(this);
@@ -172,7 +172,7 @@ $(document).ready(function(event){
     });
 
     $('input[placeholder]').each(function(){
-      createPlaceHolder($(this));
+        createPlaceHolder($(this));
     });
 
     $('body').on("created", '[name^="select_"]',function(evt) {
@@ -186,6 +186,7 @@ $(document).ready(function(event){
     $('.flashmessage .ico-close').click(function(){
         $(this).parents('.flashmessage').remove();
     });
+
     $('#mask_as_form select').on('change',function(){
         $('#mask_as_form').submit();
         $('#mask_as_form').submit();
@@ -214,7 +215,5 @@ $(document).ready(function(event){
             e.preventDefault();
             $("a.fancybox").first().click();
         });
-
-
     }
 });

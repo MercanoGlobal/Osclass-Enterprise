@@ -33,7 +33,7 @@
         <div class="form-horizontal">
         <?php if( is_writable( osc_translations_path() ) ) { ?>
             <div class="flashmessage flashmessage-info flashmessage-inline" style="display:block;">
-                <p class="info"><?php printf( __('Download more languages %s'), '<a href="https://github.com/dftd/osclass-market-backup/tree/master/languages" target="_blank">HERE</a>.'); ?></p>
+                <p class="info"><?php printf( __('Download more languages %s'), '<a href="https://enterprise-classifieds.com/languages/" target="_blank">HERE</a>.'); ?></p>
             </div>
             <form class="separate-top" action="<?php echo osc_admin_base_url(true); ?>" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="action" value="add_post" />

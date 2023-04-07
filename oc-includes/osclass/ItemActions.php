@@ -61,7 +61,7 @@
         public function add()
         {
             $aItem       = $this->data;
-            $aItem = osc_apply_filter('item_add_prepare_data', $aItem);
+            $aItem       = osc_apply_filter('item_add_prepare_data', $aItem);
             $is_spam     = 0;
             $enabled     = 1;
             $code        = osc_genRandomPassword();
@@ -1561,7 +1561,7 @@
                             $normal_path = $path = $tmpName."_normal";
                             $size = explode('x', osc_normal_dimensions());
                             $img = $imgres->autoRotate();
-                            
+
                             $img = $img->resizeTo($size[0], $size[1]);
                             if( osc_is_watermark_text() ) {
                                 $img->doWatermarkText(osc_watermark_text(), osc_watermark_text_color());

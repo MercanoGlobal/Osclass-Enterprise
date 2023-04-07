@@ -6,7 +6,7 @@
 Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contains hundreds of fixes and improvements (check the CHANGELOG).<br>
 :arrow_right: Create your own online business with the best open-source classifieds software. :arrow_left:
 
-> [Release Announcement](https://www.valueweb.gr/forums/enterprise-release/release-osclass-enterprise/)
+> [Plugins & Themes Market](https://enterprise-classifieds.com/)
 
 ## Project Info
 - [Official Website](https://enterprise-classifieds.com/)
@@ -15,7 +15,7 @@ Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contain
 
 ## Hosting Requirements and Settings
 - Apache 2.4.17+ / LiteSpeed 5.4+
-- PHP 7.1 =< 7.4
+- PHP 7.1 - 7.4 (Experimental 8+)
 - MySQL 5.7+ / MariaDB 10.2+
 - MySQLi module for PHP
 - GD module for PHP
