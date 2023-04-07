@@ -655,8 +655,8 @@
 
         static public function show_phone_checkbox( $item = null ) {
             if($item==null) { $item = osc_item(); }
-            if( Session::newInstance()->_getForm('showPhone') != 0) {
-                $item['b_show_phone'] = Session::newInstance()->_getForm('showPhone');
+            if( Session::newInstance()->_getForm('showPhone') == 1) {
+                $item['b_show_phone'] = true;
             }
             parent::generic_input_checkbox('showPhone', '1', isset($item['b_show_phone']) ? $item['b_show_phone'] : true );
             return true;
@@ -1252,7 +1252,7 @@
 	<?php
 	$categories = Category::newInstance()->listAll(false);
 	foreach($categories as $c) {
-		echo 'catPriceEnabled['.$c['pk_i_id'].'] = '.$c['b_price_enabled'].';';
+		echo 'catPriceEnabled['.$c['pk_i_id'].'] = '.($c['b_price_enabled'] == 1 ? 1 : 0).';';
 	}
 	?>
     $("#catId").change(function(){
