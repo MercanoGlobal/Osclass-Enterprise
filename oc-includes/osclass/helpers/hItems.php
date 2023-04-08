@@ -590,15 +590,6 @@
     }
 
     /**
-     * Gets if current item is under moderation
-     *
-     * @return boolean
-     */
-    function osc_item_is_under_moderation() {
-        return (osc_item_field("b_enabled") == 0 && osc_item_field("b_active") == 1);
-    }
-
-    /**
      * Gets if current item is enabled
      *
      * @return boolean
