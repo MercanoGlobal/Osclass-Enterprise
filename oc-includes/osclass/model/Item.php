@@ -74,6 +74,7 @@
                 'b_premium',
                 's_ip',
                 'b_enabled',
+                'b_moderate',
                 'b_active',
                 'b_spam',
                 's_secret',
@@ -1254,4 +1255,3 @@
     }
 
     /* file end: ./oc-includes/osclass/model/Item.php */
-?>

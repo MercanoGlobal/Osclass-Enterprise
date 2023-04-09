@@ -111,12 +111,13 @@
                             <li>Updated the Geodata to 2021 (it now contains 248 countries with all the cities and their coordinates)</li>
                             <li>Updated PHPMailer to 5.2.28</li>
                             <li>Updated Google reCAPTCHA to v1.2.4</li>
-                            <li>Updated HTML Purifier to v4.12.0</li>
-                            <li>Updated phpseclib to 2.0.35</li>
+                            <li>Updated HTML Purifier to v4.15.0</li>
+                            <li>Updated phpseclib to 2.0.39</li>
                             <li>Updated PclZip to 2.8.4</li>
                             <li>Updated the default Bender Theme to v3.2.0</li>
                             <li>Updated Breadcrumb to Schema</li>
                             <li>Increased the PHP minimum required version to 7.1.0</li>
+                            <li>Added experimental support for PHP 8.1+</li>
                             <li>Fixed the Internal CRON</li>
                             <li>Multiple fixes and improvements</li>
                         </ul>

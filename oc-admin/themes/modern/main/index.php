@@ -360,7 +360,7 @@
                     <?php foreach($items as $i) { ?>
                         <div class="row">
                             <?php 
-                                if($i['b_active'] == 1 && $i['b_enabled'] == 1 && $i['b_spam'] == 0) {
+                                if($i['b_active'] == 1 && $i['b_enabled'] == 1 && $i['b_spam'] == 0 && $i['b_moderate'] == 0) {
                                     $title = __('Active');
                                     $class = 'active';
                                 } else if($i['b_active'] == 0) {
@@ -369,9 +369,12 @@
                                 } else if($i['b_spam'] == 1) {
                                     $title = __('Spam');
                                     $class = 'spam';
-                                } else if($i['b_enabled'] == 0) {
+                                } else if($i['b_enabled'] == 0 && $i['b_moderate'] == 0) {
                                     $title = __('Blocked');
                                     $class = 'blocked';
+                                } else if($i['b_enabled'] == 0 && $i['b_moderate'] == 1) {
+                                    $title = __('Awaiting Moderation');
+                                    $class = 'moderation';
                                 }
                             ?>
 

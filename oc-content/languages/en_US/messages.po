@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2017-04-24 06:56:42+00:00\n"
-"PO-Revision-Date: 2023-04-01 00:12+0300\n"
+"PO-Revision-Date: 2023-04-09 15:18+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -1298,19 +1298,19 @@ msgstr ""
 msgid "Description too long."
 msgstr ""
 
-#: oc-includes/osclass/ItemActions.php:957
+#: oc-includes/osclass/ItemActions.php:983
 msgid "We just sent your message to %s"
 msgstr ""
 
-#: oc-includes/osclass/ItemActions.php:1015
+#: oc-includes/osclass/ItemActions.php:1041
 msgid "Your rating has been removed as you already rated this listing %d time(s)"
 msgstr ""
 
-#: oc-includes/osclass/ItemActions.php:1484
+#: oc-includes/osclass/ItemActions.php:1510
 msgid "One of the files you tried to upload exceeds the maximum size."
 msgstr ""
 
-#: oc-includes/osclass/ItemActions.php:1538 oc-includes/osclass/controller/contact.php:168
+#: oc-includes/osclass/ItemActions.php:1564 oc-includes/osclass/controller/contact.php:168
 msgid "The file you tried to upload does not have a valid extension."
 msgstr ""
 

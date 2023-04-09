@@ -478,7 +478,11 @@
                     $this->withFilters = true;
                 }
                 if($k == 'b_enabled' && $v != '') {
-                    $this->mSearch->addItemConditions(DB_TABLE_PREFIX.'t_item.b_enabled = '.$v);
+                    if($v == 'moderation') {
+                        $this->mSearch->addItemConditions(DB_TABLE_PREFIX.'t_item.b_enabled = 0 AND ' . DB_TABLE_PREFIX . 't_item.b_moderate = 1');
+                    } else {
+                        $this->mSearch->addItemConditions(DB_TABLE_PREFIX.'t_item.b_enabled = '.$v);
+                    }
                     $this->withFilters = true;
                 }
                 if($k == 'b_spam' && $v != '') {
@@ -512,7 +516,7 @@
 
             // column sort
             $sort     = $_get['sort'];
-            $arraySortColumns = array('date'  => 'dt_pub_date', 'expiration'  => 'dt_expiration');
+            $arraySortColumns = array('date' => 'dt_pub_date', 'expiration' => 'dt_expiration');
             if(!array_key_exists($sort, $arraySortColumns)) {
                 $sort = 'dt_pub_date';
             } else {
@@ -543,15 +547,16 @@
         }
 
         /**
-         * Get the status of the row. There are five status:
+         * Get the status of the row. There are seven statuses:
          *     - spam
+         *     - awaiting moderation
          *     - blocked
          *     - inactive
          *     - premium
          *     - active
          *     - expired
          *
-         * @since 3.2 -> 3.4.x
+         * @since 3.2 -> 3.4.x -> 3.10.0
          *
          * @return array Array with the class and text of the status of the listing in this row. Example:
          *     array(
@@ -565,6 +570,13 @@
                 return array(
                     'class' => 'status-spam',
                     'text'  => __('Spam')
+                );
+            }
+
+            if( osc_item_is_under_moderation() ) {
+                return array(
+                    'class' => 'status-moderation',
+                    'text'  => __('Awaiting Moderation')
                 );
             }
 

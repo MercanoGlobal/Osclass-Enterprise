@@ -291,7 +291,7 @@
                 }
 
                 if (!$this->is_admin && osc_moderate_admin_post()) {
-                    $this->disable($item['pk_i_id']);
+                    $this->moderate($item['pk_i_id']);
                 }
 
                 // THIS HOOK IS FINE, YAY!
@@ -308,7 +308,7 @@
 
             // Sanitize
             foreach(@$aItem['title'] as $key=>$value) {
-                $aItem['title'][$key] = strip_tags( trim ( $value ) );
+                $aItem['title'][$key] = strip_tags( trim ( (string)$value ) );
             }
 
             $aItem['price']        = $aItem['price'] !== null ? strip_tags(trim((string) $aItem['price'])) : $aItem['price'];
@@ -491,7 +491,7 @@
                 unset($old_item);
 
                 if (!$this->is_admin && osc_moderate_admin_edit()) {
-                    $this->disable($aItem['idItem']);
+                    $this->moderate($aItem['idItem']);
                 }
 
                 // THIS HOOK IS FINE, YAY!
@@ -518,7 +518,7 @@
          */
         private function _updateStats($result, $old_item, $oldIsExpired, $old_item_location, $aItem, $newIsExpired, $location)
         {
-            if($result==1 && $old_item['b_enabled']==1 && $old_item['b_active']==1 && $old_item['b_spam']==0) {
+            if($result==1 && $old_item['b_enabled']==1 && $old_item['b_active']==1 && $old_item['b_moderate'] == 0 && $old_item['b_spam']==0) {
                 // if old item is expired and new item is not expired.
                 if($oldIsExpired && !$newIsExpired) {
                     // increment new item stats (user, category, location_stats)
@@ -714,7 +714,7 @@
 
         /**
          * Enable an item
-         * Set s_enabled value to 1, for a given item id
+         * Set b_enabled value to 1 and b_moderate to 0, for a given item id
          *
          * @param int $id
          * @return bool
@@ -722,7 +722,7 @@
         public function enable($id)
         {
             $result = $this->manager->update(
-                array('b_enabled' => 1),
+                array('b_enabled' => 1, 'b_moderate' => 0),
                 array('pk_i_id' => $id)
             );
 
@@ -749,6 +749,32 @@
         {
             $result = $this->manager->update(
                 array('b_enabled' => 0),
+                array('pk_i_id' => $id)
+            );
+
+            // updated correctly
+            if($result == 1) {
+                osc_run_hook( 'disable_item', $id );
+                $item = $this->manager->findByPrimaryKey($id);
+                if($item['b_active']==1 && $item['b_spam']==0 && !osc_isExpired($item['dt_expiration'])) {
+                   $this->_decreaseStats($item);
+                }
+                return true;
+            }
+            return false;
+        }
+
+        /**
+         * Moderate an item.
+         * Set b_enabled value to 0 and b_moderate to 1, for a given item id
+         *
+         * @param int $id
+         * @return bool
+         */
+        public function moderate($id)
+        {
+            $result = $this->manager->update(
+                array('b_enabled' => 0, 'b_moderate' => 1),
                 array('pk_i_id' => $id)
             );
 

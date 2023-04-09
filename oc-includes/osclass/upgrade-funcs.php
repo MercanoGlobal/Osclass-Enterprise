@@ -563,6 +563,7 @@ CREATE TABLE %st_item_description_tmp (
         $comm->query(sprintf('ALTER TABLE %st_item ADD COLUMN s_contact_phone VARCHAR(100) NULL AFTER s_contact_email;', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_item ADD COLUMN b_show_phone TINYINT(1) NULL DEFAULT 1 AFTER b_show_email;', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_item ADD i_renewed INT(3) NULL DEFAULT 0 AFTER b_show_phone', DB_TABLE_PREFIX));
+        $comm->query(sprintf('ALTER TABLE %st_item ADD b_moderate TINYINT(1) NOT NULL DEFAULT 0 AFTER b_enabled', DB_TABLE_PREFIX));
         $comm->query(sprintf('ALTER TABLE %st_item_comment ADD i_rating INT(3) NULL AFTER s_body', DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'enable_comment_rating', '0', 'BOOLEAN')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'comment_rating_limit', '1', 'INTEGER')", DB_TABLE_PREFIX));
@@ -576,18 +577,28 @@ CREATE TABLE %st_item_description_tmp (
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'custom_css', '', 'STRING')", DB_TABLE_PREFIX));
         $comm->query(sprintf("INSERT INTO %st_preference VALUES ('osclass', 'custom_html', '', 'STRING')", DB_TABLE_PREFIX));
         osc_set_preference('item_posted_redirect', 'category', 'osclass', 'STRING');
+
+        $result = $comm->query(sprintf("SELECT * FROM %st_item WHERE b_enabled = 0", DB_TABLE_PREFIX));
+        $items  = $result->result();
+
+        foreach($items as $item) {
+            Item::newInstance()->update(array('b_moderate' => 1),
+            array('pk_i_id'  => $item['pk_i_id']));
+        }
+
+        unset($items);
     }
 
     osc_changeVersionTo( strtr( OSCLASS_VERSION , array ( '.' => '' ) ));
 
     if(!defined('IS_AJAX') || !IS_AJAX) {
         if(empty($aMessages)) {
-            osc_add_flash_ok_message(_m('Osclass has been updated successfully. <a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Need more help?</a>'), 'admin');
+            osc_add_flash_ok_message(_m('Osclass Enterprise has been updated successfully. <a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Need more help?</a>'), 'admin');
             echo '<script type="text/javascript"> window.location = "'.osc_admin_base_url(true).'?page=tools&action=version"; </script>';
         } else {
             echo '<div class="well ui-rounded-corners separate-top-medium">';
-            echo '<p>'.__('Osclass &raquo; Updated correctly').'</p>';
-            echo '<p>'.__('Osclass has been updated successfully. <a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Need more help?</a>').'</p>';
+            echo '<p>'.__('Osclass Enterprise &raquo; Updated correctly').'</p>';
+            echo '<p>'.__('Osclass Enterprise has been updated successfully. <a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Need more help?</a>').'</p>';
             foreach($aMessages as $msg) {
                 echo "<p>".$msg."</p>";
             }
