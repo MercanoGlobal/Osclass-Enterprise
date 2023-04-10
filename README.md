@@ -13,6 +13,10 @@ Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contain
 - [Code Repository](https://github.com/MercanoG/Osclass-Enterprise)
 - [Documentation](https://docs.enterprise-classifieds.com/)
 
+## Like what we do?
+Support our open-source project and help us keep creating amazing software for you!
+Please consider gifting us a coffee (or two!) :point_right: <a href="https://www.buymeacoffee.com/Osclass"><img src="https://i.ibb.co/TP3qYLG/donate-button.png" alt="Support Us!"></a>
+
 ## Hosting Requirements and Settings
 - Apache 2.4.17+ / LiteSpeed 5.4+
 - PHP 7.1 - 7.4 (Experimental 8+)
