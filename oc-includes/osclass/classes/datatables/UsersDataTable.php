@@ -101,10 +101,10 @@
             $this->addColumn('name', __('Name'));
             $this->addColumn('phone', __('Phone'));
             $this->addColumn('ip', __('IP'));
-            $this->addColumn('date', '<a href="'.osc_esc_html($url_base.$arg_date).'">'.__('Register Date').'</a>');
+            $this->addColumn('date', '<a href="'.osc_esc_html($url_base.$arg_date).'">'.__('Register date').'</a>');
             $this->addColumn('update_date', '<a href="'.osc_esc_html($url_base.$arg_update_date).'">'.__('Update date').'</a>');
             $this->addColumn('access_date', '<a href="'.osc_esc_html($url_base.$arg_access_date).'">'.__('Last access date').'</a>');
-            $this->addColumn('items', '<a href="'.osc_esc_html($url_base.$arg_items).'">'.__('Items').'</a>');
+            $this->addColumn('items', '<a href="'.osc_esc_html($url_base.$arg_items).'">'.__('Active items').'</a>');
 
             $dummy = &$this;
             osc_run_hook("admin_users_table", $dummy);

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-04-09 15:18+0300\n"
+"PO-Revision-Date: 2023-04-13 16:05+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -177,10 +177,6 @@ msgstr ""
 
 #: oc-admin/comments.php:264 oc-admin/comments.php:265 oc-admin/comments.php:266 oc-admin/comments.php:267 oc-admin/comments.php:268
 msgid "Are you sure you want to %s the selected comments?"
-msgstr ""
-
-#: oc-includes/osclass/classes/datatables/UsersDataTable.php:127
-msgid "Log in as %s"
 msgstr ""
 
 #: oc-admin/comments.php:265 oc-admin/items.php:452 oc-admin/items.php:869 oc-admin/themes/modern/appearance/index.php:101 oc-admin/themes/modern/comments/frm.php:79 oc-admin/themes/modern/users/alerts.php:148 oc-admin/users.php:98 oc-admin/users.php:663 oc-includes/osclass/classes/datatables/AlertsDataTable.php:87 oc-includes/osclass/classes/datatables/CommentsDataTable.php:122 oc-includes/osclass/classes/datatables/ItemsDataTable.php:239
@@ -1604,10 +1600,6 @@ msgstr ""
 #: oc-admin/themes/modern/main/index.php:64 oc-admin/themes/modern/main/index.php:118 oc-admin/themes/modern/main/index.php:172 oc-admin/themes/modern/stats/comments.php:76 oc-admin/themes/modern/stats/items.php:94 oc-admin/themes/modern/stats/items.php:96 oc-admin/themes/modern/stats/items.php:102 oc-admin/themes/modern/stats/items.php:104 oc-admin/themes/modern/stats/reports.php:71 oc-admin/themes/modern/stats/users.php:83
 #: oc-includes/osclass/classes/datatables/BanRulesDataTable.php:55 oc-includes/osclass/classes/datatables/CommentsDataTable.php:93 oc-includes/osclass/classes/datatables/ItemsDataTable.php:142 oc-includes/osclass/classes/datatables/ItemsDataTable.php:208 oc-includes/osclass/classes/datatables/MediaDataTable.php:79
 msgid "Date"
-msgstr ""
-
-#: oc-includes/osclass/classes/datatables/UsersDataTable.php:104
-msgid "Register Date"
 msgstr ""
 
 #: oc-admin/themes/modern/main/index.php:119 oc-admin/themes/modern/users/ban.php:24 oc-admin/themes/modern/users/frm.php:46 oc-admin/themes/modern/users/index.php:24 oc-admin/themes/modern/users/settings.php:25 oc-includes/osclass/classes/AdminMenu.php:55 oc-includes/osclass/classes/AdminMenu.php:66 oc-includes/osclass/classes/AdminMenu.php:67
@@ -3349,7 +3341,7 @@ msgstr ""
 msgid "Listing Statistics &raquo; %s"
 msgstr ""
 
-#: oc-admin/themes/modern/stats/items.php:95 oc-includes/osclass/classes/datatables/UsersDataTable.php:107
+#: oc-admin/themes/modern/stats/items.php:95
 msgid "Items"
 msgstr ""
 
@@ -4377,6 +4369,10 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
+#: oc-includes/osclass/classes/datatables/UsersDataTable.php:104
+msgid "Register date"
+msgstr ""
+
 #: oc-includes/osclass/classes/datatables/UsersDataTable.php:105
 msgid "Update date"
 msgstr ""
@@ -4385,8 +4381,16 @@ msgstr ""
 msgid "Last access date"
 msgstr ""
 
+#: oc-includes/osclass/classes/datatables/UsersDataTable.php:107
+msgid "Active items"
+msgstr ""
+
 #: oc-includes/osclass/classes/datatables/UsersDataTable.php:126 oc-includes/osclass/functions.php:169
 msgid "Public profile"
+msgstr ""
+
+#: oc-includes/osclass/classes/datatables/UsersDataTable.php:127
+msgid "Log in as %s"
 msgstr ""
 
 #: oc-includes/osclass/classes/datatables/UsersDataTable.php:140

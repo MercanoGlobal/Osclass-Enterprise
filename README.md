@@ -15,7 +15,7 @@ Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contain
 
 ## Like what we do?
 Support our open-source project and help us keep creating amazing software for you!<br>
-Please consider gifting us a coffee (or two!) :point_down: <br>
+:point_down: Please consider gifting us a coffee (or two!) :point_down: <br>
 <a href="https://www.buymeacoffee.com/Osclass"><img src="https://i.ibb.co/TP3qYLG/donate-button.png" alt="Support Us!"></a>
 
 ## Hosting Requirements and Settings
