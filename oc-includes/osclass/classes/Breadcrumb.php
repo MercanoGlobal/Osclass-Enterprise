@@ -48,8 +48,11 @@
                         break;
                     }
 
+                    $parentCategory = null;
                     $aCategory      = osc_get_category('id', osc_item_category_id());
-                    $parentCategory = osc_get_category('id', $aCategory['fk_i_parent_id']);
+                    if (isset($aCategory['fk_i_parent_id'])) {
+                        $parentCategory = osc_get_category('id', $aCategory['fk_i_parent_id']);
+                    }
                     // remove
                     View::newInstance()->_erase('categories');
                     View::newInstance()->_erase('subcategories');
@@ -413,4 +416,3 @@
     }
 
     /* file end: ./oc-includes/osclass/classes/Breadcrumb.php */
-?>

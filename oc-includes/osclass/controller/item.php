@@ -443,20 +443,24 @@
                 case 'send_friend':
                     $item = $this->itemManager->findByPrimaryKey( Params::getParam('id') );
 
-                    $this->_exportVariableToView('item', $item);
-
-                    $this->doView('item-send-friend.php');
+                    if ( !empty( $item ) ) {
+                        $this->_exportVariableToView( 'item' , $item );
+                        $this->doView( 'item-send-friend.php' );
+                    } else {
+                        osc_add_flash_error_message( _m( "The listing doesn't exist" ) );
+                        $this->redirectTo( osc_base_url( true ) );
+                    }
                 break;
                 case 'send_friend_post':
                     osc_csrf_check();
                     $item = $this->itemManager->findByPrimaryKey( Params::getParam('id') );
                     $this->_exportVariableToView('item', $item);
 
-                    Session::newInstance()->_setForm("yourEmail",   Params::getParam('yourEmail'));
-                    Session::newInstance()->_setForm("yourName",    Params::getParam('yourName'));
-                    Session::newInstance()->_setForm("friendName",  Params::getParam('friendName'));
-                    Session::newInstance()->_setForm("friendEmail", Params::getParam('friendEmail'));
-                    Session::newInstance()->_setForm("message_body",Params::getParam('message'));
+                    Session::newInstance()->_setForm("yourEmail",    Params::getParam('yourEmail'));
+                    Session::newInstance()->_setForm("yourName",     Params::getParam('yourName'));
+                    Session::newInstance()->_setForm("friendName",   Params::getParam('friendName'));
+                    Session::newInstance()->_setForm("friendEmail",  Params::getParam('friendEmail'));
+                    Session::newInstance()->_setForm("message_body", Params::getParam('message'));
 
                     if ((osc_recaptcha_private_key() != '')) {
                         if(!osc_check_recaptcha()) {
@@ -588,13 +592,13 @@
                                  osc_add_flash_warning_message($msg);
                             break;
                         case 5:  $msg = _m('Your comment has been marked as spam');
-                            osc_add_flash_error_message($msg);
+                                 osc_add_flash_error_message($msg);
                             break;
                         case 6:  $msg = _m('You need to be logged in to comment');
-                            osc_add_flash_error_message($msg);
+                                 osc_add_flash_error_message($msg);
                             break;
                         case 7:  $msg = _m('Sorry, comments are disabled');
-                            osc_add_flash_error_message($msg);
+                                 osc_add_flash_error_message($msg);
                             break;
                     }
 
@@ -643,9 +647,9 @@
                         $this->redirectTo( osc_item_url() );
                     }
 
-                     $commentManager->deleteByPrimaryKey($commentId);
-                     osc_add_flash_ok_message( _m('The comment has been deleted' ) );
-                     $this->redirectTo( osc_item_url() );
+                    $commentManager->deleteByPrimaryKey($commentId);
+                    osc_add_flash_ok_message( _m('The comment has been deleted' ) );
+                    $this->redirectTo( osc_item_url() );
                 break;
                 default:
                     // if there isn't ID, show an error 404
