@@ -113,7 +113,7 @@ function customPageHeader() { ?>
 
             });
         </script>
-        <?php ItemForm::location_javascript_new('admin'); ?>
+        <?php ItemForm::location_javascript('admin'); ?>
         <?php if( osc_images_enabled_at_items() ) ItemForm::photos_javascript(); ?>
         <?php
     }

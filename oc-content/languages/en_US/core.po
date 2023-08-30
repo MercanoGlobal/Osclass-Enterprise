@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-04-20 16:05+0300\n"
+"PO-Revision-Date: 2023-08-30 15:05+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: index.php:52 oc-admin/themes/modern/tools/maintenance.php:38
 msgid "Maintenance &raquo; %s"
@@ -34,7 +34,7 @@ msgstr ""
 #: oc-admin/themes/modern/pages/index.php:214 oc-admin/themes/modern/settings/currencies.php:110 oc-admin/themes/modern/settings/currencies.php:132 oc-admin/themes/modern/settings/currencies.php:175 oc-admin/themes/modern/settings/currencies.php:186 oc-admin/themes/modern/settings/locations.php:412 oc-admin/themes/modern/users/alerts.php:150 oc-admin/themes/modern/users/alerts.php:205 oc-admin/themes/modern/users/alerts.php:216
 #: oc-admin/themes/modern/users/ban.php:202 oc-admin/themes/modern/users/ban.php:213 oc-admin/themes/modern/users/frm.php:379 oc-admin/themes/modern/users/frm.php:419 oc-admin/themes/modern/users/index.php:331 oc-admin/themes/modern/users/index.php:342 oc-admin/users.php:534 oc-admin/users.php:535 oc-admin/users.php:667 oc-includes/osclass/classes/datatables/AlertsDataTable.php:82
 #: oc-includes/osclass/classes/datatables/BanRulesDataTable.php:73 oc-includes/osclass/classes/datatables/CommentsDataTable.php:116 oc-includes/osclass/classes/datatables/ItemsDataTable.php:268 oc-includes/osclass/classes/datatables/ItemsDataTable.php:370 oc-includes/osclass/classes/datatables/MediaDataTable.php:94 oc-includes/osclass/classes/datatables/PagesDataTable.php:87 oc-includes/osclass/classes/datatables/UsersDataTable.php:125
-#: oc-includes/osclass/frm/Item.form.class.php:1178 oc-includes/osclass/frm/Item.form.class.php:1353 oc-includes/osclass/frm/Item.form.class.php:1360 oc-includes/osclass/frm/Item.form.class.php:1505
+#: oc-includes/osclass/frm/Item.form.class.php:1203 oc-includes/osclass/frm/Item.form.class.php:1378 oc-includes/osclass/frm/Item.form.class.php:1385 oc-includes/osclass/frm/Item.form.class.php:1528
 msgid "Delete"
 msgstr ""
 
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Are you sure you want to %s the selected admins?"
 msgstr ""
 
-#: oc-admin/ajax/ajax.php:56 oc-includes/osclass/frm/Item.form.class.php:986 oc-includes/osclass/frm/User.form.class.php:382 oc-includes/osclass/frm/User.form.class.php:446
+#: oc-admin/ajax/ajax.php:56 oc-includes/osclass/frm/Item.form.class.php:1012 oc-includes/osclass/frm/User.form.class.php:382 oc-includes/osclass/frm/User.form.class.php:446
 msgid "No results"
 msgstr ""
 
@@ -444,7 +444,7 @@ msgstr ""
 #: oc-admin/themes/modern/languages/index.php:174 oc-admin/themes/modern/languages/index.php:186 oc-admin/themes/modern/languages/index.php:223 oc-admin/themes/modern/market/header.php:168 oc-admin/themes/modern/media/index.php:168 oc-admin/themes/modern/media/index.php:179 oc-admin/themes/modern/pages/frm.php:131 oc-admin/themes/modern/pages/index.php:202 oc-admin/themes/modern/pages/index.php:213 oc-admin/themes/modern/plugins/index.php:244
 #: oc-admin/themes/modern/plugins/index.php:261 oc-admin/themes/modern/settings/currencies.php:174 oc-admin/themes/modern/settings/currencies.php:185 oc-admin/themes/modern/settings/currency_form.php:132 oc-admin/themes/modern/settings/locations.php:129 oc-admin/themes/modern/settings/locations.php:193 oc-admin/themes/modern/settings/locations.php:220 oc-admin/themes/modern/settings/locations.php:246
 #: oc-admin/themes/modern/settings/locations.php:275 oc-admin/themes/modern/settings/locations.php:303 oc-admin/themes/modern/settings/locations.php:332 oc-admin/themes/modern/settings/locations.php:411 oc-admin/themes/modern/settings/locations.php:448 oc-admin/themes/modern/users/alerts.php:204 oc-admin/themes/modern/users/alerts.php:215 oc-admin/themes/modern/users/ban.php:201 oc-admin/themes/modern/users/ban.php:212
-#: oc-admin/themes/modern/users/frm.php:418 oc-admin/themes/modern/users/index.php:330 oc-admin/themes/modern/users/index.php:341 oc-includes/osclass/frm/Item.form.class.php:1503
+#: oc-admin/themes/modern/users/frm.php:418 oc-admin/themes/modern/users/index.php:330 oc-admin/themes/modern/users/index.php:341 oc-includes/osclass/frm/Item.form.class.php:1526
 msgid "Cancel"
 msgstr ""
 
@@ -2138,11 +2138,11 @@ msgstr ""
 msgid "Page title: this field is required"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/index.php:60 oc-includes/osclass/frm/Admin.form.class.php:104 oc-includes/osclass/frm/Comment.form.class.php:102 oc-includes/osclass/frm/Contact.form.class.php:114 oc-includes/osclass/frm/Item.form.class.php:803 oc-includes/osclass/frm/Item.form.class.php:1094 oc-includes/osclass/frm/SendFriend.form.class.php:108 oc-includes/osclass/frm/User.form.class.php:207 oc-includes/osclass/frm/User.form.class.php:321
+#: oc-admin/themes/modern/settings/index.php:60 oc-includes/osclass/frm/Admin.form.class.php:104 oc-includes/osclass/frm/Comment.form.class.php:102 oc-includes/osclass/frm/Contact.form.class.php:114 oc-includes/osclass/frm/Item.form.class.php:830 oc-includes/osclass/frm/Item.form.class.php:1120 oc-includes/osclass/frm/SendFriend.form.class.php:108 oc-includes/osclass/frm/User.form.class.php:207 oc-includes/osclass/frm/User.form.class.php:321
 msgid "Email: this field is required"
 msgstr ""
 
-#: oc-admin/themes/modern/settings/index.php:61 oc-includes/osclass/ItemActions.php:997 oc-includes/osclass/frm/Admin.form.class.php:105 oc-includes/osclass/frm/Comment.form.class.php:115 oc-includes/osclass/frm/Contact.form.class.php:109 oc-includes/osclass/frm/Item.form.class.php:804 oc-includes/osclass/frm/Item.form.class.php:1095 oc-includes/osclass/frm/SendFriend.form.class.php:107 oc-includes/osclass/frm/User.form.class.php:208
+#: oc-admin/themes/modern/settings/index.php:61 oc-includes/osclass/ItemActions.php:997 oc-includes/osclass/frm/Admin.form.class.php:105 oc-includes/osclass/frm/Comment.form.class.php:115 oc-includes/osclass/frm/Contact.form.class.php:109 oc-includes/osclass/frm/Item.form.class.php:831 oc-includes/osclass/frm/Item.form.class.php:1121 oc-includes/osclass/frm/SendFriend.form.class.php:107 oc-includes/osclass/frm/User.form.class.php:208
 #: oc-includes/osclass/frm/User.form.class.php:322
 msgid "Invalid email address"
 msgstr ""
@@ -4485,7 +4485,7 @@ msgstr ""
 msgid "Name: enter at least 3 characters"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:799 oc-includes/osclass/frm/Item.form.class.php:1090 oc-includes/osclass/frm/User.form.class.php:203 oc-includes/osclass/frm/User.form.class.php:317
+#: oc-includes/osclass/frm/Item.form.class.php:826 oc-includes/osclass/frm/Item.form.class.php:1116 oc-includes/osclass/frm/User.form.class.php:203 oc-includes/osclass/frm/User.form.class.php:317
 msgid "Name: enter at least 4 characters"
 msgstr ""
 
@@ -4741,137 +4741,137 @@ msgstr ""
 msgid "No Subcategory"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:480 oc-includes/osclass/frm/User.form.class.php:114
+#: oc-includes/osclass/frm/Item.form.class.php:486 oc-includes/osclass/frm/User.form.class.php:114
 msgid "Select a country..."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:524 oc-includes/osclass/frm/Item.form.class.php:902 oc-includes/osclass/frm/Item.form.class.php:935 oc-includes/osclass/frm/Item.form.class.php:942 oc-includes/osclass/frm/Item.form.class.php:944 oc-includes/osclass/frm/User.form.class.php:127 oc-includes/osclass/frm/User.form.class.php:371 oc-includes/osclass/frm/User.form.class.php:395 oc-includes/osclass/frm/User.form.class.php:402
+#: oc-includes/osclass/frm/Item.form.class.php:543 oc-includes/osclass/frm/Item.form.class.php:928 oc-includes/osclass/frm/Item.form.class.php:961 oc-includes/osclass/frm/Item.form.class.php:968 oc-includes/osclass/frm/Item.form.class.php:970 oc-includes/osclass/frm/User.form.class.php:127 oc-includes/osclass/frm/User.form.class.php:371 oc-includes/osclass/frm/User.form.class.php:395 oc-includes/osclass/frm/User.form.class.php:402
 #: oc-includes/osclass/frm/User.form.class.php:404
 msgid "Select a region..."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:550 oc-includes/osclass/frm/Item.form.class.php:926 oc-includes/osclass/frm/Item.form.class.php:938 oc-includes/osclass/frm/Item.form.class.php:948 oc-includes/osclass/frm/Item.form.class.php:950 oc-includes/osclass/frm/Item.form.class.php:978 oc-includes/osclass/frm/User.form.class.php:139 oc-includes/osclass/frm/User.form.class.php:390 oc-includes/osclass/frm/User.form.class.php:398
+#: oc-includes/osclass/frm/Item.form.class.php:576 oc-includes/osclass/frm/Item.form.class.php:952 oc-includes/osclass/frm/Item.form.class.php:964 oc-includes/osclass/frm/Item.form.class.php:974 oc-includes/osclass/frm/Item.form.class.php:976 oc-includes/osclass/frm/Item.form.class.php:1004 oc-includes/osclass/frm/User.form.class.php:139 oc-includes/osclass/frm/User.form.class.php:390 oc-includes/osclass/frm/User.form.class.php:398
 #: oc-includes/osclass/frm/User.form.class.php:408 oc-includes/osclass/frm/User.form.class.php:410 oc-includes/osclass/frm/User.form.class.php:439
 msgid "Select a city..."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:747 oc-includes/osclass/frm/Item.form.class.php:1026
+#: oc-includes/osclass/frm/Item.form.class.php:774 oc-includes/osclass/frm/Item.form.class.php:1052
 msgid "Description needs to be longer"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:785 oc-includes/osclass/frm/Item.form.class.php:1076
+#: oc-includes/osclass/frm/Item.form.class.php:812 oc-includes/osclass/frm/Item.form.class.php:1102
 msgid "Choose one category"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:788 oc-includes/osclass/frm/Item.form.class.php:1079
+#: oc-includes/osclass/frm/Item.form.class.php:815 oc-includes/osclass/frm/Item.form.class.php:1105
 msgid "Price: no more than 25 characters"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:790 oc-includes/osclass/frm/Item.form.class.php:1081
+#: oc-includes/osclass/frm/Item.form.class.php:817 oc-includes/osclass/frm/Item.form.class.php:1107
 msgid "Currency: make your selection"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:794 oc-includes/osclass/frm/Item.form.class.php:1085
+#: oc-includes/osclass/frm/Item.form.class.php:821 oc-includes/osclass/frm/Item.form.class.php:1111
 msgid "Photo: must be %s"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:800 oc-includes/osclass/frm/Item.form.class.php:1091 oc-includes/osclass/frm/User.form.class.php:204 oc-includes/osclass/frm/User.form.class.php:318
+#: oc-includes/osclass/frm/Item.form.class.php:827 oc-includes/osclass/frm/Item.form.class.php:1117 oc-includes/osclass/frm/User.form.class.php:204 oc-includes/osclass/frm/User.form.class.php:318
 msgid "Name: no more than 35 characters"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:808 oc-includes/osclass/frm/Item.form.class.php:1105
+#: oc-includes/osclass/frm/Item.form.class.php:835 oc-includes/osclass/frm/Item.form.class.php:1131
 msgid "Address: enter at least 4 characters"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:809 oc-includes/osclass/frm/Item.form.class.php:1106
+#: oc-includes/osclass/frm/Item.form.class.php:836 oc-includes/osclass/frm/Item.form.class.php:1132
 msgid "Address: no more than 100 characters"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:848 oc-includes/osclass/frm/Item.form.class.php:1145 oc-includes/osclass/frm/Item.form.class.php:1387
+#: oc-includes/osclass/frm/Item.form.class.php:875 oc-includes/osclass/frm/Item.form.class.php:1171 oc-includes/osclass/frm/Item.form.class.php:1411
 msgid "This action can't be undone. Are you sure you want to continue?"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1076
+#: oc-includes/osclass/frm/Item.form.class.php:1124
 msgid "Select a region"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1077
+#: oc-includes/osclass/frm/Item.form.class.php:1125
 msgid "Select a city"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1079
+#: oc-includes/osclass/frm/Item.form.class.php:1127
 msgid "City area: enter at least 3 characters"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1080
+#: oc-includes/osclass/frm/Item.form.class.php:1128
 msgid "City area: no more than 50 characters"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1211
+#: oc-includes/osclass/frm/Item.form.class.php:1236
 msgid "Remove"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1223
+#: oc-includes/osclass/frm/Item.form.class.php:1248
 msgid "Sorry, you have reached the maximum number of images per listing"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1347
+#: oc-includes/osclass/frm/Item.form.class.php:1372
 msgid "Images already uploaded"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1483
+#: oc-includes/osclass/frm/Item.form.class.php:1506
 msgid "Too many items ({netItems}) would be uploaded. Item limit is {itemLimit}."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1484
+#: oc-includes/osclass/frm/Item.form.class.php:1507
 msgid "The files are being uploaded, if you leave now the upload will be cancelled."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1485
+#: oc-includes/osclass/frm/Item.form.class.php:1508
 msgid "{file} has an invalid extension. Valid extension(s): {extensions}."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1486
+#: oc-includes/osclass/frm/Item.form.class.php:1509
 msgid "{file} is too large, maximum file size is {sizeLimit}."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1487
+#: oc-includes/osclass/frm/Item.form.class.php:1510
 msgid "{file} is empty, please select files again without it."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1500
+#: oc-includes/osclass/frm/Item.form.class.php:1523
 msgid "Click or Drop to upload images"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1501
+#: oc-includes/osclass/frm/Item.form.class.php:1524
 msgid "Processing..."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1502
+#: oc-includes/osclass/frm/Item.form.class.php:1525
 msgid "Retry"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1504
+#: oc-includes/osclass/frm/Item.form.class.php:1527
 msgid "Upload failed"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1506
+#: oc-includes/osclass/frm/Item.form.class.php:1529
 msgid "Deleting..."
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1507
+#: oc-includes/osclass/frm/Item.form.class.php:1530
 msgid "{percent}% of {total_size}"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1520
+#: oc-includes/osclass/frm/Item.form.class.php:1543
 msgid "Primary image"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1522
+#: oc-includes/osclass/frm/Item.form.class.php:1545
 msgid "Make primary image"
 msgstr ""
 
-#: oc-includes/osclass/frm/Item.form.class.php:1562
+#: oc-includes/osclass/frm/Item.form.class.php:1585
 msgid "Too many items were uploaded. Item limit is %d."
 msgstr ""
 
