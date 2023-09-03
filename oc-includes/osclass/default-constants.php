@@ -17,7 +17,7 @@
  */
 
     if( !defined('OSCLASS_VERSION') ) {
-        define('OSCLASS_VERSION', '3.10.0');
+        define('OSCLASS_VERSION', '3.10.1');
     }
 
     if( !defined('MULTISITE') ) {
@@ -119,4 +119,8 @@
 
     if( !defined('OSC_CACHE_TTL') ) {
         define('OSC_CACHE_TTL', 60);
+    }
+
+    if( !defined('UPGRADE_SKIP_DB') ) {
+        define('UPGRADE_SKIP_DB', true);
     }

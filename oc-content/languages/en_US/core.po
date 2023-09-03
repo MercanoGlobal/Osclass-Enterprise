@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2023-08-30 15:05+0300\n"
+"PO-Revision-Date: 2023-09-03 13:59+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -4293,7 +4293,7 @@ msgstr ""
 msgid "%s is corrupt or broken!"
 msgstr ""
 
-#: oc-includes/osclass/classes/Plugins.php:97
+#: oc-includes/osclass/classes/Plugins.php:100
 msgid "Plugin %s is missing the index.php file %s"
 msgstr ""
 
@@ -5064,7 +5064,7 @@ msgid "PHP version >= 7.1.x"
 msgstr ""
 
 #: oc-includes/osclass/install-functions.php:98
-msgid "At least PHP 7.1 (with PHP 7.4 being the maximum supported) is required to run Osclass. You may talk with your hosting to upgrade your PHP version."
+msgid "At least PHP 7.1 (with PHP 8.1 being the maximum supported) is required to run Osclass Enterprise. You may talk with your hosting to upgrade your PHP version."
 msgstr ""
 
 #: oc-includes/osclass/install-functions.php:101
@@ -5248,7 +5248,7 @@ msgid "Table prefix"
 msgstr ""
 
 #: oc-includes/osclass/install-functions.php:725
-msgid "If you want to run multiple Osclass installations in a single database, change this"
+msgid "If you want to run multiple Osclass Enterprise installations in a single database, change this"
 msgstr ""
 
 #: oc-includes/osclass/install-functions.php:767
@@ -5388,7 +5388,7 @@ msgid "Hi %s,"
 msgstr ""
 
 #: oc-includes/osclass/install-location.php:99
-msgid "Your Osclass installation at %s is up and running. You can access the administration panel with these details:"
+msgid "Your Osclass Enterprise installation at %s is up and running. You can access the administration panel with these details:"
 msgstr ""
 
 #: oc-includes/osclass/install-location.php:101
@@ -5412,7 +5412,7 @@ msgid "Cheers,"
 msgstr ""
 
 #: oc-includes/osclass/install-location.php:107
-msgid "The <a href=\"https://www.valueweb.gr/forums/enterprise-release/\">Osclass</a> team"
+msgid "The <a href=\"https://www.valueweb.gr/forums/enterprise-release/\">Osclass Enterprise</a> team"
 msgstr ""
 
 #: oc-includes/osclass/install.php:89
@@ -5891,7 +5891,7 @@ msgstr ""
 msgid "This is an example page description. This is a good place to put your Terms of Service or any other help information."
 msgstr ""
 
-#: oc-includes/osclass/model/Category.php:602
+#: oc-includes/osclass/model/Category.php:662
 msgid "Non-Existent Category"
 msgstr ""
 
@@ -5903,16 +5903,16 @@ msgstr ""
 msgid "There's no description available in your language"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:43
-msgid "Osclass &raquo; Has some errors"
+#: oc-includes/osclass/upgrade-funcs.php:46
+msgid "Osclass &raquo; has some errors"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:44
+#: oc-includes/osclass/upgrade-funcs.php:47
 msgid "We've encountered some problems while updating the database structure. The following queries failed:"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:46
-msgid "These errors could be false-positive errors. If you're sure that is the case, you can <a href=\"%s\">continue with the upgrade</a>."
+#: oc-includes/osclass/upgrade-funcs.php:49
+msgid "These errors could be false-positive errors. If you're sure that is the case, you can <a href=\"%s\">continue with the upgrade</a>, or <a href=\"https://www.valueweb.gr/forums/enterprise-release/\" target=\"_blank\">ask in our forums</a>."
 msgstr ""
 
 #: oc-includes/osclass/upgrade-funcs.php:286
@@ -5923,78 +5923,78 @@ msgstr ""
 msgid "here"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:600
-msgid "Osclass Enterprise &raquo; Updated correctly"
+#: oc-includes/osclass/upgrade-funcs.php:601
+msgid "Osclass Enterprise &raquo; updated correctly"
 msgstr ""
 
-#: oc-includes/osclass/upgrade-funcs.php:596 oc-includes/osclass/upgrade-funcs.php:601
+#: oc-includes/osclass/upgrade-funcs.php:597 oc-includes/osclass/upgrade-funcs.php:602
 msgid "Osclass Enterprise has been updated successfully. <a href=\"https://www.valueweb.gr/forums/enterprise-release/\" target=\"_blank\">Need more help?</a>"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1955
+#: oc-includes/osclass/utils.php:1957
 msgid "Everything looks good! Your Osclass installation is up-to-date."
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1958
+#: oc-includes/osclass/utils.php:1960
 msgid "Almost everything looks good! Your Osclass installation is up-to-date, but there were some errors removing temporary files. Please manually remove the \"oc-content/downloads/oc-temp\" folder"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1964
+#: oc-includes/osclass/utils.php:1966
 msgid "Problems when upgrading the database"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1968 oc-includes/osclass/utils.php:2244
+#: oc-includes/osclass/utils.php:1970 oc-includes/osclass/utils.php:2246
 msgid "Problems when copying files. Please check your permissions. "
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1972 oc-includes/osclass/utils.php:2255
+#: oc-includes/osclass/utils.php:1974 oc-includes/osclass/utils.php:2257
 msgid "Nothing to copy"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1977 oc-includes/osclass/utils.php:2259
+#: oc-includes/osclass/utils.php:1979 oc-includes/osclass/utils.php:2261
 msgid "Unzip failed"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1982 oc-includes/osclass/utils.php:2263
+#: oc-includes/osclass/utils.php:1984 oc-includes/osclass/utils.php:2265
 msgid "Download failed"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1987 oc-includes/osclass/utils.php:2276
+#: oc-includes/osclass/utils.php:1989 oc-includes/osclass/utils.php:2278
 msgid "Missing download URL"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:1993
+#: oc-includes/osclass/utils.php:1995
 msgid "We encountered some errors while upgrading your database. The follwing queries failed:"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:2003 oc-admin/ajax/ajax.php:529
+#: oc-includes/osclass/utils.php:2005 oc-admin/ajax/ajax.php:529
 msgid "Version could not be verified"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:2124
+#: oc-includes/osclass/utils.php:2126
 msgid "Market updating not available."
 msgstr ""
 
-#: oc-includes/osclass/utils.php:2237
+#: oc-includes/osclass/utils.php:2239
 msgid "Everything looks good!"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:2240
+#: oc-includes/osclass/utils.php:2242
 msgid "Almost everything looks good! However there were some errors removing temporary files. Please manually remove the \\\"oc-content/downloads/oc-temp\\\" folder"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:2249
+#: oc-includes/osclass/utils.php:2251
 msgid "NOTE: Web user and destination folder user is not the same, you might have an issue there. <br/>Do this in your console:<br/>chown -R %s:%s %s"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:2268
+#: oc-includes/osclass/utils.php:2270
 msgid "This is a paid item, you need to buy it before you are able to download it"
 msgstr ""
 
-#: oc-includes/osclass/utils.php:2271
+#: oc-includes/osclass/utils.php:2273
 msgid "Input code not valid"
 msgstr ""
 
-#: oc-load.php:214
+#: oc-load.php:211
 msgid "The website is currently undergoing maintenance"
 msgstr ""

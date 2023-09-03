@@ -1908,16 +1908,18 @@ function osc_do_upgrade() {
                          *** UPGRADE DATABASE ***
                          ************************/
                         $error_queries = array();
-                        if (file_exists(osc_lib_path() . 'osclass/installer/struct.sql')) {
+                        if (UPGRADE_SKIP_DB === false && file_exists(osc_lib_path() . 'osclass/installer/struct.sql')) {
                             $sql = file_get_contents(osc_lib_path() . 'osclass/installer/struct.sql');
 
                             $conn = DBConnectionClass::newInstance();
                             $c_db = $conn->getOsclassDb();
                             $comm = new DBCommandClass( $c_db );
                             $error_queries = $comm->updateDB( str_replace('/*TABLE_PREFIX*/', DB_TABLE_PREFIX, $sql) );
-
+                        } else {
+                            $error_queries[0] = true;
                         }
-                        if ($error_queries[0]) { // Everything is OK, continue
+
+                        if (UPGRADE_SKIP_DB === true || $error_queries[0]) { // Everything is OK, continue
                             /**********************************
                              ** EXECUTING ADDITIONAL ACTIONS **
                              **********************************/

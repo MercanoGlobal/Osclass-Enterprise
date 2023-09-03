@@ -81,6 +81,10 @@
             return false;
         }
 
+        static function strnatcmpCustom($a, $b) {
+            return strnatcasecmp($a['plugin_name'], $b['plugin_name']);
+        }
+
         static function listAll($sort = true)
         {
             $plugins = array();
@@ -129,10 +133,6 @@
             }
 
             return $plugins;
-        }
-
-        static function strnatcmpCustom($a, $b) {
-            return strnatcasecmp($a['plugin_name'], $b['plugin_name']);
         }
 
         static function loadActive()

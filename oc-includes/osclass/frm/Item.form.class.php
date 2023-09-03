@@ -28,7 +28,7 @@
         {
             // Did user select a specific category to post in?
             $catId = Params::getParam('catId');
-            if(Session::newInstance()->_getForm('catId') != "") {
+            if(Session::newInstance()->_getForm('catId') > 0) {
                 $catId = Session::newInstance()->_getForm('catId');
             }
 
@@ -77,7 +77,7 @@
                 $categoryID = osc_item_category_id();
             }
 
-            if( Session::newInstance()->_getForm('catId') != '' ) {
+            if( Session::newInstance()->_getForm('catId') > 0 ) {
                 $categoryID = Session::newInstance()->_getForm('catId');
             }
 
@@ -178,7 +178,7 @@
                 $categoryID = osc_item_category_id();
             }
 
-            if( Session::newInstance()->_getForm('catId') != '' ) {
+            if( Session::newInstance()->_getForm('catId') > 0 ) {
                 $categoryID = Session::newInstance()->_getForm('catId');
             }
 
@@ -282,7 +282,7 @@
         {
             // Did user select a specific category to post in?
             $catId = Params::getParam('catId');
-            if(Session::newInstance()->_getForm('catId') != ""){
+            if(Session::newInstance()->_getForm('catId') > 0){
                 $catId = Session::newInstance()->_getForm('catId');
             }
             // How many indents to add?
@@ -307,7 +307,7 @@
             if($users==null) { $users = User::newInstance()->listAll(); }
             if($item==null) { $item = osc_item(); }
             $userId = '';
-            if(Session::newInstance()->_getForm('userId') != ""){
+            if(Session::newInstance()->_getForm('userId') > 0){
                 $userId = Session::newInstance()->_getForm('userId');
             }
             echo '<select name="userId" id="userId">';
@@ -316,8 +316,8 @@
                 }
                 foreach($users as $user) {
                     $bool = false;
-                    if($userId != '' && $userId == $user['pk_i_id']){$bool = true;}
-                    if((isset($item["fk_i_user_id"]) && $item["fk_i_user_id"] == $user['pk_i_id'])){$bool = true;}
+                    if($userId > 0 && $userId == $user['pk_i_id']) { $bool = true; }
+                    if((isset($item["fk_i_user_id"]) && $item["fk_i_user_id"] == $user['pk_i_id'])) { $bool = true; }
                     echo '<option value="' . $user['pk_i_id'] . '"' . ( $bool ? ' selected="selected"' : '' ) . '>';
 
                     if( isset($user['s_name']) && !empty($user['s_name']) ) {
@@ -1289,7 +1289,7 @@
         <?php } ?>
         var result = '';
 
-        if(cat_id != '') {
+        if(cat_id > 0) {
 			if(catPriceEnabled[cat_id] == 1) {
 				$("#price").closest("div").show();
                                 // trigger show-price event
@@ -1321,7 +1321,7 @@
         <?php } ?>
         var result = '';
 
-        if(cat_id != '') {
+        if(cat_id > 0) {
 			if(catPriceEnabled[cat_id] == 1) {
 				$("#price").closest("div").show();
 			} else {

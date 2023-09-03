@@ -26,7 +26,9 @@
     require_once ABS_PATH . 'oc-load.php';
     require_once LIB_PATH . 'osclass/helpers/hErrors.php';
 
-    if( !defined('AUTO_UPGRADE') ) {
+    if (!defined('AUTO_UPGRADE') && UPGRADE_SKIP_DB === false) {
+        $error_queries = array();
+
         if(file_exists(osc_lib_path() . 'osclass/installer/struct.sql')) {
             $sql  = file_get_contents(osc_lib_path() . 'osclass/installer/struct.sql');
 
@@ -35,17 +37,17 @@
             $comm = new DBCommandClass( $c_db );
 
             $error_queries = $comm->updateDB( str_replace('/*TABLE_PREFIX*/', DB_TABLE_PREFIX, $sql) );
+        } else {
+            $error_queries[0] = true;
         }
 
-        if( Params::getParam('skipdb') == '' ){
-            if(!$error_queries[0]) {
-                $skip_db_link = osc_admin_base_url(true) . "?page=upgrade&action=upgrade-funcs&skipdb=true";
-                $title    = __('Osclass &raquo; Has some errors');
-                $message  = __("We've encountered some problems while updating the database structure. The following queries failed:");
-                $message .= "<br/><br/>" . implode("<br>", $error_queries[2]);
-                $message .= "<br/><br/>" . sprintf(__("These errors could be false-positive errors. If you're sure that is the case, you can <a href=\"%s\">continue with the upgrade</a>, or <a href=\"https://www.valueweb.gr/forums/enterprise-release/\">ask in our forums</a>."), $skip_db_link);
-                osc_die($title, $message);
-            }
+        if (Params::getParam('skipdb') == '' && !$error_queries[0]) {
+            $skip_db_link = osc_admin_base_url(true) . "?page=upgrade&action=upgrade-funcs&skipdb=true";
+            $title    = __('Osclass &raquo; has some errors');
+            $message  = __("We've encountered some problems while updating the database structure. The following queries failed:");
+            $message .= "<br/><br/>" . implode("<br>", $error_queries[2]);
+            $message .= "<br/><br/>" . sprintf(__("These errors could be false-positive errors. If you're sure that is the case, you can <a href=\"%s\">continue with the upgrade</a>, or <a href=\"https://www.valueweb.gr/forums/enterprise-release/\" target=\"_blank\">ask in our forums</a>."), $skip_db_link);
+            osc_die($title, $message);
         }
     }
 
@@ -414,7 +416,6 @@ CREATE TABLE %st_item_description_tmp (
         osc_set_preference('csrf_name', 'CSRF'.mt_rand(0,mt_getrandmax()));
 
         @mkdir(osc_uploads_path() . 'page-images');
-
     }
 
     if(osc_version() < 320) {
@@ -597,7 +598,7 @@ CREATE TABLE %st_item_description_tmp (
             echo '<script type="text/javascript"> window.location = "'.osc_admin_base_url(true).'?page=tools&action=version"; </script>';
         } else {
             echo '<div class="well ui-rounded-corners separate-top-medium">';
-            echo '<p>'.__('Osclass Enterprise &raquo; Updated correctly').'</p>';
+            echo '<p>'.__('Osclass Enterprise &raquo; updated correctly').'</p>';
             echo '<p>'.__('Osclass Enterprise has been updated successfully. <a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Need more help?</a>').'</p>';
             foreach($aMessages as $msg) {
                 echo "<p>".$msg."</p>";

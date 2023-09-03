@@ -1,4 +1,4 @@
-Osclass - software for creating and publishing online classified advertising platforms
+Osclass Enterprise - Software for creating and publishing online classified advertising platforms
 
 Copyright 2022 Osclass Enterprise
 
@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Osclass includes the following third party components included herein and distributed to you under the respective licenses. A copy of the license text should be in the \licenses\ folder of this program
+Osclass Enterprise includes the following third party components included herein and distributed to you under the respective licenses. A copy of the license text should be in the \licenses\ folder of this program
 
 
 Recaptcha - Copyright (c) 2007 reCAPTCHA -- http://recaptcha.net. License: MIT

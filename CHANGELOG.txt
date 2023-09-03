@@ -1,3 +1,11 @@
+Osclass Enterprise 3.10.1 2023-09-03
+------------------------------------
+
+- Fixed some notices
+- Fixed an issue with location dropdowns and updated the functions to prevent loading of data if not necessary
+- Disabled the unnecessary database integrity check when updating Osclass Enterprise. This can be controlled via the UPGRADE_SKIP_DB constant - set to false to enable the integrity check
+- Minor code cleanup and improvements
+
 Osclass Enterprise 3.10.0 2023-04-20
 ------------------------------------
 

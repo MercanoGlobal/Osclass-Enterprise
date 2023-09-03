@@ -65,7 +65,7 @@
             Session::newInstance()->_set('userId', $user['pk_i_id']);
             Session::newInstance()->_set('userName', $user['s_name']);
             Session::newInstance()->_set('userEmail', $user['s_email']);
-            $phone = $user['s_phone_mobile'] ?: $user['s_phone_land'];
+            $phone = osc_esc_html($user['s_phone_mobile'] ? $user['s_phone_mobile'] : $user['s_phone_land']);
             Session::newInstance()->_set('userPhone', $phone);
 
             return true;
@@ -182,7 +182,7 @@
         }
 
         //can already be a logged user or not, we'll take a look into the cookie
-        if ( Cookie::newInstance()->get_value('oc_adminId') != '' && Cookie::newInstance()->get_value('oc_adminSecret') != '') {
+        if ( Cookie::newInstance()->get_value('oc_adminId') > 0 && Cookie::newInstance()->get_value('oc_adminSecret') != '') {
             $admin = Admin::newInstance()->findByIdSecret( Cookie::newInstance()->get_value('oc_adminId'), Cookie::newInstance()->get_value('oc_adminSecret') );
             if(isset($admin['pk_i_id'])) {
                 Session::newInstance()->_set('adminId', $admin['pk_i_id']);
@@ -333,7 +333,7 @@
      * @return string
      */
     function osc_user_website() {
-        return (string) osc_user_field("s_website");
+        return (string) osc_esc_html(osc_user_field("s_website"));
     }
 
     /**
@@ -371,7 +371,7 @@
      * @return string
      */
     function osc_user_phone_land() {
-        return (string) osc_user_field("s_phone_land");
+        return (string) osc_esc_html(osc_user_field("s_phone_land"));
     }
 
     /**
@@ -380,7 +380,7 @@
      * @return string
      */
     function osc_user_phone_mobile() {
-        return (string) osc_user_field("s_phone_mobile");
+        return (string) osc_esc_html(osc_user_field("s_phone_mobile"));
     }
 
     /**
@@ -390,9 +390,9 @@
      */
     function osc_user_phone() {
         if(osc_user_field("s_phone_mobile") != "") {
-            return osc_user_field("s_phone_mobile");
+            return osc_esc_html(osc_user_field("s_phone_mobile"));
         } else if(osc_user_field("s_phone_land") != "") {
-            return osc_user_field("s_phone_land");
+            return osc_esc_html(osc_user_field("s_phone_land"));
         }
         return "";
     }
@@ -528,13 +528,21 @@
      *
      * @return int
      */
-    function osc_total_users($condition = '') {
-        switch($condition) {
+    function osc_total_users($type = '', $condition = '') {
+        switch($type) {
             case 'active':
                 return User::newInstance()->countUsers('b_active = 1');
                 break;
             case 'enabled':
                 return User::newInstance()->countUsers('b_enabled = 1');
+                break;
+            case 'online':
+                $limit_seconds = 300; // 5 minutes
+                $threshold = date('Y-m-d H:i:s', strtotime(' -' . $limit_seconds . ' seconds', time()));
+                return User::newInstance()->countUsers(sprintf('b_enabled = 1 AND b_active = 1 AND dt_access_date >= "%s"', $threshold));
+                break;
+            case 'custom':
+                return User::newInstance()->countUsers($condition);
                 break;
             default:
                 return User::newInstance()->countUsers();

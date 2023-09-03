@@ -256,6 +256,9 @@
          */
         public function getDateIntervalByPrimaryKey($item_id, $field_id)
         {
+            if (!is_numeric($item_id) || !is_numeric($field_id)) {
+                return array();
+            }
             $this->dao->select();
             $this->dao->from(DB_TABLE_PREFIX.'t_item_meta');
             $this->dao->where('fk_i_field_id', $field_id);
@@ -424,4 +427,3 @@
     }
 
     /* file end: ./oc-includes/osclass/model/Field.php */
-?>

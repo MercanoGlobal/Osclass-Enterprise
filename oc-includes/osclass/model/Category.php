@@ -63,13 +63,16 @@
 
             if($l == '') {
                 $l = osc_current_user_locale();
+                if (OC_ADMIN) {
+                    $l = osc_current_admin_locale();
+                }
             }
 
             $this->_language   = $l;
             $this->_tree       = null;
             $this->_relation   = null;
             $this->_categories = null;
-            $this->_emptyTree = true;
+            $this->_emptyTree  = true;
             $this->toTree();
         }
 
@@ -215,7 +218,7 @@
          * @param bool $empty
          * @return array
          */
-        public function toTree($empty = true)
+        public function toTree(bool $empty = true)
         {
             $key    = md5(osc_base_url().(string)$this->_language.(string)$empty);
             $found  = null;
@@ -253,18 +256,18 @@
                 $this->_tree = $this->sideTree($this->_relation[0], $this->_categories, $this->_relation);
 
                 $cache = ($cache == false ? array() : $cache);
-                $cache['tree']         = $this->_tree;
-                $cache['empty_tree']   = $this->_emptyTree;
-                $cache['relation']     = $this->_relation;
-                $cache['categories']   = $this->_categories;
-                $cache['categoriesEnabled']   = $this->_categoriesEnabled;
+                $cache['tree']       = $this->_tree;
+                $cache['empty_tree'] = $this->_emptyTree;
+                $cache['relation']   = $this->_relation;
+                $cache['categories'] = $this->_categories;
+                $cache['categoriesEnabled'] = $this->_categoriesEnabled;
                 osc_cache_set($key, $cache, OSC_CACHE_TTL);
                 return $this->_tree;
             } else {
-                $this->_tree         = $cache['tree'];
-                $this->_empty_tree   = $cache['empty_tree'];
-                $this->_relation     = $cache['relation'];
-                $this->_categories   = $cache['categories'];
+                $this->_tree       = $cache['tree'];
+                $this->_empty_tree = $cache['empty_tree'];
+                $this->_relation   = $cache['relation'];
+                $this->_categories = $cache['categories'];
                 $this->_categoriesEnabled = $cache['categoriesEnabled'];
                 return $this->_tree;
             }

@@ -96,7 +96,7 @@ function basic_info() {
     );
 
     $body  = sprintf(__('Hi %s,'),Params::getParam('webtitle'))."<br/><br/>";
-    $body .= sprintf(__('Your Osclass installation at %s is up and running. You can access the administration panel with these details:'), WEB_PATH) . '<br/>';
+    $body .= sprintf(__('Your Osclass Enterprise installation at %s is up and running. You can access the administration panel with these details:'), WEB_PATH) . '<br/>';
     $body .= '<ul>';
     $body .= '<li>'.sprintf(__('username: %s'), $admin).'</li>';
     $body .= '<li>'.sprintf(__('password: %s'), $password).'</li>';
@@ -104,7 +104,7 @@ function basic_info() {
     $body .= sprintf(__('Remember that for any doubts you might have you can consult our <a href="%1$s">documentation</a>, <a href="%2$s">forum</a> or <a href="%3$s">blog</a>.'), 'https://docs.enterprise-classifieds.com/', 'https://www.valueweb.gr/forums/enterprise-release/', 'https://enterprise-classifieds.com/blog/');
     $body .= sprintf(' ' . __('Osclass doesn’t run any developments but we can put you in touch with third party developers through a Premium Support. And hey, if you would like to contribute to Osclass - learn how <a href="%1$s">here</a>!'), 'https://www.valueweb.gr/forums/enterprise-release/') . '<br/><br/>';
     $body .= __('Cheers,')."<br/>";
-    $body .= __('The <a href="https://www.valueweb.gr/forums/enterprise-release/">Osclass</a> team');
+    $body .= __('The <a href="https://www.valueweb.gr/forums/enterprise-release/">Osclass Enterprise</a> team');
 
     $sitename = strtolower( Params::getServerParam('SERVER_NAME'));
     if ( substr( $sitename, 0, 4 ) == 'www.' ) {
@@ -117,8 +117,8 @@ function basic_info() {
         $mail->CharSet  = "utf-8";
         $mail->Host     = "localhost";
         $mail->From     = 'osclass@' . $sitename;
-        $mail->FromName = 'Osclass';
-        $mail->Subject  = 'Osclass successfully installed!';
+        $mail->FromName = 'Osclass Enterprise';
+        $mail->Subject  = 'Osclass Enterprise successfully installed!';
         $mail->AddAddress(Params::getParam('email'), 'Osclass administrator');
         $mail->Body     = $body;
         $mail->AltBody  = $body;
@@ -150,5 +150,3 @@ function install_locations() {
 
     return false;
 }
-
-?>

@@ -68,7 +68,7 @@ function osc_getAbsoluteWebURL() {
                     <img src="<?php echo osc_getAbsoluteWebURL(); ?>/oc-includes/images/osclass-logo.png" alt="Osclass Enterprise" title="Osclass Enterprise" />
                 </a>
                 <br/>
-                Version 3.10.0
+                Version 3.10.1
             </h1>
         </div>
         <div id="content">
@@ -136,7 +136,7 @@ function osc_getAbsoluteWebURL() {
                 </div>
                 <p>If you experienced any problem during the process, please don't hesitate to contact us in the <a href="https://www.valueweb.gr/forums/enterprise-release/">Osclass Support Forums</a>.
                     We recommend to perform a backup of database and files before each upgrade. You could backup your data from the "Backup" option in the admin panel.
-                    If you want to run the autoupgrade manually you could do that from the following URL : http://www.yourdomain.com/path/to/osclass/oc-admin/tools.php?action=upgrade
+                    If you want to run the autoupgrade manually you could do that from the following URL: http://www.yourdomain.com/path/to/osclass/oc-admin/tools.php?action=upgrade
                 </p>
             </div>
             <div id="resources">

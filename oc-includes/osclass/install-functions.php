@@ -95,7 +95,7 @@ function get_requirements( ) {
         'PHP version >= 7.1.x' => array(
             'requirement' => __('PHP version >= 7.1.x'),
             'fn' => version_compare(PHP_VERSION, '7.1.0', '>='),
-            'solution' => __('At least PHP 7.1 (with PHP 7.4 being the maximum supported) is required to run Osclass. You may talk with your hosting to upgrade your PHP version.')),
+            'solution' => __('At least PHP 7.1 (with PHP 8.1 being the maximum supported) is required to run Osclass Enterprise. You may talk with your hosting to upgrade your PHP version.')),
 
         'MySQLi extension for PHP' => array(
             'requirement' => __('MySQLi extension for PHP'),
@@ -722,7 +722,7 @@ function display_database_config() {
                 <tr>
                     <th align="left"><label for="tableprefix"><?php _e('Table prefix'); ?></label></th>
                     <td><input type="text" id="tableprefix" name="tableprefix" value="oc_" size="25" /></td>
-                    <td class="small"><?php _e('If you want to run multiple Osclass installations in a single database, change this'); ?></td>
+                    <td class="small"><?php _e('If you want to run multiple Osclass Enterprise installations in a single database, change this'); ?></td>
                 </tr>
                 </tbody>
             </table>
