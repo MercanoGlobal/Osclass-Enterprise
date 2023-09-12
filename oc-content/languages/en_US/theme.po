@@ -5,15 +5,15 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2023-03-13 17:57+0200\n"
+"PO-Revision-Date: 2023-09-12 15:39+0300\n"
 "Last-Translator: Tango\n"
-"Language-Team: Translations <translations@osclass.org>\n"
+"Language-Team: Translations\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: 404.php:30
 msgid "Sorry but I can't find the page you're looking for"
@@ -236,7 +236,7 @@ msgstr ""
 msgid "Subscribe now"
 msgstr ""
 
-#: common/head.php:25 item.php:168 loop-single-premium.php:48 loop-single.php:52
+#: common/head.php:25 item.php:184 loop-single-premium.php:48 loop-single.php:52
 msgid "Delete"
 msgstr ""
 
@@ -296,8 +296,12 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: footer.php:40 functions.php:407 header.php:53 item-sidebar.php:67
+#: footer.php:40 functions.php:407 header.php:53 item-sidebar.php:67 item.php:267
 msgid "Login"
+msgstr ""
+
+#: item.php:267
+msgid "Register"
 msgstr ""
 
 #: footer.php:43 header.php:55 item-sidebar.php:68 user-login.php:58
@@ -646,24 +650,24 @@ msgstr ""
 msgid "Related listings"
 msgstr ""
 
-#: item.php:154
+#: item.php:153
 msgid "Comments"
 msgstr ""
 
-#: item.php:161
+#: item.php:160
 msgid "by"
 msgstr ""
 
-#: item.php:162
+#: item.php:161
 msgid "Owner"
 msgstr ""
 
-#: item.php:178
+#: item.php:177
 #, php-format
 msgid "%d of 5"
 msgstr ""
 
-#: item.php:185
+#: item.php:184
 msgid "Delete your comment"
 msgstr ""
 
@@ -684,7 +688,15 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: item.php:275
+#: item.php:267
+msgid "You must be logged in to post a comment."
+msgstr ""
+
+#: item.php:267
+msgid "or"
+msgstr ""
+
+#: item.php:277
 msgid "of"
 msgstr ""
 

@@ -149,7 +149,6 @@
         </div>
     <?php } ?>
     <?php if( osc_comments_enabled() ) { ?>
-        <?php if( osc_reg_user_post_comments () && osc_is_web_user_logged_in() || !osc_reg_user_post_comments() ) { ?>
         <div id="comments">
             <h2><?php _e('Comments', 'bender'); ?></h2>
             <ul id="comment_error_list"></ul>
@@ -159,7 +158,7 @@
                     <?php while ( osc_has_item_comments() ) { ?>
                         <div class="comment">
                             <h3><strong><?php echo osc_comment_title(); ?></strong> <em><?php _e("by", 'bender'); ?> 
-                                <?php if ( (osc_item_user_id() == osc_comment_user_id()) && osc_comment_user_id() != 0 ) { echo osc_comment_author_name(); ?>&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true" style="color:#29b7cd" title="<?php _e('Owner', 'bender'); ?>"></i>
+                                <?php if ( (osc_item_user_id() == osc_comment_user_id()) && osc_comment_user_id() != 0 ) { echo osc_comment_author_name(); ?>&nbsp;&nbsp;<i class="fa fa-certificate" aria-hidden="true" style="color:#29b7cd" title="<?php _e('Owner', 'bender'); ?>"></i>
                                 <?php } else { echo osc_comment_author_name(); } ?>:
                             </em></h3>
 
@@ -192,6 +191,7 @@
                     </div>
                 </div>
             <?php } ?>
+            <?php if( osc_reg_user_post_comments () && osc_is_web_user_logged_in() || !osc_reg_user_post_comments() ) { ?>
             <div class="form-container form-horizontal">
                 <div class="header">
                     <h3><?php _e('Leave your comment (spam and offensive messages will be removed)', 'bender'); ?></h3>
@@ -263,8 +263,10 @@
                     </form>
                 </div>
             </div>
+            <?php } else { ?>
+                <div class="flashmessage-404"><?php _e('You must be logged in to post a comment.', 'bender'); ?> <a href="<?php echo osc_user_login_url(); ?>"><?php _e("Login", 'bender'); ?></a> <?php if(osc_user_registration_enabled()) { ?><?php _e("or", 'bender'); ?> <a href="<?php echo osc_register_account_url(); ?>"><?php _e("Register", 'bender'); ?></a><?php } ?></div>
+            <?php } ?>
         </div>
-        <?php } ?>
     <?php } ?>
 </div>
 <script type="text/javascript">

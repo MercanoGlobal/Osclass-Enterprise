@@ -97,13 +97,13 @@ function customPageHeader() { ?>
                 });
                 <?php } ?>
 
-                $('#update_expiration').change( function() {
-                    if($(this).attr("checked")) {
+                $('body').on('change', '#update_expiration', function() {
+                    if($(this).is(":checked")) {
                         $('#dt_expiration').prop('value', '');
-                        $('div.update_expiration').show();
+                        $('div.update_expiration').show(0);
                     } else {
                         $('#dt_expiration').prop('value', '-1');
-                        $('div.update_expiration').hide();
+                        $('div.update_expiration').hide(0);
                     }
                 });
 
