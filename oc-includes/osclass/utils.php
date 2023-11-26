@@ -793,7 +793,7 @@ function download_fsockopen($sourceFile, $fileout = null, $post_data = null)
 {
     // parse URL
     $aUrl = parse_url($sourceFile);
-    $host = $aUrl['host'];
+    $host = (isset($aUrl['host']) ? $aUrl['host'] : 'localhost');
     if ('localhost' == strtolower($host))
         $host = '127.0.0.1';
 
