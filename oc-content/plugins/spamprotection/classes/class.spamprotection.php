@@ -2197,7 +2197,7 @@ class spam_prot extends DAO {
                         <br />
                         <p>'.__("<strong>If you are using the check for contact mails, please add some hints into your privacy policy that mails will be saved and moderated, if spam was found inside.</strong>", "spamprotection").'</p>
                         <br />
-                        <p>'.__("Feel free to contact me in OSClass-Forum for any kind of question.<br /><br />Best regards<br />Liath", "spamprotection").'</p>
+                        <p>'.__("Feel free to create a support ticket for any kind of inquiry.<br /><br />Best regards,<br />Liath", "spamprotection").'</p>
                     </div>
 
                     <div id="spamprot_installed_buttons">

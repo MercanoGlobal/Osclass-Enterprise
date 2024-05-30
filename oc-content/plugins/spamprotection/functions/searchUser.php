@@ -18,9 +18,12 @@ if (isset($del)) {
 
 if (!empty($age)) {
     $user = spam_prot::newInstance()->_searchUnwantedUser($age, $max, $activated, $enabled, $zero, $neverLogged);
-    if ($user === false) {
-        echo 'No users found - Feature under development.';
+    if ($user) {
+        echo "Users found: " . count($user) . "<br>";
+    } else {
+        echo "No users found.<br>";
     }
+    flush();
 }
 
 if (isset($user) && !empty($user)) {
@@ -69,9 +72,10 @@ if (isset($user) && !empty($user)) {
     echo '
     </tbody>
 </table>
-<div style="clear: both;"</div>
+<div style="clear: both;"></div>
 <a id="deleteNowUnwantedAccounts" class="btn btn-red" data-link="'.osc_ajax_plugin_url('spamprotection/functions/searchUser.php').'" style="float: right; margin: 20px 0 0 0;">'.__("Delete Now", "spamprotection").'</a>
-<div style="clear: both;"</div>
+<div style="clear: both;"></div>
     ';
 }
+
 ?>

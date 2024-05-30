@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
     $("#spamprot ul.subtabs").each(function(index, element){
         var height      = $(element).closest("div.tab-content").height(),
             minheight   = $(document).height()-180;
@@ -8,7 +8,7 @@ $(document).ready(function(){
             "height": height    
         });
     });
-    
+
     if ($("input[name=sp_activate]").is(":checked")) {            
         $("#sp_options").removeClass("disabled").addClass("enabled").find("input, textarea");
     } if ($("input[name=sp_comment_activate]").is(":checked")) {            
@@ -36,7 +36,7 @@ $(document).ready(function(){
     } if ($("input[name=sp_security_login_check]").is(":checked")) {
         $("#sp_security_login_count").addClass("visible");        
     }
-    
+
     $(document).on("click", "input[name=sp_activate]", function(){
         if ($("input[name=sp_activate]").is(":checked")) {
             $("#sp_options").removeClass("disabled").addClass("enabled").find("input, textarea");        
@@ -45,7 +45,7 @@ $(document).ready(function(){
             $("input[name=sp_activate]").prop("disabled", false);
         }  
     });
-    
+
     $(document).on("click", "input[name=sp_comment_activate]", function(){
         if ($("input[name=sp_comment_activate]").is(":checked")) {
             $("#sp_comment_options").removeClass("disabled").addClass("enabled").find("input, textarea");        
@@ -385,7 +385,7 @@ $(document).ready(function(){
             val     = form.val(),
             file    = $("#search_file").val(),
             data    = form.serialize();
-                    
+
         $.ajax({
             url: file,
             type: "post",
@@ -417,54 +417,54 @@ $(document).ready(function(){
         
         $("#spamprot").prop("class", val);
     }); 
-    
+
     $(document).on("click", "#addIpToBan", function(event){  
         event.preventDefault();
         var target  = $(this).attr("href");
         var ip      = $("#addIpBan").val();
-        
+
         $.get(target+'&ip='+ip, function(result){
             $("tbody#dataIpBan").html(result);            
         });
     }); 
-    
+
     $(document).on("click", ".deleteIpBan", function(event){  
         event.preventDefault();
         var target  = $(this).attr("href");
         var ip      = $(this).data("ip");
-        
+
         $.get(target+'&ip='+ip, function(result){
             $("tbody#dataIpBan").html(result);            
         });
     }); 
-    
+
     $(document).on("click", "#openCreateFile", function(event){  
         event.preventDefault();
         var target  = $(this).attr("href");
-        
+
         $.get(target, function(result){
             $("#IpBanFlash").html(result);            
         });
     }); 
-    
+
     $(document).on("click", "#createFileNow", function(event){  
         //event.preventDefault();
         var target  = $(this).attr("href");
-        
+
         $.get(target, function(result){
             $("#IpBanFlash").html(result);            
         });
     }); 
-    
+
     $(document).on("click", "#deleteUserAll", function(event){  
         $("input[name^=deleteUserID]").prop("checked", $(this).prop("checked"));
         countDeleteUsers();
     }); 
-    
+
     $(document).on("click", "input[name^=deleteUserID]", function(event){  
         countDeleteUsers();
     }); 
-    
+
     $(document).on("click", "input[name=sp_user_zeroads]", function(){  
         if (!$(this).is(":checked")) {
             if (!confirm("Are you sure you want to show accounts that have posted ads? You could delete accounts that are still in use!")) {
@@ -472,7 +472,7 @@ $(document).ready(function(){
             }
         }
     }); 
-    
+
     $(document).on("click", "input[name=sp_user_neverlogged]", function(){  
         if (!$(this).is(":checked")) {
             if (!confirm("Are you sure you want to show accounts that have logged in? You could delete accounts that are still in use!")) {
@@ -480,14 +480,14 @@ $(document).ready(function(){
             }
         }
     });
-    
+
     $(document).on("click", "a#searchUnwantedUser, input.sp_check_unwanted", function(event){            
         //event.preventDefault();
-        
+
         var form    = $("#settingsUnwantedUser"),
             file    = $("#searchUnwantedUser").data("link"),
             data    = form.serialize();
-                    
+
         $.ajax({
             url: file,
             type: "post",
@@ -497,14 +497,14 @@ $(document).ready(function(){
             }
         });
     });
-    
+
     $(document).on("click", "a#deleteNowUnwantedAccounts", function(event){            
         event.preventDefault();
-        if (confirm("You really want to delete this "+countDeleteUsers()+" user accounts? This action cannot be undone!")) {
+        if (confirm("Do you really want to delete "+countDeleteUsers()+" user account(s)? This action cannot be undone!")) {
             var form    = $("#settingsUnwantedUser"),
                 file    = $(this).data("link"),
                 data    = form.serialize();
-                        
+
             $.ajax({
                 url: file,
                 type: "post",

@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Anti Spam & Protection System
-Plugin URI: https://amfearliath.tk/osclass-spam-protection/
+Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
 Description: Anti Spam & Protection System for Osclass. Secures your ads, comments and contact mails against spam. Protects your login/registration processes, plus many other features.
 Version: 2.0.0
 Author: Liath
-Author URI: https://amfearliath.tk/
+Author URI: https://web.archive.org/web/20200709204718/http://amfearliath.tk/osclass-spam-protection
 Short Name: spamprotection
 Plugin update URI: spam-protection
 

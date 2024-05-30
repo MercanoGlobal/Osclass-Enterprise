@@ -1,3 +1,9 @@
+Osclass Enterprise 3.10.2 2024-x-x
+------------------------------------
+
+- Fixed a PHP notice
+- Fixed issue #3 - Delete unused user accounts in SpamProtection Plugin
+
 Osclass Enterprise 3.10.1 2023-09-03
 ------------------------------------
 

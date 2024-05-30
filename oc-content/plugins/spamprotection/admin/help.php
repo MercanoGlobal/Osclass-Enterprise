@@ -330,14 +330,14 @@ $info = osc_plugin_get_info("spamprotection/index.php");
             <li><strong>Web-Media</strong>          - Improve the plugin security</li>
             <li><strong>Aficionado & Tito</strong>  - Testing and error reporting</li>
             <li><strong>dev101</strong>             - Suggestions and explaining features and functions</li>
-            <li><strong>TangoX</strong>             - Correcting some translations</li>
+            <li><strong>Tango</strong>              - Correcting some translations and fixing the code</li>
             </ul> 
             <strong>Thanks to all for your help!</strong>
             <br /><br /><br /><br />
             With time, this plugin became more then a premium plugin, but it is and will always be free. 
             If you would like to thank with a donation for the work, I would be glad if you donate something to UNICEF.
             <br /><br />
-            <a class="btn btn-red" style="float: none;" href="https://donate.unicef.org/donate/now" target="_blank">Donate to UNICEF</a>
+            <a class="btn btn-red" style="float: none;" href="https://help.unicef.org/" target="_blank">Donate to UNICEF</a>
             <br /><br /><br /><br />
             I hope this plugin will be useful to many of you and will help you to reduce the spam on your pages to a minimum. 
             Keep in mind, however, that it was never intended to fight spam automatically. 
@@ -346,9 +346,9 @@ $info = osc_plugin_get_info("spamprotection/index.php");
             An automated system would always involve the risk that even realistic ads will be marked as spam and not be published.
             <br /><br />
             If you find any errors, please report it on the forums. 
-            I will try to fix this immediately, so that everyone can use this plugin properly.<br /><br />
+            I will try to fix these immediately, so that everyone can use this plugin properly.<br /><br />
             Also I would be glad if you could rate this plugin. I needed weeks to develop it for free, you only need a few minutes to rate and review it.<br /><br />
-            <a class="btn btn-green ratenow" href="https://amfearliath.tk/osclass-spam-protection/" target="_blank">Rate and review now</a><br /><br /><br />
+            <a class="btn btn-green ratenow" href="https://web.archive.org/web/20200709204718/http://amfearliath.tk/osclass-spam-protection" target="_blank">Rate and review now</a><br /><br /><br />
             <strong>Thanks a lot!</strong>
             ', 'spamprotection'); ?></p>
         </div>

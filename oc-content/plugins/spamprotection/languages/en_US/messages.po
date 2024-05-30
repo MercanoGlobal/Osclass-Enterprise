@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OSClass Spam Protection\n"
 "POT-Creation-Date: 2017-09-05 01:39+0200\n"
-"PO-Revision-Date: 2023-04-06 03:24+0300\n"
+"PO-Revision-Date: 2024-05-30 14:37+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Liath <amfearliath@gmx.de>\n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: admin/ban_log.php:24 admin/tools.php:70 admin/tools.php:114 admin/tools.php:172 functions/searchUser.php:35
+#: admin/ban_log.php:24 admin/tools.php:70 admin/tools.php:114 admin/tools.php:172 functions/searchUser.php:38
 msgid "Email"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: admin/check.php:160 functions/searchUser.php:30
+#: admin/check.php:160 functions/searchUser.php:36
 msgid "ID"
 msgstr ""
 
@@ -138,8 +138,7 @@ msgstr ""
 msgid "Cleaner"
 msgstr ""
 
-#: admin/comments.php:18 admin/contact.php:17 admin/plugin.php:224 admin/plugin.php:379 admin/plugin.php:418 admin/plugin.php:477 admin/security.php:20 admin/settings.php:23
-#: admin/tools.php:32
+#: admin/comments.php:18 admin/contact.php:17 admin/plugin.php:224 admin/plugin.php:379 admin/plugin.php:418 admin/plugin.php:477 admin/security.php:20 admin/settings.php:23 admin/tools.php:32
 msgid "Save"
 msgstr ""
 
@@ -657,9 +656,7 @@ msgid "md5/string comparition"
 msgstr ""
 
 #: admin/help.php:102
-msgid ""
-"This algorythm works as following: removing all blanks, convert text to lowercase, then get <a href=\"http://php.net/manual/en/function.md5.php\">md5 hash</a> of text and compare with "
-"other ads."
+msgid "This algorythm works as following: removing all blanks, convert text to lowercase, then get <a href=\"http://php.net/manual/en/function.md5.php\">md5 hash</a> of text and compare with other ads."
 msgstr ""
 
 #: admin/help.php:103 admin/settings.php:89
@@ -668,8 +665,8 @@ msgstr ""
 
 #: admin/help.php:103
 msgid ""
-"This algorythm is using the <em><a href=\"http://php.net/manual/en/function.similar-text.php\">similar_text()</a></em> function: the whole text would be compared with other ads and "
-"gives back a percentage for its similarity. You can define how high the similarity can be at maximum."
+"This algorythm is using the <em><a href=\"http://php.net/manual/en/function.similar-text.php\">similar_text()</a></em> function: the whole text would be compared with other ads and gives back a percentage for its similarity. "
+"You can define how high the similarity can be at maximum."
 msgstr ""
 
 #: admin/help.php:108
@@ -682,8 +679,8 @@ msgstr ""
 
 #: admin/help.php:114
 msgid ""
-"<a href=\"https://en.wikipedia.org/wiki/Honeypot_(computing)\">Honeypots</a> are a trap for bots. Normal users can't see them and don't fill it out. If this form field is filled out, "
-"the system knows that this is a bot and marks the ad as spam."
+"<a href=\"https://en.wikipedia.org/wiki/Honeypot_(computing)\">Honeypots</a> are a trap for bots. Normal users can't see them and don't fill it out. If this form field is filled out, the system knows that this is a bot and "
+"marks the ad as spam."
 msgstr ""
 
 #: admin/help.php:120 admin/help.php:165 admin/help.php:209
@@ -719,8 +716,7 @@ msgid "Also you can define how long the item has to be expired and how much item
 msgstr ""
 
 #: admin/help.php:149
-msgid ""
-"Here you can de/activate the whole Spam Protection to secure your comments. You can deactivate some features optionally, but deactivate this checkbox will deactivate the whole system."
+msgid "Here you can de/activate the whole Spam Protection to secure your comments. You can deactivate some features optionally, but deactivate this checkbox will deactivate the whole system."
 msgstr ""
 
 #: admin/help.php:154
@@ -760,9 +756,7 @@ msgid "Also you can define how long since the comment was not activated and how 
 msgstr ""
 
 #: admin/help.php:189
-msgid ""
-"Here you can de/activate the whole Spam Protection to secure your contact mails. You can deactivate some features optionally, but deactivate this checkbox will deactivate the whole "
-"system."
+msgid "Here you can de/activate the whole Spam Protection to secure your contact mails. You can deactivate some features optionally, but deactivate this checkbox will deactivate the whole system."
 msgstr ""
 
 #: admin/help.php:194
@@ -911,8 +905,8 @@ msgstr ""
 
 #: admin/help.php:272
 msgid ""
-"Here you can activate and define the registrations protection. If you disallow email provider, no user can register with any email address from this provider, if you allow only some "
-"provider, users can register only with email adresses from this hoster."
+"Here you can activate and define the registrations protection. If you disallow email provider, no user can register with any email address from this provider, if you allow only some provider, users can register only with "
+"email adresses from this hoster."
 msgstr ""
 
 #: admin/help.php:276 admin/security.php:327
@@ -929,8 +923,8 @@ msgstr ""
 
 #: admin/help.php:280
 msgid ""
-"If you activate this, all registrations will be checked against <a href=\"https://www.stopforumspam.com/\">StopForumSpam</a> and if they have listed the user ip and/or email address, "
-"the user cannot register an account on your page."
+"If you activate this, all registrations will be checked against <a href=\"https://www.stopforumspam.com/\">StopForumSpam</a> and if they have listed the user ip and/or email address, the user cannot register an account on "
+"your page."
 msgstr ""
 
 #: admin/help.php:283 admin/security.php:344
@@ -938,8 +932,7 @@ msgid "Add Email or IP to Ban list if found on StopForumSpam"
 msgstr ""
 
 #: admin/help.php:284
-msgid ""
-"After activating this option, all Email addresses or IP's found on StopForumSpam will be banned internal. So you can prevent high data usage between your server and StopForumSpam."
+msgid "After activating this option, all Email addresses or IP's found on StopForumSpam will be banned internal. So you can prevent high data usage between your server and StopForumSpam."
 msgstr ""
 
 #: admin/help.php:287 admin/security.php:388
@@ -984,8 +977,7 @@ msgstr ""
 
 #: admin/help.php:303
 msgid ""
-"You can set options to each user for new ads, post comments or send contact mails. Users can be set to bad or trusted lists through the regular user page or with the inbuild function "
-"you can find in the security settings."
+"You can set options to each user for new ads, post comments or send contact mails. Users can be set to bad or trusted lists through the regular user page or with the inbuild function you can find in the security settings."
 msgstr ""
 
 #: admin/help.php:308
@@ -1046,14 +1038,14 @@ msgid ""
 "            <li><strong>Web-Media</strong>          -   Improve the plugin security</li>\n"
 "            <li><strong>Aficionado & Tito </strong> -   Testing and error reporting</li>\n"
 "            <li><strong>dev101</strong>             -   Suggestions and explaining features and functions</li>\n"
-"            <li><strong>TangoX</strong>             -   Correcting some translations</li>\n"
+"            <li><strong>Tango</strong>              -   Correcting some translations and fixing the code</li>\n"
 "            </ul> \n"
 "            <strong>Thanks to all for your help!</strong>\n"
 "            <br /><br /><br /><br />\n"
 "            With time, this plugin became more then a premium plugin, but it is and will always be free. \n"
 "            If you would like to thank with a donation for the work, I would be glad if you donate something to UNICEF.\n"
 "            <br /><br />\n"
-"            <a class=\"btn btn-red\" style=\"float: none;\" href=\"https://donate.unicef.org/donate/now\" target=\"_blank\">Donate to UNICEF</a>\n"
+"            <a class=\"btn btn-red\" style=\"float: none;\" href=\"https://help.unicef.org/\" target=\"_blank\">Donate to UNICEF</a>\n"
 "            <br /><br /><br /><br />\n"
 "            I hope this plugin will be useful to many of you and will help you to reduce the spam on your pages to a minimum. \n"
 "            Keep in mind, however, that it was never intended to fight spam checking. \n"
@@ -1062,9 +1054,9 @@ msgid ""
 "            An automated system would always involve the risk that even realistic ads will be marked as spam and not be published.\n"
 "            <br /><br />\n"
 "            IIf you find any errors, please report it on the forums. \n"
-"            I will try to fix this immediately, so that everyone can use this plugin properly.<br /><br />\n"
+"            I will try to fix these immediately, so that everyone can use this plugin properly.<br /><br />\n"
 "            Also I would be glad if you could rate this plugin. I needed weeks to develop it for free, you only need a few minutes to rate and review it.<br /><br />\n"
-"            <a id=\"sp_review\" href=\"https://amfearliath.tk/osclass-spam-protection/\" target=\"_blank\"><button class=\"btn btn-green ratenow\">Rate and review now</button></a><br /"
+"            <a id=\"sp_review\" href=\"https://web.archive.org/web/20200709204718/http://amfearliath.tk/osclass-spam-protection/\" target=\"_blank\"><button class=\"btn btn-green ratenow\">Rate and review now</button></a><br /"
 "><br /><br />\n"
 "            <strong>Thanks a lot!</strong>\n"
 "            "
@@ -1697,7 +1689,7 @@ msgstr ""
 msgid "Delete unused user accounts"
 msgstr ""
 
-#: admin/security.php:454 functions/searchUser.php:37
+#: admin/security.php:454 functions/searchUser.php:40
 msgid "Last Login"
 msgstr ""
 
@@ -1913,7 +1905,7 @@ msgstr ""
 msgid "Organize"
 msgstr ""
 
-#: admin/tools.php:69 admin/tools.php:113 admin/tools.php:171 functions/searchUser.php:34
+#: admin/tools.php:69 admin/tools.php:113 admin/tools.php:171 functions/searchUser.php:37
 msgid "Name"
 msgstr ""
 
@@ -2201,8 +2193,8 @@ msgstr ""
 
 #: classes/class.spamprotection.php:1709 classes/class.spamprotection.php:1717
 msgid ""
-"As per our security policy, we have temporarily disabled your account and banned the used IP in our System. You can use the following link to unban and reactivate your account. If "
-"this was not you, please contact the support and change your password. You can use the password recovery function, if you don't remember your password."
+"As per our security policy, we have temporarily disabled your account and banned the used IP in our System. You can use the following link to unban and reactivate your account. If this was not you, please contact the support "
+"and change your password. You can use the password recovery function, if you don't remember your password."
 msgstr ""
 
 #: classes/class.spamprotection.php:1710
@@ -2354,7 +2346,7 @@ msgid "<strong>If you are using the check for contact mails, please add some hin
 msgstr ""
 
 #: classes/class.spamprotection.php:2200
-msgid "Feel free to contact me in OSClass-Forum for any kind of question.<br /><br />Best regards<br />Liath"
+msgid "Feel free to create a support ticket for any kind of inquiry.<br /><br />Best regards,<br />Liath"
 msgstr ""
 
 #: classes/class.spamprotection.php:2204
@@ -2466,8 +2458,8 @@ msgstr ""
 #: functions/frontend.php:122
 #, php-format
 msgid ""
-"Your message must be verified by a moderator because it has been identified as spam. After a successful verification we will forward your e-mail to the user. Click Delete if you do "
-"not want your message to be moderated. <a href='%s'>Delete</a>"
+"Your message must be verified by a moderator because it has been identified as spam. After a successful verification we will forward your e-mail to the user. Click Delete if you do not want your message to be moderated. <a "
+"href='%s'>Delete</a>"
 msgstr ""
 
 #: functions/frontend.php:152
@@ -2497,14 +2489,14 @@ msgstr ""
 
 #: functions/frontend.php:281
 msgid ""
-"Sorry, but your e-mail address was marked as spam by <a href=\"https://www.stopforumspam.com\">StopForumSpam</a>. Due to this, you cannot register an account with us using this e-mail "
-"address, but you can request the removal from the spam list <a target=\"_blank\" href=\"https://www.stopforumspam.com/removal\">Here</a>"
+"Sorry, but your e-mail address was marked as spam by <a href=\"https://www.stopforumspam.com\">StopForumSpam</a>. Due to this, you cannot register an account with us using this e-mail address, but you can request the removal "
+"from the spam list <a target=\"_blank\" href=\"https://www.stopforumspam.com/removal\">Here</a>"
 msgstr ""
 
 #: functions/frontend.php:302
 msgid ""
-"Sorry, but your IP was marked as spam by <a href=\"https://www.stopforumspam.com\">StopForumSpam</a>. Due to this, you cannot register an account with us, but you can request the "
-"removal from the spam list <a target=\"_blank\" href=\"https://www.stopforumspam.com/removal\">Here</a>"
+"Sorry, but your IP was marked as spam by <a href=\"https://www.stopforumspam.com\">StopForumSpam</a>. Due to this, you cannot register an account with us, but you can request the removal from the spam list <a "
+"target=\"_blank\" href=\"https://www.stopforumspam.com/removal\">Here</a>"
 msgstr ""
 
 #: functions/frontend.php:312
@@ -2555,18 +2547,18 @@ msgstr ""
 msgid "<strong>Info!</strong> Your account has been reactivated, you can login as usual."
 msgstr ""
 
-#: functions/searchUser.php:36
+#: functions/searchUser.php:39
 msgid "Registered"
 msgstr ""
 
-#: functions/searchUser.php:38
+#: functions/searchUser.php:41
 msgid "Listings"
 msgstr ""
 
-#: functions/searchUser.php:39
+#: functions/searchUser.php:42
 msgid "Comments"
 msgstr ""
 
-#: functions/searchUser.php:73
+#: functions/searchUser.php:76
 msgid "Delete Now"
 msgstr ""
