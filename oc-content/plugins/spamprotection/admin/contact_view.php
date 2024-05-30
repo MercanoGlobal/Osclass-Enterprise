@@ -14,7 +14,7 @@ $item    = $sp->_getRow('t_desc', array('key' => 'fk_i_item_id', 'value' => $con
 if ($contact['fk_i_user_id']) {
     $user = User::newInstance()->findByPrimaryKey($contact['fk_i_user_id']);
     View::newInstance()->_exportVariableToView('users', $user);
-    $user_link = '<a href="'.osc_admin_base_url(true).'?page=users&action=edit&id='.$user['pk_i_id'].'">'.$user['s_name'].'</a>';
+    $user_link = '<a href="'.osc_admin_base_url(true).'?page=users&action=edit&id='.$user['pk_i_id'].'" target="_blank">'.$user['s_name'].'</a>';
 }
 $contacts = $sp->_countRows('t_sp_contacts', array('key' => 's_user_mail', 'value' => isset($user['s_email']) ? $user['s_email'] : ''));
 ?>

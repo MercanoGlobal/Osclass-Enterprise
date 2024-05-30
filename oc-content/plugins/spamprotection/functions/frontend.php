@@ -4,7 +4,7 @@ if (!defined('ABS_PATH')) {
 }
 
 function sprot_style() {
-    if (osc_is_ad_page() || osc_is_login_page() || osc_is_register_page() || osc_is_recover_page()) {
+    if (osc_is_ad_page() || osc_is_login_page() || osc_is_register_page() || osc_is_recover_page() || osc_is_publish_page() || osc_is_edit_page()) {
         osc_enqueue_style('sp-styles', osc_plugin_url('spamprotection/assets/css/style.css').'style.css?'.time());
     }
 
@@ -91,7 +91,13 @@ function sp_contact_form() {
             ';
     }
     if (osc_logged_user_id()) {
-        echo '<input type="text" name="user_id" class="sp_form_field" value="'.osc_logged_user_id().'" />';
+        echo '<input type="hidden" name="user_id" class="sp_form_field" value="'.osc_logged_user_id().'" />';
+    }
+}
+
+function sp_contact_form_userId() {
+    if (osc_logged_user_id()) {
+        echo '<input type="hidden" name="user_id" class="sp_form_field" value="'.osc_logged_user_id().'" />';
     }
 }
 
@@ -316,10 +322,10 @@ function sp_block_baduser_ads() {
 
 function sp_block_baduser_contact() {
     echo '
-    <p>'.__("Sorry, but you are not allowed to send contact mails. If you think this is a mistake, feel free to contact the support team.").'</p>
+    <p>'.__("Sorry, but you are not allowed to send contact mails. If you think this is a mistake, feel free to contact the support team.", "spamprotection").'</p>
     <script>
         $(document).ready(function(){
-            $("form#contact_form").html("").append("<p>'.__("Sorry, but you are not allowed to send contact mails. If you think this is a mistake, feel free to contact the support team.").'</p>");
+            $("form#contact_form").html("").append("<p>'.__("Sorry, but you are not allowed to send contact mails. If you think this is a mistake, feel free to contact the support team.", "spamprotection").'</p>");
         });
     </script>
     ';

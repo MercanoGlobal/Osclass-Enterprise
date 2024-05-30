@@ -195,6 +195,8 @@ if (!osc_is_admin_user_logged_in() && spam_prot::newInstance()->_get('sp_contact
     } elseif (!$trusted) {
         if (spam_prot::newInstance()->_get('sp_contact_honeypot') == '1') {
             osc_add_hook('item_contact_form', 'sp_contact_form');
+        } else {
+            osc_add_hook('item_contact_form', 'sp_contact_form_userId');
         }
 
         osc_add_hook('hook_email_item_inquiry', 'sp_check_contact_item', 1);

@@ -1312,7 +1312,7 @@ div#flashmessage #flash-inner, div#flash #flash-inner {
     width: 400px;
     text-align: center;
     background: rgba(255, 255, 255, 0.95);
-    padding: 0;
+    padding-bottom: 10px;
 }
 
 div#flash a.ico-close {

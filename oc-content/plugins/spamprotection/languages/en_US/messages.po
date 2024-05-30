@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OSClass Spam Protection\n"
 "POT-Creation-Date: 2017-09-05 01:39+0200\n"
-"PO-Revision-Date: 2024-05-30 14:37+0300\n"
+"PO-Revision-Date: 2024-05-31 01:03+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Liath <amfearliath@gmx.de>\n"
 "Language: en\n"
@@ -2434,7 +2434,7 @@ msgstr ""
 msgid "<strong>Attention!</strong> Your access was restricted due to too many false login attempts. Please contact the webmaster."
 msgstr ""
 
-#: functions/backend.php:209 functions/frontend.php:183
+#: functions/backend.php:209 functions/frontend.php:189
 #, php-format
 msgid "<strong>Warning!</strong> Only %d login attempts remaining"
 msgstr ""
@@ -2447,7 +2447,7 @@ msgstr ""
 msgid "Your listing needs to be moderated, please have patience until it is verified."
 msgstr ""
 
-#: functions/frontend.php:43 functions/frontend.php:111
+#: functions/frontend.php:43 functions/frontend.php:117
 msgid "Sending contact mails is not allowed when using the TOR Network. Please disable TOR and try again."
 msgstr ""
 
@@ -2455,59 +2455,59 @@ msgstr ""
 msgid "Your comment needs to be moderated, please have patience until it is verified."
 msgstr ""
 
-#: functions/frontend.php:122
+#: functions/frontend.php:128
 #, php-format
 msgid ""
 "Your message must be verified by a moderator because it has been identified as spam. After a successful verification we will forward your e-mail to the user. Click Delete if you do not want your message to be moderated. <a "
 "href='%s'>Delete</a>"
 msgstr ""
 
-#: functions/frontend.php:152
+#: functions/frontend.php:158
 msgid "Login is not allowed when using the TOR Network. Please disable TOR and try again."
 msgstr ""
 
-#: functions/frontend.php:168 functions/frontend.php:178
+#: functions/frontend.php:174 functions/frontend.php:184
 msgid "<strong>Attention!</strong> Your access was restricted due to too many false login attempts. Please contact support."
 msgstr ""
 
-#: functions/frontend.php:209
+#: functions/frontend.php:215
 msgid "Registration is not allowed when using the TOR Network. Please disable TOR and try again."
 msgstr ""
 
-#: functions/frontend.php:223 functions/frontend.php:225
+#: functions/frontend.php:229 functions/frontend.php:231
 #, php-format
 msgid "Sorry, but you cannot use this email address: %s"
 msgstr ""
 
-#: functions/frontend.php:228
+#: functions/frontend.php:234
 msgid "Sorry, but you need to use a valid email address."
 msgstr ""
 
-#: functions/frontend.php:245
+#: functions/frontend.php:251
 msgid "Sorry, you are not allowed to register an account here. Feel free to contact the support team if you think this is a mistake."
 msgstr ""
 
-#: functions/frontend.php:281
+#: functions/frontend.php:287
 msgid ""
 "Sorry, but your e-mail address was marked as spam by <a href=\"https://www.stopforumspam.com\">StopForumSpam</a>. Due to this, you cannot register an account with us using this e-mail address, but you can request the removal "
 "from the spam list <a target=\"_blank\" href=\"https://www.stopforumspam.com/removal\">Here</a>"
 msgstr ""
 
-#: functions/frontend.php:302
+#: functions/frontend.php:308
 msgid ""
 "Sorry, but your IP was marked as spam by <a href=\"https://www.stopforumspam.com\">StopForumSpam</a>. Due to this, you cannot register an account with us, but you can request the removal from the spam list <a "
 "target=\"_blank\" href=\"https://www.stopforumspam.com/removal\">Here</a>"
 msgstr ""
 
-#: functions/frontend.php:312
+#: functions/frontend.php:318
 msgid "Sorry, but you are not allowed to post new ads here. If you think this is a mistake, feel free to contact the support team."
 msgstr ""
 
-#: functions/frontend.php:319 functions/frontend.php:322
+#: functions/frontend.php:325 functions/frontend.php:328
 msgid "Sorry, but you are not allowed to send contact mails. If you think this is a mistake, feel free to contact the support team."
 msgstr ""
 
-#: functions/frontend.php:331
+#: functions/frontend.php:337
 msgid "Sorry, but you are not allowed to post new comments here. If you think this is a mistake, feel free to contact the support team."
 msgstr ""
 
