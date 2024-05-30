@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `/*TABLE_PREFIX*/t_spam_protection_contacts` (
   `s_user_phone` varchar(100) DEFAULT NULL,
   `s_user_message` text DEFAULT NULL,
   `s_reason` text DEFAULT NULL,
-  `s_token` varchar(13) DEFAULT NULL,
+  `s_token` varchar(50) DEFAULT NULL,
   `dt_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`pk_i_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

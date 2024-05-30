@@ -1155,7 +1155,7 @@ class spam_prot extends DAO {
         if (!empty($return['pk_i_id'])) { return $return['pk_i_id']; }
     }
 
-    function _deleteMailByUser($id, $token) {
+    function _deleteMailByUser($id, $token, $email) {
         $contact = $this->_getRow('t_sp_contacts', array('key' => 'pk_i_id', 'value' => $id));
         if ($contact['s_token'] == $token) {
             $this->_addGlobalLog('Blocked contact email deleted by user', $email, 'System');
