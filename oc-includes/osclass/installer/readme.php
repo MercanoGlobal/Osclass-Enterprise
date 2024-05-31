@@ -68,7 +68,7 @@ function osc_getAbsoluteWebURL() {
                     <img src="<?php echo osc_getAbsoluteWebURL(); ?>/oc-includes/images/osclass-logo.png" alt="Osclass Enterprise" title="Osclass Enterprise" />
                 </a>
                 <br/>
-                Version 3.10.1
+                Version 3.10.2
             </h1>
         </div>
         <div id="content">

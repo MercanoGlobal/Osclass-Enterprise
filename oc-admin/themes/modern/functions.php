@@ -64,7 +64,7 @@ function admin_footer_html() { ?>
     <div class="float-right">
         <strong>Version <?php echo OSCLASS_VERSION; ?></strong>
     </div>
-    <a id="ninja" href="" class="ico ico-48 ico-dash-white"></a>
+    <a id="ninja" href="<?php echo osc_admin_base_url(true); ?>?page=tools&action=version" class="ico ico-48 ico-dash-white"></a>
     <div class="clear"></div>
 <?php
 }

@@ -120,6 +120,7 @@
                             <li>Added experimental support for PHP 8.1+</li>
                             <li>Fixed the Internal CRON</li>
                             <li>Multiple fixes and improvements</li>
+                            <li>👉<a href="https://github.com/MercanoG/Osclass-Enterprise/blob/main/CHANGELOG.txt" target="_blank">Full Changelog</a></li>
                         </ul>
                     </div>
                 </td>
