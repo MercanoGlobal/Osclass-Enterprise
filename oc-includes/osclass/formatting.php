@@ -35,7 +35,11 @@ function add_slashes_extended( $array ) {
 }
 
 function osc_sanitizeString($string) {
-    $string = strip_tags($string);
+    if ($string === '' || $string === null) {
+        return '';
+    }
+
+    $string = ($string !== NULL ? strip_tags($string) : '');
     $string = preg_replace('/%([a-fA-F0-9][a-fA-F0-9])/', '--$1--', $string);
     $string = str_replace('%', '', $string);
     $string = preg_replace('/--([a-fA-F0-9][a-fA-F0-9])--/', '%$1', $string);

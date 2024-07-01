@@ -494,8 +494,8 @@
                 }
                 $url = str_replace('{CATEGORIES}', implode("/", $sanitized_categories), $url);
             }
-            $url = str_replace(array('{ITEM_ID}', '{ITEM_CITY}'), array(osc_sanitizeString(isset($item['pk_i_id']) ? $item['pk_i_id'] : NULL), osc_sanitizeString(isset($item['s_city']) ? $item['s_city'] : NULL)), $url);
-            $url = str_replace(array('{ITEM_TITLE}', '?'), array(osc_sanitizeString(str_replace(',' , '-' , isset($item['s_title']) ? $item['s_title'] : NULL)), '') , $url);
+            $url = str_replace(array('{ITEM_ID}', '{ITEM_CITY}'), array(osc_sanitizeString(isset($item['pk_i_id']) ? $item['pk_i_id'] : ''), osc_sanitizeString(isset($item['s_city']) ? $item['s_city'] : '')), $url);
+            $url = str_replace(array('{ITEM_TITLE}', '?'), array(osc_sanitizeString(str_replace(',' , '-' , isset($item['s_title']) ? $item['s_title'] : '')), ''), $url);
             if($locale!='') {
                 $path = osc_base_url().$locale."/".$url;
             } else {
