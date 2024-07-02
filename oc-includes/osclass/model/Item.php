@@ -290,7 +290,7 @@
             }
 
             if(!is_array($options)) {
-                $options = explode("|", $options);
+                $options = explode("|", $options ?? '');
             }
             foreach($options as $option) {
                 switch ($option) {
