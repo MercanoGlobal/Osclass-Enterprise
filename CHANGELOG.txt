@@ -1,4 +1,4 @@
-Osclass Enterprise 3.10.3 2024-xx-xx
+Osclass Enterprise 3.10.3 2024-07-08
 ------------------------------------
 
 - Fixed some PHP 8.1+ notices
