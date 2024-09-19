@@ -1,4 +1,4 @@
-<?php if ( ! defined('ABS_PATH')) exit('ABS_PATH is not loaded. Direct access is not allowed.');
+<?php if ( ! defined('ABS_PATH') ) exit('ABS_PATH is not loaded. Direct access is not allowed.');
 
 /*
  * Copyright 2022 Osclass Enterprise
@@ -74,7 +74,7 @@
             foreach($categories as $c) {
                 $selected = ( (isset($item["fk_i_category_id"]) && $item["fk_i_category_id"] == $c['pk_i_id']) || (isset($catId) && $catId == $c['pk_i_id']) );
 
-                echo '<option value="' . $c['pk_i_id'] . '"' . ($selected ? 'selected="selected'.$item["fk_i_category_id"].'"' : '') . '>' . $deep_string . $c['s_name'] . '</option>';
+                echo '<option value="' . $c['pk_i_id'] . '"' . ($selected ? 'selected="selected' . (isset($item["fk_i_category_id"]) ? $item["fk_i_category_id"] : '') . '"' : '') . '>' . $deep_string . $c['s_name'] . '</option>';
                 if(isset($c['categories']) && is_array($c['categories'])) {
                     ManageItemsForm::subcategory_select($c['categories'], $item, $default_item, $deep);
                 }

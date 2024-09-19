@@ -32,6 +32,7 @@
         private $_categoriesEnabled;
         private $_relation;
         private $_emptyTree;
+        private $_empty_tree;
         private $_slugs;
 
         public static function newInstance($l = '')

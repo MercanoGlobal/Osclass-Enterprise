@@ -1,4 +1,4 @@
-<?php if ( ! defined('ABS_PATH')) exit('ABS_PATH is not loaded. Direct access is not allowed.');
+<?php if ( ! defined('ABS_PATH') ) exit('ABS_PATH is not loaded. Direct access is not allowed.');
 
 /*
  * Copyright 2022 Osclass Enterprise
@@ -28,6 +28,7 @@
     {
 
         private $pages;
+        private $total_filtered;
 
         public function table($params)
         {

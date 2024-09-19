@@ -2,6 +2,21 @@
 class spam_prot extends DAO {
 
     private static $instance;
+    private $_table_user;
+    private $_table_admin;
+    private $_table_item;
+    private $_table_comment;
+    private $_table_desc;
+    private $_table_bans;
+    private $_table_pref;
+    private $_table_sp_ban_log;
+    private $_table_sp_items;
+    private $_table_sp_users;
+    private $_table_sp_comments;
+    private $_table_sp_contacts;
+    private $_table_sp_logins;
+    private $_table_sp_globallog;
+    private $configFiles;
 
     public static function newInstance() {
         if (!self::$instance instanceof self) {

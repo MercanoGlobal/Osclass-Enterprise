@@ -1,4 +1,4 @@
-<?php if ( ! defined('ABS_PATH')) exit('ABS_PATH is not loaded. Direct access is not allowed.');
+<?php if ( ! defined('ABS_PATH') ) exit('ABS_PATH is not loaded. Direct access is not allowed.');
 
 /*
  * Copyright 2022 Osclass Enterprise
@@ -19,6 +19,7 @@
     class WebThemes extends Themes
     {
         private static $instance;
+        private $path;
 
         private $pages = array( '404',
                                 'contact',
