@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://enterprise-classifieds.com/"><img src="https://raw.githubusercontent.com/MercanoG/Osclass-Enterprise/main/oc-includes/images/osclass-logo.png" alt="Enterprise-Classifieds.com"></a>
+  <a href="https://enterprise-classifieds.com/"><img src="https://raw.githubusercontent.com/MercanoGlobal/Osclass-Enterprise/main/oc-includes/images/osclass-logo.png" alt="Enterprise-Classifieds.com"></a>
 </p>
 
 # Osclass Enterprise
@@ -10,7 +10,7 @@ Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contain
 
 ## Project Info
 - [Official Website](https://enterprise-classifieds.com/)
-- [Code Repository](https://github.com/MercanoG/Osclass-Enterprise)
+- [Code Repository](https://github.com/MercanoGlobal/Osclass-Enterprise)
 - [Documentation](https://docs.enterprise-classifieds.com/)
 
 ## Like what we do?

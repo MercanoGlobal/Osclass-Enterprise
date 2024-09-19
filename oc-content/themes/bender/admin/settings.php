@@ -45,8 +45,8 @@
             <div class="form-row">
                 <div class="form-label"><?php _e('Footer link', 'bender'); ?></div>
                 <div class="form-controls">
-                    <div class="form-label-checkbox"><input type="checkbox" name="footer_link" value="1" <?php echo (osc_get_preference('footer_link', 'bender') ? 'checked' : ''); ?> > <?php _e('I want to help Osclass by linking to <a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank">Osclass Enterprise</a> from my site with the following text:', 'bender'); ?></div>
-                    <span class="help-box"><?php _e('This website is proudly using the <a title="Osclass Enterprise" href="https://github.com/MercanoG/Osclass-Enterprise"><strong>Osclass Enterprise</strong></a> classifieds software', 'bender'); ?></span>
+                    <div class="form-label-checkbox"><input type="checkbox" name="footer_link" value="1" <?php echo (osc_get_preference('footer_link', 'bender') ? 'checked' : ''); ?> > <?php _e('I want to help Osclass by linking to <a href="https://github.com/MercanoGlobal/Osclass-Enterprise" target="_blank">Osclass Enterprise</a> from my site with the following text:', 'bender'); ?></div>
+                    <span class="help-box"><?php _e('This website is proudly using the <a title="Osclass Enterprise" href="https://github.com/MercanoGlobal/Osclass-Enterprise"><strong>Osclass Enterprise</strong></a> classifieds software', 'bender'); ?></span>
                 </div>
             </div>
             <?php } ?>

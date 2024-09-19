@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-24 06:56:52+00:00\n"
-"PO-Revision-Date: 2023-09-12 15:39+0300\n"
+"PO-Revision-Date: 2024-09-19 17:39+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: 404.php:30
 msgid "Sorry but I can't find the page you're looking for"
@@ -124,12 +124,12 @@ msgid "Footer link"
 msgstr ""
 
 #: admin/settings.php:48
-msgid "I want to help Osclass by linking to <a href=\"https://github.com/MercanoG/Osclass-Enterprise\" target=\"_blank\">Osclass Enterprise</a> from my site with the following text:"
+msgid "I want to help Osclass by linking to <a href=\"https://github.com/MercanoGlobal/Osclass-Enterprise\" target=\"_blank\">Osclass Enterprise</a> from my site with the following text:"
 msgstr ""
 
 #: admin/settings.php:49
 msgid ""
-"This website is proudly using the <a title=\"Osclass Enterprise\" href=\"https://github.com/MercanoG/Osclass-Enterprise\"><strong>Osclass Enterprise</strong></a> classifieds software"
+"This website is proudly using the <a title=\"Osclass Enterprise\" href=\"https://github.com/MercanoGlobal/Osclass-Enterprise\"><strong>Osclass Enterprise</strong></a> classifieds software"
 msgstr ""
 
 #: admin/settings.php:56

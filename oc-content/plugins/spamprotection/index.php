@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Anti Spam & Protection System
-Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
+Plugin URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Description: Anti Spam & Protection System for Osclass. Secures your ads, comments and contact mails against spam. Protects your login/registration processes, plus many other features.
 Version: 2.0.0
 Author: Liath
@@ -92,7 +92,7 @@ Changelog
 
 1.7.4 - Fixed some Bugs: https://forums.osclass.org/plugins/(plugin)-spam-protection/msg155084/#msg155084
 
-2.0.0   - Corrected some issues (by Tango) - https://github.com/MercanoG/Osclass-Enterprise
+2.0.0   - Corrected some issues (Mercano Global) - https://github.com/MercanoGlobal/Osclass-Enterprise
 
 */
 

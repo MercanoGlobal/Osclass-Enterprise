@@ -64,7 +64,7 @@ function osc_getAbsoluteWebURL() {
     <div id="container">
         <div id="header" class="readme">
             <h1 id="logo">
-                <a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank">
+                <a href="https://github.com/MercanoGlobal/Osclass-Enterprise" target="_blank">
                     <img src="<?php echo osc_getAbsoluteWebURL(); ?>/oc-includes/images/osclass-logo.png" alt="Osclass Enterprise" title="Osclass Enterprise" />
                 </a>
                 <br/>
@@ -168,7 +168,7 @@ function osc_getAbsoluteWebURL() {
         </div>
         <div id="footer">
             <ul>
-                <li><a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank">Feedback</a></li>
+                <li><a href="https://github.com/MercanoGlobal/Osclass-Enterprise" target="_blank">Feedback</a></li>
                 <li><a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank">Forums</a></li>
             </ul>
         </div>

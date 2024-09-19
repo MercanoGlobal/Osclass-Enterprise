@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Google Analytics
-Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
+Plugin URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Description: This plugin adds the Google Analytics script at the footer of every page
 Version: 2.2.1
 Author: Osclass
-Author URI: https://github.com/MercanoG/Osclass-Enterprise
+Author URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Plugin update URI: 
 */
 

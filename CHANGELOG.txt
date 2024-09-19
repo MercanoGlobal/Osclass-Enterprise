@@ -2,6 +2,7 @@ Osclass Enterprise 3.10.4 2024-09-19
 ------------------------------------
 
 - Fixed some the last remaining PHP 8.3 notices
+- Updated the repo name
 
 Osclass Enterprise 3.10.3 2024-07-08
 ------------------------------------

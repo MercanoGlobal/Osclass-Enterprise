@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Osclass Enterprise\n"
 "Report-Msgid-Bugs-To: http://osclass.org/\n"
 "POT-Creation-Date: 2016-12-12 15:46:28+00:00\n"
-"PO-Revision-Date: 2024-09-19 14:14+0300\n"
+"PO-Revision-Date: 2024-09-19 17:39+0300\n"
 "Last-Translator: Tango\n"
 "Language-Team: Translations\n"
 "Language: en_US\n"
@@ -3590,7 +3590,7 @@ msgid "Checking for updates (Current version %s)"
 msgstr ""
 
 #: oc-admin/themes/modern/tools/upgrade.php:54
-msgid "To check for new releases, please visit the <a href=\"https://github.com/MercanoG/Osclass-Enterprise/releases\" target=\"_blank\">official release channel</a> and follow the <a href=\"https://docs.enterprise-classifieds.com/updating_osclass.html\" target=\"_blank\">upgrade instructions</a>."
+msgid "To check for new releases, please visit the <a href=\"https://github.com/MercanoGlobal/Osclass-Enterprise/releases\" target=\"_blank\">official release channel</a> and follow the <a href=\"https://docs.enterprise-classifieds.com/updating_osclass.html\" target=\"_blank\">upgrade instructions</a>."
 msgstr ""
 
 #: oc-admin/themes/modern/tools/upgrade.php:48

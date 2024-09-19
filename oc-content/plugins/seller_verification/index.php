@@ -1,7 +1,7 @@
 <?php   
 /*
 Plugin Name: Seller Verification
-Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
+Plugin URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Description: This plugin extends the User Profiles with a seller verification attribute that can only be added by admins
 Version: 1.2.0
 Author: AZR & Osclass Enterprise

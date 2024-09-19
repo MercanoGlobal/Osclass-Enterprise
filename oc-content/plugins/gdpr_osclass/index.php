@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Osclass GDPR
-Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
+Plugin URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Description: GDPR compliance, add agree box to forms, remove account and download user information
 Version: 1.2.2
 Author: Osclass
-Author URI: https://github.com/MercanoG/Osclass-Enterprise
+Author URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Short Name: gdpr_osclass
 Plugin update URI: gdpr_osclass
 */

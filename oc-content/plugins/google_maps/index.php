@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Google Maps
-Plugin URI: https://github.com/MercanoG/Osclass-Enterprise
+Plugin URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Description: This plugin shows a Google Map on the location space of every item.
 Version: 2.1.7
 Author: Osclass & kingsult
-Author URI: https://github.com/MercanoG/Osclass-Enterprise
+Author URI: https://github.com/MercanoGlobal/Osclass-Enterprise
 Plugin update URI: 
 */
 

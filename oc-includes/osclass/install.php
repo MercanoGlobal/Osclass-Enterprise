@@ -251,7 +251,7 @@ switch( $step ) {
                             <a href="<?php echo get_absolute_url(); ?>oc-includes/osclass/installer/readme.php" target="_blank" hreflang="en"><?php _e('Readme'); ?></a>
                         </li>
                         <li>
-                            <a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank" hreflang="en"><?php _e( 'Feedback' ); ?></a>
+                            <a href="https://github.com/MercanoGlobal/Osclass-Enterprise" target="_blank" hreflang="en"><?php _e( 'Feedback' ); ?></a>
                         </li>
                         <li>
                             <a href="https://www.valueweb.gr/forums/enterprise-release/" target="_blank" hreflang="en"><?php _e('Forums');?></a>

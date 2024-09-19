@@ -33,7 +33,7 @@
                     How to integrate it in your theme:
                 </h2>
                 <p>
-                    1. <i>*Already integrated in <a href="https://github.com/MercanoG/Osclass-Enterprise" target="_blank">Osclass Enterprise</a></i> - Apply the following hook in <code>oc-admin\themes\modern\users\frm.php</code> line ~321 above this code <code>&lt;?php if(!$aux['edit']) { osc_run_hook('user_register_form'); }; ?&gt;</code>:
+                    1. <i>*Already integrated in <a href="https://github.com/MercanoGlobal/Osclass-Enterprise" target="_blank">Osclass Enterprise</a></i> - Apply the following hook in <code>oc-admin\themes\modern\users\frm.php</code> line ~321 above this code <code>&lt;?php if(!$aux['edit']) { osc_run_hook('user_register_form'); }; ?&gt;</code>:
                 </p>
                 <pre>&lt;?php osc_run_hook('seller_verification', isset($user['pk_i_id']) ? $user['pk_i_id'] : ''); ?&gt;</pre>
                 <p>
