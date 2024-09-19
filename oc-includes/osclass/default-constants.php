@@ -17,7 +17,7 @@
  */
 
     if( !defined('OSCLASS_VERSION') ) {
-        define('OSCLASS_VERSION', '3.10.3');
+        define('OSCLASS_VERSION', '3.10.4');
     }
 
     if( !defined('MULTISITE') ) {
