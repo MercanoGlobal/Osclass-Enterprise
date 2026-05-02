@@ -15,8 +15,7 @@ Osclass Enterprise is the continuation of the Osclass v3.8.0 project and contain
 
 ## Like what we do?
 Support our open-source project and help us keep creating amazing software for you!<br>
-:point_down: Please consider gifting us a coffee :point_down: <br>
-<a href="https://www.buymeacoffee.com/Osclass"><img src="https://i.ibb.co/TP3qYLG/donate-button.png" alt="Support Us!"></a>
+[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=mercanoglobal&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/mercanoglobal)
 
 ## Hosting Requirements and Settings
 - Apache 2.4.17+ / LiteSpeed 5.4+
